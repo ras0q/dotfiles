@@ -41,10 +41,6 @@
     "toggleTestFile": true
   },
   "go.formatTool": "gofmt",
-  "go.inlayHints.compositeLiteralFields": true,
-  "go.inlayHints.constantValues": true,
-  "go.inlayHints.functionTypeParameters": true,
-  "go.inlayHints.parameterNames": true,
   "go.lintTool": "golangci-lint",
   "go.testFlags": ["-cover", "-shuffle=on", "-race"],
   "go.toolsManagement.autoUpdate": true,

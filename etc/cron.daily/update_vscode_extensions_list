@@ -1,5 +1,0 @@
-#!/bin/bash
-
-DOTFILES_DIR=/home/ras/ghq/github.com/Ras96/dotfiles
-
-/home/ras/.wincmd/bin/code --list-extensions > $DOTFILES_DIR/.vscode-extensions.txt

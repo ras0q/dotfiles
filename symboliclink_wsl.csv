@@ -1,0 +1,12 @@
+.config,~/.config
+.vscode-server/data/Machine/settings.json,~/.vscode-server/data/Machine/settings.json
+bin,/usr/local/bin
+.Brewfile,~/.Brewfile
+.gitconfig,~/.gitconfig
+.golangci.yml,~/.golangci.yml
+.night-owl.my.omp.json,~/.night-owl.my.omp.json
+.prettierrc.yml,~/.prettierrc.yml
+.tool-versions,~/.tool-versions
+.vimrc,~/.vimrc
+.wslconfig,~/.wslconfig
+wsl.conf,/etc/wsl.conf
