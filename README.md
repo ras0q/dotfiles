@@ -2,35 +2,14 @@
 
 ## Installation
 
-1. 
-```bash
-cp /mnt/c/Users/kira/.ssh/ ~/ -r
-sudo chmod 600 ~/.ssh/id_rsa
-```
+1. clone this repository
+1. setup `~/.ssh` directory
+1. `./wsl_init.sh`
 
-2. 
-```bash
-/bin/bash -c "$(curl -L https://raw.githubusercontent.com/Ras96/dotfiles/main/scripts/install.sh)"
-```
+## TODO
 
-## Contents
-
-- Git
-- curl
-- linuxbrew
-  - asdf
-    - go (old version)
-    - Node.js
-  - bat
-  - fish
-  - fzf
-  - gh
-  - ghq
-  - git-delta
-  - gitmoji
-  - go (latest version)
-  - jq
-  - live-server
-  - oh-my-posh
-  - yarn
-- Rust
+- symbolic link bugs
+- mac support
+- windows support
+- vscode extensions
+- windows commands
