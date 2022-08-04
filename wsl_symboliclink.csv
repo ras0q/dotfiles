@@ -9,3 +9,4 @@
 .vimrc,~/.vimrc
 .wslconfig,~/.wslconfig
 wsl.conf,/etc/wsl.conf
+bin,/usr/local/bin

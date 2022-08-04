@@ -8,7 +8,7 @@
 
 ## TODO
 
-- symbolic link bugs
+- symbolic link bugs when target directory already exists
 - mac support
 - windows support
 - vscode extensions
