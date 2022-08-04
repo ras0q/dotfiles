@@ -12,7 +12,7 @@ sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt install git
 
 ec "Creating symboliclinks..."
-cat ./wsl_symboliclink.csv | awk -F "," -v P=$PWD '{ printf("sudo ln -sf %s/wsl/%s %s\n",P,$1,$2) }' | bash
+cat ./wsl_symboliclink.csv | awk -F "," -v P=$PWD '{ printf("sudo ln -sfT %s/wsl/%s %s\n",P,$1,$2) }' | bash
 
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 if !(type "brew" > /dev/null 2>&1); then
