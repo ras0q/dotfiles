@@ -13,11 +13,6 @@ SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR GOPATH:/home/ras/go
 SETUVAR GOTESTS_TEMPLATE_DIR:/home/ras/ghq/github\x2ecom/Ras96/gotests\x2dtemplate/template
 SETUVAR SWIFTENV_ROOT:/home/ras/\x2eswiftenv
-SETUVAR ZO_CMD:zo
-SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/home/ras/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/home/ras/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/home/ras\x24
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_c:git\x20commit\x20\x2da
 SETUVAR _fish_abbr_d:docker
@@ -43,11 +38,9 @@ SETUVAR _fish_abbr_tq:todoist\x20quick
 SETUVAR _fisher_decors_2F_fish_2D_ghq_files:/home/ras/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e/home/ras/\x2econfig/fish/completions/ghq\x2efish
 SETUVAR _fisher_edc_2F_bass_files:/home/ras/\x2econfig/fish/functions/__bass\x2epy\x1e/home/ras/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/home/ras/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/fzf\x2efish
-SETUVAR _fisher_jethrokuan_2F_z_files:/home/ras/\x2econfig/fish/functions/__z\x2efish\x1e/home/ras/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/ras/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/ras/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:/home/ras/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e/home/ras/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e/home/ras/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e/home/ras/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e/home/ras/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/ras/\x2econfig/fish/functions/fisher\x2efish\x1e/home/ras/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1edecors/fish\x2dghq\x1ejethrokuan/fzf\x1ejethrokuan/z\x1ejorgebucaran/autopair\x2efish\x1eyo\x2dgoto/ggl\x2efish\x1eedc/bass
-SETUVAR _fisher_yo_2D_goto_2F_ggl_2E_fish_files:/home/ras/\x2econfig/fish/functions/fin\x2efish\x1e/home/ras/\x2econfig/fish/functions/ggl\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/ggl\x2efish\x1e/home/ras/\x2econfig/fish/completions/fin\x2efish\x1e/home/ras/\x2econfig/fish/completions/ggl\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1edecors/fish\x2dghq\x1ejethrokuan/fzf\x1ejorgebucaran/autopair\x2efish\x1eedc/bass
 SETUVAR --export code:code
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
