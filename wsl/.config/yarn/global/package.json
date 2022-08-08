@@ -8,7 +8,7 @@
     "create-vite": "^2.9.4",
     "create-yo": "^2.0.0",
     "edge": "^7.10.1",
-    "eslint": "^8.2.0",
+    "eslint": "^8.21.0",
     "live-server": "^1.2.1",
     "prettier": "^2.5.1",
     "prettier-plugin-md-nocjsp": "^1.2.0",
