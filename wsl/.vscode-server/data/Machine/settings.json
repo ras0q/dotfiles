@@ -59,6 +59,7 @@
   "prolog.executablePath": "/home/linuxbrew/.linuxbrew/bin/swipl",
   "redhat.telemetry.enabled": true,
   "remote.SSH.enableAzureIntegration": true,
+  "swiftformat.path": "/home/linuxbrew/.linuxbrew/bin/swiftformat",
   "tabnine.experimentalAutoImports": true,
   "todo-tree.general.tags": [
     "BUG",
