@@ -1,5 +1,6 @@
 .config,~/.config
 .vscode-server/data/Machine/settings.json,~/.vscode-server/data/Machine/settings.json
+.asdfrc,~/.asdfrc
 .Brewfile,~/.Brewfile
 .gitconfig,~/.gitconfig
 .golangci.yml,~/.golangci.yml
