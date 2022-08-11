@@ -2,6 +2,7 @@
 .vscode-server/data/Machine/settings.json,~/.vscode-server/data/Machine/settings.json
 .asdfrc,~/.asdfrc
 .Brewfile,~/.Brewfile
+.Brewfile.lock.json,~/.Brewfile.lock.json
 .gitconfig,~/.gitconfig
 .golangci.yml,~/.golangci.yml
 .omp-theme.json,~/.omp-theme.json
