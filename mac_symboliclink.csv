@@ -1,0 +1,13 @@
+.config,~/.config
+.asdfrc,~/.asdfrc
+.Brewfile,~/.Brewfile
+.Brewfile.lock.json,~/.Brewfile.lock.json
+.gitconfig,~/.gitconfig
+.golangci.yml,~/.golangci.yml
+.omp-theme.json,~/.omp-theme.json
+.prettierrc.yml,~/.prettierrc.yml
+.tool-versions,~/.tool-versions
+.vimrc,~/.vimrc
+.wslconfig,~/.wslconfig
+wsl.conf,/etc/wsl.conf
+bin,/usr/local/bin
