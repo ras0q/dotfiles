@@ -35,6 +35,7 @@ SETUVAR _fish_abbr_pg:openssl\x20rand\x20\x2dbase64
 SETUVAR _fish_abbr_t:todoist
 SETUVAR _fish_abbr_tl:todoist\x20\x2d\x2dcolor\x20list\x20\x2df\x20\x22\x23Inbox\x22\x20\x2dp
 SETUVAR _fish_abbr_tq:todoist\x20quick
+SETUVAR _fish_abbr_vimrc:vim\x20\x7e/\x2evimrc
 SETUVAR _fisher_decors_2F_fish_2D_ghq_files:/home/ras/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e/home/ras/\x2econfig/fish/completions/ghq\x2efish
 SETUVAR _fisher_edc_2F_bass_files:/home/ras/\x2econfig/fish/functions/__bass\x2epy\x1e/home/ras/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/home/ras/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/home/ras/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/home/ras/\x2econfig/fish/conf\x2ed/fzf\x2efish
