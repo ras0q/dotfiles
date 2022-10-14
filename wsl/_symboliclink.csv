@@ -1,6 +1,7 @@
 .config,~/.config
 .vscode-server/data/Machine/settings.json,~/.vscode-server/data/Machine/settings.json
 .asdfrc,~/.asdfrc
+.bashrc,~/.bashrc
 .Brewfile,~/.Brewfile
 .Brewfile.lock.json,~/.Brewfile.lock.json
 .gitconfig,~/.gitconfig
