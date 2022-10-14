@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@eslint/create-config": "^0.1.2",
-    "@openapitools/openapi-generator-cli": "^2.4.26",
+    "@openapitools/openapi-generator-cli": "^2.5.1",
     "@stoplight/prism-cli": "^4.6.0",
     "@stoplight/spectral-cli": "^6.4.0",
     "create-nuxt-app": "^4.0.0",
