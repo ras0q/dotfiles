@@ -37,3 +37,5 @@ end
 
 # oh-my-posh
 oh-my-posh init fish --config ~/.omp-theme.json | source
+
+status --is-interactive; and rbenv init - fish | source
