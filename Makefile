@@ -15,7 +15,7 @@ help:
 # --------------------
 # initialize scripts
 # --------------------
-init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-visudo setup-fish
+init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-fish setup-visudo
 
 # --------------------
 # link scripts
@@ -38,7 +38,8 @@ setup-apt:
 	@sudo apt upgrade -y
 
 setup-brew:
-	@bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	@which brew > /dev/null || bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	@brew cleanup
 	@brew doctor
 	@brew update
 	@brew upgrade
@@ -46,16 +47,17 @@ setup-brew:
 	@brew bundle cleanup --global
 
 setup-asdf:
-	@cat ~/.tool-versions | awk '{print "asdf plugin add " $1}' | bash
+	@cat ~/.tool-versions | awk '{print "asdf plugin add " $$1}' | bash
 	@asdf install
 
+setup-fish:
+	@cat /etc/shells | grep fish || sudo bash -c "echo $(shell which fish) >> /etc/shells"
+	@chsh -s $(shell which fish)
+
 setup-visudo:
+	@echo "[INFO] exec \"sudo visudo\" and add these lines:"
 	@echo "ras     ALL=NOPASSWD: /usr/sbin/service"
 	@echo "ras     ALL=NOPASSWD: /usr/sbin/hwclock"
-
-setup-fish:
-	@cat /etc/shells | grep fish || sudo bash -c "echo $(which fish) >> /etc/shells"
-	@chsh -s $(which fish)
 
 # --------------------
 # utility scripts
