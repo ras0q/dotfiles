@@ -59,3 +59,6 @@ end
 
 # oh-my-posh
 oh-my-posh init fish --config ~/.omp-theme.json | source
+
+# zoxide
+zoxide init --cmd cd --hook pwd fish | source
