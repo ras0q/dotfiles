@@ -4,7 +4,7 @@
 
 1. clone this repository
 1. setup `~/.ssh` directory
-1. `./wsl_init.sh`
+1. `make init-wsl`
 
 ## TODO
 
