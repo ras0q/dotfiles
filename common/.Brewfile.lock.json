@@ -5,7 +5,7 @@
         "revision": "cf8a86177665825a7f30780e8fe1af333a0527c6"
       },
       "homebrew/core": {
-        "revision": "388ff7561473380333de18e98eb3bbf1c7fdb69f"
+        "revision": "5b36ba740a61cab0a4f3b83c269baa05a3b0c538"
       },
       "jandedobbeleer/oh-my-posh": {
         "revision": "d606bd0ed7d57ffddeb68e741c2f229f31fc3811"
@@ -1272,7 +1272,7 @@
       "Ubuntu 20.04.5 LTS (focal)": {
         "HOMEBREW_VERSION": "3.6.7-32-g31758ea",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "Homebrew/linuxbrew-core": "388ff7561473380333de18e98eb3bbf1c7fdb69f",
+        "Homebrew/linuxbrew-core": "5b36ba740a61cab0a4f3b83c269baa05a3b0c538",
         "GCC": "9.4.0"
       }
     }
