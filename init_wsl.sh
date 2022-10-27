@@ -9,9 +9,6 @@ sudo apt upgrade -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt install git
 
-echo "Creating symboliclinks..."
-./_sync.sh
-
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 if !(type "brew" > /dev/null 2>&1); then
   echo "Installing brew..."
