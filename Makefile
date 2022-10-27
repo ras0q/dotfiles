@@ -15,7 +15,7 @@ help:
 # --------------------
 # initialize scripts
 # --------------------
-init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-fish setup-visudo
+init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-docker setup-fish setup-visudo
 
 # --------------------
 # link scripts
@@ -49,6 +49,15 @@ setup-brew:
 setup-asdf:
 	@cat ~/.tool-versions | awk '{print "asdf plugin add " $$1}' | bash
 	@asdf install
+
+setup-docker:
+	@sudo mkdir -p /etc/apt/keyrings
+	@curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+		| sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg --yes
+	@echo \
+		"deb [arch=$$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $$(lsb_release -cs) stable" \
+		| sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+	@sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 setup-fish:
 	@cat /etc/shells | grep fish || sudo bash -c "echo $(shell which fish) >> /etc/shells"
