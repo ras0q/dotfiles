@@ -9,7 +9,7 @@
 ## Installation
 
 1. clone this repository
-1. execute `init-mac` or `init-wsl`
+1. execute `make init-mac` or `make init-wsl`
 
 ## Utilities
 
