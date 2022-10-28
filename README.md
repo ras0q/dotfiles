@@ -1,15 +1,23 @@
 # dotfiles
 
+## Requirements
+
+- bash
+- git
+- (ssh)
+
 ## Installation
 
 1. clone this repository
-1. setup `~/.ssh` directory
-1. `make init-wsl`
+1. execute `init-mac` or `init-wsl`
+
+## Utilities
+
+- `make dump`
+  - dump your tools config (VSCode, Brew...)
 
 ## TODO
 
-- symbolic link bugs when target directory already exists
-- mac support
 - windows support
 - vscode extensions
 - windows commands
