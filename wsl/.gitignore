@@ -1,0 +1,6 @@
+.config/configstore
+.config/gh/hosts.yml
+.config/pulse/cookie
+.config/TabNine
+.config/yarn/global/node_modules
+.config/wslu
