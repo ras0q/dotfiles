@@ -1,5 +1,6 @@
 ROOT_DIR    := $$PWD
 COMMON_DIR  := $(ROOT_DIR)/common
+MAC_DIR		  := $(ROOT_DIR)/mac
 WSL_DIR     := $(ROOT_DIR)/wsl
 
 # handle all targets as .PHONY
@@ -15,6 +16,7 @@ help:
 # --------------------
 # initialize scripts
 # --------------------
+init-mac: link-common link-mac setup-brew setup-asdf setup-fish
 init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-docker setup-fish setup-visudo
 
 # --------------------
@@ -22,6 +24,9 @@ init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-docker setu
 # --------------------
 link-common:
 	@find $(COMMON_DIR) -type f | xargs -I{} ln -sf {} ~
+
+link-mac:
+	@ln -sf $(MAC_DIR)/.config ~
 
 link-wsl:
 	@ln -sf $(WSL_DIR)/.config ~
