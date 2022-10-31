@@ -15,9 +15,3 @@
 
 - `make dump`
   - dump your tools config (VSCode, Brew...)
-
-## TODO
-
-- windows support
-- vscode extensions
-- windows commands
