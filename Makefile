@@ -8,10 +8,17 @@ CMDS=$(shell grep -E -o "^[a-z_-]+" ./Makefile)
 .PHONY: $(CMDS)
 
 # default target
-help:
-	@echo "Commands:"
-	@echo "---------"
-	@echo $(CMDS) | sed 's/\s/\n/g'
+init:
+	@ \
+	if [ $(shell uname -s) = "Darwin" ]; then \
+		echo "macOS detected!!"; \
+		$(MAKE) init-mac; \
+	elif [ $(shell uname -s) = "Linux" ]; then \
+		echo "WSL detected!!"; \
+		$(MAKE) init-wsl; \
+	else \
+		echo "Unsupported OS"; \
+	fi
 
 # --------------------
 # initialize scripts
