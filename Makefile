@@ -86,5 +86,10 @@ setup-visudo:
 # --------------------
 dump:
 	@brew bundle --global dump -f
-	@code --list-extensions > code-extensions.txt
+	@code --list-extensions > $(INFO_DIR)/vscode_extensions_remote.txt
+	@ \
+	if which pwsh > /dev/null; then \
+		pwsh -c code --list-extensions > $(INFO_DIR)/vscode_extensions_windows.txt; \
+		pwsh -c winget export --include-versions --accept-source-agreements -o $(INFO_DIR)/winget_packages.json; \
+	fi
 

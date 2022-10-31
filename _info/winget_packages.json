@@ -1,0 +1,232 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2022-10-31T23:36:59.606-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Readdle.Spark",
+					"Version" : "3.1.0"
+				},
+				{
+					"PackageIdentifier" : "AgileBits.1Password",
+					"Version" : "8.9.5"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.2019.BuildTools",
+					"Version" : "16.11.7"
+				},
+				{
+					"PackageIdentifier" : "Lexikos.AutoHotkey",
+					"Version" : "1.1.34.04"
+				},
+				{
+					"PackageIdentifier" : "Canonical.Ubuntu",
+					"Version" : "2004.2022.1.0"
+				},
+				{
+					"PackageIdentifier" : "Discord.Discord",
+					"Version" : "1.0.9006"
+				},
+				{
+					"PackageIdentifier" : "Figma.Figma",
+					"Version" : "116.4.2"
+				},
+				{
+					"PackageIdentifier" : "Figma.fonthelper",
+					"Version" : "114.6.2"
+				},
+				{
+					"PackageIdentifier" : "Git.Git",
+					"Version" : "2.38.1"
+				},
+				{
+					"PackageIdentifier" : "ImageMagick.ImageMagick",
+					"Version" : "7.1.0.51"
+				},
+				{
+					"PackageIdentifier" : "LINE.LINE",
+					"Version" : "7.12.0.2848"
+				},
+				{
+					"PackageIdentifier" : "Logitech.LogiBolt",
+					"Version" : "1.2.6024.0"
+				},
+				{
+					"PackageIdentifier" : "Logitech.Options",
+					"Version" : "9.70.68"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge",
+					"Version" : "107.0.1418.26"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
+					"Version" : "107.0.1418.24"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal",
+					"Version" : "1.15.2875.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Office",
+					"Version" : "16.0.15629.20208"
+				},
+				{
+					"PackageIdentifier" : "OBSProject.OBSStudio",
+					"Version" : "28.0.3"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive",
+					"Version" : "22.207.1002.0003"
+				},
+				{
+					"PackageIdentifier" : "iZotope.ProductPortal",
+					"Version" : "Unknown"
+				},
+				{
+					"PackageIdentifier" : "Spotify.Spotify",
+					"Version" : "1.1.96.785.g464c973a"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams",
+					"Version" : "1.5.00.21668"
+				},
+				{
+					"PackageIdentifier" : "marha.VcXsrv",
+					"Version" : "1.20.9.0"
+				},
+				{
+					"PackageIdentifier" : "vim.vim",
+					"Version" : "9.0.0801"
+				},
+				{
+					"PackageIdentifier" : "Obsidian.Obsidian",
+					"Version" : "1.0.0"
+				},
+				{
+					"PackageIdentifier" : "OliverSchwendener.ueli",
+					"Version" : "8.23.1"
+				},
+				{
+					"PackageIdentifier" : "SlackTechnologies.Slack",
+					"Version" : "4.29.144"
+				},
+				{
+					"PackageIdentifier" : "WinSCP.WinSCP",
+					"Version" : "5.21.5"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome",
+					"Version" : "106.0.5249.119"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
+					"Version" : "12.0.40664.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64",
+					"Version" : "12.0.30501.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.5",
+					"Version" : "5.0.17"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.3_1",
+					"Version" : "3.1.30"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86",
+					"Version" : "11.0.61030.0"
+				},
+				{
+					"PackageIdentifier" : "JohnMacFarlane.Pandoc",
+					"Version" : "2.19.2"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsSDK",
+					"Version" : "< 10.0.22000.832"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86",
+					"Version" : "14.34.31823.3"
+				},
+				{
+					"PackageIdentifier" : "Google.Drive",
+					"Version" : "65.0.4.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86",
+					"Version" : "8.0.61001"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams",
+					"Version" : "1.4.0.22976"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode",
+					"Version" : "1.72.2"
+				},
+				{
+					"PackageIdentifier" : "SomePythonThings.WingetUIStore",
+					"Version" : "1.4.2"
+				},
+				{
+					"PackageIdentifier" : "Zoom.Zoom",
+					"Version" : "< 5.12.8964"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.2.7.0"
+				},
+				{
+					"PackageIdentifier" : "JohnMacFarlane.Pandoc",
+					"Version" : "2.18"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UpdateAssistant",
+					"Version" : "1.4.9200.23367"
+				},
+				{
+					"PackageIdentifier" : "WavesAudio.WavesCentral",
+					"Version" : "13.3.2"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64",
+					"Version" : "14.34.31823.3"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.10",
+					"Version" : "3.10.1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64",
+					"Version" : "11.0.61030.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys",
+					"Version" : "0.63.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6",
+					"Version" : "6.0.10"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.2.6.0"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.3.2691"
+}
