@@ -32,7 +32,7 @@ SETUVAR _fish_abbr_ll:exa\x20\x2dl
 SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_opl:eval\x20\x28op\x20signin\x20my\x29
 SETUVAR _fish_abbr_pg:openssl\x20rand\x20\x2dbase64
-SETUVAR _fish_abbr_t:todoist
+SETUVAR _fish_abbr_t:tig
 SETUVAR _fish_abbr_tl:todoist\x20\x2d\x2dcolor\x20list\x20\x2df\x20\x22\x23Inbox\x22\x20\x2dp
 SETUVAR _fish_abbr_tq:todoist\x20quick
 SETUVAR _fish_abbr_vimrc:vim\x20\x7e/\x2evimrc
