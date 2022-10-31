@@ -58,7 +58,7 @@ function gf_open -d 'Repository search and open in editor'
 end
 
 # oh-my-posh
-oh-my-posh init fish --config ~/.omp-theme.json | source
+oh-my-posh init fish --strict --config ~/.omp-theme.json | source
 
 # zoxide
 zoxide init --cmd cd --hook pwd fish | source
