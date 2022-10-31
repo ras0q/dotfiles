@@ -1,7 +1,9 @@
 ROOT_DIR    := $$PWD
+INFO_DIR    := $(ROOT_DIR)/_info
 COMMON_DIR  := $(ROOT_DIR)/common
 MAC_DIR		  := $(ROOT_DIR)/mac
 WSL_DIR     := $(ROOT_DIR)/wsl
+OS          := $(shell uname)
 
 # handle all targets as .PHONY
 CMDS=$(shell grep -E -o "^[a-z_-]+" ./Makefile)
@@ -10,15 +12,14 @@ CMDS=$(shell grep -E -o "^[a-z_-]+" ./Makefile)
 # default target
 init:
 	@ \
-	if [ $(shell uname -s) = "Darwin" ]; then \
-		echo "macOS detected!!"; \
-		$(MAKE) init-mac; \
-	elif [ $(shell uname -s) = "Linux" ]; then \
-		echo "WSL detected!!"; \
-		$(MAKE) init-wsl; \
-	else \
-		echo "Unsupported OS"; \
-	fi
+	case $(OS) in \
+		Darwin) \
+			echo "macOS detected!!" && $(MAKE) init-mac;; \
+		Linux) \
+			echo "WSL detected!!" && $(MAKE) init-wsl;; \
+		*) \
+			echo "Unsupported OS";; \
+	esac
 
 # --------------------
 # initialize scripts
