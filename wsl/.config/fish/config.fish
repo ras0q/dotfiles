@@ -73,3 +73,6 @@ oh-my-posh init fish --strict --config ~/.omp-theme.json | source
 
 # zoxide
 zoxide init --cmd cd --hook pwd fish | source
+
+# fix interop
+fix_wsl2_interop
