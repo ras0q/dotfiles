@@ -1,3 +1,4 @@
+WSL: Ubuntu にインストールされている拡張機能:
 Arjun.swagger-viewer
 christian-kohler.path-intellisense
 cssho.vscode-svgviewer
@@ -17,6 +18,7 @@ marp-team.marp-vscode
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 MS-CEINTL.vscode-language-pack-ja
+ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
