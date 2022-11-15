@@ -42,6 +42,7 @@ link-wsl:
 	@ln -sf $(WSL_DIR)/.wslconfig ~
 	@sudo ln -sf $(WSL_DIR)/bin /usr/local
 	@sudo ln -sf $(WSL_DIR)/wsl.conf /etc
+	@sudo update-alternatives --set editor /usr/bin/vim.basic
 
 # --------------------
 # setup scripts
@@ -92,4 +93,3 @@ dump:
 		pwsh -c code --list-extensions > $(INFO_DIR)/vscode_extensions_windows.txt; \
 		pwsh -c winget export --include-versions --accept-source-agreements -o $(INFO_DIR)/winget_packages.json; \
 	fi
-
