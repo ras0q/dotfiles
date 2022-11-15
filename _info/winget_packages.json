@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-11-13T21:31:08.435-00:00",
+	"CreationDate" : "2022-11-15T19:29:30.228-00:00",
 	"Sources" : 
 	[
 		{
@@ -108,7 +108,7 @@
 				},
 				{
 					"PackageIdentifier" : "SlackTechnologies.Slack",
-					"Version" : "4.29.144"
+					"Version" : "4.29.149"
 				},
 				{
 					"PackageIdentifier" : "WinSCP.WinSCP",
@@ -168,7 +168,7 @@
 				},
 				{
 					"PackageIdentifier" : "Zoom.Zoom",
-					"Version" : "< 5.12.8964"
+					"Version" : "> 5.12.10137"
 				},
 				{
 					"PackageIdentifier" : "JohnMacFarlane.Pandoc",
