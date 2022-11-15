@@ -22,6 +22,9 @@ set wildmode=list:longest
 set expandtab
 set tabstop=2
 set shiftwidth=2
+if expand("%:r") == 'Makefile'
+  set noexpandtab
+endif
 
 " search settings
 set ignorecase
