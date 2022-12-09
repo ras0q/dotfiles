@@ -12,8 +12,8 @@ end
 function ghcr
     set -x reponame $argv[1]
     gh repo create $reponame --private
-    ghq get git@github.com:Ras96/$reponame.git
-    cd (ghq root)/github.com/Ras96/$reponame
+    ghq get git@github.com:ras0q/$reponame.git
+    cd (ghq root)/github.com/ras0q/$reponame
     git branch -M main
 end
 

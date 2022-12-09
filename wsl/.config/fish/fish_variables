@@ -11,7 +11,6 @@ SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR GOPATH:/home/ras/go
-SETUVAR GOTESTS_TEMPLATE_DIR:/home/ras/ghq/github\x2ecom/Ras96/gotests\x2dtemplate/template
 SETUVAR --export SSH_AUTH_SOCK:/home/ras/\x2essh/agent\x2esock
 SETUVAR SWIFTENV_ROOT:/home/ras/\x2eswiftenv
 SETUVAR __fish_initialized:3400
