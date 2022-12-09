@@ -6,3 +6,4 @@
 .config/TabNine
 .config/wslu
 .config/yarn/global/node_modules
+.config/yarn/global/yarn-error.log

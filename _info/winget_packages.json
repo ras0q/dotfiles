@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-11-15T19:29:30.228-00:00",
+	"CreationDate" : "2022-11-21T16:22:38.166-00:00",
 	"Sources" : 
 	[
 		{
@@ -13,6 +13,10 @@
 				{
 					"PackageIdentifier" : "AgileBits.1Password",
 					"Version" : "8.9.8"
+				},
+				{
+					"PackageIdentifier" : "Amazon.Kindle",
+					"Version" : "1.33.0.62002"
 				},
 				{
 					"PackageIdentifier" : "Lexikos.AutoHotkey",
@@ -56,11 +60,11 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge",
-					"Version" : "107.0.1418.42"
+					"Version" : "107.0.1418.52"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
-					"Version" : "107.0.1418.42"
+					"Version" : "107.0.1418.52"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal",
@@ -68,7 +72,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Office",
-					"Version" : "16.0.15726.20174"
+					"Version" : "16.0.15726.20202"
 				},
 				{
 					"PackageIdentifier" : "OBSProject.OBSStudio",
@@ -76,7 +80,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive",
-					"Version" : "22.225.1026.0001"
+					"Version" : "22.227.1030.0001"
 				},
 				{
 					"PackageIdentifier" : "iZotope.ProductPortal",
@@ -151,6 +155,10 @@
 					"Version" : "14.34.31823.3"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64",
+					"Version" : "9.0.30729.6161"
+				},
+				{
 					"PackageIdentifier" : "Google.Drive",
 					"Version" : "66.0.3.0"
 				},
@@ -169,6 +177,10 @@
 				{
 					"PackageIdentifier" : "Zoom.Zoom",
 					"Version" : "> 5.12.10137"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86",
+					"Version" : "9.0.30729.6161"
 				},
 				{
 					"PackageIdentifier" : "JohnMacFarlane.Pandoc",
