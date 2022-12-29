@@ -14,7 +14,7 @@ SETUVAR GOPATH:/home/ras/go
 SETUVAR --export SSH_AUTH_SOCK:/home/ras/\x2essh/agent\x2esock
 SETUVAR SWIFTENV_ROOT:/home/ras/\x2eswiftenv
 SETUVAR __fish_initialized:3400
-SETUVAR _fish_abbr_c:git\x20commit\x20\x2da
+SETUVAR _fish_abbr_c:git\x20add\x20\x2e\x20\x26\x26\x20git\x20commit
 SETUVAR _fish_abbr_d:docker
 SETUVAR _fish_abbr_dc:docker\x20compose
 SETUVAR _fish_abbr_g:git

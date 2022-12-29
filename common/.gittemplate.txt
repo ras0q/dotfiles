@@ -1,0 +1,12 @@
+
+
+# ✨ fe: Introduce new features.
+# 🐛 bu: Fix a bug.
+# 🩹 ad: Simple fix for a non-critical issue.
+# ♻️  re: Refactor code.
+# 💥 bo: Introduce breaking changes.
+# 🔥 rm: Remove code or files.
+# 💄 ui: Add or update the UI and style files.
+# 🔧 co: Add or update configuration files.
+# 📝 do: Add or update documentation.
+# ⬆️  up: Upgrade dependencies.

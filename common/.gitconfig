@@ -15,3 +15,5 @@
 	inico = commit --allow-empty -m \":seedling: initial commit\"
 [init]
 	defaultBranch = main
+[commit]
+	template = /home/ras/.gittemplate.txt
