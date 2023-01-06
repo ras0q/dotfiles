@@ -7,7 +7,6 @@
 	editor = vim
 [fetch]
 	prune = true
-
 [alias]
 	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs git branch -d
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(black)%s%C(reset) %C(dim white)- %an%C(reset)' --all
@@ -16,4 +15,4 @@
 [init]
 	defaultBranch = main
 [commit]
-	template = /home/ras/.gittemplate.txt
+	template = ~/.gittemplate.txt

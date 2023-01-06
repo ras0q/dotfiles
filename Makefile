@@ -18,7 +18,7 @@ init:
 		Linux) \
 			echo "WSL detected!!" && $(MAKE) init-wsl;; \
 		*) \
-			echo "Unsupported OS";; \
+			echo "Unsupported OS" && exit 1;; \
 	esac
 
 # --------------------
@@ -91,7 +91,14 @@ setup-visudo:
 # --------------------
 dump:
 	@brew bundle --global dump -f
-	@code --list-extensions > $(INFO_DIR)/vscode_extensions_remote.txt
+	@case $(OS) in \
+		Darwin) \
+			echo "macOS detected!!" && code --list-extensions > $(INFO_DIR)/vscode_extensions_mac.txt;; \
+		Linux) \
+			echo "WSL detected!!" && code --list-extensions > $(INFO_DIR)/vscode_extensions_remote.txt;; \
+		*) \
+			echo "Unsupported OS" && exit 1;; \
+	esac
 	@ \
 	if which pwsh > /dev/null; then \
 		pwsh -c code --list-extensions > $(INFO_DIR)/vscode_extensions_windows.txt; \
