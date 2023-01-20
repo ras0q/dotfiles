@@ -16,3 +16,5 @@
 	defaultBranch = main
 [commit]
 	template = ~/.gittemplate.txt
+[pull]
+	rebase = false
