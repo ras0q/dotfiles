@@ -38,6 +38,10 @@ end
 # oh-my-posh
 oh-my-posh init fish --config ~/.omp-theme.json | source
 
+# zoxide
+zoxide init --cmd cd --hook pwd fish | source
+
+# renv
 status --is-interactive; and rbenv init - fish | source
 
 # The next line updates PATH for the Google Cloud SDK.
