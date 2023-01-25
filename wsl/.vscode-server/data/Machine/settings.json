@@ -74,5 +74,6 @@
   "yaml.format.singleQuote": false,
   "yaml.schemas": {
     "http://json.schemastore.org/swagger-2.0": ["*swagger.yaml", "*swagger.yml"]
-  }
+  },
+  "python.defaultInterpreterPath": "python3"
 }
