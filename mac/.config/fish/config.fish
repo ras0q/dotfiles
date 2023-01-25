@@ -1,3 +1,6 @@
+# abbreviations
+fish_init_abbr
+
 # asdf
 source (brew --prefix asdf)/libexec/asdf.fish
 
