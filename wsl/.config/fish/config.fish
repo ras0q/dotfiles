@@ -6,6 +6,9 @@ wsl2_setup_sshagent
 # fix problems for WSL2
 wsl2_fix_interop
 
+# abbreviations
+fish_init_abbr
+
 # asdf
 source (brew --prefix asdf)/libexec/asdf.fish
 
