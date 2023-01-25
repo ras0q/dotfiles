@@ -1,4 +1,4 @@
-colorscheme delek
+colorscheme zellner
 syntax enable
 
 " basic settings
@@ -55,7 +55,7 @@ augroup gitabbr
   autocmd FileType gitcommit iabbrev bo :boom:
   " 🔥 rm: Remove code or files.
   autocmd FileType gitcommit iabbrev rm :fire:
-  " 💄 ui: Add or update the UI and style files.
+  " 💄 li: Add or update the UI and style files.
   autocmd FileType gitcommit iabbrev ui :lipstick:
   " 🔧 co: Add or update configuration files.
   autocmd FileType gitcommit iabbrev co :wrench:
