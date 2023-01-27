@@ -14,4 +14,4 @@ zoxide init --cmd cd --hook pwd fish | source
 status --is-interactive; and rbenv init - fish | source
 
 # updates PATH for the Google Cloud SDK.
-~/google-cloud-sdk/path.fish.inc
+source ~/google-cloud-sdk/path.fish.inc
