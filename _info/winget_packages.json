@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2023-01-28T11:06:44.266-00:00",
+	"CreationDate" : "2023-01-28T21:36:36.304-00:00",
 	"Sources" : 
 	[
 		{
@@ -52,7 +52,7 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge",
-					"Version" : "109.0.1518.69"
+					"Version" : "109.0.1518.70"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
@@ -177,10 +177,6 @@
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86",
 					"Version" : "9.0.30729.6161"
-				},
-				{
-					"PackageIdentifier" : "ManicTime.ManicTime",
-					"Version" : "5.2.5.1"
 				},
 				{
 					"PackageIdentifier" : "JohnMacFarlane.Pandoc",
