@@ -36,13 +36,11 @@ link-common:
 link-mac:
 	@ln -sf $(MAC_DIR)/.config ~
 	@ln -sf $(MAC_DIR)/.Brewfile ~
-	@ln -sf $(MAC_DIR)/.Brewfile.lock.json ~
 
 link-wsl:
 	@ln -sf $(WSL_DIR)/.config ~
 	@ln -sf $(WSL_DIR)/.vscode-server/data/Machine/settings.json ~/.vscode-server/data/Machine
 	@ln -sf $(WSL_DIR)/.Brewfile ~
-	@ln -sf $(WSL_DIR)/.Brewfile.lock.json ~
 	@ln -sf $(WSL_DIR)/.curlrc ~
 	@ln -sf $(WSL_DIR)/.wslconfig ~
 	@sudo ln -sf $(WSL_DIR)/bin /usr/local
