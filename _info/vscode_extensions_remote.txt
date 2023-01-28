@@ -1,4 +1,8 @@
+WSL: Ubuntu にインストールされている拡張機能:
+antfu.browse-lite
+antfu.vite
 Arjun.swagger-viewer
+CalebDenio.vscode-emojicode
 christian-kohler.path-intellisense
 cssho.vscode-svgviewer
 DavidAnson.vscode-markdownlint
@@ -13,6 +17,7 @@ GitHub.copilot
 GitHub.vscode-pull-request-github
 golang.go-nightly
 Gruntfuggly.todo-tree
+humao.rest-client
 joaompinto.vscode-graphviz
 marp-team.marp-vscode
 mechatroner.rainbow-csv
@@ -30,13 +35,13 @@ ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.cpptools
+ms-vscode.live-server
 mushan.vscode-paste-image
 p1c2u.docker-compose
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
 ritwickdey.LiveServer
 shd101wyy.markdown-preview-enhanced
-sswg.swift-lang
 tomoki1207.pdf
 vadimcn.vscode-lldb
 vknabel.vscode-swiftformat
