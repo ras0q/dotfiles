@@ -24,8 +24,8 @@ init:
 # --------------------
 # initialize scripts
 # --------------------
-init-mac: link-common link-mac setup-brew setup-asdf setup-fish
-init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-docker setup-fish setup-visudo
+init-mac: link-common link-mac setup-brew setup-asdf setup-volta setup-fish
+init-wsl: link-common link-wsl setup-apt setup-brew setup-asdf setup-volta setup-docker setup-fish setup-visudo
 
 # --------------------
 # link scripts
@@ -66,6 +66,9 @@ setup-brew:
 setup-asdf:
 	@cat ~/.tool-versions | awk '{print "asdf plugin add " $$1}' | bash
 	@asdf install
+
+setup-volta:
+	@curl https://get.volta.sh | bash
 
 setup-docker:
 	@sudo mkdir -p /etc/apt/keyrings
