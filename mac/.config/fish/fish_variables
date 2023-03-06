@@ -11,6 +11,7 @@ SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR GOPATH:/Users/kira/go
 SETUVAR SWIFTENV_ROOT:/Users/kira/\x2eswiftenv
+SETUVAR _ZO_EXCLUDE_DIRS:/Users/kira/google\x2dcloud\x2dsdk
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_decors_2F_fish_2D_ghq_files:/Users/kira/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e/Users/kira/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e/Users/kira/\x2econfig/fish/completions/ghq\x2efish
 SETUVAR _fisher_edc_2F_bass_files:/Users/kira/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/kira/\x2econfig/fish/functions/bass\x2efish
