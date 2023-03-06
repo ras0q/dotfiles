@@ -4,7 +4,7 @@
     "@openapitools/openapi-generator-cli": "^2.5.1",
     "@stoplight/spectral-cli": "^6.4.0",
     "create-nuxt-app": "^4.0.0",
-    "create-vite": "^3.2.1",
+    "create-vite": "^4.1.0",
     "create-yo": "^2.0.0",
     "edge": "^7.10.1",
     "eslint": "^8.21.0",
