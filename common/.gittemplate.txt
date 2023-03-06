@@ -5,7 +5,7 @@
 # 🩹 ad: Simple fix for a non-critical issue.
 # ♻️  re: Refactor code.
 # 💥 bo: Introduce breaking changes.
-# 🎨 ar: Improve structure / format of the code.
+# 🎨 fo: Improve structure / format of the code.
 # 🔥 rm: Remove code or files.
 # 💄 ui: Add or update the UI and style files.
 # 🔧 co: Add or update configuration files.
