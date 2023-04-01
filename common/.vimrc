@@ -56,7 +56,7 @@ augroup gitabbr
   " 🔥 rm: Remove code or files.
   autocmd FileType gitcommit iabbrev rm :fire:
   " 🎨 fo: Improve structure / format of the code.
-  autocmd FileType gitcommit iabbrev ar :art:
+  autocmd FileType gitcommit iabbrev fo :art:
   " 💄 ui: Add or update the UI and style files.
   autocmd FileType gitcommit iabbrev ui :lipstick:
   " 🔧 co: Add or update configuration files.
