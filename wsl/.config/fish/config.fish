@@ -17,3 +17,6 @@ oh-my-posh init fish --strict --config ~/.omp-theme.json | source
 
 # zoxide
 zoxide init --cmd cd --hook pwd fish | source
+
+# 1password
+source /home/ras/.config/op/plugins.sh
