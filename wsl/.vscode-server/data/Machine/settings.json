@@ -54,7 +54,6 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "prettier.prettierPath": "/home/ras/.config/yarn/global/node_modules/prettier",
   "prolog.executablePath": "/home/linuxbrew/.linuxbrew/bin/swipl",
   "redhat.telemetry.enabled": true,
   "remote.SSH.enableAzureIntegration": true,
