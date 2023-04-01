@@ -47,5 +47,5 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/linuxbrew/\x2elinuxbrew/sbin\x1e/home/ras/go/bin
+SETUVAR fish_user_paths:/home/ras/\x2easdf/shims\x1e/home/linuxbrew/\x2elinuxbrew/opt/asdf/libexec/bin\x1e/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/linuxbrew/\x2elinuxbrew/sbin\x1e/home/ras/go/bin\x1e/home/ras/\x2evolta/bin
 SETUVAR theme_color_scheme:base16\x2dlight
