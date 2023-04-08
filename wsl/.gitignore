@@ -7,3 +7,4 @@
 .config/wslu
 .config/yarn/global/node_modules
 .config/yarn/global/yarn-error.log
+.config/nextjs-nodejs/config.json
