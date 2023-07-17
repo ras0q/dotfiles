@@ -18,4 +18,5 @@ function fish_init_abbr -d 'Initialize fish abbreviations'
   # others
   abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'
   abbr -a gg 'ghq get'
+  abbr -a sc 'systemctl'
 end
