@@ -1,10 +1,11 @@
 .config/chromium
 .config/configstore
+.config/Cypress
 .config/gh/hosts.yml
-.config/pulse/cookie
+.config/nextjs-nodejs/config.json
 .config/op
+.config/pulse
 .config/TabNine
-.config/wslu
 .config/yarn/global/node_modules
 .config/yarn/global/yarn-error.log
-.config/nextjs-nodejs/config.json
+.config/wslu
