@@ -2,6 +2,13 @@
 
 Minimum configuration for my PC
 
+## インストール
+
+1. [ras0q/dotfiles-tiny](https://github.com/ras0q/dotfiles-tiny)を適当な場所にgit cloneもしくはzipでダウンロード
+2. インストールスクリプトを実行
+   - Windows (PowerShell): `.\install.ps1`
+   - ==TODO== Mac: `./install.sh`
+
 ## 共通
 
 - ターミナル: [WezTerm](https://wezfurlong.org/wezterm/index.html)
