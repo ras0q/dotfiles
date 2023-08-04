@@ -20,12 +20,8 @@ jobs:
       - name: Generate setting files from templates
         run: |
           go run parse_tmpl.go
-      - name: Commit changes
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "action@github.com"
-          git add .
-          git commit -m "[skip ci] Generate setting files from templates"
-      - name: Push changes
-        run: |
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: ${{ matrix.os }}: Generate setting files from templates
+          commit_user_name: github-actions[bot]
+          commit_user_email: action@github.com
