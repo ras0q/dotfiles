@@ -38,7 +38,7 @@ Minimum configuration for my PC
     - [ueli.config.json](https://gist.github.com/ras0q/6e45414e2c7acf4ff3c4c78ff03bee8a#file-ueli-config-json)
 - CLI
   - [git](https://git-scm.com/)
-  - [Vim](https://www.vim.org/)
+  - [Neovim](https://neovim.io/)
   - [Everything](https://www.voidtools.com/)
     - ueliの検索に必要
 
