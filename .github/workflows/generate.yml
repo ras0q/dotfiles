@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "common/templates/*"
   pull_request:
+    paths:
+      - "common/templates/*"
 
 jobs:
   generate:
