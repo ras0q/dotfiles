@@ -17,6 +17,10 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version-file: ./go.mod
+      - name: Rebase to main
+        run: |
+          git fetch origin main
+          git rebase origin/main
       - name: Generate config from templates
         run: |
           go run parse_tmpl.go
