@@ -1,4 +1,4 @@
-name: Generate setting files from templates
+name: Generate config from templates
 
 on:
   push:
@@ -17,11 +17,11 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version-file: ./go.mod
-      - name: Generate setting files from templates
+      - name: Generate config from templates
         run: |
           go run parse_tmpl.go
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: ${{ matrix.os }}: Generate setting files from templates
+          commit_message: ${{ matrix.os }}: Generate config from templates
           commit_user_name: github-actions[bot]
           commit_user_email: action@github.com
