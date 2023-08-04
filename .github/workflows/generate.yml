@@ -23,5 +23,3 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "${{ matrix.os }}: Generate config from templates"
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "action@github.com"
