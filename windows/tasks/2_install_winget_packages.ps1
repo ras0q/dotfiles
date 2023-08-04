@@ -18,7 +18,7 @@ winget install `
   <# Common CLI #> `
   "Git.Git" `
   "GitHub.cli" `
-  "vim.vim" `
+  "Neovim.Neovim" `
   <# Only for Windows #> `
   "SomePythonThings.WingetUIStore" `
   "Microsoft.PowerShell" `
