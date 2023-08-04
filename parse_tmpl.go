@@ -27,7 +27,6 @@ var commonTmplData = map[string]any{
 }
 
 func main() {
-	// ls files
 	files, err := templateFiles.ReadDir(tmplDir)
 	panicOnError(err)
 
