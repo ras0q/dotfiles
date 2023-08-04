@@ -17,8 +17,10 @@ winget install `
   "OliverSchwendener.ueli" `
   <# Common CLI #> `
   "Git.Git" `
+  "GitHub.cli" `
   "vim.vim" `
   <# Only for Windows #> `
   "SomePythonThings.WingetUIStore" `
   "Microsoft.PowerShell" `
-  "gerardog.gsudo"
+  "gerardog.gsudo" `
+  "voidtools.Everything"

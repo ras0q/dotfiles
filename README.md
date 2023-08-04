@@ -39,6 +39,8 @@ Minimum configuration for my PC
 - CLI
   - [git](https://git-scm.com/)
   - [Vim](https://www.vim.org/)
+  - [Everything](https://www.voidtools.com/)
+    - ueliの検索に必要
 
 ## Windows
 
