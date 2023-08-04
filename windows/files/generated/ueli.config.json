@@ -1,0 +1,219 @@
+{
+  "appearanceOptions": {
+    "allowTransparentBackground": true,
+    "fontFamily": "\"Segoe UI\", Roboto, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+    "maxSearchResultsPerPage": 8,
+    "searchResultHeight": 50,
+    "showDescriptionOnAllSearchResults": false,
+    "showSearchIcon": true,
+    "showSearchResultNumbers": false,
+    "smoothScrolling": true,
+    "userInputHeight": 60,
+    "windowWidth": 600,
+    "userInputBorderRadius": "0px",
+    "userInputFontSize": "24px",
+    "userInputFontWeight": "200",
+    "userInputBottomMargin": 0,
+    "searchResultNameFontSize": "16px",
+    "searchResultNameFontWeight": "400",
+    "searchResultDescriptionFontSize": "12px",
+    "searchResultDescriptionFontWeight": "200",
+    "searchResultsBorderRadius": "0px",
+    "scrollbarBorderRadius": "0px"
+  },
+  "applicationSearchOptions": {
+    "applicationFileExtensions": [
+      ".lnk",
+      ".appref-ms",
+      ".url",
+      ".exe"
+    ],
+    "applicationFolders": [
+      "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs",
+      "C:\\Users\\kira\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu",
+      "C:\\Users\\kira\\Desktop"
+    ],
+    "enabled": true,
+    "showFullFilePath": true,
+    "useNativeIcons": true
+  },
+  "browserBookmarksOptions": {
+    "browser": "Microsoft Edge",
+    "isEnabled": true
+  },
+  "calculatorOptions": {
+    "isEnabled": true,
+    "precision": 16
+  },
+  "colorConverterOptions": {
+    "hexEnabled": true,
+    "hslEnabled": true,
+    "isEnabled": true,
+    "rgbEnabled": true,
+    "rgbaEnabled": true,
+    "showColorPreview": true
+  },
+  "colorThemeOptions": {
+    "name": "Polar Night",
+    "userInputBackgroundColor": "#2E3440",
+    "userInputTextColor": "#fefefe",
+    "searchResultsBackgroundColor": "#3B4252",
+    "searchResultsItemActiveBackgroundColor": "#4C566A",
+    "searchResultsItemActiveDescriptionColor": "#ccc",
+    "searchResultsItemActiveTextColor": "#fff",
+    "searchResultsItemDescriptionTextColor": "#ccc",
+    "searchResultsItemNameTextcolor": "#fff",
+    "scrollbarBackgroundColor": "#2E3440",
+    "scrollbarForegroundColor": "#4C566A"
+  },
+  "commandlineOptions": {
+    "isEnabled": true,
+    "prefix": ">",
+    "shell": "WSL in Windows Terminal"
+  },
+  "controlPanelOptions": {
+    "isEnabled": true
+  },
+  "currencyConverterOptions": {
+    "isEnabled": false,
+    "precision": 2,
+    "defaultTarget": "EUR"
+  },
+  "dictionaryOptions": {
+    "debounceDelay": 250,
+    "isEnabled": false,
+    "minSearchTermLength": 3,
+    "prefix": "dict?"
+  },
+  "emailOptions": {
+    "isEnabled": false
+  },
+  "everythingSearchOptions": {
+    "enabled": true,
+    "maxSearchResults": "8",
+    "pathToEs": "C:\\Users\\kira\\scoop\\apps\\everything-cli\\current\\es.exe",
+    "prefix": " "
+  },
+  "fileBrowserOptions": {
+    "blackList": [
+      "desktop.ini"
+    ],
+    "isEnabled": true,
+    "maxSearchResults": 100,
+    "showFullFilePath": true,
+    "showHiddenFiles": true
+  },
+  "generalOptions": {
+    "allowWindowMove": true,
+    "autostart": true,
+    "clearCachesOnExit": false,
+    "hideMainWindowAfterExecution": true,
+    "hideMainWindowOnBlur": true,
+    "hotKey": {
+      "key": "Space",
+      "modifier": "Alt",
+      "secondModifier": "-"
+    },
+    "language": "日本語",
+    "logExecution": true,
+    "persistentUserInput": true,
+    "rememberWindowPosition": false,
+    "rescanEnabled": true,
+    "rescanIntervalInSeconds": 300,
+    "showAlwaysOnPrimaryDisplay": false,
+    "showTrayIcon": true,
+    "decimalSeparator": "."
+  },
+  "mdfindOptions": {
+    "debounceDelay": 250,
+    "enabled": false,
+    "maxSearchResults": 24,
+    "prefix": "md?"
+  },
+  "operatingSystemCommandsOptions": {
+    "isEnabled": false
+  },
+  "operatingSystemSettingsOptions": {
+    "isEnabled": false
+  },
+  "searchEngineOptions": {
+    "blackList": [],
+    "fuzzyness": 0.5,
+    "maxSearchResults": 24
+  },
+  "shortcutOptions": {
+    "isEnabled": true,
+    "shortcuts": [
+      {
+        "description": "Visual Studio Codeを開く",
+        "executionArgument": "code",
+        "icon": {
+          "parameter": "",
+          "type": "URL"
+        },
+        "name": "code",
+        "needsUserConfirmationBeforeExecution": false,
+        "tags": [],
+        "type": "Commandline tool"
+      }
+    ]
+  },
+  "simpleFolderSearchOptions": {
+    "folders": [
+      {
+        "excludeHiddenFiles": true,
+        "folderPath": "C:\\Users\\kira",
+        "recursive": false
+      },
+      {
+        "excludeHiddenFiles": false,
+        "folderPath": "C:\\Users\\kira\\Drive",
+        "recursive": false
+      }
+    ],
+    "isEnabled": true,
+    "showFullFilePath": true
+  },
+  "translationOptions": {
+    "debounceDelay": 250,
+    "enabled": true,
+    "minSearchTermLength": 3,
+    "prefix": "t ",
+    "sourceLanguage": "en",
+    "targetLanguage": "ja"
+  },
+  "urlOptions": {
+    "defaultProtocol": "https",
+    "isEnabled": true
+  },
+  "uwpSearchOptions": {
+    "isEnabled": false
+  },
+  "weatherOptions": {
+    "isEnabled": false,
+    "prefix": "wea?",
+    "temperatureUnit": "Celsius"
+  },
+  "websearchOptions": {
+    "isEnabled": true,
+    "webSearchEngines": [
+      {
+        "encodeSearchTerm": true,
+        "icon": {
+          "parameter": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 48 48\" version=\"1.1\">\n                <g id=\"surface1\">\n                <path style=\" fill:#FFC107;\" d=\"M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 33.652344 32.65625 29.222656 36 24 36 C 17.371094 36 12 30.628906 12 24 C 12 17.371094 17.371094 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 12.953125 4 4 12.953125 4 24 C 4 35.046875 12.953125 44 24 44 C 35.046875 44 44 35.046875 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z \"></path>\n                <path style=\" fill:#FF3D00;\" d=\"M 6.304688 14.691406 L 12.878906 19.511719 C 14.65625 15.109375 18.960938 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 16.316406 4 9.65625 8.335938 6.304688 14.691406 Z \"></path>\n                <path style=\" fill:#4CAF50;\" d=\"M 24 44 C 29.164063 44 33.859375 42.023438 37.410156 38.808594 L 31.21875 33.570313 C 29.210938 35.089844 26.714844 36 24 36 C 18.796875 36 14.382813 32.683594 12.71875 28.054688 L 6.195313 33.078125 C 9.503906 39.554688 16.226563 44 24 44 Z \"></path>\n                <path style=\" fill:#1976D2;\" d=\"M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 34.511719 30.238281 33.070313 32.164063 31.214844 33.570313 C 31.21875 33.570313 31.21875 33.570313 31.21875 33.570313 L 37.410156 38.808594 C 36.972656 39.203125 44 34 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z \"></path>\n                </g>\n                </svg>",
+          "type": "SVG"
+        },
+        "isFallback": false,
+        "name": "Google",
+        "prefix": "g ",
+        "priority": "1",
+        "url": "https://google.com/search?q={{query}}",
+        "suggestionUrl": "https://www.google.com/complete/search?client=opera&q={{query}}"
+      }
+    ]
+  },
+  "workflowOptions": {
+    "isEnabled": true,
+    "workflows": []
+  }
+}
