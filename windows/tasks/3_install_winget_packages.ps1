@@ -18,6 +18,7 @@ winget install `
   <# Common CLI #> `
   "Git.Git" `
   "GitHub.cli" `
+  "Golang.Go" `
   "Neovim.Neovim" `
   <# Only for Windows #> `
   "SomePythonThings.WingetUIStore" `

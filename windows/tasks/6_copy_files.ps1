@@ -1,7 +1,7 @@
 $now = Get-Date -UFormat "%Y%m%d-%H%M%S"
 $backupDir = ".\backup\" + $now + "\"
 if (!(Test-Path $backupDir)) {
-  New-Item -ItemType Directory -Path $backupDir
+  New-Item -ItemType Directory -Path $backupDir > $null
 }
 
 function Copy-Backup($source, $destination) {
