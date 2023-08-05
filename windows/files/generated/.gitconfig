@@ -1,10 +1,12 @@
 [user]
 	name = ras0q
 	email = ras0q@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwlDquvYaQtT4cq1KWEC/S+W7et8oSyQjdib2VDObz8
 [push]
 	default = current
 [core]
 	editor = nvim
+	autoCRLF = false
 [fetch]
 	prune = true
 [alias]
@@ -16,5 +18,10 @@
 	defaultBranch = main
 [commit]
 	template = ~/.gittemplate.txt
+	gpgsign = true
 [pull]
 	rebase = false
+[gpg]
+	format = ssh
+[gpg "ssh"]
+program = C:\\Users\\kira\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe

@@ -21,9 +21,16 @@ const (
 var templateFiles embed.FS
 
 var commonTmplData = map[string]any{
+	"Home":      must(os.UserHomeDir()),
 	"IsDarwin":  isDarwin,
 	"IsLinux":   isLinux,
 	"IsWindows": isWindows,
+}
+
+var tmpfFuncs = template.FuncMap{
+	"escapeBS": func(s string) string {
+		return strings.ReplaceAll(s, "\\", "\\\\")
+	},
 }
 
 func main() {
@@ -42,7 +49,10 @@ func main() {
 			continue
 		}
 
-		t, err := template.ParseFS(templateFiles, path.Join(tmplDir, f.Name()))
+		t, err := template.
+			New(f.Name()).
+			Funcs(tmpfFuncs).
+			ParseFiles(path.Join(tmplDir, f.Name()))
 		panicOnError(err)
 
 		outputFile, _ := strings.CutSuffix(f.Name(), ".tmpl")
@@ -58,6 +68,11 @@ func panicOnError(err error) {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func must[T any](t T, err error) T {
+	panicOnError(err)
+	return t
 }
 
 func osBaseDir() string {
