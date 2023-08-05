@@ -25,5 +25,5 @@
 	format = ssh
 {{ if .IsWindows -}}
 [gpg "ssh"]
-program = {{ escapeBS .Home }}\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
+	program = {{ escapeBS .Home }}\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
 {{- end -}}
