@@ -24,6 +24,6 @@
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = C:\\Users\\kira\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
+	program = C:\\Users\\runneradmin\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
 [core]
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
