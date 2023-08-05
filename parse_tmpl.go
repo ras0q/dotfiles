@@ -28,8 +28,9 @@ var commonTmplData = map[string]any{
 }
 
 var tmpfFuncs = template.FuncMap{
-	"escapeBS": func(s string) string {
-		return strings.ReplaceAll(s, "\\", "\\\\")
+	// BStoFS converts back slashes to forward slashes
+	"BStoFS": func(s string) string {
+		return strings.ReplaceAll(s, "\\", "/")
 	},
 }
 
