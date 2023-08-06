@@ -15,5 +15,6 @@ Copy-Backup $commonDir\.wezterm.lua $HOME\.wezterm.lua
 
 # Copy OS specific files
 $windowsDir = ".\windows\files"
+Copy-Backup $windowsDir\Microsoft.PowerShell_profile.ps1 $PROFILE
 $windowsGenDir = $windowsDir + "\generated"
 Copy-Backup $windowsGenDir\.gitconfig $HOME\.gitconfig
