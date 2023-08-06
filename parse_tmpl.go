@@ -53,7 +53,7 @@ func main() {
 		t, err := template.
 			New(f.Name()).
 			Funcs(tmpfFuncs).
-			ParseFiles(path.Join(tmplDir, f.Name()))
+			ParseFS(templateFiles, path.Join(tmplDir, f.Name()))
 		panicOnError(err)
 
 		outputFile, _ := strings.CutSuffix(f.Name(), ".tmpl")
