@@ -19,19 +19,19 @@ catch {
   exit 1
 }
 
-Write-Info "Next steps:"
+Write-Host "Next steps:"
 # common
-Write-Info "  - [ ] Login to Microsoft Store"
+Write-Host "  - [ ] Login to Microsoft Store"
 # winget
-Write-Info "  - [ ] Login to Microsoft Edge"
-Write-Info "  - [ ] Login to Visual Studio Code (GitHub)"
-Write-Info "  - [ ] Login to 1Password"
-Write-Info "  - [ ] Login to Discord"
-Write-Info "  - [ ] Login to Figma"
-Write-Info "  - [ ] Login to Google Drive"
-Write-Info "  - [ ] Clone your Obsidian vault (~/Documents/<vault-name> is recommended)"
-Write-Info "  - [ ] Login to LINE"
-Write-Info "  - [ ] Login to Slack"
-Write-Info "  - [ ] Login to Spotify"
-Write-Info "  - [ ] Import your ueli settings (from ./windows/files/generated/ueli.config.json)"
-Write-Info "  - [ ] Login to GitHub CLI"
+Write-Host "  - [ ] Login to Microsoft Edge"
+Write-Host "  - [ ] Login to Visual Studio Code (GitHub)"
+Write-Host "  - [ ] Login to 1Password"
+Write-Host "  - [ ] Login to Discord"
+Write-Host "  - [ ] Login to Figma"
+Write-Host "  - [ ] Login to Google Drive"
+Write-Host "  - [ ] Clone your Obsidian vault (~/Documents/<vault-name> is recommended)"
+Write-Host "  - [ ] Login to LINE"
+Write-Host "  - [ ] Login to Slack"
+Write-Host "  - [ ] Login to Spotify"
+Write-Host "  - [ ] Import your ueli settings (from ./windows/files/generated/ueli.config.json)"
+Write-Host "  - [ ] Login to GitHub CLI"
