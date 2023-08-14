@@ -6,6 +6,10 @@ if (!(Test-Path $backupDir)) {
 
 function Copy-Backup($source, $destination) {
   Copy-Item $destination $backupDir -Recurse
+  $destinationDir = Split-Path $destination
+  if (!(Test-Path $destinationDir)) {
+    New-Item -ItemType Directory -Path $destinationDir > $null
+  }
   Copy-Item $source $destination -Recurse
 }
 
