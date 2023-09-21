@@ -4,6 +4,7 @@ gsudo {
   # Common files
   $confDir = ".\common\config"
   ## $HOME
+  New-Item -ItemType SymbolicLink -Path $HOME\.gittemplate.txt -Value $confDir\.gittemplate.txt
   New-Item -ItemType SymbolicLink -Path $HOME\.wezterm.lua -Value $confDir\.wezterm.lua
 
   # OS specific files
