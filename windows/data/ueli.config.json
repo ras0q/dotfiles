@@ -1,10 +1,10 @@
 {
   "appearanceOptions": {
     "allowTransparentBackground": true,
-    "fontFamily": "\"Segoe UI\", Roboto, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+    "fontFamily": "\"源ノ角ゴシック JP\", \"Segoe UI\", Roboto, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
     "maxSearchResultsPerPage": 8,
     "searchResultHeight": 50,
-    "showDescriptionOnAllSearchResults": false,
+    "showDescriptionOnAllSearchResults": true,
     "showSearchIcon": true,
     "showSearchResultNumbers": false,
     "smoothScrolling": true,
@@ -207,13 +207,17 @@
         "name": "Google",
         "prefix": "g ",
         "priority": "1",
-        "url": "https://google.com/search?q={{ "{{query}}" }}",
-        "suggestionUrl": "https://www.google.com/complete/search?client=opera&q={{ "{{query}}" }}"
+        "url": "https://google.com/search?q={{query}}",
+        "suggestionUrl": "https://www.google.com/complete/search?client=opera&q={{query}}"
       }
     ]
   },
   "workflowOptions": {
     "isEnabled": true,
     "workflows": []
+  },
+  "loremIpsumOptions": {
+    "isEnabled": false,
+    "prefix": "lipsum"
   }
 }

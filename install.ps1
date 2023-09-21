@@ -33,5 +33,5 @@ Write-Host "  - [ ] Clone your Obsidian vault (~/Documents/<vault-name> is recom
 Write-Host "  - [ ] Login to LINE"
 Write-Host "  - [ ] Login to Slack"
 Write-Host "  - [ ] Login to Spotify"
-Write-Host "  - [ ] Import your ueli settings (from ./windows/files/generated/ueli.config.json)"
+Write-Host "  - [ ] Import your ueli settings (from ./windows/data/ueli.config.json)"
 Write-Host "  - [ ] Login to GitHub CLI"
