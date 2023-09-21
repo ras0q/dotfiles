@@ -9,6 +9,7 @@ gsudo {
   New-Item -ItemType SymbolicLink -Force -Path $HOME\AppData\Local\nvim -Target $confDir\nvim
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.gittemplate.txt -Target $confDir\.gittemplate.txt
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.wezterm.lua -Target $confDir\.wezterm.lua
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.config\starship.toml -Target $confDir\starship.toml
 
   # OS specific files
   $confDir = "$baseDir\windows\config"

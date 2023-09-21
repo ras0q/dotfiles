@@ -128,7 +128,7 @@
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontFamily": "SauceCodePro NF, 源ノ角ゴシック Code JP, Source Code Pro",
+  "terminal.integrated.fontFamily": "源ノ角ゴシック Code JP, Source Code Pro",
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.ignoreProcessNames": ["oh-my-posh", "bash", "zsh"],
