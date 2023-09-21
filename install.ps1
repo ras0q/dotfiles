@@ -1,7 +1,5 @@
-function Write-Info($message) {
-  Write-Host "[" -NoNewline
+function Write-Info($message) { Write-Host "[" -NoNewline
   Write-Host -ForegroundColor Green "INFO" -NoNewline
-  Write-Host "] " -NoNewline
   Write-Host $message
 }
 
