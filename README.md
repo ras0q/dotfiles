@@ -12,13 +12,7 @@ Minimum configuration for my PC
 ## 共通
 
 - ターミナル: [WezTerm](https://wezfurlong.org/wezterm/index.html)
-- コーディングフォント: [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
-  - Regularを使用
-  - 普段のコーディング時は通常のSource Code Proを使う
-    - [Google Fonts](https://fonts.google.com/specimen/Source+Code+Pro)か[Adobe Fonts (GitHub)](https://github.com/adobe-fonts/source-code-pro/blob/release/OTF/SourceCodePro-Regular.otf)からダウンロードできる
-  - シェルなどでNerd Fontsが必要な場合はSauceCodeProを使う
-    - [Nerd Fonts (GitHub)](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/SauceCodeProNerdFont-Regular.ttf)からダウンロードできる
-    - ==TODO== TTF形式になっているため、OTF形式に変換する必要がある
+- コーディングフォント: [フォント2023 | Scrapbox](https://scrapbox.io/ras0q/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%882023)
 - ブラウザ: [Microsoft Edge](https://www.microsoft.com/edge/)
   - 拡張機能はMicrosoftアカウントで同期される
 - エディタ: [Visual Studio Code](https://code.visualstudio.com/)
