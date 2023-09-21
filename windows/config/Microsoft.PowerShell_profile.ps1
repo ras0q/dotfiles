@@ -1,5 +1,11 @@
 # Path: $PROFILE/Microsoft.PowerShell_profile.ps1
 
+function Set-New-Path() {
+  $env:Path = `
+    [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + `
+    [System.Environment]::GetEnvironmentVariable("Path", "User")
+}
+
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineOption -PredictionSource History
 
