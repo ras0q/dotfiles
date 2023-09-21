@@ -3,8 +3,8 @@ local wezterm = require 'wezterm'
 local config = {
   color_scheme = 'One Light (Gogh)',
   font = wezterm.font_with_fallback {
-    'SauceCodePro NF',
-    'Source Code Pro',
+    'SauceCodePro Nerd Font Mono',
+    '源ノ角ゴシック Code JP',
   },
   default_prog = { 'pwsh' },
   keys = {},

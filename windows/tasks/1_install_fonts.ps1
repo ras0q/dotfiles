@@ -7,8 +7,8 @@ $fonts = @(
     output=$fontDir + "/SourceHanSansJP-VF.otf"
   }
   [pscustomobject]@{
-    uri="https://github.com/adobe-fonts/source-code-pro/raw/release/OTF/SourceCodePro-Regular.otf";
-    output=$fontDir + "/SourceCodePro-Regular.otf"
+    uri="https://github.com/adobe-fonts/source-han-code-jp/raw/release/OTF/SourceHanCodeJP-Regular.otf";
+    output=$fontDir + "/SourceHanCodeJP-Regular.otf"
   }
   [pscustomobject]@{
     uri="https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/SauceCodeProNerdFontMono-Regular.ttf";
