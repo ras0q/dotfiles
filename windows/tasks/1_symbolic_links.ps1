@@ -16,6 +16,7 @@ gsudo {
   ## $HOME
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.gitconfig -Target $confDir\.gitconfig
   New-Item -ItemType SymbolicLink -Force -Path $HOME\AppData\Roaming\Code\User\settings.json -Target $confDir\vscode\settings.json
-  ## $PROFILE
+  ## $PROFILE (sync also VSCode_profile)
   New-Item -ItemType SymbolicLink -Force -Path $PROFILE -Target $confDir\Microsoft.PowerShell_profile.ps1
+  New-Item -ItemType SymbolicLink -Force -Path $PROFILE.Replace("PowerShell_profile", "VSCode_profile") -Target $confDir\Microsoft.PowerShell_profile.ps1
 }
