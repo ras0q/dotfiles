@@ -21,6 +21,7 @@ catch {
 
 Write-Host "Next steps:"
 # common
+Write-Host "  - [ ] Install fonts (from ./windows/dist/fonts)"
 Write-Host "  - [ ] Login to Microsoft Store"
 # winget
 Write-Host "  - [ ] Login to Microsoft Edge"

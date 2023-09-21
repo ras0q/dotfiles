@@ -1,6 +1,6 @@
 # https://scrapbox.io/ras0q/フォント2023
 
-$fontDir = "~/AppData/Local/Microsoft/Windows/Fonts"
+$fontDir = "./windows/dist/fonts"
 $fonts = @(
   [pscustomobject]@{
     uri="https://github.com/adobe-fonts/source-han-sans/raw/release/Variable/OTF/Subset/SourceHanSansJP-VF.otf";
@@ -15,6 +15,8 @@ $fonts = @(
     output=$fontDir + "/SauceCodeProNerdFontMono-Regular.ttf"
   }
 )
+
+New-Item -ItemType Directory -Force -Path $fontDir
 
 foreach ($font in $fonts) {
   if (Test-Path $font.output) {
