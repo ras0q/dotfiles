@@ -28,5 +28,12 @@ require("lazy").setup({
         indent = { enable = true },
       }
     end,
-  }
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
+  },
 })
