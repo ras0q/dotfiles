@@ -157,8 +157,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": false,
   "window.zoomLevel": -1,
-  "workbench.colorTheme": "Absent Light (rainglow)",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Catppuccin Latte",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
   "workbench.tree.renderIndentGuides": "always"
