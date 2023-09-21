@@ -1,16 +1,18 @@
-# Create symbolic links (Path -> Value)
+# Create symbolic links (Path -> Target)
 
 gsudo {
+  $baseDir = (Get-Item -Path ".\").FullName
+
   # Common files
-  $confDir = ".\common\config"
+  $confDir = "$baseDir\common\config"
   ## $HOME
-  New-Item -ItemType SymbolicLink -Path $HOME\.gittemplate.txt -Value $confDir\.gittemplate.txt
-  New-Item -ItemType SymbolicLink -Path $HOME\.wezterm.lua -Value $confDir\.wezterm.lua
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.gittemplate.txt -Target $confDir\.gittemplate.txt
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.wezterm.lua -Target $confDir\.wezterm.lua
 
   # OS specific files
-  $confDir = ".\windows\config"
+  $confDir = "$baseDir\windows\config"
   ## $HOME
-  New-Item -ItemType SymbolicLink -Path $HOME\.gitconfig -Value $confDir\.gitconfig
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.gitconfig -Target $confDir\.gitconfig
   ## $PROFILE
-  New-Item -ItemType SymbolicLink -Path $PROFILE -Value $confDir\Microsoft.PowerShell_profile.ps1
+  New-Item -ItemType SymbolicLink -Force -Path $PROFILE -Target $confDir\Microsoft.PowerShell_profile.ps1
 }
