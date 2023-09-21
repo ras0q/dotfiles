@@ -1,0 +1,165 @@
+{
+  "C_Cpp.clang_format_style": "{BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true}",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "code-runner.runInTerminal": true,
+  "debug.allowBreakpointsEverywhere": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.autoIndent": "full",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.foldingMaximumRegions": 2000,
+  "editor.fontFamily": "源ノ角ゴシック Code JP, Source Code Pro",
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 20,
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "all",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "️": true
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoUpdate": true,
+  "files.associations": {
+    "*.conf": "properties",
+    "*.tmpl": "njk"
+  },
+  "files.autoGuessEncoding": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.ignoreLegacyWarning": true,
+  "git.openRepositoryInParentFolders": "never",
+  "git.suggestSmartCommit": false,
+  "github.copilot.enable": {
+    "*": true,
+    "cpp": true,
+    "ex3asm": false,
+    "go": true,
+    "javascript": true,
+    "json": true,
+    "markdown": true,
+    "njk": false,
+    "plaintext": true,
+    "rust": false,
+    "scminput": false,
+    "yaml": true
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "go.gopath": "",
+  "go.lintTool": "golangci-lint",
+  "http.proxySupport": "off",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-preview-enhanced.puppeteerWaitForTimeout": 3000,
+  "markdownlint.config": {
+    "first-line-h1": false,
+    "no-inline-html": false,
+    "ol-prefix": false
+  },
+  "material-icon-theme.folders.theme": "specific",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "remote.SSH.configFile": "C:\\Users\\kira\\.ssh\\config",
+  "remote.SSH.remotePlatform": {
+    "dlb": "linux"
+  },
+  "remote.SSH.showLoginTerminal": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "sortJSON.contextMenu": {
+    "sortJSONAlphaNum": false,
+    "sortJSONAlphaNumReverse": false,
+    "sortJSONKeyLength": false,
+    "sortJSONKeyLengthReverse": false,
+    "sortJSONReverse": false,
+    "sortJSONType": false,
+    "sortJSONTypeReverse": false,
+    "sortJSONValues": false,
+    "sortJSONValuesReverse": false
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "SauceCodePro NF, 源ノ角ゴシック Code JP, Source Code Pro",
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.ignoreProcessNames": ["oh-my-posh", "bash", "zsh"],
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "args": [],
+      "icon": "terminal-cmd",
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ]
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    },
+    "Ubuntu (WSL)": {
+      "args": ["-d", "Ubuntu"],
+      "path": "C:\\WINDOWS\\System32\\wsl.exe"
+    }
+  },
+  "terminal.integrated.tabs.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.commandCenter": false,
+  "window.zoomLevel": -1,
+  "workbench.colorTheme": "Absent Light (rainglow)",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always"
+}
