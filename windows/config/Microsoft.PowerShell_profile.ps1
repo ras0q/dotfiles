@@ -5,3 +5,4 @@ Set-PSReadLineOption -PredictionSource History
 
 # Additional paths
 $env:Path += ";$HOME\AppData\Local\1Password\app\8"
+$env:Path += ";$HOME\scoop\apps\gcc\current\bin"

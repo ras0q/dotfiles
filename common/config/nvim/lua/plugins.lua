@@ -11,4 +11,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({})
+require("lazy").setup({
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require "nvim-treesitter.install".prefer_git = false
+      require "nvim-treesitter.configs".setup {
+        highlight = { enable = true },
+        indent = { enable = true },
+      }
+    end,
+  }
+})
