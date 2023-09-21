@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 
 local config = {
-  color_scheme = 'One Light (Gogh)',
+  color_scheme = 'Catppuccin Latte',
   font = wezterm.font_with_fallback {
     'SauceCodePro Nerd Font Mono',
     '源ノ角ゴシック Code JP',
