@@ -10,6 +10,8 @@ local config = {
   },
   font_size = 12.0,
   hide_tab_bar_if_only_one_tab = true,
+  initial_cols = 80,
+  initial_rows = 20,
   keys = {
     -- Alt+Shift+Fでフルスクリーン切り換え
     {
