@@ -8,7 +8,6 @@
 [core]
 	editor = nvim
 	autoCRLF = false
-	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 
 [init]
 	defaultBranch = main
