@@ -1,5 +1,9 @@
 [wsl2]
-localhostForwarding=true
+localhostForwarding = true
 kernelCommandLine = vsyscall=emulate
-memory=6GB
-swap=0
+memory = 6GB
+swap = 0
+
+[experimental]
+autoMemoryReclaim = gradual
+sparseVhd = true
