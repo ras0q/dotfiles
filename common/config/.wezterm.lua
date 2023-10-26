@@ -3,7 +3,6 @@ local wezterm = require 'wezterm'
 local config = {
   adjust_window_size_when_changing_font_size = false,
   color_scheme = 'Catppuccin Latte',
-  default_domain = 'WSL:Ubuntu',
   default_prog = { 'pwsh' },
   font = wezterm.font_with_fallback {
     '源ノ角ゴシック Code JP',
@@ -20,6 +19,17 @@ local config = {
       mods = 'SHIFT|META',
       action = wezterm.action.ToggleFullScreen,
     },
+    {
+      key = "Space",
+      mods = "CTRL",
+      action = wezterm.action.ShowLauncherArgs {
+        flags = 'LAUNCH_MENU_ITEMS|FUZZY'
+      },
+    },
+  },
+  launch_menu = {
+    { label = "PowerShell", args = { "pwsh" } },
+    { label = "WSL2",       args = { "wsl" } },
   },
   use_ime = true,
   window_background_opacity = 0.9,
