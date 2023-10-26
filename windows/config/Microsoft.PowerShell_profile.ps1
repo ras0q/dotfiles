@@ -29,7 +29,7 @@ Set-Alias powershell pwsh
 function ga() { git add -A && git commit }
 function gc() { git commit }
 function gs($branch) { git switch $branch }
-function gp() { git push }
+function gpu() { git push }
 function gpp() { git pull && git bprune }
 # ghq
 function gf() { ghq list -p | fzf | ForEach-Object { Set-Location $_ } }
