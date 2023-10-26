@@ -8,6 +8,7 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$conda\
 $cmd_duration\
 $line_break\
 $character"""
@@ -29,3 +30,5 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
+
+[conda]
