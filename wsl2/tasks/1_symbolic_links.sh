@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eux
 
 # Common files
 confDir="$PWD/common/config"
