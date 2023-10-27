@@ -4,7 +4,7 @@
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "[go]": {
-    "editor.defaultFormatter": "golang.go-nightly"
+    "editor.defaultFormatter": "golang.go"
   },
   "[makefile]": {
     "editor.detectIndentation": false,
@@ -22,7 +22,11 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "emmet.triggerExpansionOnTab": true,
   "eslint.format.enable": true,
-  "eslint.validate": ["javascript", "typescript", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue"
+  ],
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.ignoreLegacyWarning": true,
@@ -40,8 +44,15 @@
     "toggleTestFile": true
   },
   "go.formatTool": "gofmt",
+  "go.generateTestsFlags": [
+    "-template_dir=/home/ras/ghq/github.com/ras0q/gotests-template/map-errors-gomock-gocmp/"
+  ],
   "go.lintTool": "golangci-lint",
-  "go.testFlags": ["-cover", "-shuffle=on", "-race"],
+  "go.testFlags": [
+    "-cover",
+    "-shuffle=on",
+    "-race"
+  ],
   "go.toolsManagement.autoUpdate": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
@@ -55,6 +66,7 @@
     "jupyter-notebook": "left"
   },
   "prolog.executablePath": "/home/linuxbrew/.linuxbrew/bin/swipl",
+  "python.defaultInterpreterPath": "python3",
   "redhat.telemetry.enabled": true,
   "remote.SSH.enableAzureIntegration": true,
   "swiftformat.path": "/home/linuxbrew/.linuxbrew/bin/swiftformat",
@@ -72,7 +84,9 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "yaml.format.singleQuote": false,
   "yaml.schemas": {
-    "http://json.schemastore.org/swagger-2.0": ["*swagger.yaml", "*swagger.yml"]
-  },
-  "python.defaultInterpreterPath": "python3"
+    "http://json.schemastore.org/swagger-2.0": [
+      "*swagger.yaml",
+      "*swagger.yml"
+    ]
+  }
 }

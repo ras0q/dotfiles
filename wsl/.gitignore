@@ -4,6 +4,7 @@
 .config/dconf
 .config/enchant
 .config/gh/hosts.yml
+.config/go/telemetry
 .config/nextjs-nodejs/config.json
 .config/op
 .config/pulse
