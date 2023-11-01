@@ -1,0 +1,37 @@
+# Path: $HOME/.gitconfig
+
+[user]
+	name = ras0q
+	email = ras0q@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwlDquvYaQtT4cq1KWEC/S+W7et8oSyQjdib2VDObz8
+
+[core]
+	editor = nvim
+	autoCRLF = false
+
+[init]
+	defaultBranch = main
+
+[fetch]
+	prune = true
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgsign = true
+	template = ~/.gittemplate.txt
+
+[push]
+	default = current
+
+[alias]
+	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs git branch -d
+	lo = log --oneline
+	inico = commit --allow-empty -m \":seedling: initial commit\"
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
