@@ -1,9 +1,9 @@
 local wezterm = require 'wezterm'
 
+-- common config
 local config = {
   adjust_window_size_when_changing_font_size = false,
   color_scheme = 'Catppuccin Latte',
-  default_prog = { 'pwsh' },
   font = wezterm.font_with_fallback {
     '源ノ角ゴシック Code JP',
     'Source Code Pro'
@@ -27,12 +27,20 @@ local config = {
       },
     },
   },
-  launch_menu = {
-    { label = "PowerShell", args = { "pwsh" } },
-    { label = "WSL2",       args = { "wsl" } },
-  },
   use_ime = true,
   window_background_opacity = 0.9,
 }
+
+-- platform specific config
+local platform = wezterm.target_triple
+if platform == "x86_64-pc-windows-msvc" then
+  config.default_prog = { 'pwsh' }
+  config.launch_menu = {
+    { label = "PowerShell", args = { "pwsh" } },
+    { label = "WSL2",       args = { "wsl" } },
+  }
+elseif platform == "x86_64-apple-darwin" or platform == "aarch64-apple-darwin" then
+else
+end
 
 return config
