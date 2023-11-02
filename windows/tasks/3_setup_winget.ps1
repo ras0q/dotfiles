@@ -27,6 +27,7 @@ winget install `
   "GitHub.cli" `
   "Golang.Go" `
   "Neovim.Neovim" `
+  "Rye.Rye" `
   "Starship.Starship" `
   <# Only for Windows #> `
   "SomePythonThings.WingetUIStore" `
