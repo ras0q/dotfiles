@@ -4,6 +4,7 @@ local opt = vim.opt
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 vim.scriptencoding = "utf-8"
+vim.g.mapleader = " "
 
 -- appearance
 opt.number = true
