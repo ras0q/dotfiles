@@ -37,7 +37,7 @@ if platform == "x86_64-pc-windows-msvc" then
   config.default_prog = { 'pwsh' }
   config.launch_menu = {
     { label = "PowerShell", args = { "pwsh" } },
-    { label = "WSL2",       args = { "wsl" } },
+    { label = "WSL2",       args = { "wsl", "~" } },
   }
 elseif platform == "x86_64-apple-darwin" or platform == "aarch64-apple-darwin" then
 else
