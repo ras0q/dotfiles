@@ -12,3 +12,7 @@ zoxide init --cmd cd --hook pwd fish | source
 
 # 1password
 source /home/ras/.config/op/plugins.sh
+
+# aqua
+# TODO: why export?
+export AQUA_GLOBAL_CONFIG=$AQUA_GLOBAL_CONFIG

@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR AQUA_GLOBAL_CONFIG:/home/ras/\x2econfig/aquaproj\x2daqua/aqua\x2eyaml
 SETUVAR DOCKER_BUILDKIT:1
 SETUVAR EDITOR:code
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
@@ -19,4 +20,4 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_plugins:jorgebucaran/autopair\x2efish\x1eedc/bass\x1ejethrokuan/fzf\x1ejorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_key_bindings:fish_default_key_bindings
-SETUVAR fish_user_paths:/home/ras/\x2easdf/shims\x1e/home/linuxbrew/\x2elinuxbrew/opt/asdf/libexec/bin\x1e/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/linuxbrew/\x2elinuxbrew/sbin\x1e/home/ras/go/bin\x1e/home/ras/\x2erye/shims
+SETUVAR fish_user_paths:/home/ras/\x2easdf/shims\x1e/home/linuxbrew/\x2elinuxbrew/opt/asdf/libexec/bin\x1e/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/linuxbrew/\x2elinuxbrew/sbin\x1e/home/ras/go/bin\x1e/home/ras/\x2erye/shims\x1e/home/ras/\x2elocal/share/aquaproj\x2daqua/bin
