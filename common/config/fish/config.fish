@@ -1,9 +1,3 @@
-# setup background services for WSL2
-wsl2_setup_sshagent
-
-# abbreviations
-fish_init_abbr
-
 # starship
 starship init fish | source
 
