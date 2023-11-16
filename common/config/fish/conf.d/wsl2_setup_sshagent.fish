@@ -1,6 +1,6 @@
 # setup 1Password SSH agent for WSL2
 
-if !string match -q "*microsoft*" (uname -r)
+if ! string match -q "*microsoft*" (uname -r)
   return
 end
 
