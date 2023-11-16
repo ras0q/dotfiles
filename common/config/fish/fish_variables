@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR AQUA_GLOBAL_CONFIG:/home/ras/\x2econfig/aquaproj\x2daqua/aqua\x2eyaml
+SETUVAR --export AQUA_GLOBAL_CONFIG:/home/ras/\x2econfig/aquaproj\x2daqua/aqua\x2eyaml
 SETUVAR DOCKER_BUILDKIT:1
 SETUVAR EDITOR:code
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
@@ -11,7 +11,7 @@ SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR GOPATH:/home/ras/go
 SETUVAR LANG:POSIX
-SETUVAR SSH_AUTH_SOCK:/home/ras/\x2essh/agent\x2esock
+SETUVAR --export SSH_AUTH_SOCK:/home/ras/\x2essh/agent\x2esock
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:\x7e/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_open\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish
