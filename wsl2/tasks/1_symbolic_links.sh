@@ -14,6 +14,5 @@ confDir="$PWD/wsl2/config"
 ## $HOME
 sudo ln -sf $confDir/.Brewfile $HOME
 sudo ln -sf $confDir/.gitconfig $HOME
-sudo ln -sf $confDir/.wslconfig $HOME
 ## /etc
 sudo ln -sf $confDir/wsl.conf /etc
