@@ -6,6 +6,7 @@ confDir="$PWD/common/config"
 sudo ln -sf $confDir/.asdfrc $HOME
 sudo ln -sf $confDir/.gittemplate.txt $HOME
 ## $HOME/.config
+sudo ln -sf $confDir/fish $HOME/.config
 sudo ln -sf $confDir/nvim $HOME/.config
 sudo ln -sf $confDir/starship.toml $HOME/.config
 

@@ -1,0 +1,22 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR DOCKER_BUILDKIT:1
+SETUVAR EDITOR:code
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
+SETUVAR FZF_DISABLE_KEYBINDINGS:0
+SETUVAR FZF_LEGACY_KEYBINDINGS:0
+SETUVAR FZF_PREVIEW_DIR_CMD:ls
+SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
+SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR GOPATH:/home/ras/go
+SETUVAR LANG:POSIX
+SETUVAR SSH_AUTH_SOCK:/home/ras/\x2essh/agent\x2esock
+SETUVAR __fish_initialized:3400
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jethrokuan_2F_fzf_files:\x7e/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_open\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e\x7e/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish
+SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/autopair\x2efish\x1eedc/bass\x1ejethrokuan/fzf\x1ejorgebucaran/fisher
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_user_paths:/home/ras/\x2easdf/shims\x1e/home/linuxbrew/\x2elinuxbrew/opt/asdf/libexec/bin\x1e/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/linuxbrew/\x2elinuxbrew/sbin\x1e/home/ras/go/bin
