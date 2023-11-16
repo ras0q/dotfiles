@@ -1,4 +1,4 @@
-#!/bin/sh -eux
+#!/bin/bash -eux
 
 # Common files
 confDir="$PWD/common/config"
@@ -17,4 +17,7 @@ confDir="$PWD/ubuntu/config"
 sudo ln -sf $confDir/.Brewfile $HOME
 sudo ln -sf $confDir/.gitconfig $HOME
 ## /etc
-sudo ln -sf $confDir/wsl.conf /etc
+### WSl2 only
+if [[ "$(uname -r)" == *microsoft* ]]; then
+  sudo ln -sf $confDir/wsl.conf /etc
+fi

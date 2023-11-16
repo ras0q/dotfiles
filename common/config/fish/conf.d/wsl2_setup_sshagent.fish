@@ -1,5 +1,9 @@
 # setup 1Password SSH agent for WSL2
 
+if !string match -q "*microsoft*" (uname -r)
+  return
+end
+
 if ! ss -a | grep -q $SSH_AUTH_SOCK >/dev/null 2>&1
   if test -e $SSH_AUTH_SOCK
     echo "removing previous socket..."
