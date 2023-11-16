@@ -14,7 +14,6 @@ sudo ln -sf $confDir/starship.toml $HOME/.config
 # OS specific files
 confDir="$PWD/ubuntu/config"
 ## $HOME
-sudo ln -sf $confDir/.Brewfile $HOME
 sudo ln -sf $confDir/.gitconfig $HOME
 ## /etc
 ### WSl2 only
