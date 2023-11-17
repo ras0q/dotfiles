@@ -22,9 +22,9 @@ jobs:
           key: v1-aqua-installer-${{runner.os}}-${{runner.arch}}-${{hashFiles('**/aqua.yaml')}}
           restore-keys: |
             v1-aqua-installer-${{runner.os}}-${{runner.arch}}-
-      - uses: aquaproj/aqua-installer@v2.2.0 # renovate: depName=aquaproj/aqua-installer
+      - uses: aquaproj/aqua-installer@v2.2.0
         with:
-          aqua_version: v2.17.3 # renovate: depName=aquaproj/aqua
+          aqua_version: v2.17.3
           working_directory: common/config/aquaproj-aqua
       - run: aqua update-checksum -deep -prune
         working-directory: common/config/aquaproj-aqua
