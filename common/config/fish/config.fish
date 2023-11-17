@@ -7,7 +7,9 @@ fish_add_path \
   ~/.volta/bin
 
 # starship
-starship init fish | source
+starship init fish --print-full-init \
+  | sed "s@(which starship)@(aqua which starship)@g" \
+  | source
 
 # zoxide
 zoxide init --cmd cd --hook pwd fish | source
