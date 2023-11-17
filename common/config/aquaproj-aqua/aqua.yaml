@@ -10,7 +10,7 @@ registries:
 - type: standard
   ref: v4.88.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: ogham/exa@v0.10.1
+- name: ogham/exa@v0.10.0
 - name: junegunn/fzf@0.44.1
 - name: cli/cli@v2.39.1
 - name: x-motemen/ghq@v1.4.2
