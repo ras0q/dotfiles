@@ -156,13 +156,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/ogham/exa/v0.10.0/exa-linux-x86_64-musl-v0.10.0.zip",
-      "checksum": "3E8473062E025055DDE151955EB29B2CD6E1CDCE8E4710EBFA41432E22F7416D",
+      "id": "github_release/github.com/ogham/exa/v0.10.1/exa-linux-x86_64-musl-v0.10.1.zip",
+      "checksum": "790311D6167C2B439DEE253D548C8FCB67809AA6704BC2C4F2B8DD25CF6FDD31",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/ogham/exa/v0.10.0/exa-macos-x86_64-v0.10.0.zip",
-      "checksum": "0621D43E832E630FE246E0903CFD41A91477F4ABDFD0D6833B57C49F8CADDA74",
+      "id": "github_release/github.com/ogham/exa/v0.10.1/exa-macos-x86_64-v0.10.1.zip",
+      "checksum": "7A77673BC5644C92E019168EBD827232AA09FAE6D9790A1B6E8BDFD3EB9684BC",
       "algorithm": "sha256"
     },
     {
