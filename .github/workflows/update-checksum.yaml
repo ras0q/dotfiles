@@ -11,7 +11,7 @@ on:
 
 jobs:
   update-aqua-checksum:
-    uses: "aquaproj/update-checksum-workflow/.github/workflows/update-checksum.yaml@main"
+    uses: "ras0q/update-checksum-workflow/.github/workflows/update-checksum.yaml@main"
     permissions:
       contents: "read"
     with:
