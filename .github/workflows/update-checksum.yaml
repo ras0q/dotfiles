@@ -42,3 +42,5 @@ jobs:
       - name: Enable automerge
         if: github.event_name == 'pull_request'
         run: gh pr merge ${{ github.event.number }} --squash --auto --delete-branch
+        env:
+          GH_TOKEN: ${{ github.token }}
