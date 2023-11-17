@@ -10,6 +10,7 @@ $git_state\
 $git_status\
 $conda\
 $cmd_duration\
+$time\
 $line_break\
 $character"""
 
@@ -17,6 +18,10 @@ $character"""
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
 vimcmd_symbol = "[<](bold green)"
+
+[hostname]
+ssh_symbol = '\[ssh\]'                      # less escaped
+format = "[$hostname$ssh_symbol]($style) "
 
 [git_branch]
 symbol = "git "
@@ -30,5 +35,8 @@ behind = "<"
 diverged = "<>"
 renamed = "r"
 deleted = "x"
+
+[time]
+disabled = false
 
 [conda]
