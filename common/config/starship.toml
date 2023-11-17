@@ -9,10 +9,11 @@ $git_branch\
 $git_state\
 $git_status\
 $conda\
-$cmd_duration\
-$time\
 $line_break\
 $character"""
+right_format = """
+$cmd_duration\
+$time"""
 
 [character]
 success_symbol = '[\$](bold green)'
@@ -20,11 +21,12 @@ error_symbol = '[\$](bold red)'
 vimcmd_symbol = '[\$](bold green)'
 
 [hostname]
-ssh_symbol = '\[ssh\]'                      # less escaped
+ssh_symbol = '\[ssh\]'
 format = '[$hostname$ssh_symbol]($style) '
 
 [git_branch]
-symbol = 'git '
+symbol = ''
+truncation_length = 4
 
 [git_commit]
 tag_symbol = ' tag '
