@@ -10,7 +10,6 @@ registries:
 - type: standard
   ref: v4.88.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: int128/ghcp@v1.13.2 # for GitHub Actions
 - name: ogham/exa@v0.10.1
 - name: junegunn/fzf@0.44.1
 - name: cli/cli@v2.39.1
