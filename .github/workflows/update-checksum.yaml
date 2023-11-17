@@ -11,10 +11,24 @@ on:
 
 jobs:
   update-aqua-checksum:
-    uses: "ras0q/update-checksum-workflow/.github/workflows/update-checksum.yaml@fix/install-packages-in-working-directory"
-    permissions:
-      contents: "read"
-    with:
-      aqua_version: "v2.17.3" # renovate: depName=aquaproj/aqua
-      working_directory: "common/config/aquaproj-aqua"
-      prune: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v3
+        with:
+          path: ~/.local/share/aquaproj-aqua
+          key: v1-aqua-installer-${{runner.os}}-${{runner.arch}}-${{hashFiles('**/aqua.yaml')}}
+          restore-keys: |
+            v1-aqua-installer-${{runner.os}}-${{runner.arch}}-
+      - uses: aquaproj/aqua-installer@v2.2.0 # renovate: depName=aquaproj/aqua-installer
+        with:
+          aqua_version: v2.16.4 # renovate: depName=aquaproj/aqua
+          working_directory: common/config/aquaproj-aqua
+      - run: aqua update-checksum -deep -prune
+        working-directory: common/config/aquaproj-aqua
+      - run: git diff --exit-code
+      - run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git commit -am "chore(aqua): update checksum"
+          git push
