@@ -4,6 +4,8 @@
 confDir="$PWD/common/config"
 ## $HOME
 ln -sf $confDir/.asdfrc $HOME
+ln -sf $confDir/.bash_aliases $HOME
+ln -sf $confDir/.bashrc $HOME
 ln -sf $confDir/.gittemplate.txt $HOME
 ## $HOME/.config
 ln -sf $confDir/aquaproj-aqua $HOME/.config
