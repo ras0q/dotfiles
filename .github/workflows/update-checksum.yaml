@@ -11,7 +11,7 @@ on:
 
 jobs:
   update-aqua-checksum:
-    uses: "ras0q/update-checksum-workflow/.github/workflows/update-checksum.yaml@main"
+    uses: "ras0q/update-checksum-workflow/.github/workflows/update-checksum.yaml@fix/install-packages-in-working-directory"
     permissions:
       contents: "read"
     with:
