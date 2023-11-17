@@ -10,7 +10,7 @@ on:
       - "main"
   pull_request:
     paths:
-      - "${{env.AQUA_WORKING_DIRECTORY}}/*"
+      - "${{ env.AQUA_WORKING_DIRECTORY }}/*"
       - ".github/workflows/update-checksum.yaml"
 
 jobs:
@@ -19,6 +19,6 @@ jobs:
     permissions:
       contents: "read"
     with:
-      aqua_version: "${{env.AQUA_VERSION}}"
-      working_directory: "${{env.AQUA_WORKING_DIRECTORY}}"
+      aqua_version: "${{ env.AQUA_VERSION }}"
+      working_directory: "${{ env.AQUA_WORKING_DIRECTORY }}"
       prune: true
