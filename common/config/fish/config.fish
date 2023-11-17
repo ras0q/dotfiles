@@ -1,3 +1,11 @@
+# $fish_user_paths
+fish_add_path \
+  ~/.local/share/aquaproj-aqua/bin \
+  ~/.asdf/shims \
+  ~/go/bin \
+  ~/.rye/shims \
+  ~/.volta/bin
+
 # starship
 starship init fish | source
 
