@@ -29,9 +29,11 @@ jobs:
       - run: git diff --exit-code
         id: diff
         continue-on-error: true
-      - run: |
+      - name: Commit changes
+        run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+          git add -A
           git commit --author . -m "chore(aqua): update checksum"
           git push
         if: steps.diff.outcome == 'failure'
