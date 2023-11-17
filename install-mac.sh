@@ -1,7 +1,7 @@
 #!/bin/bash -eu
 
 function info {
-  echo "\033[32m[INFO]\033[0m $1"
+  echo -e "\e[1;34m[INFO]\e[22;0m $1"
 }
 
 # Execute tasks in ./mac/tasks one by one
