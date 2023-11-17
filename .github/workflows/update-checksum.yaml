@@ -1,16 +1,12 @@
 name: update aqua checksum
 
-env:
-  AQUA_VERSION: "v2.16.4" # renovate: depName=aquaproj/aqua
-  AQUA_WORKING_DIRECTORY: "common/config/aquaproj-aqua"
-
 on:
   push:
     branches:
       - "main"
   pull_request:
     paths:
-      - "${{ env.AQUA_WORKING_DIRECTORY }}/*"
+      - "common/config/aquaproj-aqua/*"
       - ".github/workflows/update-checksum.yaml"
 
 jobs:
@@ -19,6 +15,6 @@ jobs:
     permissions:
       contents: "read"
     with:
-      aqua_version: "${{ env.AQUA_VERSION }}"
-      working_directory: "${{ env.AQUA_WORKING_DIRECTORY }}"
+      aqua_version: "v2.16.4" # renovate: depName=aquaproj/aqua
+      working_directory: "common/config/aquaproj-aqua"
       prune: true
