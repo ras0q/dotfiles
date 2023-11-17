@@ -15,6 +15,6 @@ jobs:
     permissions:
       contents: "read"
     with:
-      aqua_version: "v2.16.4" # renovate: depName=aquaproj/aqua
+      aqua_version: "v2.17.3" # renovate: depName=aquaproj/aqua
       working_directory: "common/config/aquaproj-aqua"
       prune: true
