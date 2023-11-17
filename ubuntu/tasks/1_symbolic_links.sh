@@ -3,18 +3,18 @@
 # Common files
 confDir="$PWD/common/config"
 ## $HOME
-sudo ln -sf $confDir/.asdfrc $HOME
-sudo ln -sf $confDir/.gittemplate.txt $HOME
+ln -sf $confDir/.asdfrc $HOME
+ln -sf $confDir/.gittemplate.txt $HOME
 ## $HOME/.config
-sudo ln -sf $confDir/aquaproj-aqua $HOME/.config
-sudo ln -sf $confDir/fish $HOME/.config
-sudo ln -sf $confDir/nvim $HOME/.config
-sudo ln -sf $confDir/starship.toml $HOME/.config
+ln -sf $confDir/aquaproj-aqua $HOME/.config
+ln -sf $confDir/fish $HOME/.config
+ln -sf $confDir/nvim $HOME/.config
+ln -sf $confDir/starship.toml $HOME/.config
 
 # OS specific files
 confDir="$PWD/ubuntu/config"
 ## $HOME
-sudo ln -sf $confDir/.gitconfig $HOME
+ln -sf $confDir/.gitconfig $HOME
 ## /etc
 ### WSl2 only
 if [[ "$(uname -r)" == *microsoft* ]]; then
