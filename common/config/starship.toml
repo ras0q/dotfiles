@@ -1,4 +1,4 @@
-"$schema" = "https://starship.rs/config-schema.json"
+'$schema' = 'https://starship.rs/config-schema.json'
 
 add_newline = false
 format = """
@@ -15,26 +15,26 @@ $line_break\
 $character"""
 
 [character]
-success_symbol = "[>](bold green)"
-error_symbol = "[x](bold red)"
-vimcmd_symbol = "[<](bold green)"
+success_symbol = '[>](bold green)'
+error_symbol = '[x](bold red)'
+vimcmd_symbol = '[<](bold green)'
 
 [hostname]
 ssh_symbol = '\[ssh\]'                      # less escaped
-format = "[$hostname$ssh_symbol]($style) "
+format = '[$hostname$ssh_symbol]($style) '
 
 [git_branch]
-symbol = "git "
+symbol = 'git '
 
 [git_commit]
-tag_symbol = " tag "
+tag_symbol = ' tag '
 
 [git_status]
-ahead = ">"
-behind = "<"
-diverged = "<>"
-renamed = "r"
-deleted = "x"
+ahead = '>'
+behind = '<'
+diverged = '<>'
+renamed = 'r'
+deleted = 'x'
 
 [time]
 disabled = false
