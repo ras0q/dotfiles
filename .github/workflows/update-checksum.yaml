@@ -39,3 +39,6 @@ jobs:
           git commit --author . -m "chore(aqua): update checksum"
           git push origin
         if: steps.diff.outcome == 'failure'
+      - name: Enable automerge
+        if: github.event_name == 'pull_request'
+        run: gh pr edit ${{ github.event.number }} --merge --squash --auto
