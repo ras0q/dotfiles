@@ -13,13 +13,26 @@ local config = {
   initial_cols = 80,
   initial_rows = 20,
   keys = {
-    -- Alt+Shift+Fでフルスクリーン切り換え
     {
+      -- ctrl+Vでclipboardをペースト
+      key = 'V',
+      mods = 'CTRL',
+      action = wezterm.action.PasteFrom 'Clipboard',
+    },
+    {
+      -- ctrl+Vでprimary selectionをペースト
+      key = 'V',
+      mods = 'CTRL|SHIFT',
+      action = wezterm.action.PasteFrom 'PrimarySelection',
+    },
+    {
+      -- alt+shift+Fでフルスクリーン切り換え
       key = 'f',
       mods = 'SHIFT|META',
       action = wezterm.action.ToggleFullScreen,
     },
     {
+      -- ctrl+spaceでランチャー表示
       key = "Space",
       mods = "CTRL",
       action = wezterm.action.ShowLauncherArgs {
