@@ -8,17 +8,11 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$conda\
 $line_break\
 $character"""
 right_format = """
 $cmd_duration\
 $time"""
-
-[character]
-success_symbol = '[\$](bold green)'
-error_symbol = '[\$](bold red)'
-vimcmd_symbol = '[\$](bold green)'
 
 [hostname]
 ssh_symbol = '\[ssh\]'
@@ -38,7 +32,10 @@ diverged = '<>'
 renamed = 'r'
 deleted = 'x'
 
+[character]
+success_symbol = '[\$](bold green)'
+error_symbol = '[\$](bold red)'
+vimcmd_symbol = '[\$](bold green)'
+
 [time]
 disabled = false
-
-[conda]
