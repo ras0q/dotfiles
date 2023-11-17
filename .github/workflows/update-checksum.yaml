@@ -24,7 +24,7 @@ jobs:
             v1-aqua-installer-${{runner.os}}-${{runner.arch}}-
       - uses: aquaproj/aqua-installer@v2.2.0
         with:
-          aqua_version: v2.17.3
+          aqua_version: v2.17.3 # renovate: depName=aquaproj/aqua
           working_directory: common/config/aquaproj-aqua
       - run: aqua update-checksum -deep -prune
         working-directory: common/config/aquaproj-aqua
