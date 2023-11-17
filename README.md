@@ -1,13 +1,15 @@
-# dotfiles-tiny
+# dotfiles-v2
 
 Minimum configuration for my PC
 
 ## インストール
 
-1. [ras0q/dotfiles-tiny](https://github.com/ras0q/dotfiles-tiny)を適当な場所にgit cloneもしくはzipでダウンロード
+1. [ras0q/dotfiles-v2](https://github.com/ras0q/dotfiles-v2)を適当な場所にgit cloneもしくはzipでダウンロード
 2. インストールスクリプトを実行
    - Windows (PowerShell): `.\install.ps1`
-   - ==TODO== Mac: `./install.sh`
+   - Mac: `./install-mac.sh`
+   - Ubuntu: `./install-ubuntu.sh`
+     - for nonroot user: `./install-ubuntu.sh -n`
 
 ## 共通
 

@@ -1,4 +1,4 @@
-#!/bin/sh -eu
+#!/bin/bash -eu
 
 function info {
   echo "\033[32m[INFO]\033[0m $1"
