@@ -8,10 +8,11 @@ ln -sf $confDir/.bashrc $HOME
 ln -sf $confDir/.gittemplate.txt $HOME
 ln -sf $confDir/.wezterm.lua $HOME
 ## $HOME/.config
-ln -sf $confDir/aquaproj-aqua $HOME/.config
-ln -sf $confDir/fish $HOME/.config
-ln -sf $confDir/nvim $HOME/.config
-ln -sf $confDir/starship.toml $HOME/.config
+mkdir -p $HOME/.config
+ln -sf $confDir/aquaproj-aqua $HOME/.config/
+ln -sf $confDir/fish $HOME/.config/
+ln -sf $confDir/nvim $HOME/.config/
+ln -sf $confDir/starship.toml $HOME/.config/
 
 # OS specific files
 confDir="$PWD/mac/config"
