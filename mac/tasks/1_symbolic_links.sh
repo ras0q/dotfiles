@@ -3,10 +3,13 @@
 # Common files
 confDir="$PWD/common/config"
 ## $HOME
-ln -sf $confDir/.asdfrc $HOME
+ln -sf $confDir/.bash_profile $HOME
+ln -sf $confDir/.bashrc $HOME
 ln -sf $confDir/.gittemplate.txt $HOME
 ln -sf $confDir/.wezterm.lua $HOME
 ## $HOME/.config
+ln -sf $confDir/aquaproj-aqua $HOME/.config
+ln -sf $confDir/fish $HOME/.config
 ln -sf $confDir/nvim $HOME/.config
 ln -sf $confDir/starship.toml $HOME/.config
 
