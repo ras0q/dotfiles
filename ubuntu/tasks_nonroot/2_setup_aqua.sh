@@ -1,1 +1,1 @@
-../tasks/4_setup_aqua.sh
+../../common/tasks/setup_aqua.sh
