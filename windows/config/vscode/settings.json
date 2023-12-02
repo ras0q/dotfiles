@@ -16,8 +16,11 @@
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnType": true
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -31,6 +34,9 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "black-formatter.path": [
+    "${userHome}\\.rye\\shims\\black.exe"
+  ],
   "code-runner.runInTerminal": true,
   "debug.allowBreakpointsEverywhere": true,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -59,6 +65,7 @@
   "extensions.autoUpdate": true,
   "files.associations": {
     "*.conf": "properties",
+    "*.json5": "json",
     "*.tmpl": "njk"
   },
   "files.autoGuessEncoding": true,
@@ -67,6 +74,9 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.venv/**": true
+  },
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.ignoreLegacyWarning": true,
@@ -102,6 +112,9 @@
     "ol-prefix": false
   },
   "material-icon-theme.folders.theme": "specific",
+  "mypy-type-checker.path": [
+    "${userHome}\\.rye\\shims\\mypy.exe"
+  ],
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -111,6 +124,9 @@
     "dlb": "linux"
   },
   "remote.SSH.showLoginTerminal": true,
+  "ruff.path": [
+    "${userHome}\\.rye\\shims\\ruff.exe"
+  ],
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,
@@ -131,7 +147,11 @@
   "terminal.integrated.fontFamily": "源ノ角ゴシック Code JP, Source Code Pro",
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.ignoreProcessNames": ["oh-my-posh", "bash", "zsh"],
+  "terminal.integrated.ignoreProcessNames": [
+    "oh-my-posh",
+    "bash",
+    "zsh"
+  ],
   "terminal.integrated.profiles.windows": {
     "Command Prompt": {
       "args": [],
@@ -149,7 +169,10 @@
       "source": "PowerShell"
     },
     "Ubuntu (WSL)": {
-      "args": ["-d", "Ubuntu"],
+      "args": [
+        "-d",
+        "Ubuntu"
+      ],
       "path": "C:\\WINDOWS\\System32\\wsl.exe"
     }
   },
@@ -161,8 +184,5 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always",
-  "files.watcherExclude": {
-    "**/.venv/**": true
-  }
+  "workbench.tree.renderIndentGuides": "always"
 }
