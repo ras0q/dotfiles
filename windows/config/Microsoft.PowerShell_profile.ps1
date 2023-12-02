@@ -18,10 +18,15 @@ function Call($batfile) {
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineOption -PredictionSource History
 
+# Environment variables
+$env:AQUA_GLOBAL_CONFIG = "$HOME\.config\aquaproj-aqua\aqua.yaml"
+
 # Additional paths
 $env:Path += ";$HOME\AppData\Local\1Password\app\8"
 $env:Path += ";$HOME\scoop\apps\gcc\current\bin"
 $env:Path += ";$HOME\.rye\shims"
+$env:Path += ";$HOME\AppData\Local\aquaproj-aqua\bat"
+$env:Path += ";$HOME\AppData\Local\aquaproj-aqua\bin"
 
 # Aliases & Functions
 Set-Alias powershell pwsh

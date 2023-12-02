@@ -6,6 +6,7 @@ gsudo {
   # Common files
   $confDir = "$baseDir\common\config"
   ## $HOME
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.config\aquaproj-aqua -Target $confDir\aquaproj-aqua
   New-Item -ItemType SymbolicLink -Force -Path $HOME\AppData\Local\nvim -Target $confDir\nvim
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.gittemplate.txt -Target $confDir\.gittemplate.txt
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.wezterm.lua -Target $confDir\.wezterm.lua

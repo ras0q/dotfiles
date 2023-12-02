@@ -23,12 +23,8 @@ winget install `
   "Spotify.Spotify" `
   "OliverSchwendener.ueli" `
   <# Common CLI #> `
+  "aquaproj.aqua" `
   "Git.Git" `
-  "GitHub.cli" `
-  "Golang.Go" `
-  "Neovim.Neovim" `
-  "Rye.Rye" `
-  "Starship.Starship" `
   <# Only for Windows #> `
   "SomePythonThings.WingetUIStore" `
   "Microsoft.PowerShell" `
