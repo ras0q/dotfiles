@@ -8,6 +8,7 @@ on:
     paths:
       - "common/config/aquaproj-aqua/*"
       - ".github/workflows/update-checksum.yaml"
+  workflow_dispatch:
 
 jobs:
   update-aqua-checksum:
