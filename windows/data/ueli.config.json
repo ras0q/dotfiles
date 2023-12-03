@@ -69,7 +69,7 @@
   "commandlineOptions": {
     "isEnabled": true,
     "prefix": ">",
-    "shell": "WSL in Windows Terminal"
+    "shell": "PowerShell Core"
   },
   "controlPanelOptions": {
     "isEnabled": true
@@ -155,6 +155,34 @@
         "needsUserConfirmationBeforeExecution": false,
         "tags": [],
         "type": "Commandline tool"
+      },
+      {
+        "description": "",
+        "executionArgument": "wezterm -e wsl ~",
+        "icon": {
+          "parameter": "https://raw.githubusercontent.com/wez/wezterm/main/assets/icon/terminal.png",
+          "type": "URL"
+        },
+        "name": "Wezterm WSL2",
+        "needsUserConfirmationBeforeExecution": false,
+        "tags": [
+          "wezterm"
+        ],
+        "type": "Commandline tool"
+      },
+      {
+        "description": "",
+        "executionArgument": "wezterm -e pwsh.exe ~",
+        "icon": {
+          "parameter": "https://raw.githubusercontent.com/wez/wezterm/main/assets/icon/terminal.png",
+          "type": "URL"
+        },
+        "name": "WezTerm PowerShell",
+        "needsUserConfirmationBeforeExecution": false,
+        "tags": [
+          "wezterm"
+        ],
+        "type": "Commandline tool"
       }
     ]
   },
@@ -176,7 +204,7 @@
   },
   "translationOptions": {
     "debounceDelay": 250,
-    "enabled": true,
+    "enabled": false,
     "minSearchTermLength": 3,
     "prefix": "t ",
     "sourceLanguage": "en",
