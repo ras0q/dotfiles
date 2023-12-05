@@ -7,6 +7,7 @@ ln -sf $confDir/.bash_profile $HOME
 ln -sf $confDir/.bashrc $HOME
 ln -sf $confDir/.gittemplate.txt $HOME
 ## $HOME/.config
+mkdir -p $HOME/.config
 ln -sf $confDir/aquaproj-aqua $HOME/.config
 ln -sf $confDir/fish $HOME/.config
 ln -sf $confDir/nvim $HOME/.config
