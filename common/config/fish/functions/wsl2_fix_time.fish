@@ -3,5 +3,5 @@ function wsl2_fix_time
     return
   end
 
-  pwsh -c wsl -u root ntpdate ntp.nict.jp
+  sudo ntpdate ntp.nict.jp
 end
