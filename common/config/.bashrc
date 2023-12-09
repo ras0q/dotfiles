@@ -1,4 +1,6 @@
 PATH=$PATH:~/.local/bin
+# add Go Path for VSCode
+PATH=$PATH:~/.local/share/aquaproj-aqua/bin/go
 
 # If fish is installed, use it
 # NOTE: This command should be at the end of this file
