@@ -1,6 +1,11 @@
 {
   "checksums": [
     {
+      "id": "github_content/github.com/dylanaraps/neofetch/7.1.0/neofetch",
+      "checksum": "3DC33493E54029FB1528251552093A9F9A2894FCF94F9C3A6F809136A42348C7",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/BurntSushi/ripgrep/14.0.3/ripgrep-14.0.3-x86_64-apple-darwin.tar.gz",
       "checksum": "DD06BEBD3A9D75981F8E3271B6C69286990F3FC1A374F0E5B0FC2866EC69BC4C",
       "algorithm": "sha256"
