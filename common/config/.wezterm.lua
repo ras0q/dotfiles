@@ -41,7 +41,7 @@ local config = {
     },
   },
   use_ime = true,
-  window_background_opacity = 0.9,
+  window_background_opacity = 1,
 }
 
 -- platform specific config
