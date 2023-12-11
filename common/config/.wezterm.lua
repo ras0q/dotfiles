@@ -53,6 +53,7 @@ if platform == "x86_64-pc-windows-msvc" then
     { label = "WSL2",       args = { "wsl", "~" } },
   }
 elseif platform == "x86_64-apple-darwin" or platform == "aarch64-apple-darwin" then
+  config.font_size = 12.0
 else
 end
 
