@@ -16,7 +16,7 @@ winget install `
   "AgileBits.1Password" `
   "Discord.Discord" `
   "Figma.Figma" `
-  "Google.Drive" `
+  "Google.GoogleDrive" `
   "Obsidian.Obsidian" `
   "LINE.LINE" `
   "SlackTechnologies.Slack" `
