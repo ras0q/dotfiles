@@ -81,28 +81,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jqlang/jq/jq-1.7/jq-linux-amd64",
-      "checksum": "2F312B9587B1C1EDDF3A53F9A0B7D276B9B7B94576C85BDA22808CA950569716",
+      "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-linux-amd64",
+      "checksum": "5942C9B0934E510EE61EB3E30273F1B3FE2590DF93933A93D7C58B81D19C8FF5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jqlang/jq/jq-1.7/jq-linux-arm64",
-      "checksum": "AB57EE39075DB4A23F899D396ECEF3C6E58F6AADA35BFEE472468210BD126940",
+      "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-linux-arm64",
+      "checksum": "4DD2D8A0661DF0B22F1BB9A1F9830F06B6F3B8F7D91211A1EF5D7C4F06A8B4A5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jqlang/jq/jq-1.7/jq-macos-amd64",
-      "checksum": "4B4568FB5C6CBB8F1A8F640FF601C6D2BBECF9FA8F2CF796C7482E7054A01C41",
+      "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-macos-amd64",
+      "checksum": "4155822BBF5EA90F5C79CF254665975EB4274D426D0709770C21774DE5407443",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jqlang/jq/jq-1.7/jq-macos-arm64",
-      "checksum": "B8D313FD4F3BD8A0B338B9DDD1C006FCCF9312DC609A20D2D6E4BAD964AA99F9",
+      "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-macos-arm64",
+      "checksum": "0BBE619E663E0DE2C550BE2FE0D240D076799D6F8A652B70FA04AEA8A8362E8A",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/jqlang/jq/jq-1.7/jq-windows-amd64.exe",
-      "checksum": "2E9CC54D0A5D098E2007DECEC1DBB3C555CA2F5AABDED7AEC907FE0FFE401AAB",
+      "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-windows-amd64.exe",
+      "checksum": "7451FBBF37FEFFB9BF262BD97C54F0DA558C63F0748E64152DD87B0A07B6D6AB",
       "algorithm": "sha256"
     },
     {
