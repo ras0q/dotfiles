@@ -2,7 +2,7 @@
 # aqua - Declarative CLI Version Manager
 # https://aquaproj.github.io/
 checksum:
-  enabled: true
+  enabled: false
   require_checksum: false
   supported_envs:
   - all
