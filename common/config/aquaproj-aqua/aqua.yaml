@@ -19,7 +19,7 @@ packages:
 - name: neovim/neovim@v0.9.4
 - name: starship/starship@v1.16.0
 - name: ajeetdsouza/zoxide@v0.9.2
-- name: mitsuhiko/rye@0.15.2
+- name: mitsuhiko/rye@0.16.0
 - name: volta-cli/volta@v1.1.1
 - name: BurntSushi/ripgrep@14.0.3
 - name: dylanaraps/neofetch@7.1.0
