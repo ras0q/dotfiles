@@ -2,8 +2,6 @@ name: update aqua checksum
 
 on:
   push:
-    branches:
-      - "main"
   pull_request:
     paths:
       - "common/config/aquaproj-aqua/*"
