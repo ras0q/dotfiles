@@ -136,28 +136,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.15.2/rye-aarch64-linux.gz",
-      "checksum": "42130F8ED85668CF42BE71880C21C7B44068360ACC2A4FC20833821C389BA806",
+      "id": "github_release/github.com/mitsuhiko/rye/0.16.0/rye-aarch64-linux.gz",
+      "checksum": "B22DE221A74179AAFA4826D1F6B94FC2C67E886382E08E676C1CADD7A81656EF",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.15.2/rye-aarch64-macos.gz",
-      "checksum": "F40373E757ABF2AC2BCD5AD3E6B05BD9E8DA0A47F30E10E4503F4908A32F5063",
+      "id": "github_release/github.com/mitsuhiko/rye/0.16.0/rye-aarch64-macos.gz",
+      "checksum": "EADF43CEA2C56DFD7206CCDEF3316D7716D1D154C60A524425BC2A3F4EB1C2AC",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.15.2/rye-x86_64-linux.gz",
-      "checksum": "E649A4C95F459669023B78ABA934FDE6D98F2BE646108070A23B7A5F651D7A01",
+      "id": "github_release/github.com/mitsuhiko/rye/0.16.0/rye-x86_64-linux.gz",
+      "checksum": "C1B1F0CF41801B10348074E7DA1215BA95EADF1A45CAD5A1345A5C70E2F183DD",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.15.2/rye-x86_64-macos.gz",
-      "checksum": "F3284498077C10C367C35AB2EA0C19F6E9F75D97A51EFF633B9479203F0791BE",
+      "id": "github_release/github.com/mitsuhiko/rye/0.16.0/rye-x86_64-macos.gz",
+      "checksum": "60785F384D33135F6193B3255BF69EE2FBF2A25F7A65760E5AB74C77047745BB",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.15.2/rye-x86_64-windows.exe",
-      "checksum": "4E57A8B9856550D30C7FCBA5B7A43ABEA68996E59F4CFB568E5F617CF9AAD657",
+      "id": "github_release/github.com/mitsuhiko/rye/0.16.0/rye-x86_64-windows.exe",
+      "checksum": "0B8DF5FDA71AD88BDF69A3D0241156A0D7FA9B29A01E7EAB68E16B1A760C5C35",
       "algorithm": "sha256"
     },
     {
@@ -296,8 +296,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.104.0/registry.yaml",
-      "checksum": "40427CE6C15899F0E714F112F6F091CA8DBB6A81B29FD16B428B788BFC9464B11A1574FD2DDE0E45C4CABE0C355CC621B281B8701F9EC48D970A799DA71AE3A8",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.108.0/registry.yaml",
+      "checksum": "50CA196B4FACDC34E6BC64F3FB0702B7228BAEA489A0C973F2DEF278B922258735993737B8C9443613901901C4C76F247C0A3AB98EFF86E48864F3DD3717C142",
       "algorithm": "sha512"
     }
   ]
