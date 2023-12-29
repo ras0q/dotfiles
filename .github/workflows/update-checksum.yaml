@@ -2,7 +2,12 @@ name: update aqua checksum
 
 on:
   push:
+    branches:
+      - "main"
   pull_request:
+    paths:
+      - "common/config/aquaproj-aqua/*"
+      - ".github/workflows/update-checksum.yaml"
   workflow_dispatch:
 
 jobs:
