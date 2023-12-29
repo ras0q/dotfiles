@@ -28,6 +28,7 @@ jobs:
   update-aqua-checksum:
     runs-on: ubuntu-latest
     needs: path-filter
+    if: needs.path-filter.outputs.update-aqua-checksum == 'true'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -59,6 +60,7 @@ jobs:
   check-aqua-install:
     runs-on: ubuntu-latest
     needs: path-filter
+    if: needs.path-filter.outputs.check-aqua-install == 'true'
     steps:
       - uses: actions/checkout@v4
         with:
