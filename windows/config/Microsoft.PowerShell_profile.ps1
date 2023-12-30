@@ -25,6 +25,7 @@ $env:AQUA_GLOBAL_CONFIG = "$HOME\.config\aquaproj-aqua\aqua.yaml"
 $env:Path += ";$HOME\AppData\Local\1Password\app\8"
 $env:Path += ";$HOME\scoop\apps\gcc\current\bin"
 $env:Path += ";$HOME\.rye\shims"
+$env:Path += ";$HOME\AppData\Local\Volta\bin"
 $env:Path += ";$HOME\AppData\Local\aquaproj-aqua\bat"
 $env:Path += ";$HOME\AppData\Local\aquaproj-aqua\bin"
 
