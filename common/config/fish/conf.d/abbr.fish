@@ -9,10 +9,10 @@ abbr -a gpp 'git pull && git bprune'
 abbr -a d 'docker'
 abbr -a dc 'docker compose'
 
-# ls (exa)
-abbr -a la 'exa -al'
-abbr -a ll 'exa -l'
-abbr -a ls 'exa'
+# ls (eza)
+abbr -a la 'eza -al'
+abbr -a ll 'eza -l'
+abbr -a ls 'eza'
 
 # others
 abbr -a bd 'brew bundle dump --global --tap --formula -f'
