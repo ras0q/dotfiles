@@ -47,7 +47,7 @@ local config = {
 -- platform specific config
 local platform = wezterm.target_triple
 if platform == "x86_64-pc-windows-msvc" then
-  config.default_prog = { 'pwsh' }
+  config.default_prog = { 'wsl', "~" }
   config.launch_menu = {
     { label = "PowerShell", args = { "pwsh" } },
     { label = "WSL2",       args = { "wsl", "~" } },
