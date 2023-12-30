@@ -191,16 +191,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/ogham/exa/v0.10.1/exa-linux-x86_64-musl-v0.10.1.zip",
-      "checksum": "790311D6167C2B439DEE253D548C8FCB67809AA6704BC2C4F2B8DD25CF6FDD31",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/ogham/exa/v0.10.1/exa-macos-x86_64-v0.10.1.zip",
-      "checksum": "7A77673BC5644C92E019168EBD827232AA09FAE6D9790A1B6E8BDFD3EB9684BC",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/starship/starship/v1.17.0/starship-aarch64-apple-darwin.tar.gz",
       "checksum": "48AEAF4A5CDD4A97A0A899B45A0E34C80A12F2E5EE7E10F858DBCAD35BD094BA",
       "algorithm": "sha256"
