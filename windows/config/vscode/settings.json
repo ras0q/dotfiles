@@ -19,7 +19,7 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
   "[typescript]": {
@@ -184,5 +184,8 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "Lua.diagnostics.globals": [
+    "vim"
+  ]
 }
