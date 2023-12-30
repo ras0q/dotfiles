@@ -81,6 +81,21 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/eza-community/eza/v0.17.0/eza.exe_x86_64-pc-windows-gnu.zip",
+      "checksum": "0A0AAA406244281D4105E494149C6E01855AAA87D694DE37A7680DA11A1D85C0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/eza-community/eza/v0.17.0/eza_aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "CF2C0C33CFE446784A634592FA8803FAE1100822A26B1F7E969D79BB040778EC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/eza-community/eza/v0.17.0/eza_x86_64-unknown-linux-gnu.tar.gz",
+      "checksum": "26BDFDA62ED514598397AEB729ED611C14B1BCAB85E7E0FD8226498D1CF87295",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-linux-amd64",
       "checksum": "5942C9B0934E510EE61EB3E30273F1B3FE2590DF93933A93D7C58B81D19C8FF5",
       "algorithm": "sha256"
