@@ -6,18 +6,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.3/ripgrep-14.0.3-x86_64-apple-darwin.tar.gz",
-      "checksum": "DD06BEBD3A9D75981F8E3271B6C69286990F3FC1A374F0E5B0FC2866EC69BC4C",
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "4D882FC945E5A9B6080A5C0506F7FE4AAEA191C1865355428DD4BFA096F974B5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.3/ripgrep-14.0.3-x86_64-pc-windows-msvc.zip",
-      "checksum": "B6DF202A06CAB342CF28302F319DDD5788DA10672781C38DD49EBE566B423E3F",
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "FE4F75EDFAA50F0D4FECBF47696B7629F3449C9C2C5A4DA828753139E5A2E203",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/BurntSushi/ripgrep/14.0.3/ripgrep-14.0.3-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "62CD0EFC4D6F1817B9C852859987B4720CD52E0DE008418266E8503028DC0C7A",
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "F84757B07F425FE5CF11D87DF6644691C644A5CD2348A2C670894272999D3BA7",
       "algorithm": "sha256"
     },
     {
@@ -121,33 +121,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/0.44.1/fzf-0.44.1-darwin_amd64.zip",
-      "checksum": "613551E06BF295AAF5CA215058FFB0C19CAFA858CCA5CEBC8D5B96D695267095BFB839EF0FFBBBA32DF810C1DEC505D3DDEAD1C38DBB25EA14A1E277116C42C3",
-      "algorithm": "sha512"
-    },
-    {
-      "id": "github_release/github.com/junegunn/fzf/0.44.1/fzf-0.44.1-darwin_arm64.zip",
-      "checksum": "2A4792775AC771A6365790A16F7F6F2BBA4F7917290CDCA7B022FDDFF25EDF244F680DC9015CA828141EB50363D451E2473D3B321907895C9984C19B4119069C",
-      "algorithm": "sha512"
-    },
-    {
-      "id": "github_release/github.com/junegunn/fzf/0.44.1/fzf-0.44.1-linux_amd64.tar.gz",
-      "checksum": "73D7946F08DAE8A330F4233E3EEB71C4FFC411412E3FE8488D608DDE3F7A74BD",
+      "id": "github_release/github.com/junegunn/fzf/0.45.0/fzf-0.45.0-darwin_amd64.zip",
+      "checksum": "601BED418FBA5223558C069EC5560E77D765350D1AB508CC276268A5FEF499D5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/0.44.1/fzf-0.44.1-linux_arm64.tar.gz",
-      "checksum": "6F66207D485F9FD237E17D87F239CD3E8A388B11F6B4CCA1FDF77030347CB11E",
+      "id": "github_release/github.com/junegunn/fzf/0.45.0/fzf-0.45.0-darwin_arm64.zip",
+      "checksum": "91EEF4744D3ADD75A3E9BFFD48C47F2F5C7179A73DBB3FAFEF4AEB1AB7AC5930",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/0.44.1/fzf-0.44.1-windows_amd64.zip",
-      "checksum": "BB8F1D47D9AEA2A40B5460EE0399F406AE9081EA4E1CB532593CE5B90B9B620F",
+      "id": "github_release/github.com/junegunn/fzf/0.45.0/fzf-0.45.0-linux_amd64.tar.gz",
+      "checksum": "0F1F0B7F71680F6C88E8DDF18ECE8E14C54EA6793EC17D4D51E58D15C0BAB03C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/junegunn/fzf/0.44.1/fzf-0.44.1-windows_arm64.zip",
-      "checksum": "C55AB5B0EC94BEF0DA610945501E98F73A8D7B770770333539FEBE93C852EE87",
+      "id": "github_release/github.com/junegunn/fzf/0.45.0/fzf-0.45.0-linux_arm64.tar.gz",
+      "checksum": "12C5FF170FD9D4500BE878837C5EC82AB06C69C14C4830FEFF1266A6C1D0B165",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/junegunn/fzf/0.45.0/fzf-0.45.0-windows_amd64.zip",
+      "checksum": "EAAC5E0C8EE52C984B92FD5A5EF6E96D4AD33C194EA84AEAC17DF1D72EA207F8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/junegunn/fzf/0.45.0/fzf-0.45.0-windows_arm64.zip",
+      "checksum": "25AAA210749B28FBB606D6D86616CBD37932AE6572329AB931A1DD582FB72119",
       "algorithm": "sha256"
     },
     {
@@ -176,48 +176,48 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.4/nvim-linux64.tar.gz",
-      "checksum": "DBF4EAE83647CA5C3CE1CD86939542A7B6AE49CD78884F3B4236F4F248E5D447",
+      "id": "github_release/github.com/neovim/neovim/v0.9.5/nvim-linux64.tar.gz",
+      "checksum": "44EE395D9B5F8A14BE8EC00D3B8EAD34E18FE6461E40C9C8C50E6956D643B6CA",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.4/nvim-macos.tar.gz",
-      "checksum": "86136ACBC959ABD164B7C1177707D3A8784A81B158380CF3493B1B5F1D9ED88A",
+      "id": "github_release/github.com/neovim/neovim/v0.9.5/nvim-macos.tar.gz",
+      "checksum": "19D2366E0D6DA001583BD0B8A3DB59F69CE3DDA5FA41F3064C6778CEF3EDD34C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.4/nvim-win64.zip",
-      "checksum": "C2CCCFA8D6A116AD3E30334826E05D86CCFA055CF67210B32BC84A8E9D7390BB",
+      "id": "github_release/github.com/neovim/neovim/v0.9.5/nvim-win64.zip",
+      "checksum": "DE6DC1F0EDB45F5F225EE24CE80A4FCBC3A337932037E98AE143975FCA2556BF",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.0/starship-aarch64-apple-darwin.tar.gz",
-      "checksum": "48AEAF4A5CDD4A97A0A899B45A0E34C80A12F2E5EE7E10F858DBCAD35BD094BA",
+      "id": "github_release/github.com/starship/starship/v1.17.1/starship-aarch64-apple-darwin.tar.gz",
+      "checksum": "458367BDA385A39CA4FF32E864BEE936B46D31793D93696B0743615111442793",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.0/starship-aarch64-pc-windows-msvc.zip",
-      "checksum": "485BDAEDCCB0DCC49AEA10DB1C5574C4A4D35EF5776886F450D22FEBD38F2496",
+      "id": "github_release/github.com/starship/starship/v1.17.1/starship-aarch64-pc-windows-msvc.zip",
+      "checksum": "1F81D19DCE229C86F2F9D49440ED2EA03BAF2FB3A9AC0090CAF817269E28F62D",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.0/starship-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "F2F768BA599B5DF72BD9490599E20BA54B076E2B6F4BA4C58792A86CE391A78B",
+      "id": "github_release/github.com/starship/starship/v1.17.1/starship-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "B2A6A704B5A6BB5D3ED3FD815B53BDB6B56B38C9891323BCAC2FD145260C05B1",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.0/starship-x86_64-apple-darwin.tar.gz",
-      "checksum": "BDAE707C3B00D254AFEE52D23C8D9435C381465B1A7DF8A0389D1B937EE8A215",
+      "id": "github_release/github.com/starship/starship/v1.17.1/starship-x86_64-apple-darwin.tar.gz",
+      "checksum": "7BF1FF0D8DF9DB7622E8295F9BD28C0A931D8618360A491ABD04D7C21A0289F9",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.0/starship-x86_64-pc-windows-msvc.zip",
-      "checksum": "24497A2CFD5AD61AD0DF5CFD1E3800C5CCEA7732DFE6D1F4B0CBFAEEB29721DC",
+      "id": "github_release/github.com/starship/starship/v1.17.1/starship-x86_64-pc-windows-msvc.zip",
+      "checksum": "C3BD0A79FC219183C84CDE63C9D6A456D4DF6CA5A1A5517555F3715C1A215FC7",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.0/starship-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "C859B2D8859A4790B8903D73847CB32CF39587634FD5C9246664E368C0CD535A",
+      "id": "github_release/github.com/starship/starship/v1.17.1/starship-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "4F325E520C4A95116A613B09AEB37F5B99265CA2B9DBF167465DB52E836DBCF4",
       "algorithm": "sha256"
     },
     {
@@ -301,9 +301,9 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.111.0/registry.yaml",
-      "checksum": "00BFBA1EDB24EE49D9E4F61976578EEC1C3623EE595A9D001A3BF877CC545DE4",
-      "algorithm": "sha256"
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.114.0/registry.yaml",
+      "checksum": "A650594CDC792507BB1F96CCD72B3925B0E7166D73BA1B185CB3BCD9B0478B65C60226CAEA90917311F09FDF322F50A80430689C958D0E7C7558A23EDA7F9A89",
+      "algorithm": "sha512"
     }
   ]
 }
