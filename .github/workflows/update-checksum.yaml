@@ -42,12 +42,12 @@ jobs:
         if: steps.diff.outcome == 'failure'
       - run: aqua install --all --only-link
 
-  automerge:
+  approve:
     runs-on: ubuntu-latest
     needs: update-aqua-checksum
     if: "github.event.pull_request.user.login == 'renovate[bot]' && contains(github.event.pull_request.body, ' **Automerge**: Enabled.')"
     steps:
       - uses: actions/checkout@v4
-      - run: gh pr merge ${{ github.event.number }} --squash --auto --delete-branch
+      - run: gh pr review ${{ github.event.number }} --approve
         env:
           GITHUB_TOKEN: ${{ github.token }}
