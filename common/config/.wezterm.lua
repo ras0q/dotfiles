@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- common config
 local config = {
@@ -17,27 +18,47 @@ local config = {
       -- ctrl+Vでclipboardをペースト
       key = 'V',
       mods = 'CTRL',
-      action = wezterm.action.PasteFrom 'Clipboard',
+      action = act.PasteFrom 'Clipboard',
     },
     {
       -- ctrl+Vでprimary selectionをペースト
       key = 'V',
       mods = 'CTRL|SHIFT',
-      action = wezterm.action.PasteFrom 'PrimarySelection',
+      action = act.PasteFrom 'PrimarySelection',
     },
     {
       -- alt+shift+Fでフルスクリーン切り換え
       key = 'f',
       mods = 'SHIFT|META',
-      action = wezterm.action.ToggleFullScreen,
+      action = act.ToggleFullScreen,
     },
     {
       -- ctrl+spaceでランチャー表示
       key = "Space",
       mods = "CTRL",
-      action = wezterm.action.ShowLauncherArgs {
+      action = act.ShowLauncherArgs {
         flags = 'LAUNCH_MENU_ITEMS|FUZZY'
       },
+    },
+  },
+  mouse_bindings = {
+    {
+      -- Click only select text and doesn't open hyperlinks
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = 'NONE',
+      action = act.CompleteSelection 'PrimarySelection',
+    },
+    {
+      -- Bind 'Up' event of CTRL-Click to open hyperlinks
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = 'CTRL',
+      action = act.OpenLinkAtMouseCursor,
+    },
+    {
+      -- Disable the 'Down' event of CTRL-Click to avoid weird program behaviors
+      event = { Down = { streak = 1, button = 'Left' } },
+      mods = 'CTRL',
+      action = act.Nop,
     },
   },
   use_ime = true,
