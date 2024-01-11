@@ -26,6 +26,7 @@ winget install `
   "aquaproj.aqua" `
   "Git.Git" `
   <# Only for Windows #> `
+  "jstarks.npiperelay" `
   "SomePythonThings.WingetUIStore" `
   "Microsoft.PowerShell" `
   "gerardog.gsudo" `
