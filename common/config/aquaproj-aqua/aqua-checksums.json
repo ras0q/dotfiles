@@ -221,6 +221,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.20.8/tree-sitter-linux-arm64.gz",
+      "checksum": "51A50F907F71157003ACE392C0BB1C0E8FEE2973834E8EE1622DA0AC2BB9BFFC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.20.8/tree-sitter-linux-x64.gz",
+      "checksum": "90734A35CEBD1AA4C0A5F7CBE81063724576F489951E5B55F88DCF073057D100",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.20.8/tree-sitter-macos-arm64.gz",
+      "checksum": "E443779655ED3422D7331089E3FDC3C4BE662C271353634A30115BA669BF2C0F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.20.8/tree-sitter-macos-x64.gz",
+      "checksum": "90E59681B60B15D28B01B3560D2E0E262EACF5EFCA16990C0FB814C661D992D9",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.20.8/tree-sitter-windows-x64.gz",
+      "checksum": "083A94631BFE953030FFD72EF6B6C0227585CC238337F4DED114F94FB58D2C31",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/volta-cli/volta/v1.1.1/volta-1.1.1-linux.tar.gz",
       "checksum": "AB14E5D50EF836F8F43B56323CFBE7BA95A004BAD05450B453C5B06A0B433D7B",
       "algorithm": "sha256"
