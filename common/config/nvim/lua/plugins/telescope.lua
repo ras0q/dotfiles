@@ -10,17 +10,10 @@ return {
     },
   },
   config = function()
-    require("telescope").setup {
-      pickers = {
-        find_files = {
-          -- show dotfiles
-          find_command = { "rg", "--files", "--hidden", "-g", "!.git" }
-        }
-      }
-    }
+    require("telescope").setup {}
     local builtin = require("telescope.builtin")
     -- find files
-    vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+    vim.keymap.set("n", "<leader>ff", builtin.git_files, {})
     -- search for a string
     vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
   end,
