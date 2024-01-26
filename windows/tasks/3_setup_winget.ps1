@@ -22,6 +22,7 @@ winget install `
   "SlackTechnologies.Slack" `
   "Spotify.Spotify" `
   "OliverSchwendener.ueli" `
+  "Betterbird.Betterbird" `
   <# Common CLI #> `
   "aquaproj.aqua" `
   "Git.Git" `
