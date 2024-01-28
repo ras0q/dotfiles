@@ -11,9 +11,6 @@ $git_state\
 $git_status\
 $line_break\
 $character"""
-right_format = """
-$cmd_duration\
-$time"""
 
 [directory]
 truncation_length = 4
