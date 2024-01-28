@@ -5,41 +5,18 @@ local act = wezterm.action
 local config = {
   adjust_window_size_when_changing_font_size = false,
   color_scheme = 'Catppuccin Latte',
-  font = wezterm.font_with_fallback {
-    '源ノ角ゴシック Code JP',
-    'Source Code Pro'
-  },
+  font = wezterm.font_with_fallback { '源ノ角ゴシック Code JP', 'Source Code Pro' },
   font_size = 10.0,
   hide_tab_bar_if_only_one_tab = true,
   initial_cols = 80,
   initial_rows = 20,
   keys = {
-    {
-      -- ctrl+Vでclipboardをペースト
-      key = 'V',
-      mods = 'CTRL',
-      action = act.PasteFrom 'Clipboard',
-    },
-    {
-      -- ctrl+Vでprimary selectionをペースト
-      key = 'V',
-      mods = 'CTRL|SHIFT',
-      action = act.PasteFrom 'PrimarySelection',
-    },
-    {
-      -- alt+shift+Fでフルスクリーン切り換え
-      key = 'f',
-      mods = 'SHIFT|META',
-      action = act.ToggleFullScreen,
-    },
-    {
-      -- ctrl+spaceでランチャー表示
-      key = "Space",
-      mods = "CTRL",
-      action = act.ShowLauncherArgs {
-        flags = 'LAUNCH_MENU_ITEMS|FUZZY'
-      },
-    },
+    -- Ctrl+V to paste from clipboard
+    { key = 'V',     mods = 'CTRL',       action = act.PasteFrom('Clipboard') },
+    -- Alt+Shift+F to toggle fullscreen
+    { key = 'f',     mods = 'SHIFT|META', action = act.ToggleFullScreen },
+    -- Ctrl+Space to show launcher
+    { key = 'Space', mods = 'CTRL',       action = act.ShowLauncherArgs { flags = 'LAUNCH_MENU_ITEMS|FUZZY' } },
   },
   mouse_bindings = {
     {
