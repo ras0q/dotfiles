@@ -5,6 +5,7 @@ palette = 'catppuccin_latte'
 format = """
 $username\
 $hostname\
+$shell\
 $directory\
 $git_branch\
 $git_state\
@@ -12,13 +13,19 @@ $git_status\
 $line_break\
 $character"""
 
-[directory]
-truncation_length = 4
-style = 'bold lavender' # Catppuccin Latte lavender
-
 [hostname]
 ssh_symbol = '\[ssh\]'
 format = '[$hostname$ssh_symbol]($style) '
+
+[directory]
+truncation_length = 4
+style = 'bold lavender'
+
+[shell]
+disabled = false
+unknown_indicator = "MYTERY SHELL"
+format = '[\[$indicator\]]($style) '
+style = "sapphire bold"
 
 [git_branch]
 symbol = ''
