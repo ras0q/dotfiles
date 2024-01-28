@@ -1,5 +1,16 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
+local act_cb = wezterm.action_callback
+
+-- Helper functions
+local function copy_or_sigint(window, pane)
+  local is_selection_active = string.len(window:get_selection_text_for_pane(pane)) ~= 0
+  if is_selection_active then
+      window:perform_action(wezterm.action.CopyTo('ClipboardAndPrimarySelection'), pane)
+  else
+      window:perform_action(wezterm.action.SendKey{ key='c', mods='CTRL' }, pane)
+  end
+end
 
 -- common config
 local config = {
@@ -11,8 +22,10 @@ local config = {
   initial_cols = 80,
   initial_rows = 20,
   keys = {
+    -- Ctrl+C to copy to clipboard
+    { key = 'c',     mods = 'CTRL',       action = act_cb(copy_or_sigint) },
     -- Ctrl+V to paste from clipboard
-    { key = 'V',     mods = 'CTRL',       action = act.PasteFrom('Clipboard') },
+    { key = 'v',     mods = 'CTRL',       action = act.PasteFrom('Clipboard') },
     -- Alt+Shift+F to toggle fullscreen
     { key = 'f',     mods = 'SHIFT|META', action = act.ToggleFullScreen },
     -- Ctrl+Space to show launcher
