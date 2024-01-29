@@ -1,5 +1,8 @@
 {
   "C_Cpp.clang_format_style": "{BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true}",
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -7,7 +10,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
@@ -34,7 +37,9 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "black-formatter.path": ["${userHome}\\.rye\\shims\\black.exe"],
+  "black-formatter.path": [
+    "${userHome}\\.rye\\shims\\black.exe"
+  ],
   "code-runner.runInTerminal": true,
   "debug.allowBreakpointsEverywhere": true,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -45,6 +50,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.foldingMaximumRegions": 2000,
   "editor.fontFamily": "SF Mono, 源ノ角ゴシック Code JP, Source Code Pro",
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.guides.bracketPairs": true,
@@ -110,7 +116,9 @@
     "ol-prefix": false
   },
   "material-icon-theme.folders.theme": "specific",
-  "mypy-type-checker.path": ["${userHome}\\.rye\\shims\\mypy.exe"],
+  "mypy-type-checker.path": [
+    "${userHome}\\.rye\\shims\\mypy.exe"
+  ],
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -120,7 +128,9 @@
     "dlb": "linux"
   },
   "remote.SSH.showLoginTerminal": true,
-  "ruff.path": ["${userHome}\\.rye\\shims\\ruff.exe"],
+  "ruff.path": [
+    "${userHome}\\.rye\\shims\\ruff.exe"
+  ],
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,
@@ -138,9 +148,11 @@
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.ignoreProcessNames": ["oh-my-posh", "bash", "zsh"],
+  "terminal.integrated.ignoreProcessNames": [],
+  "terminal.integrated.minimumContrastRatio": 1,
   "terminal.integrated.profiles.windows": {
     "Command Prompt": {
       "args": [],
@@ -158,7 +170,10 @@
       "source": "PowerShell"
     },
     "Ubuntu (WSL)": {
-      "args": ["-d", "Ubuntu"],
+      "args": [
+        "-d",
+        "Ubuntu"
+      ],
       "path": "C:\\WINDOWS\\System32\\wsl.exe"
     }
   },
@@ -170,8 +185,5 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always",
-  "Lua.diagnostics.globals": ["vim"],
-  "terminal.integrated.fontSize": 14,
-  "editor.fontSize": 14
+  "workbench.tree.renderIndentGuides": "always"
 }
