@@ -81,8 +81,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.17.3/eza.exe_x86_64-pc-windows-gnu.zip",
-      "checksum": "09215616E63398BE1945FB15874DF20AE750AAFB17A43613F977F500CFFA6ED1",
+      "id": "github_release/github.com/eza-community/eza/v0.17.3/eza.exe_x86_64-pc-windows-gnu.tar.gz",
+      "checksum": "D11B8BF025CB72B446D98FA74FB15098F0C5F7EA99FBCE8D4E3C9A43BFB7BEEC",
       "algorithm": "sha256"
     },
     {
@@ -91,8 +91,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.17.3/eza_x86_64-unknown-linux-gnu.tar.gz",
-      "checksum": "4A005184C6116088ADAEE37A1018F57C333560A02AB5E0047B8F0DEEBC20336F",
+      "id": "github_release/github.com/eza-community/eza/v0.17.3/eza_x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "84EC83499D3750DB183E2AB056894A57FD4A7F67583683103E4EA4F690F8C82B",
       "algorithm": "sha256"
     },
     {
@@ -326,8 +326,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.126.0/registry.yaml",
-      "checksum": "2E0A3365B977B7969A8608603D209644629D85CF6C6FBC0E97E3519A170AAEA130328D4B8A2166BC5AD74EB1758BEC27706DDED6B26301A5BC6442F54A87A22D",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.127.0/registry.yaml",
+      "checksum": "A12E7F6497EA1D47E557A63659679E9BB04584C4CF9203B571A46B36D84C633816FDB4A5AE5B397992226AEE08D1AB91E17567B475B6956B566AE1BA32E0D8F9",
       "algorithm": "sha512"
     }
   ]
