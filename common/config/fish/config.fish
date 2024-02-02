@@ -3,7 +3,8 @@ fish_add_path \
   ~/.local/share/aquaproj-aqua/bin \
   ~/go/bin \
   ~/.rye/shims \
-  ~/.volta/bin
+  ~/.volta/bin \
+  ~/.cargo/bin \
 
 # starship
 starship init fish --print-full-init \
