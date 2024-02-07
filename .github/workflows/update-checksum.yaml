@@ -37,7 +37,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add -A
-          $PR_NUM=${{ github.event.number}} git commit --author . -m "chore(aqua): update checksum for $PR_NUM"
+          PR_NUM=${{ github.event.number}} git commit --author . -m "chore(aqua): update checksum for $PR_NUM"
           git push origin
         if: steps.diff.outcome == 'failure'
       - run: aqua install --all --only-link
