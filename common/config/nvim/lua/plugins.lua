@@ -74,4 +74,8 @@ require("lazy").setup({
       require("mini.trailspace").setup()
     end,
   },
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  }
 })
