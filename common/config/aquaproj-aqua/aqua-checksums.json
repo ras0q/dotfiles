@@ -101,18 +101,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.0/eza.exe_x86_64-pc-windows-gnu.tar.gz",
-      "checksum": "8A9B9CEFD9D57E82C9BF9C7647C7CD8F2F7D71B6F00BA2D4FDDC25E5754E6C09",
+      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza.exe_x86_64-pc-windows-gnu.tar.gz",
+      "checksum": "57642FBAADF97F9B6E31C140639664513C265AB36B3828757B0EB74D038E9947",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.0/eza_aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "82C992A384503D7B5BFFACB2D681959CB18E7D04AD98BE36B811F33B581ED5CA",
+      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza_aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "1A5FA320F94B118F03BC5EFC63360C1B13CF78D570F668EE5A6926BCF9601C9D",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.0/eza_x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "F668E54A8B2A2D64DA1D3B04C84BDE2D609F4C29A02E11C099DF4B9A838D62D5",
+      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza_x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "FF6C34A9784A1C7BDF8184739AAFAAE58561D3C8E1DFC446402F9245F8D1E3D8",
       "algorithm": "sha256"
     },
     {
@@ -316,39 +316,69 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/golang.org/dl/go1.21.6.darwin-amd64.tar.gz",
-      "checksum": "31D6ECCA09010AB351E51343A5AF81D678902061FEE871F912BDD5EF4D778850",
+      "id": "http/golang.org/dl/go1.22.0.darwin-amd64.tar.gz",
+      "checksum": "EBCA81DF938D2D1047CC992BE6C6C759543CF309D401B86AF38A6AED3D4090F4",
       "algorithm": "sha256"
     },
     {
-      "id": "http/golang.org/dl/go1.21.6.darwin-arm64.tar.gz",
-      "checksum": "0FF541FB37C38E5E5C5BCECC8F4F43C5FFD5E3A6C33A5D3E4003DED66FCFB331",
+      "id": "http/golang.org/dl/go1.22.0.darwin-arm64.tar.gz",
+      "checksum": "BF8E388B09134164717CD52D3285A4AB3B68691B80515212DA0E9F56F518FB1E",
       "algorithm": "sha256"
     },
     {
-      "id": "http/golang.org/dl/go1.21.6.linux-amd64.tar.gz",
-      "checksum": "3F934F40AC360B9C01F616A9AA1796D227D8B0328BF64CB045C7B8C4EE9CAEA4",
+      "id": "http/golang.org/dl/go1.22.0.linux-amd64.tar.gz",
+      "checksum": "F6C8A87AA03B92C4B0BF3D558E28EA03006EB29DB78917DAEC5CFB6EC1046265",
       "algorithm": "sha256"
     },
     {
-      "id": "http/golang.org/dl/go1.21.6.linux-arm64.tar.gz",
-      "checksum": "E2E8AA88E1B5170A0D495D7D9C766AF2B2B6C6925A8F8956D834AD6B4CACBD9A",
+      "id": "http/golang.org/dl/go1.22.0.linux-arm64.tar.gz",
+      "checksum": "6A63FEF0E050146F275BF02A0896BADFE77C11B6F05499BB647E7BD613A45A10",
       "algorithm": "sha256"
     },
     {
-      "id": "http/golang.org/dl/go1.21.6.windows-amd64.zip",
-      "checksum": "27AC9DD6E66FB3FD0ACFA6792FF053C86E7D2C055B022F4B5D53BFDDEC9E3301",
+      "id": "http/golang.org/dl/go1.22.0.windows-amd64.zip",
+      "checksum": "78B3158FE3AA358E0B6C9F26ECD338F9A11441E88BC434AE2E9F0CA2B0CC4DD3",
       "algorithm": "sha256"
     },
     {
-      "id": "http/golang.org/dl/go1.21.6.windows-arm64.zip",
-      "checksum": "B93AFF8F3C882C764C66A39B7A1483B0460E051E9992BF3435479129E5051BCD",
+      "id": "http/golang.org/dl/go1.22.0.windows-arm64.zip",
+      "checksum": "31A61E41D06A3BB2189A303F5F3E777CA4B454EFF439F0A67BC2B166330021F4",
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.128.0/registry.yaml",
-      "checksum": "CDE3F6CE5A8CC1C9ECE1ECFF3F176839C2C34904AF45C0324BAB593672B92263",
+      "id": "http/ziglang.org/download/0.11.0/zig-linux-aarch64-0.11.0.tar.xz",
+      "checksum": "956EB095D8BA44AC6EBD27F7C9956E47D92937C103BF754745D0A39CDAA5D4C6",
       "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-linux-x86_64-0.11.0.tar.xz",
+      "checksum": "2D00E789FEC4F71790A6E7BF83FF91D564943C5EE843C5FD966EFC474B423047",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-macos-aarch64-0.11.0.tar.xz",
+      "checksum": "C6EBF927BB13A707D74267474A9F553274E64906FD21BF1C75A20BDE8CADF7B2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-macos-x86_64-0.11.0.tar.xz",
+      "checksum": "1C1C6B9A906B42BAAE73656E24E108FD8444BB50B6E8FD03E9E7A3F8B5F05686",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-windows-aarch64-0.11.0.zip",
+      "checksum": "5D4BD13DB5ECB0DDC749231E00F125C1D31087D708E9FF9B45C4F4E13E48C661",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-windows-x86_64-0.11.0.zip",
+      "checksum": "142CAA3B804D86B4752556C9B6B039B7517A08AFA3AF842645C7E2DCD125F652",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.129.0/registry.yaml",
+      "checksum": "84A1A5462544236153B92F352B90D0376F396BB9B2161DA18AD0DB78A38A0BDB5D22C7A81C1D0EBB1C6CACC1008CE860F2F60109E404F8E7A3368F95DCA7C16E",
+      "algorithm": "sha512"
     }
   ]
 }
