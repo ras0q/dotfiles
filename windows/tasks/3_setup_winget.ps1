@@ -27,6 +27,7 @@ winget install `
   "aquaproj.aqua" `
   "Git.Git" `
   <# Only for Windows #> `
+  "Flow-Launcher.Flow-Launcher" `
   "jstarks.npiperelay" `
   "SomePythonThings.WingetUIStore" `
   "Microsoft.PowerShell" `
