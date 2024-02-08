@@ -1,8 +1,12 @@
 # Path: $PROFILE/Microsoft.PowerShell_profile.ps1
 
-function Set-New-Path() {
-  $env:Path = `
-    [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + `
+function Set-Path() {
+  $env:Path = "$HOME\AppData\Local\1Password\app\8;" `
+  + "$HOME\.rye\shims;" `
+  + "$HOME\AppData\Local\volta\bin;" `
+  + "$HOME\AppData\Local\aquaproj-aqua\bat;" `
+  + "$HOME\AppData\Local\aquaproj-aqua\bin;" `
+  + [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + `
     [System.Environment]::GetEnvironmentVariable("Path", "User")
 }
 
@@ -21,13 +25,8 @@ Set-PSReadLineOption -PredictionSource History
 # Environment variables
 $env:AQUA_GLOBAL_CONFIG = "$HOME\.config\aquaproj-aqua\aqua.yaml"
 
-# Additional paths
-$env:Path += ";$HOME\AppData\Local\1Password\app\8"
-$env:Path += ";$HOME\scoop\apps\gcc\current\bin"
-$env:Path += ";$HOME\.rye\shims"
-$env:Path += ";$HOME\AppData\Local\Volta\bin"
-$env:Path += ";$HOME\AppData\Local\aquaproj-aqua\bat"
-$env:Path += ";$HOME\AppData\Local\aquaproj-aqua\bin"
+# Set PATH
+Set-Path
 
 # Aliases & Functions
 Set-Alias powershell pwsh

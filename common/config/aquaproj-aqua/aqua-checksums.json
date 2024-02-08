@@ -81,38 +81,38 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.40.3/deno-aarch64-apple-darwin.zip",
-      "checksum": "67E9E9E9D597B195BC2EE4D330C61771F9A8D770BD674620BBF7CE3BEB5A322F",
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-aarch64-apple-darwin.zip",
+      "checksum": "B5A3D704B7519E3D9DD04B78FD50495B48F177744DD61FBDDF097C5B9C2C2DA7",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.40.3/deno-x86_64-apple-darwin.zip",
-      "checksum": "51C89D83C9851A656478F35DFA3375824ECB757C49A601DD1DD85C63C2276698",
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-x86_64-apple-darwin.zip",
+      "checksum": "AF62D0BF4DAF66C98CE83E2F520DDD228949A5BD84CB4F9D61D30288DF03C4E1",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.40.3/deno-x86_64-pc-windows-msvc.zip",
-      "checksum": "B7BD9B078C84A5DA813CFAE4CF6A7B25BD2962499E21A82A830F60AD0BCEF451",
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-x86_64-pc-windows-msvc.zip",
+      "checksum": "31146AD7E7F68C625855D154D92BB8F0078E5FFC679255F2FE3F87C0D53CCB02",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.40.3/deno-x86_64-unknown-linux-gnu.zip",
-      "checksum": "AD2902DF64C817C5889C823EE31F82FA36CDF66A4E259AE25C51404443B2EC2B",
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-x86_64-unknown-linux-gnu.zip",
+      "checksum": "C5206615877DBFEE26E8EF8D5BAA83D625D4DC2BF3605F1F65252F9675223235",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.0/eza.exe_x86_64-pc-windows-gnu.tar.gz",
-      "checksum": "8A9B9CEFD9D57E82C9BF9C7647C7CD8F2F7D71B6F00BA2D4FDDC25E5754E6C09",
+      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza.exe_x86_64-pc-windows-gnu.tar.gz",
+      "checksum": "57642FBAADF97F9B6E31C140639664513C265AB36B3828757B0EB74D038E9947",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.0/eza_aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "82C992A384503D7B5BFFACB2D681959CB18E7D04AD98BE36B811F33B581ED5CA",
+      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza_aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "1A5FA320F94B118F03BC5EFC63360C1B13CF78D570F668EE5A6926BCF9601C9D",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.0/eza_x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "F668E54A8B2A2D64DA1D3B04C84BDE2D609F4C29A02E11C099DF4B9A838D62D5",
+      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza_x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "FF6C34A9784A1C7BDF8184739AAFAAE58561D3C8E1DFC446402F9245F8D1E3D8",
       "algorithm": "sha256"
     },
     {
@@ -346,8 +346,38 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.128.1/registry.yaml",
-      "checksum": "F05190B76B28B0E73B00FFD8AF96808D8B575037FB7B73B7365086EA54C3BE0EA6A480F5AEAF8069AA3D08D18FD81C24403BDD3292280B76CFA65E39E2C46D45",
+      "id": "http/ziglang.org/download/0.11.0/zig-linux-aarch64-0.11.0.tar.xz",
+      "checksum": "956EB095D8BA44AC6EBD27F7C9956E47D92937C103BF754745D0A39CDAA5D4C6",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-linux-x86_64-0.11.0.tar.xz",
+      "checksum": "2D00E789FEC4F71790A6E7BF83FF91D564943C5EE843C5FD966EFC474B423047",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-macos-aarch64-0.11.0.tar.xz",
+      "checksum": "C6EBF927BB13A707D74267474A9F553274E64906FD21BF1C75A20BDE8CADF7B2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-macos-x86_64-0.11.0.tar.xz",
+      "checksum": "1C1C6B9A906B42BAAE73656E24E108FD8444BB50B6E8FD03E9E7A3F8B5F05686",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-windows-aarch64-0.11.0.zip",
+      "checksum": "5D4BD13DB5ECB0DDC749231E00F125C1D31087D708E9FF9B45C4F4E13E48C661",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/ziglang.org/download/0.11.0/zig-windows-x86_64-0.11.0.zip",
+      "checksum": "142CAA3B804D86B4752556C9B6B039B7517A08AFA3AF842645C7E2DCD125F652",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.129.0/registry.yaml",
+      "checksum": "84A1A5462544236153B92F352B90D0376F396BB9B2161DA18AD0DB78A38A0BDB5D22C7A81C1D0EBB1C6CACC1008CE860F2F60109E404F8E7A3368F95DCA7C16E",
       "algorithm": "sha512"
     }
   ]
