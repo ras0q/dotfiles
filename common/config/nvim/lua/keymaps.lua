@@ -13,5 +13,8 @@ keymap("n", "tt", ":split | wincmd j | resize 10 | terminal<CR>i", opts)
 -- insert mode
 keymap("i", "jk", "<ESC>", opts)
 
+-- visual mode
+keymap("v", "jk", "<ESC>", opts)
+
 -- terminal mode
 keymap("t", "<ESC>", "<C-\\><C-n>", opts)
