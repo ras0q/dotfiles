@@ -96,6 +96,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-aarch64-unknown-linux-gnu.zip",
+      "checksum": "251EF2B8F230B87EA1E121E7B835C6A2B77435E6063B6E939DC535F5C8DBD95E",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/denoland/deno/v1.40.4/deno-x86_64-apple-darwin.zip",
       "checksum": "AF62D0BF4DAF66C98CE83E2F520DDD228949A5BD84CB4F9D61D30288DF03C4E1",
       "algorithm": "sha256"
@@ -386,8 +391,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.131.2/registry.yaml",
-      "checksum": "A0DAE2272276029617FE9F0BABA2BF82FC4A64D22907A0AA9A4771C05EC54220D3FE7B2BA3466256FFCAF07081196A43B2F162BE9DB65AF36E9B1842B1CD70B9",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.132.1/registry.yaml",
+      "checksum": "713CE8B72E88A4643FB13C41AE0741C3A9F89CBE60376928189847C050029C52DE869BCD6E4DB5C72062465F20BC2DBF78499BEB12D2786FF20371596C26D012",
       "algorithm": "sha512"
     }
   ]
