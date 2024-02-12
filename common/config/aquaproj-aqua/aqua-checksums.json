@@ -6,6 +6,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-aarch64-apple-darwin.tar.gz",
+      "checksum": "FC59CA3EAA5B5BCFA1488EEB80291BAD0E8E2842E05D4400FC7B29D5EE4BD26B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "C8C210B99844FBF16B7A36D1C963E8351BCA5FF2DD7C788F5FBA4AC18BA8C60D",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-apple-darwin.tar.gz",
       "checksum": "4D882FC945E5A9B6080A5C0506F7FE4AAEA191C1865355428DD4BFA096F974B5",
       "algorithm": "sha256"
@@ -83,6 +93,11 @@
     {
       "id": "github_release/github.com/denoland/deno/v1.40.4/deno-aarch64-apple-darwin.zip",
       "checksum": "B5A3D704B7519E3D9DD04B78FD50495B48F177744DD61FBDDF097C5B9C2C2DA7",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-aarch64-unknown-linux-gnu.zip",
+      "checksum": "251EF2B8F230B87EA1E121E7B835C6A2B77435E6063B6E939DC535F5C8DBD95E",
       "algorithm": "sha256"
     },
     {
@@ -376,8 +391,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.131.1/registry.yaml",
-      "checksum": "6D124F59AA46CA09D3C2E9030F349C97B4E66C1E679D32EF8A4F5E515D8AABF70B6647E07AA73E79CCD213BE88A27D07C6C3C2DC6E4FD27D8E86D2F35A1CD278",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.132.1/registry.yaml",
+      "checksum": "713CE8B72E88A4643FB13C41AE0741C3A9F89CBE60376928189847C050029C52DE869BCD6E4DB5C72062465F20BC2DBF78499BEB12D2786FF20371596C26D012",
       "algorithm": "sha512"
     }
   ]
