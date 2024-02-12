@@ -6,6 +6,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-aarch64-apple-darwin.tar.gz",
+      "checksum": "FC59CA3EAA5B5BCFA1488EEB80291BAD0E8E2842E05D4400FC7B29D5EE4BD26B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "C8C210B99844FBF16B7A36D1C963E8351BCA5FF2DD7C788F5FBA4AC18BA8C60D",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/BurntSushi/ripgrep/14.1.0/ripgrep-14.1.0-x86_64-apple-darwin.tar.gz",
       "checksum": "4D882FC945E5A9B6080A5C0506F7FE4AAEA191C1865355428DD4BFA096F974B5",
       "algorithm": "sha256"
@@ -86,6 +96,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/denoland/deno/v1.40.4/deno-aarch64-unknown-linux-gnu.zip",
+      "checksum": "251EF2B8F230B87EA1E121E7B835C6A2B77435E6063B6E939DC535F5C8DBD95E",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/denoland/deno/v1.40.4/deno-x86_64-apple-darwin.zip",
       "checksum": "AF62D0BF4DAF66C98CE83E2F520DDD228949A5BD84CB4F9D61D30288DF03C4E1",
       "algorithm": "sha256"
@@ -101,18 +116,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza.exe_x86_64-pc-windows-gnu.tar.gz",
-      "checksum": "57642FBAADF97F9B6E31C140639664513C265AB36B3828757B0EB74D038E9947",
+      "id": "github_release/github.com/eza-community/eza/v0.18.2/eza.exe_x86_64-pc-windows-gnu.tar.gz",
+      "checksum": "E34348FD7B8EC1761F3AAADF0BE9C35D3C2E1A12939007A5C83C2B302078F9B5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza_aarch64-unknown-linux-gnu.tar.gz",
-      "checksum": "1A5FA320F94B118F03BC5EFC63360C1B13CF78D570F668EE5A6926BCF9601C9D",
+      "id": "github_release/github.com/eza-community/eza/v0.18.2/eza_aarch64-unknown-linux-gnu.tar.gz",
+      "checksum": "B729C5B85066C444B9038ADF046F37DC6A050126DEEA4F15E9969A83A637EDCE",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/eza-community/eza/v0.18.1/eza_x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "FF6C34A9784A1C7BDF8184739AAFAAE58561D3C8E1DFC446402F9245F8D1E3D8",
+      "id": "github_release/github.com/eza-community/eza/v0.18.2/eza_x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "025E879B0862EDDBCC57D996C88C249C198105DD80C49F8A03DC3387A12C9979",
       "algorithm": "sha256"
     },
     {
@@ -171,28 +186,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.21.0/rye-aarch64-linux.gz",
-      "checksum": "52BFBB432733F7D93340D92FB245989669D0B2D5F26AD796AF5A5198291E0529",
+      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-aarch64-linux.gz",
+      "checksum": "C6ECEC4D5C05524DE6B99E877E11475081354049E36D9B1A47C438532E117D48",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.21.0/rye-aarch64-macos.gz",
-      "checksum": "91659E8B2C6FB39EBF2DF6220AE10EFDEC2F85DD8DBFA3023E5F2BF5B491198D",
+      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-aarch64-macos.gz",
+      "checksum": "B63B15D82D2C03E05277498607CED2E019E02FBCAC399AD1E11179142AD8E87C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.21.0/rye-x86_64-linux.gz",
-      "checksum": "41D515170E021E20F72A8DD3AC2404BE0681832498A8034AEFE3CF59600B39F2",
+      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-x86_64-linux.gz",
+      "checksum": "7400415B9FE2BE349E047EB896689C4603C1CA021053F68EBC9F13B10495B2AB",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.21.0/rye-x86_64-macos.gz",
-      "checksum": "556CD7B2BECCC1410CB4D28B0E6779266E3B40477F1A1EA798C64B46366AE54D",
+      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-x86_64-macos.gz",
+      "checksum": "57B5C5A910B4977B8AE2FFA03DC18500D930B2ECB950AFF507E4B7B18E60D744",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.21.0/rye-x86_64-windows.exe",
-      "checksum": "A79D95D24519B1375EBD675F2BFAD215546943D1D2E7F0713D197396DEA6DF67",
+      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-x86_64-windows.exe",
+      "checksum": "20257D23813F646AE4829F822A675F505FD20B73ADECE4522219F978594A4379",
       "algorithm": "sha256"
     },
     {
@@ -376,8 +391,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.129.0/registry.yaml",
-      "checksum": "84A1A5462544236153B92F352B90D0376F396BB9B2161DA18AD0DB78A38A0BDB5D22C7A81C1D0EBB1C6CACC1008CE860F2F60109E404F8E7A3368F95DCA7C16E",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.132.1/registry.yaml",
+      "checksum": "713CE8B72E88A4643FB13C41AE0741C3A9F89CBE60376928189847C050029C52DE869BCD6E4DB5C72062465F20BC2DBF78499BEB12D2786FF20371596C26D012",
       "algorithm": "sha512"
     }
   ]

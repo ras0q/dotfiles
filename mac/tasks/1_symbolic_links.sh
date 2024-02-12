@@ -13,6 +13,9 @@ ln -sf $confDir/aquaproj-aqua $HOME/.config/
 ln -sf $confDir/fish $HOME/.config/
 ln -sf $confDir/nvim $HOME/.config/
 ln -sf $confDir/starship.toml $HOME/.config/
+## $HOME/.rye
+mkdir -p $HOME/.rye
+ln -sf $confDir/rye/config.toml $HOME/.rye
 
 # OS specific files
 confDir="$PWD/mac/config"
