@@ -186,28 +186,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-aarch64-linux.gz",
-      "checksum": "C6ECEC4D5C05524DE6B99E877E11475081354049E36D9B1A47C438532E117D48",
+      "id": "github_release/github.com/mitsuhiko/rye/0.23.0/rye-aarch64-linux.gz",
+      "checksum": "204D41C8D093358E3205921C59B637B0163356A4628B818134C1C30FD2E82302",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-aarch64-macos.gz",
-      "checksum": "B63B15D82D2C03E05277498607CED2E019E02FBCAC399AD1E11179142AD8E87C",
+      "id": "github_release/github.com/mitsuhiko/rye/0.23.0/rye-aarch64-macos.gz",
+      "checksum": "E9F0D21BFAE75C4089303E3A4C95FA277675C0962FA8B24FFF0B69418FFD03B2",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-x86_64-linux.gz",
-      "checksum": "7400415B9FE2BE349E047EB896689C4603C1CA021053F68EBC9F13B10495B2AB",
+      "id": "github_release/github.com/mitsuhiko/rye/0.23.0/rye-x86_64-linux.gz",
+      "checksum": "0018FCE5A7B185143287CB5FB88D292941B5E760714D1F8A6C0C35D31438FA65",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-x86_64-macos.gz",
-      "checksum": "57B5C5A910B4977B8AE2FFA03DC18500D930B2ECB950AFF507E4B7B18E60D744",
+      "id": "github_release/github.com/mitsuhiko/rye/0.23.0/rye-x86_64-macos.gz",
+      "checksum": "B84C4DAB08D3E192FA147C73F2A02135C1A0823C55F004B57D926E31036EADBF",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/rye/0.22.0/rye-x86_64-windows.exe",
-      "checksum": "20257D23813F646AE4829F822A675F505FD20B73ADECE4522219F978594A4379",
+      "id": "github_release/github.com/mitsuhiko/rye/0.23.0/rye-x86_64-windows.exe",
+      "checksum": "BD9D763393B40CD61A9D11D571B22AD0BA6C85D5E492785E8245B27A15520D11",
       "algorithm": "sha256"
     },
     {
