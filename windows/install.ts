@@ -74,8 +74,13 @@ await $.logGroup(async () => {
   const dotfilesDir = flags["dotfiles-dir"]
     ? resolve(dirname, flags["dotfiles-dir"])
     : resolve(home, "ghq/github.com/ras0q/dotfiles-v2");
-  await $`git clone ${dotfiles} ${dotfilesDir} --depth 1`;
-  $.logStep(`Cloned ${dotfilesDir}`);
+  if (await exists(dotfilesDir)) {
+    await $`git -C ${dotfilesDir} pull`;
+    $.logStep(`Pulled ${dotfilesDir}`);
+  } else {
+    await $`git clone ${dotfiles} ${dotfilesDir} --depth 1`;
+    $.logStep(`Cloned ${dotfilesDir}`);
+  }
 });
 
 $.logStep("Creating symlinks");
