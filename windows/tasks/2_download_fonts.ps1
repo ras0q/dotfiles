@@ -11,7 +11,7 @@ $fonts = @(
     output=$fontDir + "/SourceHanCodeJP-Regular.otf"
   }
   [pscustomobject]@{
-    uri="https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/SauceCodeProNerdFontMono-Regular.ttf";
+    uri="https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/SauceCodeProNerdFontMono-Regular.ttf";
     output=$fontDir + "/SauceCodeProNerdFontMono-Regular.ttf"
   }
 )
