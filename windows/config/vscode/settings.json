@@ -1,8 +1,6 @@
 {
   "C_Cpp.clang_format_style": "{BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true}",
-  "Lua.diagnostics.globals": [
-    "vim"
-  ],
+  "Lua.diagnostics.globals": ["vim"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -37,9 +35,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "black-formatter.path": [
-    "${userHome}\\.rye\\shims\\black.exe"
-  ],
+  "black-formatter.path": ["${userHome}\\.rye\\shims\\black.exe"],
   "code-runner.runInTerminal": true,
   "debug.allowBreakpointsEverywhere": true,
   "editor.accessibilitySupport": "off",
@@ -115,9 +111,7 @@
     "ol-prefix": false
   },
   "material-icon-theme.folders.theme": "specific",
-  "mypy-type-checker.path": [
-    "${userHome}\\.rye\\shims\\mypy.exe"
-  ],
+  "mypy-type-checker.path": ["${userHome}\\.rye\\shims\\mypy.exe"],
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -127,9 +121,7 @@
     "dlb": "linux"
   },
   "remote.SSH.showLoginTerminal": true,
-  "ruff.path": [
-    "${userHome}\\.rye\\shims\\ruff.exe"
-  ],
+  "ruff.path": ["${userHome}\\.rye\\shims\\ruff.exe"],
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,
@@ -169,10 +161,7 @@
       "source": "PowerShell"
     },
     "Ubuntu (WSL)": {
-      "args": [
-        "-d",
-        "Ubuntu"
-      ],
+      "args": ["-d", "Ubuntu"],
       "path": "C:\\WINDOWS\\System32\\wsl.exe"
     }
   },
