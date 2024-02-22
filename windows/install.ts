@@ -1,9 +1,5 @@
 import { exists } from "https://deno.land/std@0.217.0/fs/exists.ts";
-import {
-  dirname,
-  fromFileUrl,
-  resolve,
-} from "https://deno.land/std@0.217.0/path/mod.ts";
+import { resolve } from "https://deno.land/std@0.217.0/path/mod.ts";
 import $ from "https://deno.land/x/dax@0.39.2/mod.ts";
 import { parseArgs } from "https://deno.land/std@0.217.0/cli/parse_args.ts";
 
@@ -12,22 +8,20 @@ const flags: {
 } = parseArgs(Deno.args);
 
 const home = Deno.env.get("USERPROFILE")!;
-const rootDir = dirname(dirname(fromFileUrl(import.meta.url)));
-const commonConfig = `${rootDir}/common/config`;
-const windowsConfig = `${rootDir}/windows/config`;
+const dirname = import.meta.dirname || Deno.exit(1);
 const config = {
   // deno-fmt-ignore
   symlinks: {
-    [`${home}/.config/aquaproj-aqua`]: `${commonConfig}/aquaproj-aqua`,
-    [`${home}/.config/starship.toml`]: `${commonConfig}/starship.toml`,
-    [`${home}/.gitconfig`]: `${windowsConfig}/.gitconfig`,
-    [`${home}/.gittemplate.txt`]: `${commonConfig}/.gittemplate.txt`,
-    [`${home}/.wezterm.lua`]: `${commonConfig}/.wezterm.lua`,
-    [`${home}/.wslconfig`]: `${windowsConfig}/.wslconfig`,
-    [`${home}/AppData/Local/nvim`]: `${commonConfig}/nvim`,
-    [`${home}/AppData/Roaming/Code/User/settings.json`]: `${windowsConfig}/vscode/settings.json`,
-    [`${home}/Microsoft.PowerShell_profile.ps1`]: `${windowsConfig}/Microsoft.PowerShell_profile.ps1`,
-    [`${home}/Microsoft.VSCode_profile.ps1`]: `${windowsConfig}/Microsoft.PowerShell_profile.ps1`,
+    [`${home}/.config/aquaproj-aqua`]: `../common/config/aquaproj-aqua`,
+    [`${home}/.config/starship.toml`]: `../common/config/starship.toml`,
+    [`${home}/.gitconfig`]: `./config/.gitconfig`,
+    [`${home}/.gittemplate.txt`]: `../common/config/.gittemplate.txt`,
+    [`${home}/.wezterm.lua`]: `../common/config/.wezterm.lua`,
+    [`${home}/.wslconfig`]: `./config/.wslconfig`,
+    [`${home}/AppData/Local/nvim`]: `../common/config/nvim`,
+    [`${home}/AppData/Roaming/Code/User/settings.json`]: `./config/vscode/settings.json`,
+    [`${home}/Microsoft.PowerShell_profile.ps1`]: `./config/Microsoft.PowerShell_profile.ps1`,
+    [`${home}/Microsoft.VSCode_profile.ps1`]: `./config/Microsoft.PowerShell_profile.ps1`,
   },
   fonts: {
     links: [
@@ -78,7 +72,7 @@ await $.logGroup(async () => {
   await Promise.all(
     Object.entries(config.symlinks).map(async ([_link, _target]) => {
       const link = resolve(_link);
-      const target = resolve(_target);
+      const target = resolve(dirname, _target);
       await exists(link) && await Deno.remove(link);
       await Deno.symlink(target, link);
       $.logStep(`Created ${link}`);
@@ -89,7 +83,7 @@ await $.logGroup(async () => {
 $.logStep("Downloading fonts");
 await $.logGroup(async () => {
   const { dist, links } = config.fonts;
-  const fontBaseDir = resolve(dist);
+  const fontBaseDir = resolve(dirname, dist);
   await $`mkdir -p ${fontBaseDir}`;
   await Promise.all(links.map(async (font) => {
     const fontPath = resolve(fontBaseDir, font.split("/").slice(-1)[0]);
