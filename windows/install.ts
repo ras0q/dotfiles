@@ -4,6 +4,7 @@ import $ from "https://deno.land/x/dax@0.39.2/mod.ts";
 import { parseArgs } from "https://deno.land/std@0.217.0/cli/parse_args.ts";
 
 const flags: {
+  "dotfiles-dir"?: string;
   "upgrade-winget"?: boolean;
 } = parseArgs(Deno.args);
 
@@ -66,6 +67,16 @@ const config = {
     ],
   },
 };
+
+$.logStep("Cloning dotfiles");
+await $.logGroup(async () => {
+  const dotfiles = "https://github.com/ras0q/dotfiles-v2.git";
+  const dotfilesDir = flags["dotfiles-dir"]
+    ? resolve(dirname, flags["dotfiles-dir"])
+    : resolve(home, "ghq/github.com/ras0q/dotfiles-v2");
+  await $`git clone ${dotfiles} ${dotfilesDir} --depth 1`;
+  $.logStep(`Cloned ${dotfilesDir}`);
+});
 
 $.logStep("Creating symlinks");
 await $.logGroup(async () => {
