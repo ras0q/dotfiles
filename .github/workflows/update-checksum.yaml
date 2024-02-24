@@ -6,7 +6,7 @@ on:
       - "main"
   pull_request:
     paths:
-      - "common/config/aquaproj-aqua/*"
+      - "common/aquaproj-aqua/*"
       - ".github/workflows/update-checksum.yaml"
   workflow_dispatch:
 
@@ -26,9 +26,9 @@ jobs:
       - uses: aquaproj/aqua-installer@v2.3.0
         with:
           aqua_version: v2.23.1
-          working_directory: common/config/aquaproj-aqua
+          working_directory: common/aquaproj-aqua
       - run: aqua update-checksum -deep -prune
-        working-directory: common/config/aquaproj-aqua
+        working-directory: common/aquaproj-aqua
       - run: git diff --exit-code
         id: diff
         continue-on-error: true
@@ -41,7 +41,7 @@ jobs:
           git push origin
         if: steps.diff.outcome == 'failure'
         env:
-          PR_NUM: ${{ github.event.number}} 
+          PR_NUM: ${{ github.event.number}}
       - run: aqua install --all --only-link
 
   approve:
