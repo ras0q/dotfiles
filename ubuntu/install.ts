@@ -17,6 +17,8 @@ const flags: {
   "nonroot"?: boolean;
 } = parseArgs(Deno.args);
 
+!flags["nonroot"] && (await $`sudo echo "Hello sudoer!"`);
+
 const home = Deno.env.get("HOME")!;
 const dirname = import.meta.dirname || Deno.exit(1);
 const config = {
@@ -113,7 +115,8 @@ await $.logGroup(async () => {
     return;
   }
 
-  const { gpgLink, gpgPath, installLink, packages: dockerPackages } = config.apt.docker;
+  const { gpgLink, gpgPath, installLink, packages: dockerPackages } =
+    config.apt.docker;
   await exists(gpgPath) && await $`sudo rm ${gpgPath}`;
   await $`install -m 0755 -d /etc/apt/keyrings`;
   await $`sudo tee ${gpgPath}`
