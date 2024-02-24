@@ -5,11 +5,6 @@ import { resolve } from "https://deno.land/std@0.217.0/path/mod.ts";
 import { parseArgs } from "https://deno.land/std@0.217.0/cli/parse_args.ts";
 import $ from "https://deno.land/x/dax@0.39.2/mod.ts";
 
-if (Deno.build.os !== "linux") {
-  console.error("This script is for Ubuntu only");
-  Deno.exit(1);
-}
-
 $.setPrintCommand(true);
 
 const flags: {
@@ -35,6 +30,26 @@ const config = {
     // ...(Deno.env.get("WSL_DISTRO_NAME")
     //   ? { "/etc/wsl.conf": "./config/.wsl.conf" }
     //   : {}),
+
+    // MacOS only
+    ...(Deno.build.os === "darwin")
+      ? {
+        [`${home}/.Brewfile`]: "../mac/config/.Brewfile",
+        [`${home}/.Brewfile.lock.json`]: "../mac/config/.Brewfile.lock.json",
+        [`${home}/.gitconfig.mac`]: "../mac/config/.gitconfig.mac",
+      }
+      : {},
+  },
+  fonts: {
+    links: [
+      // 源ノ角ゴシック
+      "https://github.com/adobe-fonts/source-han-sans/raw/release/Variable/OTF/Subset/SourceHanSansJP-VF.otf",
+      // 源ノ角ゴシック Code
+      "https://github.com/adobe-fonts/source-han-code-jp/raw/release/OTF/SourceHanCodeJP-Regular.otf",
+      // Source Code Pro (Nerd Font)
+      "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/SauceCodeProNerdFontMono-Regular.ttf",
+    ],
+    dist: "./dist/fonts",
   },
   apt: {
     packages: [
@@ -58,6 +73,10 @@ const config = {
         "docker-compose-plugin",
       ],
     },
+  },
+  brew: {
+    installLink:
+      "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh",
   },
   rust: {
     installLink: "https://sh.rustup.rs",
@@ -95,49 +114,83 @@ await $.logGroup(async () => {
   );
 });
 
-$.logStep("Setting up apt and packages");
+$.logStep("Downloading fonts");
 await $.logGroup(async () => {
-  if (flags["nonroot"]) {
-    $.logStep("Skipped apt setup");
-    return;
-  }
-
-  const { packages } = config.apt;
-  await $`sudo apt-get update`;
-  await $`sudo apt-get upgrade -y`;
-  await $`sudo apt-get install -y ${packages}`;
-  $.logStep(`Installed apt packages: ${packages.join(", ")}`);
-
-  // Ref: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
-  $.logStep("Installing Docker and Docker Compose with apt");
-  if (flags["nonroot"]) {
-    $.logStep("Skipped Docker setup");
-    return;
-  }
-
-  const { gpgLink, gpgPath, installLink, packages: dockerPackages } =
-    config.apt.docker;
-  await exists(gpgPath) && await $`sudo rm ${gpgPath}`;
-  await $`install -m 0755 -d /etc/apt/keyrings`;
-  await $`sudo tee ${gpgPath}`
-    .stdin($.request(gpgLink))
-    .stdout("null");
-  await $`sudo chmod a+r ${gpgPath}`;
-  $.logStep("Added Docker's GPG key");
-
-  const arch = (await $`dpkg --print-architecture`.text()).trim();
-  const codename = (await $`lsb_release -cs`.text()).trim();
-  await $`sudo tee /etc/apt/sources.list.d/docker2.list`
-    .stdinText(
-      `deb [arch=${arch} signed-by=${gpgPath}] ${installLink} ${codename} stable`,
-    )
-    .stdout("null");
-  await $`sudo apt-get update`;
-  $.logStep("Added Docker's apt repository");
-
-  await $`sudo apt-get install -y ${dockerPackages}`;
-  $.logStep(`Installed Docker's apt packages: ${dockerPackages.join(", ")}`);
+  const { dist, links } = config.fonts;
+  const fontBaseDir = resolve(dirname, dist);
+  await $`mkdir -p ${fontBaseDir}`;
+  await Promise.all(links.map(async (font) => {
+    const fontPath = resolve(fontBaseDir, font.split("/").slice(-1)[0]);
+    const data = await $.request(font).showProgress();
+    await Deno.writeFile(fontPath, new Uint8Array(await data.arrayBuffer()));
+    $.logStep(`Downloaded ${fontPath}`);
+  }));
 });
+
+if (Deno.build.os === "linux") {
+  $.logStep("Setting up apt and packages");
+  await $.logGroup(async () => {
+    if (flags["nonroot"]) {
+      $.logStep("Skipped apt setup");
+      return;
+    }
+
+    const { packages } = config.apt;
+    await $`sudo apt-get update`;
+    await $`sudo apt-get upgrade -y`;
+    await $`sudo apt-get install -y ${packages}`;
+    $.logStep(`Installed apt packages: ${packages.join(", ")}`);
+
+    // Ref: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+    $.logStep("Installing Docker and Docker Compose with apt");
+    if (flags["nonroot"]) {
+      $.logStep("Skipped Docker setup");
+      return;
+    }
+
+    const { gpgLink, gpgPath, installLink, packages: dockerPackages } =
+      config.apt.docker;
+    await exists(gpgPath) && await $`sudo rm ${gpgPath}`;
+    await $`install -m 0755 -d /etc/apt/keyrings`;
+    await $`sudo tee ${gpgPath}`
+      .stdin($.request(gpgLink))
+      .stdout("null");
+    await $`sudo chmod a+r ${gpgPath}`;
+    $.logStep("Added Docker's GPG key");
+
+    const arch = (await $`dpkg --print-architecture`.text()).trim();
+    const codename = (await $`lsb_release -cs`.text()).trim();
+    await $`sudo tee /etc/apt/sources.list.d/docker2.list`
+      .stdinText(
+        `deb [arch=${arch} signed-by=${gpgPath}] ${installLink} ${codename} stable`,
+      )
+      .stdout("null");
+    await $`sudo apt-get update`;
+    $.logStep("Added Docker's apt repository");
+
+    await $`sudo apt-get install -y ${dockerPackages}`;
+    $.logStep(`Installed Docker's apt packages: ${dockerPackages.join(", ")}`);
+  });
+} else if (Deno.build.os === "darwin") {
+  $.logStep("Setting up Homebrew");
+  await $.logGroup(async () => {
+    if (flags["nonroot"]) {
+      $.logStep("Skipped Homebrew setup");
+      return;
+    }
+
+    await $`bash`
+      .stdin($.request(config.brew.installLink));
+    await $`
+      brew cleanup
+      brew update
+      brew upgrade
+      brew doctor
+      brew bundle --global --force
+      brew cleanup --global --force
+    `;
+  });
+}
 
 $.logStep("Setting up rust with rustup");
 await $.logGroup(async () => {
