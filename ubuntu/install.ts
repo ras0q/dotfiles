@@ -27,8 +27,8 @@ const config = {
     [`${home}/.config/fish`]: "../common/config/fish",
     [`${home}/.config/nvim`]: "../common/config/nvim",
     [`${home}/.config/starship.toml`]: "../common/config/starship.toml",
+    [`${home}/.gitconfig`]: "../common/config/.gitconfig",
     [`${home}/.rye/config.toml`]: "../common/config/rye/config.toml",
-    [`${home}/.gitconfig`]: "./config/.gitconfig",
     // // WSL2 only
     // ...(Deno.env.get("WSL_DISTRO_NAME")
     //   ? { "/etc/wsl.conf": "./config/.wsl.conf" }

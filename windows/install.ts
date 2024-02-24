@@ -15,7 +15,8 @@ const config = {
   symlinks: {
     [`${home}/.config/aquaproj-aqua`]: `../common/config/aquaproj-aqua`,
     [`${home}/.config/starship.toml`]: `../common/config/starship.toml`,
-    [`${home}/.gitconfig`]: `./config/.gitconfig`,
+    [`${home}/.gitconfig`]: `../common/config/.gitconfig`,
+    [`${home}/.gitconfig.win`]: `./config/.gitconfig.win`,
     [`${home}/.gittemplate.txt`]: `../common/config/.gittemplate.txt`,
     [`${home}/.wezterm.lua`]: `../common/config/.wezterm.lua`,
     [`${home}/.wslconfig`]: `./config/.wslconfig`,

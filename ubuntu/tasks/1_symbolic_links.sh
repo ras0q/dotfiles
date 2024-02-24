@@ -5,6 +5,7 @@ confDir="$PWD/common/config"
 ## $HOME
 ln -sf $confDir/.bash_profile $HOME
 ln -sf $confDir/.bashrc $HOME
+ln -sf $confDir/.gitconfig $HOME
 ln -sf $confDir/.gittemplate.txt $HOME
 ## $HOME/.config
 mkdir -p $HOME/.config
@@ -18,8 +19,6 @@ ln -sf $confDir/rye/config.toml $HOME/.rye
 
 # OS specific files
 confDir="$PWD/ubuntu/config"
-## $HOME
-ln -sf $confDir/.gitconfig $HOME
 ## /etc
 ### WSl2 only
 if [[ "$(uname -r)" == *microsoft* ]]; then

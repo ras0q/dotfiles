@@ -8,7 +8,6 @@
 [core]
 	editor = nvim
 	autoCRLF = false
-	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 
 [init]
 	defaultBranch = main
@@ -33,5 +32,12 @@
 
 [gpg]
 	format = ssh
-[gpg "ssh"]
-	program = op-ssh-sign
+
+# Include system-wide .gitconfig
+# XXX:
+#		If multiple keys are specified, the last one takes precedence,
+#   and even if the path does not exist, it will not cause an error.
+#   (simply not including the path)
+[include]
+	path = ~/.gitconfig.mac
+	path = ~/.gitconfig.win

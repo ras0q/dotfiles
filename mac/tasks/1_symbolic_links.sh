@@ -5,6 +5,7 @@ confDir="$PWD/common/config"
 ## $HOME
 ln -sf $confDir/.bash_profile $HOME
 ln -sf $confDir/.bashrc $HOME
+ln -sf $confDir/.gitconfig $HOME
 ln -sf $confDir/.gittemplate.txt $HOME
 ln -sf $confDir/.wezterm.lua $HOME
 ## $HOME/.config
@@ -22,4 +23,4 @@ confDir="$PWD/mac/config"
 ## $HOME
 ln -sf $confDir/.Brewfile $HOME
 ln -sf $confDir/.Brewfile.lock.json $HOME
-ln -sf $confDir/.gitconfig $HOME
+ln -sf $confDir/.gitconfig.mac $HOME

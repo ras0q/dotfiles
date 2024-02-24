@@ -8,6 +8,7 @@ gsudo {
   ## $HOME
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.config\aquaproj-aqua -Target $confDir\aquaproj-aqua
   New-Item -ItemType SymbolicLink -Force -Path $HOME\AppData\Local\nvim -Target $confDir\nvim
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.gitconfig -Target $confDir\.gitconfig
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.gittemplate.txt -Target $confDir\.gittemplate.txt
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.wezterm.lua -Target $confDir\.wezterm.lua
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.config\starship.toml -Target $confDir\starship.toml
@@ -15,7 +16,7 @@ gsudo {
   # OS specific files
   $confDir = "$baseDir\windows\config"
   ## $HOME
-  New-Item -ItemType SymbolicLink -Force -Path $HOME\.gitconfig -Target $confDir\.gitconfig
+  New-Item -ItemType SymbolicLink -Force -Path $HOME\.gitconfig.win -Target $confDir\.gitconfig.win
   New-Item -ItemType SymbolicLink -Force -Path $HOME\.wslconfig -Target $confDir\.wslconfig
   New-Item -ItemType SymbolicLink -Force -Path $HOME\AppData\Roaming\Code\User\settings.json -Target $confDir\vscode\settings.json
   ## $PROFILE (sync also VSCode_profile)
