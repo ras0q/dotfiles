@@ -67,6 +67,22 @@ const config = {
       "voidtools.Everything",
     ],
   },
+  nextSteps: [
+    "Install fonts (from ./dist/fonts)",
+    "Login to Microsoft Store",
+    "Login to Microsoft Edge",
+    "Login to Visual Studio Code (GitHub)",
+    "Login to 1Password",
+    "Login to Discord",
+    "Login to Figma",
+    "Login to Google Drive",
+    "Clone your Obsidian vault (~/Documents/<vault-name> is recommended)",
+    "Login to LINE",
+    "Login to Slack",
+    "Login to Spotify",
+    "Import your ueli settings (from ./windows/data/ueli.config.json)",
+    "Login to GitHub CLI",
+  ],
 };
 
 $.logStep("Cloning dotfiles");
@@ -153,3 +169,10 @@ await $.logGroup(async () => {
 });
 
 $.log("Set up complete🎉🎉🎉");
+
+$.log("Next steps");
+$.logGroup(() => {
+  for (const step of config.nextSteps) {
+    $.log(step);
+  }
+});

@@ -85,6 +85,9 @@ const config = {
     installLink:
       "https://raw.githubusercontent.com/aquaproj/aqua-installer/main/aqua-installer",
   },
+  nextSteps: [
+    "Install fonts (from ./dist/fonts)"
+  ]
 };
 
 $.logStep("Cloning dotfiles");
@@ -205,4 +208,13 @@ await $.logGroup(async () => {
   await $`aqua install --all`.env({
     PATH: `${home}/.local/share/aquaproj-aqua/bin:${Deno.env.get("PATH")}`,
   });
+});
+
+$.log("Set up complete🎉🎉🎉");
+
+$.log("Next steps");
+$.logGroup(() => {
+  for (const step of config.nextSteps) {
+    $.log(step);
+  }
 });
