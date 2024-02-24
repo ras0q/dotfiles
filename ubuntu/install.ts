@@ -44,18 +44,18 @@ const config = {
       "gcc",
       "socat", // for 1Password SSH
     ],
-  },
-  docker: {
-    gpgLink: "https://download.docker.com/linux/ubuntu/gpg",
-    gpgPath: "/etc/apt/keyrings/docker.asc",
-    installLink: "https://download.docker.com/linux/ubuntu",
-    packages: [
-      "docker-ce",
-      "docker-ce-cli",
-      "containerd.io",
-      "docker-buildx-plugin",
-      "docker-compose-plugin",
-    ],
+    docker: {
+      gpgLink: "https://download.docker.com/linux/ubuntu/gpg",
+      gpgPath: "/etc/apt/keyrings/docker.asc",
+      installLink: "https://download.docker.com/linux/ubuntu",
+      packages: [
+        "docker-ce",
+        "docker-ce-cli",
+        "containerd.io",
+        "docker-buildx-plugin",
+        "docker-compose-plugin",
+      ],
+    },
   },
   rust: {
     installLink: "https://sh.rustup.rs",
@@ -105,17 +105,15 @@ await $.logGroup(async () => {
   await $`sudo apt-get upgrade -y`;
   await $`sudo apt-get install -y ${packages}`;
   $.logStep(`Installed apt packages: ${packages.join(", ")}`);
-});
 
-// Ref: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
-$.logStep("Installing Docker and Docker Compose");
-await $.logGroup(async () => {
+  // Ref: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+  $.logStep("Installing Docker and Docker Compose with apt");
   if (flags["nonroot"]) {
     $.logStep("Skipped Docker setup");
     return;
   }
 
-  const { gpgLink, gpgPath, installLink, packages } = config.docker;
+  const { gpgLink, gpgPath, installLink, packages: dockerPackages } = config.apt.docker;
   await exists(gpgPath) && await $`sudo rm ${gpgPath}`;
   await $`install -m 0755 -d /etc/apt/keyrings`;
   await $`sudo tee ${gpgPath}`
@@ -134,8 +132,8 @@ await $.logGroup(async () => {
   await $`sudo apt-get update`;
   $.logStep("Added Docker's apt repository");
 
-  await $`sudo apt-get install -y ${packages}`;
-  $.logStep(`Installed Docker packages: ${packages.join(", ")}`);
+  await $`sudo apt-get install -y ${dockerPackages}`;
+  $.logStep(`Installed Docker's apt packages: ${dockerPackages.join(", ")}`);
 });
 
 $.logStep("Setting up rust with rustup");
