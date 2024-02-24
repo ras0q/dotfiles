@@ -18,25 +18,26 @@ const home = Deno.env.get("HOME")!;
 const dirname = import.meta.dirname || Deno.exit(1);
 const config = {
   symlinks: {
-    [`${home}/.bash_profile`]: "../common/config/.bash_profile",
-    [`${home}/.bashrc`]: "../common/config/.bashrc",
-    [`${home}/.config/aquaproj-aqua`]: "../common/config/aquaproj-aqua",
-    [`${home}/.config/fish`]: "../common/config/fish",
-    [`${home}/.config/nvim`]: "../common/config/nvim",
-    [`${home}/.config/starship.toml`]: "../common/config/starship.toml",
-    [`${home}/.gitconfig`]: "../common/config/.gitconfig",
-    [`${home}/.rye/config.toml`]: "../common/config/rye/config.toml",
+    [`${home}/.bash_profile`]: "./common/.bash_profile",
+    [`${home}/.bashrc`]: "./common/.bashrc",
+    [`${home}/.config/aquaproj-aqua`]: "./common/aquaproj-aqua",
+    [`${home}/.config/fish`]: "./common/fish",
+    [`${home}/.config/nvim`]: "./common/nvim",
+    [`${home}/.config/starship.toml`]: "./common/starship.toml",
+    [`${home}/.gitconfig`]: "./common/.gitconfig",
+    [`${home}/.gittemplate.txt`]: `./common/.gittemplate.txt`,
+    [`${home}/.rye/config.toml`]: "./common/rye/config.toml",
     // // WSL2 only
     // ...(Deno.env.get("WSL_DISTRO_NAME")
-    //   ? { "/etc/wsl.conf": "./config/.wsl.conf" }
+    //   ? { "/etc/wsl.conf": "./wsl/.wsl.conf" }
     //   : {}),
 
     // MacOS only
     ...(Deno.build.os === "darwin")
       ? {
-        [`${home}/.Brewfile`]: "../mac/config/.Brewfile",
-        [`${home}/.Brewfile.lock.json`]: "../mac/config/.Brewfile.lock.json",
-        [`${home}/.gitconfig.mac`]: "../mac/config/.gitconfig.mac",
+        [`${home}/.Brewfile`]: "./mac/.Brewfile",
+        [`${home}/.Brewfile.lock.json`]: "./mac/.Brewfile.lock.json",
+        [`${home}/.gitconfig.mac`]: "./mac/.gitconfig.mac",
       }
       : {},
   },
@@ -86,8 +87,8 @@ const config = {
       "https://raw.githubusercontent.com/aquaproj/aqua-installer/main/aqua-installer",
   },
   nextSteps: [
-    "Install fonts (from ./dist/fonts)"
-  ]
+    "Install fonts (from ./dist/fonts)",
+  ],
 };
 
 $.logStep("Cloning dotfiles");
@@ -110,7 +111,7 @@ await $.logGroup(async () => {
     Object.entries(config.symlinks).map(async ([_link, _target]) => {
       const link = resolve(_link);
       const target = resolve(dirname, _target);
-      await exists(link) && await Deno.remove(link);
+      await $`rm -rf ${link}`;
       await Deno.symlink(target, link);
       $.logStep(`Created ${link}`);
     }),
@@ -153,7 +154,7 @@ if (Deno.build.os === "linux") {
 
     const { gpgLink, gpgPath, installLink, packages: dockerPackages } =
       config.apt.docker;
-    await exists(gpgPath) && await $`sudo rm ${gpgPath}`;
+    await $`sudo rm ${gpgPath}`;
     await $`install -m 0755 -d /etc/apt/keyrings`;
     await $`sudo tee ${gpgPath}`
       .stdin($.request(gpgLink))
