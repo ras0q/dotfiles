@@ -53,6 +53,9 @@ const config = {
     dist: "./dist/fonts",
   },
   apt: {
+    ppa: [
+      "ppa:git-core/ppa",
+    ],
     packages: [
       "curl",
       "ca-certificates",
@@ -139,7 +142,8 @@ if (Deno.build.os === "linux") {
       return;
     }
 
-    const { packages } = config.apt;
+    const { packages, ppa } = config.apt;
+    await $`sudo add-apt-repository -y ${ppa}`;
     await $`sudo apt-get update`;
     await $`sudo apt-get upgrade -y`;
     await $`sudo apt-get install -y ${packages}`;
