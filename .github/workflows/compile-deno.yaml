@@ -32,7 +32,7 @@ jobs:
         with:
           deno-version: v1.x
       - name: Compile install script for ${{ github.event.inputs.chosen-os }}
-        run: deno compile --unstable --allow-all ${{ env.SRC_PATH }} -o ${{ env.DIST_PATH }}
+        run: deno compile --allow-all -o ${{ env.DIST_PATH }} ${{ env.SRC_PATH }}
       - uses: actions/upload-artifact@v4
         with:
           name: install
