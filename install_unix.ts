@@ -112,10 +112,12 @@ $.logStep("Creating symlinks");
 await $.logGroup(async () => {
   await Promise.all(
     Object.entries(config.symlinks).map(async ([_link, _target]) => {
-      const link = resolve(_link);
-      const target = resolve(dirname, _target);
+      const link = $.path(_link).resolve();
+      const target = $.path(`${dirname}/${_target}`).resolve();
       await $`rm -rf ${link}`;
-      await Deno.symlink(target, link);
+      await link.createSymlinkTo(target, {
+        kind: "absolute",
+      });
       $.logStep(`Created ${link}`);
     }),
   );

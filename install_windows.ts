@@ -3,6 +3,8 @@ import { resolve } from "https://deno.land/std@0.217.0/path/mod.ts";
 import $ from "https://deno.land/x/dax@0.39.2/mod.ts";
 import { parseArgs } from "https://deno.land/std@0.217.0/cli/parse_args.ts";
 
+$.setPrintCommand(true);
+
 const flags: {
   "dotfiles-dir"?: string;
   "upgrade-winget"?: boolean;
@@ -13,17 +15,17 @@ const dirname = import.meta.dirname || Deno.exit(1);
 const config = {
   // deno-fmt-ignore
   symlinks: {
-    [`${home}/.config/aquaproj-aqua`]: `../common/config/aquaproj-aqua`,
-    [`${home}/.config/starship.toml`]: `../common/config/starship.toml`,
-    [`${home}/.gitconfig`]: `../common/config/.gitconfig`,
-    [`${home}/.gitconfig.win`]: `./config/.gitconfig.win`,
-    [`${home}/.gittemplate.txt`]: `../common/config/.gittemplate.txt`,
-    [`${home}/.wezterm.lua`]: `../common/config/.wezterm.lua`,
-    [`${home}/.wslconfig`]: `./config/.wslconfig`,
-    [`${home}/AppData/Local/nvim`]: `../common/config/nvim`,
-    [`${home}/AppData/Roaming/Code/User/settings.json`]: `./config/vscode/settings.json`,
-    [`${home}/Microsoft.PowerShell_profile.ps1`]: `./config/Microsoft.PowerShell_profile.ps1`,
-    [`${home}/Microsoft.VSCode_profile.ps1`]: `./config/Microsoft.PowerShell_profile.ps1`,
+    [`${home}/.config/aquaproj-aqua/`]: `./common/aquaproj-aqua`,
+    [`${home}/.config/starship.toml`]: `./common/starship.toml`,
+    [`${home}/.gitconfig`]: `./common/.gitconfig`,
+    [`${home}/.gitconfig.win`]: `./win/.gitconfig.win`,
+    [`${home}/.gittemplate.txt`]: `./common/.gittemplate.txt`,
+    [`${home}/.wezterm.lua`]: `./common/.wezterm.lua`,
+    [`${home}/.wslconfig`]: `./win/.wslconfig`,
+    [`${home}/AppData/Local/nvim/`]: `./common/nvim`,
+    [`${home}/AppData/Roaming/Code/User/settings.json`]: `./win/vscode/settings.json`,
+    [`${home}/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`]: `./win/Microsoft.PowerShell_profile.ps1`,
+    [`${home}/Documents/PowerShell/Microsoft.VSCode_profile.ps1`]: `./win/Microsoft.PowerShell_profile.ps1`,
   },
   fonts: {
     links: [
@@ -92,8 +94,7 @@ await $.logGroup(async () => {
     ? resolve(dirname, flags["dotfiles-dir"])
     : resolve(home, "ghq/github.com/ras0q/dotfiles-v2");
   if (await exists(dotfilesDir)) {
-    await $`git -C ${dotfilesDir} pull`;
-    $.logStep(`Pulled ${dotfilesDir}`);
+    $.logStep("Skipped dotfiles clone");
   } else {
     await $`git clone ${dotfiles} ${dotfilesDir} --depth 1`;
     $.logStep(`Cloned ${dotfilesDir}`);
@@ -104,10 +105,13 @@ $.logStep("Creating symlinks");
 await $.logGroup(async () => {
   await Promise.all(
     Object.entries(config.symlinks).map(async ([_link, _target]) => {
-      const link = resolve(_link);
-      const target = resolve(dirname, _target);
-      await exists(link) && await Deno.remove(link);
-      await Deno.symlink(target, link);
+      const link = $.path(_link).resolve();
+      const target = $.path(`${dirname}/${_target}`).resolve();
+      await $`rm -rf ${link}`;
+      await link.createSymlinkTo(target, {
+        kind: "absolute",
+        type: _link.endsWith("/") ? "dir" : "file", // only for Windows
+      });
       $.logStep(`Created ${link}`);
     }),
   );
