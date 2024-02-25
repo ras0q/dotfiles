@@ -36,5 +36,5 @@ jobs:
         run: deno compile --allow-all -o ${{ env.DIST_PATH }} ${{ env.SRC_PATH }}
       - uses: actions/upload-artifact@v4
         with:
-          name: install
+          name: install-${{ github.event.inputs.chosen-os }}
           path: ${{ env.DIST_PATH }}
