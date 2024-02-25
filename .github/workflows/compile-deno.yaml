@@ -1,0 +1,38 @@
+name: Compile install script with Deno
+
+on:
+  workflow_dispatch:
+    inputs:
+      chosen-os:
+        required: true
+        description: "The OS to compile for"
+        type: choice
+        options:
+          - "ubuntu-latest"
+          - "macos-latest"
+          - "windows-latest"
+
+jobs:
+  compile:
+    runs-on: ${{ github.event.inputs.chosen-os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up envs for ${{ github.event.inputs.chosen-os }}
+        run: |
+          echo "Compiling for ${{ github.event.inputs.chosen-os }}"
+          if [ ${{ github.event.inputs.chosen-os }} == "windows-latest" ]; then
+            echo "SRC_PATH=./install_windows.ts" > .env
+            echo "DIST_PATH=./dist/install.exe" > .env
+          else
+            echo "SRC_PATH=./install_unix.ts" > .env
+            echo "DIST_PATH=./dist/install" > .env
+          fi
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: Compile install script for ${{ github.event.inputs.chosen-os }}
+        run: deno compile --unstable --allow-all ${{ env.SRC_PATH }} -o ${{ env.DIST_PATH }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: install
+          path: ${{ env.DIST_PATH }}
