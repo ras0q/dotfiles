@@ -19,13 +19,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Set up envs for ${{ github.event.inputs.chosen-os }}
         run: |
+          set -x
           echo "Compiling for ${{ github.event.inputs.chosen-os }}"
           if [ ${{ github.event.inputs.chosen-os }} == "windows-latest" ]; then
-            echo "SRC_PATH=./install_windows.ts" > .env
-            echo "DIST_PATH=./dist/install.exe" > .env
+            echo "SRC_PATH=./install_windows.ts" >> $GITHUB_ENV
+            echo "DIST_PATH=./dist/install.exe" >> $GITHUB_ENV
           else
-            echo "SRC_PATH=./install_unix.ts" > .env
-            echo "DIST_PATH=./dist/install" > .env
+            echo "SRC_PATH=./install_unix.ts" >> $GITHUB_ENV
+            echo "DIST_PATH=./dist/install" >> $GITHUB_ENV
           fi
       - uses: denoland/setup-deno@v1
         with:
