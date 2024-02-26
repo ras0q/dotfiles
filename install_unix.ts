@@ -38,6 +38,7 @@ const config = {
         [`${home}/.Brewfile`]: "./mac/.Brewfile",
         [`${home}/.Brewfile.lock.json`]: "./mac/.Brewfile.lock.json",
         [`${home}/.gitconfig.mac`]: "./mac/.gitconfig.mac",
+        [`${home}/.wezterm.lua`]: "./common/.wezterm.lua"
       }
       : {},
   },
@@ -191,14 +192,11 @@ if (Deno.build.os === "linux") {
 
     await $`bash`
       .stdin($.request(config.brew.installLink));
-    await $`
-      brew cleanup
-      brew update
-      brew upgrade
-      brew doctor
-      brew bundle --global --force
-      brew cleanup --global --force
-    `;
+    await $`brew cleanup`;
+    await $`brew upgrade`;
+    await $`brew doctor`;
+    await $`brew bundle --global --force`;
+    await $`brew bundle cleanup --global --force`;
   });
 }
 

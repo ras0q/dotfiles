@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "2f22c21799744c6b027a0695b36a37185d66a6a6"
+        "revision": "9d77d7001e805498d4c6c3001c13124f605eed24"
       },
       "homebrew/cask": {
-        "revision": "517010940927d54167c10bd5888d205a5d8d76c4"
+        "revision": "f969888e20e765df9dbf9aa61b3fd0f23e038778"
       },
       "homebrew/cask-fonts": {
         "revision": "ec1fd7a3dc5676a9a3091a896d80240fcc985902"
@@ -14,7 +14,7 @@
         "revision": "91ae9fa3388cd2fe47d0937a36c1dd3fda90fe74"
       },
       "homebrew/core": {
-        "revision": "45a086cd6bf0cced6c7f7fcfb3131fcaf124439a"
+        "revision": "2b1352cab785527ed4e7b030d2f4a4c7d6a94ea2"
       }
     },
     "brew": {
@@ -647,13 +647,13 @@
         }
       },
       "obsidian": {
-        "version": "1.5.3",
+        "version": "1.5.8",
         "options": {
           "full_name": "obsidian"
         }
       },
       "readdle-spark": {
-        "version": "3.13.5.66574",
+        "version": "3.14.2.66894",
         "options": {
           "full_name": "readdle-spark"
         }
@@ -683,13 +683,13 @@
         }
       },
       "1password": {
-        "version": "8.10.24",
+        "version": "8.10.26",
         "options": {
           "full_name": "1password"
         }
       },
       "discord": {
-        "version": "0.0.294",
+        "version": "0.0.295",
         "options": {
           "full_name": "discord"
         }
@@ -766,11 +766,11 @@
         "macOS": "13.5"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.8-102-g65102db",
+        "HOMEBREW_VERSION": "4.2.9-118-gc6d9592",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
-        "CLT": "",
-        "Xcode": "15.0",
+        "CLT": "15.1.0.0.1.1700200546",
+        "Xcode": "15.2",
         "macOS": "14.2.1"
       }
     }
