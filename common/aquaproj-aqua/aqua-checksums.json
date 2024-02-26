@@ -61,6 +61,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/astral-sh/rye/0.26.0/rye-aarch64-linux.gz",
+      "checksum": "5DA3513279BC3C6491742A350C64E0F1B0F9E0DCD3A5724348862801EE1F603F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/rye/0.26.0/rye-aarch64-macos.gz",
+      "checksum": "CC8AAE839C20B0F38D5FA9D70D07C7DCA5321E6C265A881ABEF8F7200D197F12",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/rye/0.26.0/rye-x86_64-linux.gz",
+      "checksum": "6F1B95CF68C67F38C78B58728AB209BB2E4AB857B829B738A77B4C2599E074E5",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/rye/0.26.0/rye-x86_64-macos.gz",
+      "checksum": "F88CC7A8E6CCA749C66486A5DC5B3403B1F59DA9E6026DF4FC70BE742DB761C3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/rye/0.26.0/rye-x86_64-windows.exe",
+      "checksum": "EF199A37C6908CEBB7D2B733A17DB49509CB45C989EAF682FFF030FD5060E8A5",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/cli/cli/v2.44.1/gh_2.44.1_linux_amd64.tar.gz",
       "checksum": "F11EEFB646768E3F53E2185F6D3B01B4CB02112C2C60E65A4B5875150287FF97",
       "algorithm": "sha256"
@@ -183,31 +208,6 @@
     {
       "id": "github_release/github.com/junegunn/fzf/0.46.1/fzf-0.46.1-windows_arm64.zip",
       "checksum": "130CD169F1521E0F462B7CDF5C0595F0D85824F7ACACCD224813581939DC4CA6",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/rye/0.26.0/rye-aarch64-linux.gz",
-      "checksum": "5DA3513279BC3C6491742A350C64E0F1B0F9E0DCD3A5724348862801EE1F603F",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/rye/0.26.0/rye-aarch64-macos.gz",
-      "checksum": "CC8AAE839C20B0F38D5FA9D70D07C7DCA5321E6C265A881ABEF8F7200D197F12",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/rye/0.26.0/rye-x86_64-linux.gz",
-      "checksum": "6F1B95CF68C67F38C78B58728AB209BB2E4AB857B829B738A77B4C2599E074E5",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/rye/0.26.0/rye-x86_64-macos.gz",
-      "checksum": "F88CC7A8E6CCA749C66486A5DC5B3403B1F59DA9E6026DF4FC70BE742DB761C3",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/rye/0.26.0/rye-x86_64-windows.exe",
-      "checksum": "EF199A37C6908CEBB7D2B733A17DB49509CB45C989EAF682FFF030FD5060E8A5",
       "algorithm": "sha256"
     },
     {
@@ -391,8 +391,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.141.0/registry.yaml",
-      "checksum": "1CBF84EA00EAB544621B280B49BC1174479FD7B0B49E6C0032085B6DEE313A1714640B27C4C14CA2D286A88AAC16A6DFB9805CE26A19BB0F81D8F8DCFFD8B6DE",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.142.0/registry.yaml",
+      "checksum": "A920B4389BB50FEC05A86DF4F6B2B7573F1247F591565F831FCF447A9498797038EE3EE14004D78739FF73BFC51BB90AAABF0537D8C49F1D15D1EC0F9FF678E9",
       "algorithm": "sha512"
     }
   ]
