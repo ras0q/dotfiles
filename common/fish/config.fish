@@ -5,6 +5,7 @@ fish_add_path \
   ~/.rye/shims \
   ~/.volta/bin \
   ~/.cargo/bin \
+  /opt/homebrew/bin
 
 # starship
 starship init fish --print-full-init \
