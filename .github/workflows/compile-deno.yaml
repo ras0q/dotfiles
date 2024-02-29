@@ -36,4 +36,5 @@ jobs:
         run: deno compile --allow-all -o ${{ env.DIST_PATH }} ${{ env.SRC_PATH }}
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ matrix.os }}/${{ env.DIST_PATH }}
+          name: install-${{ matrix.os }}
+          path: ${{ env.DIST_PATH }}
