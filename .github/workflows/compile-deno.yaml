@@ -34,7 +34,26 @@ jobs:
           deno-version: v1.x
       - name: Compile install script for ${{ matrix.os }}
         run: deno compile --allow-all -o ${{ env.DIST_PATH }} ${{ env.SRC_PATH }}
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: install-${{ matrix.os }}
-          path: ./dist
+          path: ${{ env.DIST_PATH }}
+  deploy-pages:
+    needs: compile
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+      - name: Upload an artifact for GitHub Pages
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: dist
+      - uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
