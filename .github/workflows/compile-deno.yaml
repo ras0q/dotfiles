@@ -51,6 +51,7 @@ jobs:
           path: artifacts
       - name: Prepare dist folder
         run: |
+          mkdir -p dist
           mv artifacts/install-macos-latest/install dist/install-macos
           mv artifacts/install-ubuntu-latest/install dist/install-ubuntu
           mv artifacts/install-windows-latest/install.exe dist/install-windows.exe
