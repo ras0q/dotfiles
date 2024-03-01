@@ -48,7 +48,12 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: dist
+          path: artifacts
+      - name: Prepare dist folder
+        run: |
+          mv artifacts/install-macos-latest/install dist/install-macos
+          mv artifacts/install-ubuntu-latest/install dist/install-ubuntu
+          mv artifacts/install-windows-latest/install.exe dist/install-windows.exe
       - name: Upload an artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
