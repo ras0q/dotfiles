@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "9d77d7001e805498d4c6c3001c13124f605eed24"
+        "revision": "ffd2348507f77fb2a582e254e6da1a16bba8cc92"
       },
       "homebrew/cask": {
-        "revision": "f969888e20e765df9dbf9aa61b3fd0f23e038778"
+        "revision": "c618d283039321d098aa419160a4b62565bbb56b"
       },
       "homebrew/cask-fonts": {
         "revision": "ec1fd7a3dc5676a9a3091a896d80240fcc985902"
@@ -14,7 +14,7 @@
         "revision": "91ae9fa3388cd2fe47d0937a36c1dd3fda90fe74"
       },
       "homebrew/core": {
-        "revision": "2b1352cab785527ed4e7b030d2f4a4c7d6a94ea2"
+        "revision": "aab4aa6562a65d6b07ea33fd9cd462cb8c2f796a"
       }
     },
     "brew": {
@@ -623,7 +623,7 @@
     },
     "cask": {
       "figma": {
-        "version": "116.15.15",
+        "version": "116.16.13",
         "options": {
           "full_name": "figma"
         }
@@ -635,7 +635,7 @@
         }
       },
       "microsoft-edge": {
-        "version": "121.0.2277.128,7d455fa7-376b-4ff4-a83c-e74664b24a02",
+        "version": "122.0.2365.63,73a07aa6-b8e8-4555-95b1-a709271ee36a",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -653,19 +653,19 @@
         }
       },
       "readdle-spark": {
-        "version": "3.14.2.66894",
+        "version": "3.14.3.67452",
         "options": {
           "full_name": "readdle-spark"
         }
       },
       "spotify": {
-        "version": "1.2.31.1205,4d59ad7c,349",
+        "version": "1.2.32.997,4c6498b6,1708",
         "options": {
           "full_name": "spotify"
         }
       },
       "visual-studio-code": {
-        "version": "1.86.2",
+        "version": "1.87.0",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -766,7 +766,7 @@
         "macOS": "13.5"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.9-118-gc6d9592",
+        "HOMEBREW_VERSION": "4.2.10-111-g53c1107",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.1.0.0.1.1700200546",
