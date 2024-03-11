@@ -61,28 +61,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/rye/0.28.0/rye-aarch64-linux.gz",
-      "checksum": "00C3805B1986AE79787388917964BBEEE0A1C4ADC3DEA1BA0060BD9756F0B405",
+      "id": "github_release/github.com/astral-sh/rye/0.29.0/rye-aarch64-linux.gz",
+      "checksum": "5D743D91525C773D8EE148E2E6F1F16770DAE539E39568BAD3B03CCD69E5ABC7",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/rye/0.28.0/rye-aarch64-macos.gz",
-      "checksum": "90511869FBEB28629D81C5345C74E71E3B3E566F947843C58703A2BB599F82AD",
+      "id": "github_release/github.com/astral-sh/rye/0.29.0/rye-aarch64-macos.gz",
+      "checksum": "67127C80582D0A81806DE6A32F8527B298439FE425D32ABF322A068A7AE64E89",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/rye/0.28.0/rye-x86_64-linux.gz",
-      "checksum": "7DC1145925CD47D4AFC425D61557031E194F3F2B2A4F8921DCCB927A962652E2",
+      "id": "github_release/github.com/astral-sh/rye/0.29.0/rye-x86_64-linux.gz",
+      "checksum": "A950DB192C8E814F5889F45BD926C6A9EA6F7323F7BC18A469036C666F6DB815",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/rye/0.28.0/rye-x86_64-macos.gz",
-      "checksum": "4220B75B2823DF21E80507233A7E4320C53044A8518CE26018A2DA0E037B1703",
+      "id": "github_release/github.com/astral-sh/rye/0.29.0/rye-x86_64-macos.gz",
+      "checksum": "F538D63AFC930A5C636A54AE7D644D9793FFCEE05A1875AED73B9A7FC621F26B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/rye/0.28.0/rye-x86_64-windows.exe",
-      "checksum": "9D3517C96449203AA062BBCAD0DC5361610E5606800632508BA68DDA616D0B06",
+      "id": "github_release/github.com/astral-sh/rye/0.29.0/rye-x86_64-windows.exe",
+      "checksum": "98B2425C0D54FA9C96C4EF929285EA9B64834ED9E53C876E3934E2A9BA6A874B",
       "algorithm": "sha256"
     },
     {
