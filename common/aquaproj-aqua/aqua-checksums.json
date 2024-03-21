@@ -226,33 +226,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.1/starship-aarch64-apple-darwin.tar.gz",
-      "checksum": "458367BDA385A39CA4FF32E864BEE936B46D31793D93696B0743615111442793",
+      "id": "github_release/github.com/starship/starship/v1.18.0/starship-aarch64-apple-darwin.tar.gz",
+      "checksum": "F6AC9D4107026767D55AB4BC67104AAF6F9C1517919F9C45D1ED50360D08D97A",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.1/starship-aarch64-pc-windows-msvc.zip",
-      "checksum": "1F81D19DCE229C86F2F9D49440ED2EA03BAF2FB3A9AC0090CAF817269E28F62D",
+      "id": "github_release/github.com/starship/starship/v1.18.0/starship-aarch64-pc-windows-msvc.zip",
+      "checksum": "4D9A4D8BA36979D5B30D44CD886AB01F5E64E6E073EDDEB780F7DFC34499B356",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.1/starship-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "B2A6A704B5A6BB5D3ED3FD815B53BDB6B56B38C9891323BCAC2FD145260C05B1",
+      "id": "github_release/github.com/starship/starship/v1.18.0/starship-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "EB007A6C076B6D41612A6EC25CEE7ED03518FB0EAF1F5D51B9C0354BE1DD08C2",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.1/starship-x86_64-apple-darwin.tar.gz",
-      "checksum": "7BF1FF0D8DF9DB7622E8295F9BD28C0A931D8618360A491ABD04D7C21A0289F9",
+      "id": "github_release/github.com/starship/starship/v1.18.0/starship-x86_64-apple-darwin.tar.gz",
+      "checksum": "9962179E6E997E19F21E65285CC889C6FFF90143DEF76637E5DA91435B6194E1",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.1/starship-x86_64-pc-windows-msvc.zip",
-      "checksum": "C3BD0A79FC219183C84CDE63C9D6A456D4DF6CA5A1A5517555F3715C1A215FC7",
+      "id": "github_release/github.com/starship/starship/v1.18.0/starship-x86_64-pc-windows-msvc.zip",
+      "checksum": "B5FFB4CABC44AAE9AC408C62F9C5372A8A3B04E3162D01A6FD780AFFA237F9C8",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/starship/starship/v1.17.1/starship-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "4F325E520C4A95116A613B09AEB37F5B99265CA2B9DBF167465DB52E836DBCF4",
+      "id": "github_release/github.com/starship/starship/v1.18.0/starship-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "9A9B7231FCBA9E39459988CE851DB2D420445B432A735CE2649150025DEF9B6B",
       "algorithm": "sha256"
     },
     {
