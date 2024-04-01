@@ -24,10 +24,10 @@ jobs:
           echo "Compiling for ${{ matrix.os }}"
           if [ ${{ matrix.os }} == "windows-latest" ]; then
             echo "SRC_PATH=./install_windows.ts" >> $GITHUB_ENV
-            echo "DIST_PATH=./dist/install.exe" >> $GITHUB_ENV
+            echo "DIST_PATH=./dist/install-${{ matrix.os }}.exe" >> $GITHUB_ENV
           else
             echo "SRC_PATH=./install_unix.ts" >> $GITHUB_ENV
-            echo "DIST_PATH=./dist/install" >> $GITHUB_ENV
+            echo "DIST_PATH=./dist/install-${{ matrix.os }}" >> $GITHUB_ENV
           fi
       - uses: denoland/setup-deno@v1
         with:
@@ -38,28 +38,3 @@ jobs:
         with:
           name: install-${{ matrix.os }}
           path: ${{ env.DIST_PATH }}
-  deploy-pages:
-    needs: compile
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-      - name: Prepare dist folder
-        run: |
-          mkdir -p dist
-          mv artifacts/install-macos-latest/install dist/install-macos
-          mv artifacts/install-ubuntu-latest/install dist/install-ubuntu
-          mv artifacts/install-windows-latest/install.exe dist/install-windows.exe
-      - name: Upload an artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: github-pages
-          path: dist
-      - uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
