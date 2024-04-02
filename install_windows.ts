@@ -67,6 +67,7 @@ const config = {
       "Microsoft.PowerShell",
       "gerardog.gsudo",
       "voidtools.Everything",
+      "Kitware.CMake",
     ],
   },
   nextSteps: [
