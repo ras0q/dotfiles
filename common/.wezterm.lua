@@ -16,9 +16,32 @@ end
 local config = {
   adjust_window_size_when_changing_font_size = false,
   color_scheme = 'Catppuccin Latte',
+  colors = {
+    tab_bar = {
+      active_tab = {
+        bg_color = "#eff1f5", -- latte base
+        fg_color = "#179299", -- latte teal
+      },
+      inactive_tab = {
+        bg_color = "#e6e9ef", -- latte mantle
+        fg_color = "#6c6f85", -- latte subtext0
+      },
+      inactive_tab_hover = {
+        bg_color = "#dce0e8", -- latte crust
+        fg_color = "#6c6f85", -- latte subtext0
+      },
+      new_tab = {
+        bg_color = "#ccd0da", -- latte surface0
+        fg_color = "#5c5f77", -- latte subtext1,
+      },
+      new_tab_hover = {
+        bg_color = "#ccd0da", -- latte surface0
+        fg_color = "#fe640b", -- latte peach
+      }
+    }
+  },
   font = wezterm.font_with_fallback { '源ノ角ゴシック Code JP', 'Source Code Pro' },
   font_size = 10.0,
-  hide_tab_bar_if_only_one_tab = true,
   initial_cols = 80,
   initial_rows = 20,
   keys = {
@@ -53,6 +76,16 @@ local config = {
   },
   use_ime = true,
   window_background_opacity = 1,
+  window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+  window_frame = {
+    font_size = 12.0,
+    active_titlebar_bg = "#ccd0da", -- latte surface0
+    inactive_titlebar_bg = "#bcc0cc", -- latte surface1
+  },
+  window_padding = {
+    left = "2cell",
+    right = "2cell",
+  }
 }
 
 -- platform specific config
