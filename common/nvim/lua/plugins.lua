@@ -32,35 +32,19 @@ require("lazy").setup({
     end,
   },
   {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "VeryLazy",
-    config = function()
-      require("nvim-tree").setup {}
-    end,
-  },
-  {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      {
-        "nvim-telescope/telescope-file-browser.nvim",
-        config = function()
-          require("telescope").load_extension("file_browser")
-          vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>", {})
-        end,
-      },
+      "nvim-telescope/telescope-file-browser.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-        config = function()
-          require("telescope").load_extension("fzf")
-        end,
       }
     },
-    event = "VeryLazy",
+    -- event = "VeryLazy",
     config = function()
-      require("telescope").setup {
+      local telescope = require("telescope")
+      telescope.setup {
         defaults = {
           layout_config = {
             prompt_position = "top",
@@ -80,6 +64,12 @@ require("lazy").setup({
           }
         }
       }
+
+      telescope.load_extension("file_browser")
+      vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>", {})
+
+      telescope.load_extension("fzf")
+
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<leader>ff", function()
         vim.fn.system("git rev-parse --is-inside-work-tree")
