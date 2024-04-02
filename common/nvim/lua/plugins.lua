@@ -34,6 +34,7 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
+      "nvim-tree/nvim-web-devicons",
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
       {
@@ -54,6 +55,7 @@ require("lazy").setup({
         },
         extensions = {
           file_browser = {
+            display_stat = false,
             hijack_netrw = true,
           },
           fzf = {
