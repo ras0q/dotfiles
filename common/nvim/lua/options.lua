@@ -7,6 +7,7 @@ vim.scriptencoding = "utf-8"
 vim.g.mapleader = " "
 
 -- appearance
+vim.cmd.colorscheme("delek") -- fallback colorscheme
 opt.number = true
 opt.cursorline = true
 opt.virtualedit = "onemore"
