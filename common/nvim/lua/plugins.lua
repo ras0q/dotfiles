@@ -65,7 +65,8 @@ require("lazy").setup({
           layout_config = {
             prompt_position = "top",
             preview_width = 0.6
-          }
+          },
+          sorting_strategy = "ascending",
         },
         extensions = {
           file_browser = {
