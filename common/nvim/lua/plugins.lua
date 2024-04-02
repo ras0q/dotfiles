@@ -77,5 +77,25 @@ require("lazy").setup({
   {
     "wakatime/vim-wakatime",
     lazy = false,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "williamboman/mason.nvim",
+    },
+    config = function()
+      require("mason").setup({
+        ui = { border = "single" }
+      })
+      local lspconfig = require("lspconfig")
+      local mason_lspconfig = require("mason-lspconfig")
+      mason_lspconfig.setup()
+      mason_lspconfig.setup_handlers({
+        function(server_name)
+          lspconfig[server_name].setup({})
+        end,
+      })
+    end
   }
 })
