@@ -44,23 +44,47 @@ require("lazy").setup({
         "nvim-telescope/telescope-file-browser.nvim",
         config = function()
           require("telescope").load_extension("file_browser")
+          vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>", {})
         end,
       },
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        config = function()
+          require("telescope").load_extension("fzf")
+        end,
+      }
     },
     config = function()
       require("telescope").setup {
+        defaults = {
+          layout_config = {
+            prompt_position = "top",
+            preview_width = 0.6
+          }
+        },
         pickers = {
           find_files = {
-            -- show dotfiles
+            -- show hidden files
             find_command = { "rg", "--files", "--hidden", "-g", "!.git" }
+          }
+        },
+        extensions = {
+          file_browser = {
+            hijack_netrw = true,
+          },
+          fzf = {
+            fuzzy = true,                    -- false will only do exact matching
+            override_generic_sorter = true,  -- override the generic sorter
+            override_file_sorter = true,     -- override the file sorter
+            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
           }
         }
       }
       local builtin = require("telescope.builtin")
-      -- find files
       vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-      -- search for a string
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+      -- vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
     end,
   },
   {

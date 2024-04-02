@@ -26,3 +26,4 @@ packages:
 - name: tree-sitter/tree-sitter@v0.22.2
 - name: denoland/deno@v1.42.1
 - name: ziglang/zig@0.11.0
+- name: sharkdp/fd@v9.0.0
