@@ -15,11 +15,13 @@ require("lazy").setup({
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = false,
     priority = 1000,
     config = function() vim.cmd.colorscheme "catppuccin-latte" end
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy",
     build = ":TSUpdate",
     config = function()
       require "nvim-treesitter.install".prefer_git = false
@@ -32,6 +34,7 @@ require("lazy").setup({
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    event = "VeryLazy",
     config = function()
       require("nvim-tree").setup {}
     end,
@@ -55,6 +58,7 @@ require("lazy").setup({
         end,
       }
     },
+    event = "VeryLazy",
     config = function()
       require("telescope").setup {
         defaults = {
@@ -89,6 +93,7 @@ require("lazy").setup({
   },
   {
     "echasnovski/mini.nvim",
+    event = "VeryLazy",
     config = function()
       require("mini.completion").setup()
       require("mini.cursorword").setup()
@@ -108,6 +113,7 @@ require("lazy").setup({
       "neovim/nvim-lspconfig",
       "williamboman/mason.nvim",
     },
+    event = "VeryLazy",
     config = function()
       require("mason").setup({
         ui = { border = "single" }
