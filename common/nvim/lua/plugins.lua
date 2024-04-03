@@ -53,6 +53,11 @@ require("lazy").setup({
           },
           sorting_strategy = "ascending",
         },
+        pickers = {
+          find_files = {
+            find_command = { "fd", "--hidden", "--exclude", "**/.git/*", }
+          }
+        },
         extensions = {
           file_browser = {
             hidden = { file_browser = true },
@@ -74,14 +79,7 @@ require("lazy").setup({
       telescope.load_extension("fzf")
 
       local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<leader>ff", function()
-        vim.fn.system("git rev-parse --is-inside-work-tree")
-        if vim.v.shell_error == 0 then
-          builtin.git_files()
-        else
-          builtin.find_files({ hidden = true })
-        end
-      end, {})
+      vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
     end,
   },
