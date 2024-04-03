@@ -6,10 +6,6 @@ opt.fileencoding = "utf-8"
 vim.scriptencoding = "utf-8"
 vim.g.mapleader = " "
 
--- disable plugins
-vim.g.loaded_netrw       = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- appearance
 vim.cmd.colorscheme("delek") -- fallback colorscheme
 opt.number = true
