@@ -60,6 +60,8 @@ require("lazy").setup({
         },
         extensions = {
           file_browser = {
+            grouped = true, -- directories, then files
+            auto_depth = true,
             hidden = { file_browser = true },
             display_stat = false,
             hijack_netrw = true,
