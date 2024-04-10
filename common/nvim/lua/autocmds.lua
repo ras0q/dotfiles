@@ -15,6 +15,8 @@ augroup gitabbr
   autocmd FileType gitcommit iabbrev bo :boom:
   " 🔥 rm: Remove code or files.
   autocmd FileType gitcommit iabbrev rm :fire:
+  " ⏪️ rv: Revert changes.
+  autocmd FileType gitcommit iabbrev rv :rewind:
   " 🎨 fo: Improve structure / format of the code.
   autocmd FileType gitcommit iabbrev fo :art:
   " 💄 ui: Add or update the UI and style files.

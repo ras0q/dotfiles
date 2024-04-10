@@ -7,6 +7,7 @@
 # 💥 bo: Introduce breaking changes.
 # 🎨 fo: Improve structure / format of the code.
 # 🔥 rm: Remove code or files.
+# ⏪️ rv: Revert changes.
 # 💄 ui: Add or update the UI and style files.
 # 🔧 co: Add or update configuration files.
 # 📝 do: Add or update documentation.
