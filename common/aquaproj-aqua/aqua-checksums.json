@@ -321,33 +321,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/x-motemen/ghq/v1.6.0/ghq_darwin_amd64.zip",
-      "checksum": "F2FBF3C3A5A2666D346B8648F929D95ADB6B338823BD6008ABF1F3E1F89FE1F3",
+      "id": "github_release/github.com/x-motemen/ghq/v1.6.1/ghq_darwin_amd64.zip",
+      "checksum": "12FC7F6639AFF9A4C85B486B31D1129C9A1C1DE8321786978CD8D794B1C0CB1B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/x-motemen/ghq/v1.6.0/ghq_darwin_arm64.zip",
-      "checksum": "834B84BC6A9353349380F8C5D0221F98AD15ACED363217DC865B952EE4E1691B",
+      "id": "github_release/github.com/x-motemen/ghq/v1.6.1/ghq_darwin_arm64.zip",
+      "checksum": "8A0B726CBDF27DA6965D9FD27E22D7444A07A689B2316D1160EEE4694E1C7C91",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/x-motemen/ghq/v1.6.0/ghq_linux_amd64.zip",
-      "checksum": "A1DF34D1F06275DAF791A57786FC7E51E46D48FCABB4A10C16F63E68EDFF9080",
+      "id": "github_release/github.com/x-motemen/ghq/v1.6.1/ghq_linux_amd64.zip",
+      "checksum": "FA121C76C14608175C52FC0EA53A584F20DDA96BCEC66909B5F7EE8B75715163",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/x-motemen/ghq/v1.6.0/ghq_linux_arm64.zip",
-      "checksum": "2233F2D66C4AED6C4AF5A583417EC9809C4745054E5B69332CC3BA8BCBC04BC3",
+      "id": "github_release/github.com/x-motemen/ghq/v1.6.1/ghq_linux_arm64.zip",
+      "checksum": "1E4279DF58D22DC6CE963E558C23F470C872D6AE59BDE6DE4CF00F33041AD262",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/x-motemen/ghq/v1.6.0/ghq_windows_amd64.zip",
-      "checksum": "BA986A5754BB2A06D968282149F9F604729222432F88CAC999A7F5A53AB60A13",
+      "id": "github_release/github.com/x-motemen/ghq/v1.6.1/ghq_windows_amd64.zip",
+      "checksum": "966E793A0946195DBADF0E311459EAC321027AB49A13B58872ED9D296E295BC0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/x-motemen/ghq/v1.6.0/ghq_windows_arm64.zip",
-      "checksum": "74E73E38AC0E4A7A731266055288ECE32FB45B19F076361EB7D981BB366A49F4",
+      "id": "github_release/github.com/x-motemen/ghq/v1.6.1/ghq_windows_arm64.zip",
+      "checksum": "424ED92F3F2FAD2EEB59FA656D7C4AD32F4366217035A9CEC93DF018E3760118",
       "algorithm": "sha256"
     },
     {
