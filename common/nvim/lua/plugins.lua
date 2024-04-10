@@ -41,6 +41,7 @@ require("lazy").setup({
     -- event = "VeryLazy",
     config = function()
       local telescope = require("telescope")
+      local actions = require("telescope.actions")
       telescope.setup {
         defaults = {
           layout_config = {
@@ -48,6 +49,12 @@ require("lazy").setup({
             preview_width = 0.6
           },
           sorting_strategy = "ascending",
+          mappings = {
+            n = {
+              ["q"] = actions.close,
+              ["ZZ"] = actions.close,
+            }
+          }
         },
         pickers = {
           find_files = {
