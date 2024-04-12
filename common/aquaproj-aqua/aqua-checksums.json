@@ -116,28 +116,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.42.2/deno-aarch64-apple-darwin.zip",
-      "checksum": "5983FB82AC3B95D46E7E8744BB1DEF7351CED803899B4ED3C979E1C41E7D978D",
+      "id": "github_release/github.com/denoland/deno/v1.42.3/deno-aarch64-apple-darwin.zip",
+      "checksum": "F6AE93A64EF0A225D850F2B54EE9A3D1D4AA0D1710B22FD8024C96268FAA4A92",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.42.2/deno-aarch64-unknown-linux-gnu.zip",
-      "checksum": "21FFEEE51BA10B0777F0D323DD00DF329E9108F2EE6D9A6E941B52C1CA0A3142",
+      "id": "github_release/github.com/denoland/deno/v1.42.3/deno-aarch64-unknown-linux-gnu.zip",
+      "checksum": "71AFAE10A9E0239FFC9D92B6FED33CB1AA9FF93BC361ED964F0CC8B46DC36AC9",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.42.2/deno-x86_64-apple-darwin.zip",
-      "checksum": "E9A67F5948941F54CA9AAF609E9272B3C345C51B5F2947753DEB27EADCED9ACA",
+      "id": "github_release/github.com/denoland/deno/v1.42.3/deno-x86_64-apple-darwin.zip",
+      "checksum": "92D82287B74E27C77D6432C40CA2B1D8AF0FB8D65D7FFC3668189D41C43DE3E7",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.42.2/deno-x86_64-pc-windows-msvc.zip",
-      "checksum": "585BA0FF4BF21539889E941A34C7C4C7DE8DEB891E17A57E46B135F8401801FD",
+      "id": "github_release/github.com/denoland/deno/v1.42.3/deno-x86_64-pc-windows-msvc.zip",
+      "checksum": "FFD58F1D22F9D10FA2BF47E39FC56BC502F1D4404AB6F1AF933050AF74942954",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/denoland/deno/v1.42.2/deno-x86_64-unknown-linux-gnu.zip",
-      "checksum": "756342D331D469DDC3B6FB09DE70864E225A693DC7A937BC46790403F84C4FD7",
+      "id": "github_release/github.com/denoland/deno/v1.42.3/deno-x86_64-unknown-linux-gnu.zip",
+      "checksum": "7C10C96BE32E43007A24A1933EF56326962B6CE9003CF583B961C1C4A73C8DAC",
       "algorithm": "sha256"
     },
     {
