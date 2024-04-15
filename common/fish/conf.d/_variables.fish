@@ -5,4 +5,3 @@ set -q AQUA_GLOBAL_CONFIG; or set -Ux AQUA_GLOBAL_CONFIG ~/.config/aquaproj-aqua
 set -q EDITOR; or set -Ux EDITOR nvim
 set -q GOPATH; or set -Ux GOPATH ~/go
 set -q LANG; or set -Ux LANG POSIX
-set -q SSH_AUTH_SOCK; or set -Ux SSH_AUTH_SOCK ~/.ssh/agent.sock
