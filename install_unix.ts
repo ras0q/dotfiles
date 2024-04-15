@@ -16,6 +16,7 @@ const flags: {
 
 const home = Deno.env.get("HOME")!;
 const dirname = import.meta.dirname || Deno.exit(1);
+const isWSL2 = Deno.env.get("WSL_DISTRO_NAME") !== undefined;
 const config = {
   symlinks: {
     [`${home}/.bash_profile`]: "./common/.bash_profile",
@@ -28,7 +29,7 @@ const config = {
     [`${home}/.gittemplate.txt`]: `./common/.gittemplate.txt`,
     [`${home}/.rye/config.toml`]: "./common/rye/config.toml",
     // // WSL2 only
-    // ...(Deno.env.get("WSL_DISTRO_NAME")
+    // ...isWSL2
     //   ? { "/etc/wsl.conf": "./wsl/.wsl.conf" }
     //   : {}),
 
@@ -38,7 +39,7 @@ const config = {
         [`${home}/.Brewfile`]: "./mac/.Brewfile",
         [`${home}/.Brewfile.lock.json`]: "./mac/.Brewfile.lock.json",
         [`${home}/.gitconfig.mac`]: "./mac/.gitconfig.mac",
-        [`${home}/.wezterm.lua`]: "./common/.wezterm.lua"
+        [`${home}/.wezterm.lua`]: "./common/.wezterm.lua",
       }
       : {},
   },
@@ -92,6 +93,7 @@ const config = {
   },
   nextSteps: [
     "Install fonts (from ./dist/fonts)",
+    ...isWSL2 ? ["set -U NPIPERELAY_PATH {{ path to npiperelay }}"] : [],
   ],
 };
 

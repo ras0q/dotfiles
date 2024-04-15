@@ -6,7 +6,7 @@ end
 
 set -q SSH_AUTH_SOCK; or set -Ux SSH_AUTH_SOCK ~/.ssh/agent.sock
 set -q NPIPERELAY_PATH; or begin
-  # set -U (wslpath {{ path to npiperelay }})
+  # set -U NPIPERELAY_PATH {{ path to npiperelay }}
   echo (set_color yellow)WARNING: \$NPIPERELAY_PATH is not set. 1Password SSH Agent will not be set up.(set_color normal)
   exit 0
 end
