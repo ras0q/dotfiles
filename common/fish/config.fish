@@ -6,6 +6,8 @@ fish_add_path \
   ~/.volta/bin \
   ~/.cargo/bin \
   /opt/homebrew/bin
+set -q CODE_BIN; and fish_add_path $CODE_BIN
+set -q PWSH_BIN; and fish_add_path $PWSH_BIN
 
 # starship
 starship init fish --print-full-init \
