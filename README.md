@@ -2,38 +2,28 @@
 
 Cross-platform dotfiles for Windows, Mac, and Ubuntu powered by [Deno](https://deno.land/).
 
-## Contents
-
-WIP
-
-## Setup
-
-### 1. Compile
-
-Compile and download an artifact link from the [Compile install script with Deno](https://github.com/ras0q/dotfiles-v2/actions/workflows/compile-deno.yaml) workflow.
-
-==TODO==: issue public link for the artifact
-
-### 2. Setup Environment
-
-Run the following command to setup environment with dotfiles.
-
-Windows (Powershell):
+## Setup (Windows)
 
 ```powershell
-# Git is required for the install script
-Invoke-WebRequest -Uri {artifact_link} -OutFile install.zip
-Expand-Archive -Path install.zip -DestinationPath .
-.\install
 ```
 
-Mac / Ubuntu (bash):
+## Setup (Mac / Ubuntu)
 
 ```bash
+# 1. Install dependencies with apt
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y wget unzip git
-wget {artifact_link} -O install.zip
-unzip install.zip
-./install
+sudo apt install -y curl wget unzip git
+
+# 2. Clone the dotfiles repository
+git clone https://github.com/ras0q/dotfiles-v2.git ~/ghq/github.com/ras0q/dotfiles-v2 # or preferred directory
+
+# 3. Install Deno temporally for the initial setup
+# TODO: setup with compiled binary, without Deno directly
+curl -fsSL https://deno.land/install.sh | DENO_INSTALL=/tmp/.deno sh
+
+# 4. Run the initial setup
+$DENO_INSTALL/bin/deno run ~/ghq/github.com/ras0q/dotfiles-v2/install_unix.ts
+# 5. Clean up
+rm -rf /tmp/.deno
 ```
