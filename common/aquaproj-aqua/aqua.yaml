@@ -25,5 +25,5 @@ packages:
 - name: eza-community/eza@v0.18.11
 - name: tree-sitter/tree-sitter@v0.22.5
 - name: denoland/deno@v1.42.4
-- name: ziglang/zig@0.11.0
+- name: ziglang/zig@0.12.0
 - name: sharkdp/fd@v9.0.0
