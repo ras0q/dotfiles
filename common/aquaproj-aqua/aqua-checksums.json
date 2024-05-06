@@ -351,6 +351,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/ynqa/jnv/v0.2.2/jnv-x86_64-apple-darwin.tar.xz",
+      "checksum": "1AB1562BB085D0F71D2F491F9AE96151F4CC3EAF9511C056ECF522F2D7CE9B15",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/ynqa/jnv/v0.2.2/jnv-x86_64-unknown-linux-gnu.tar.xz",
+      "checksum": "087F6AF17115A0FA0E52B7B91BC7F89B3A3E4B7AA6011447CFAF32A5024EDB4A",
+      "algorithm": "sha256"
+    },
+    {
       "id": "http/golang.org/dl/go1.22.2.darwin-amd64.tar.gz",
       "checksum": "33E7F63077B1C5BCE4F1ECADD4D990CF229667C40BFB00686990C950911B7AB7",
       "algorithm": "sha256"
