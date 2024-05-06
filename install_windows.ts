@@ -1,7 +1,7 @@
-import { exists } from "https://deno.land/std@0.217.0/fs/exists.ts";
-import { resolve } from "https://deno.land/std@0.217.0/path/mod.ts";
-import $ from "https://deno.land/x/dax@0.39.2/mod.ts";
-import { parseArgs } from "https://deno.land/std@0.217.0/cli/parse_args.ts";
+import { exists } from "jsr:@std/fs@0.229.0";
+import { resolve } from "jsr:@std/path@0.225.0";
+import { parseArgs } from "jsr:@std/cli@0.224.0";
+import $ from "jsr:@david/dax@0.41.0";
 
 $.setPrintCommand(true);
 
@@ -109,7 +109,7 @@ await $.logGroup(async () => {
       const link = $.path(_link).resolve();
       const target = $.path(`${dirname}/${_target}`).resolve();
       await $`rm -rf ${link}`;
-      await link.createSymlinkTo(target, {
+      await link.symlinkTo(target, {
         kind: "absolute",
         type: _link.endsWith("/") ? "dir" : "file", // only for Windows
       });
