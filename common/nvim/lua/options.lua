@@ -5,6 +5,7 @@ opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 vim.scriptencoding = "utf-8"
 vim.g.mapleader = " "
+opt.clipboard:append{'unnamedplus'}
 
 -- appearance
 vim.cmd.colorscheme("delek") -- fallback colorscheme
