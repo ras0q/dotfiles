@@ -1,6 +1,6 @@
 -- TODO: migrate to lua syntax
 -- git commit prefix
-vim.cmd [[
+vim.cmd([[
 augroup gitabbr
   autocmd!
   " ✨ fe: Introduce new features.
@@ -28,4 +28,4 @@ augroup gitabbr
   " ⬆️ up: Upgrade dependencies.
   autocmd FileType gitcommit iabbrev up :arrow_up:
 augroup END
-]]
+]])

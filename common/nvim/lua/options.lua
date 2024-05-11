@@ -5,7 +5,7 @@ opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
 vim.scriptencoding = "utf-8"
 vim.g.mapleader = " "
-opt.clipboard:append{'unnamedplus'}
+opt.clipboard:append({ "unnamedplus" })
 
 -- appearance
 vim.cmd.colorscheme("delek") -- fallback colorscheme
@@ -17,7 +17,7 @@ opt.list = true
 opt.listchars = { tab = ">>", trail = "-", nbsp = "+" }
 
 -- tabs
-opt.expandtab = vim.fn.expand("%:r") ~= 'Makefile' -- Makefileのときはタブ、それ以外はスペース
+opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
 opt.tabstop = 2
 opt.shiftwidth = 2
 
