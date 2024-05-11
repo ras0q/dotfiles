@@ -21,6 +21,7 @@ require("lazy").setup({
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    enabled = false,
     event = "VeryLazy",
     build = ":TSUpdate",
     config = function()
@@ -146,5 +147,5 @@ require("lazy").setup({
   {
     "github/copilot.vim",
     event = "VeryLazy",
-  }
+  },
 })
