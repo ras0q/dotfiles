@@ -2,10 +2,10 @@
 -- LSP Manager: mason.nvim
 
 return {
-  "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
   dependencies = {
-    "neovim/nvim-lspconfig",
     "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   },
   event = "VeryLazy",
   config = function()
