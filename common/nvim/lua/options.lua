@@ -14,7 +14,7 @@ opt.cursorline = true
 opt.virtualedit = "onemore"
 opt.smartindent = true
 opt.list = true
-opt.listchars = { tab = ">>", trail = "-", nbsp = "+" }
+opt.listchars = { tab = ">-", trail = "-", nbsp = "+" }
 
 -- tabs
 opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
