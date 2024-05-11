@@ -6,12 +6,17 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    {
+      "j-hui/fidget.nvim",
+      event = "LspAttach",
+    },
   },
   event = "VeryLazy",
   config = function()
     require("mason").setup({
       ui = { border = "single" }
     })
+
     local mason_lspconfig = require("mason-lspconfig")
     mason_lspconfig.setup({
       ensure_installed = { "lua_ls", "bashls", "gopls", "jsonls" }
@@ -21,5 +26,7 @@ return {
         require("lspconfig")[server_name].setup({})
       end,
     })
+
+    require("fidget").setup()
   end
 }
