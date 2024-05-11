@@ -17,7 +17,7 @@ opt.list = true
 opt.listchars = { tab = ">-", trail = "-", nbsp = "+" }
 
 -- tabs
-opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
+opt.expandtab = false
 opt.tabstop = 2
 opt.shiftwidth = 2
 
