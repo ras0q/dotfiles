@@ -108,12 +108,13 @@ require("lazy").setup({
       require("mason").setup({
         ui = { border = "single" }
       })
-      local lspconfig = require("lspconfig")
       local mason_lspconfig = require("mason-lspconfig")
-      mason_lspconfig.setup()
+      mason_lspconfig.setup({
+        ensure_installed = { "lua_ls", "bashls", "gopls", "jsonls" }
+      })
       mason_lspconfig.setup_handlers({
         function(server_name)
-          lspconfig[server_name].setup({})
+          require("lspconfig")[server_name].setup({})
         end,
       })
     end
@@ -147,5 +148,6 @@ require("lazy").setup({
   {
     "github/copilot.vim",
     event = "VeryLazy",
+    build = ":Copilot enable"
   },
 })
