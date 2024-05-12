@@ -1,47 +1,73 @@
 -- LSP: nvim-lspconfig
--- LSP Manager: mason.nvim
+-- Formatter / Linter: none-ls.nvim
+-- Package Manager: mason.nvim
 
 return {
+	{
+		"williamboman/mason.nvim",
+		event = "VeryLazy",
+		opts = {
+			ui = { border = "single" },
+		},
+	},
+
+	-- LSP
+	{
+		"williamboman/mason-lspconfig",
+		event = "VeryLazy",
+		opts = {
+			ensure_installed = {
+				"lua_ls",
+				"bashls",
+				"gopls",
+				"jsonls",
+			},
+		},
+	},
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			{
-				"j-hui/fidget.nvim",
-				event = "LspAttach",
-			},
 		},
-		event = "VeryLazy",
+		event = "LspAttach",
 		config = function()
-			require("mason").setup({
-				ui = { border = "single" },
-			})
-
-			local mason_lspconfig = require("mason-lspconfig")
-			mason_lspconfig.setup({
-				ensure_installed = { "lua_ls", "bashls", "gopls", "jsonls" },
-			})
-			mason_lspconfig.setup_handlers({
+			local lspconfig = require("lspconfig")
+			require("mason-lspconfig").setup_handlers({
 				function(server_name)
-					require("lspconfig")[server_name].setup({})
+					lspconfig[server_name].setup({})
 				end,
 			})
-
-			require("fidget").setup()
 		end,
 	},
+
+	-- Formatter / Linter
 	{
 		"jay-babu/mason-null-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"goimports",
+				"golangci_lint",
+			},
+		},
+	},
+	{
+		"nvimtools/none-ls.nvim",
 		dependencies = {
 			"williamboman/mason.nvim",
-			"nvimtools/none-ls.nvim",
+			"jay-babu/mason-null-ls.nvim",
 		},
 		config = function()
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-			local null_ls = require("null-ls")
-			null_ls.setup({
+			local builtins = require("null-ls.builtins")
+			require("null-ls").setup({
+				sources = {
+					builtins.formatting.stylua,
+					builtins.formatting.goimports,
+					builtins.diagnostics.golangci_lint,
+				},
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then
 						vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -54,13 +80,6 @@ return {
 						})
 					end
 				end,
-				sources = {
-					null_ls.builtins.formatting.stylua,
-				},
-			})
-
-			require("mason-null-ls").setup({
-				ensure_installed = { "stylua" },
 			})
 		end,
 	},

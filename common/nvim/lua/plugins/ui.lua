@@ -1,6 +1,7 @@
 -- Theme: catppuccin-latte
 -- Syntax: nvim-treesitter
 -- Popup: noice.nvim
+-- LSP Log: fidget.nvim
 
 return {
 	{
@@ -50,5 +51,9 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"j-hui/fidget.nvim",
+		event = "LspAttach",
 	},
 }
