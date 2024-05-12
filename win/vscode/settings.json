@@ -11,7 +11,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[lua]": {
-    "editor.defaultFormatter": "sumneko.lua"
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
@@ -44,7 +44,7 @@
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.foldingMaximumRegions": 2000,
-  "editor.fontFamily": "SF Mono, 源ノ角ゴシック Code JP, Source Code Pro",
+  "editor.fontFamily": "源ノ角ゴシック Code JP, Symbols Nerd Font",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
@@ -98,7 +98,6 @@
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
   },
-  "go.gopath": "",
   "go.lintTool": "golangci-lint",
   "http.proxySupport": "off",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -110,7 +109,6 @@
     "no-inline-html": false,
     "ol-prefix": false
   },
-  "material-icon-theme.folders.theme": "specific",
   "mypy-type-checker.path": ["${userHome}\\.rye\\shims\\mypy.exe"],
   "notebook.cellToolbarLocation": {
     "default": "right",
@@ -138,8 +136,7 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.ignoreProcessNames": [],
@@ -176,5 +173,6 @@
   "workbench.tree.renderIndentGuides": "always",
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+  "go.toolsManagement.autoUpdate": true
 }
