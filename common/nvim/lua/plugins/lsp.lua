@@ -35,6 +35,7 @@ return {
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local lspconfig = require("lspconfig")
 			require("mason-lspconfig").setup_handlers({

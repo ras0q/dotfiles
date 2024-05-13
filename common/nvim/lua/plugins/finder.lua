@@ -7,6 +7,8 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"nvim-telescope/telescope-file-browser.nvim",
 	},
+	-- TODO: cannot open finder on startup
+	event = "VeryLazy",
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
