@@ -31,3 +31,8 @@ opt.wrapscan = true
 -- backup
 opt.backup = false
 opt.swapfile = false
+
+-- terminal
+if vim.fn.has("win64") then
+	vim.o.shell = "pwsh"
+end
