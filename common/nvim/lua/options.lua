@@ -17,7 +17,7 @@ opt.list = true
 opt.listchars = { tab = ">-", trail = "-", nbsp = "+" }
 
 -- tabs
-opt.expandtab = false
+opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 
