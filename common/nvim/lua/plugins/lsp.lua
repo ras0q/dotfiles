@@ -13,8 +13,14 @@ return {
 
 	-- LSP
 	{
-		"williamboman/mason-lspconfig",
-		event = "VeryLazy",
+		"neovim/nvim-lspconfig",
+		lazy = true,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
 		opts = {
 			ensure_installed = {
 				"lua_ls",
@@ -25,12 +31,10 @@ return {
 		},
 	},
 	{
-		"neovim/nvim-lspconfig",
+		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			"neovim/nvim-lspconfig",
 		},
-		event = "LspAttach",
 		config = function()
 			local lspconfig = require("lspconfig")
 			require("mason-lspconfig").setup_handlers({
@@ -43,22 +47,8 @@ return {
 
 	-- Formatter / Linter
 	{
-		"jay-babu/mason-null-ls.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {
-			ensure_installed = {
-				"stylua",
-				"goimports",
-				"golangci_lint",
-			},
-		},
-	},
-	{
 		"nvimtools/none-ls.nvim",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"jay-babu/mason-null-ls.nvim",
-		},
+		lazy = true,
 		config = function()
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 			local builtins = require("null-ls.builtins")
@@ -82,5 +72,19 @@ return {
 				end,
 			})
 		end,
+	},
+	{
+		"jay-babu/mason-null-ls.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"goimports",
+				"golangci_lint",
+			},
+		},
 	},
 }
