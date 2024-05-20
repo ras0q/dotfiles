@@ -33,6 +33,6 @@ opt.backup = false
 opt.swapfile = false
 
 -- terminal
-if vim.fn.has("win64") then
-	vim.o.shell = "pwsh"
+if vim.fn.has("win64") == 1 then
+	opt.shell = "pwsh"
 end
