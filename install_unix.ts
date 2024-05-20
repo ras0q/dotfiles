@@ -5,6 +5,10 @@ import { resolve } from "jsr:@std/path@0.225.0";
 import { parseArgs } from "jsr:@std/cli@0.224.0";
 import $ from "jsr:@david/dax@0.41.0";
 
+$.setInfoLogger((...args) => {
+  console.log(`%c[INFO] ${args.join(" ")}`, "color: green; font-weight: bold;");
+});
+
 const flags: {
   "nonroot"?: boolean;
   "verbose"?: boolean;
@@ -27,12 +31,12 @@ const isMacOS = Deno.build.os === "darwin";
 
 await $.logGroup("Cloning dotfiles", async () => {
   if (await exists(dotfilesDir)) {
-    $.logStep("Skipped dotfiles clone");
+    $.log("Skipped dotfiles clone");
     return;
   }
 
   await $`git clone https://github.com/ras0q/dotfiles-v2.git ${dotfilesDir} --depth 1`;
-  $.logStep(`Cloned dotfiles to ${dotfilesDir}`);
+  $.log(`Cloned dotfiles to ${dotfilesDir}`);
 });
 
 await $.logGroup("Creating symlinks", async () => {
@@ -69,13 +73,13 @@ await $.logGroup("Creating symlinks", async () => {
       if (linkPath.startsWith(home)) {
         await $`rm -rf ${linkPath}`;
         await $`ln -s ${targetPath} ${linkPath}`;
-        $.logStep(`Created symlink: ${linkPath} -> ${targetPath}`);
+        $.log(`Created symlink: ${linkPath} -> ${targetPath}`);
       } else if (!flags["nonroot"]) {
         await $`sudo rm -rf ${linkPath}`;
         await $`sudo ln -s ${targetPath} ${linkPath}`;
-        $.logStep(`Created symlink (with sudo): ${linkPath} -> ${targetPath}`);
+        $.log(`Created symlink (with sudo): ${linkPath} -> ${targetPath}`);
       } else {
-        $.logStep(`Skipped creating symlink: ${linkPath} -> ${targetPath}`);
+        $.log(`Skipped creating symlink: ${linkPath} -> ${targetPath}`);
       }
     }),
   );
@@ -100,7 +104,7 @@ if (flags["download-fonts"]) {
       const fontPath = resolve(fontBaseDir, font.split("/").slice(-1)[0]);
       const data = await $.request(font).showProgress();
       await Deno.writeFile(fontPath, new Uint8Array(await data.arrayBuffer()));
-      $.logStep(`Downloaded ${fontPath}`);
+      $.log(`Downloaded ${fontPath}`);
     }));
   });
 }
@@ -124,7 +128,7 @@ if (isLinux && !flags["nonroot"]) {
       "socat", // for 1Password SSH
     ];
     await $`sudo apt-get install -y ${packages}`;
-    $.logStep(`Installed apt packages: ${packages}`);
+    $.log(`Installed apt packages: ${packages}`);
   });
 
   // Ref: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
@@ -137,7 +141,7 @@ if (isLinux && !flags["nonroot"]) {
       .stdin($.request(gpgLink))
       .stdout("null");
     await $`sudo chmod a+r ${gpgPath}`;
-    $.logStep("Added Docker's GPG key");
+    $.log("Added Docker's GPG key");
 
     const arch = (await $`dpkg --print-architecture`.text()).trim();
     const codename = (await $`lsb_release -cs`.text()).trim();
@@ -148,7 +152,7 @@ if (isLinux && !flags["nonroot"]) {
       )
       .stdout("null");
     await $`sudo apt-get update`;
-    $.logStep("Added Docker's apt repository");
+    $.log("Added Docker's apt repository");
 
     const dockerPackages = [
       "docker-ce",
@@ -158,14 +162,14 @@ if (isLinux && !flags["nonroot"]) {
       "docker-compose-plugin",
     ];
     await $`sudo apt-get install -y ${dockerPackages}`;
-    $.logStep(`Installed Docker's apt packages: ${dockerPackages.join(", ")}`);
+    $.log(`Installed Docker's apt packages: ${dockerPackages.join(", ")}`);
   });
 }
 
 if (isMacOS && !flags["nonroot"]) {
   await $.logGroup("Installing up Homebrew", async () => {
     if (await $.commandExists("brew")) {
-      $.logStep("Skipped Homebrew installation");
+      $.log("Skipped Homebrew installation");
       return;
     }
 
@@ -174,7 +178,7 @@ if (isMacOS && !flags["nonroot"]) {
         "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh",
       ),
     );
-    $.logStep("Installed Homebrew");
+    $.log("Installed Homebrew");
   });
 
   await $.logGroup("Installing Homebrew packages", async () => {
@@ -183,25 +187,25 @@ if (isMacOS && !flags["nonroot"]) {
     await $`brew doctor`;
     await $`brew bundle --global --force`;
     await $`brew bundle cleanup --global --force`;
-    $.logStep("Installed Homebrew packages (See ~/.Brewfile)");
+    $.log("Installed Homebrew packages (See ~/.Brewfile)");
   });
 }
 
 await $.logGroup("Installing rustup", async () => {
   if (await $.commandExists("rustup")) {
-    $.logStep("Skipped rustup installation");
+    $.log("Skipped rustup installation");
     return;
   }
 
   await $`bash -s -- -y --no-modify-path`.stdin(
     $.request("https://sh.rustup.rs"),
   );
-  $.logStep("Installed rustup");
+  $.log("Installed rustup");
 });
 
 await $.logGroup("Installing aquaproj", async () => {
   if (await $.commandExists("aqua")) {
-    $.logStep("Skipped aqua installation");
+    $.log("Skipped aqua installation");
     return;
   }
 
@@ -212,7 +216,7 @@ await $.logGroup("Installing aquaproj", async () => {
 
 await $.logGroup("Installing aquaproj packages", async () => {
   await $`${home}/.local/share/aquaproj-aqua/bin/aqua install --all`;
-  $.logStep("Installed aquaproj packages");
+  $.log("Installed aquaproj packages");
 });
 
 $.logGroup("Set up complete🎉🎉🎉", () => {
