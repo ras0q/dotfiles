@@ -27,5 +27,5 @@ packages:
 - name: denoland/deno@v1.43.6
 - name: ziglang/zig@0.12.0
 - name: sharkdp/fd@v10.1.0
-- name: ynqa/jnv@v0.2.2
+- name: ynqa/jnv@v0.2.3
 - name: JohnnyMorganz/StyLua@v0.20.0
