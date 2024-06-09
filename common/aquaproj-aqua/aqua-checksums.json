@@ -181,6 +181,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/helix-editor/helix/24.03/helix-24.03-aarch64-linux.tar.xz",
+      "checksum": "DEAAE9FE0C1F0EA6C0B18E4A06E01A3FF894E65551909C4FEB4738D9FDF8D492",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/helix-editor/helix/24.03/helix-24.03-aarch64-macos.tar.xz",
+      "checksum": "9007B80EB2E8F9E202849F6DBB53440DCCE3707C5BE4F8E9BC0623D7BF968D54",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/helix-editor/helix/24.03/helix-24.03-x86_64-linux.tar.xz",
+      "checksum": "B15290807FEDF4907ABC700A408C2A4E74662A3008A46224BF18AECA38379BFC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/helix-editor/helix/24.03/helix-24.03-x86_64-macos.tar.xz",
+      "checksum": "7DC16C24D11CA4F613E0A4DAB057DA21D382F4C323D64AADCCAF2F4731C88A49",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/helix-editor/helix/24.03/helix-24.03-x86_64-windows.zip",
+      "checksum": "0CE486668E8D32C3B16B5AEA332168B9EB24D6FD931355745BC0C19099D7E6AB",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/jqlang/jq/jq-1.7.1/jq-linux-amd64",
       "checksum": "5942C9B0934E510EE61EB3E30273F1B3FE2590DF93933A93D7C58B81D19C8FF5",
       "algorithm": "sha256"

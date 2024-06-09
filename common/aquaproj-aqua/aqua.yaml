@@ -29,3 +29,4 @@ packages:
 - name: sharkdp/fd@v10.1.0
 - name: ynqa/jnv@v0.2.3
 - name: JohnnyMorganz/StyLua@v0.20.0
+- name: helix-editor/helix@24.03

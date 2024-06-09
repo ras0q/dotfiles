@@ -1,0 +1,10 @@
+theme = "catppuccin_latte"
+
+[editor]
+
+[keys.normal]
+C-s = ":w"
+Z = { Z = ":wq" }
+
+[keys.insert]
+j = { k = "normal_mode" }
