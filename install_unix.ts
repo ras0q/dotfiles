@@ -54,7 +54,7 @@ await $.logGroup("Creating symlinks", async () => {
     // WSL2 only
     ...isWSL2
       ? [
-        ["/etc/wsl.conf", "./wsl/.wsl.conf"],
+        ["/etc/wsl.conf", "./wsl/wsl.conf"],
       ]
       : [],
     // MacOS only
