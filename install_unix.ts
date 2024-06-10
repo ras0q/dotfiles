@@ -45,6 +45,7 @@ await $.logGroup("Creating symlinks", async () => {
     [`${home}/.bashrc`, "./common/.bashrc"],
     [`${home}/.config/aquaproj-aqua`, "./common/aquaproj-aqua"],
     [`${home}/.config/fish`, "./common/fish"],
+    [`${home}/.config/helix`, "./common/helix"],
     [`${home}/.config/nvim`, "./common/nvim"],
     [`${home}/.config/starship.toml`, "./common/starship.toml"],
     [`${home}/.gitconfig`, "./common/.gitconfig"],

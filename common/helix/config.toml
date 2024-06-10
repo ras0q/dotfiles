@@ -1,0 +1,30 @@
+theme = "catppuccin_latte"
+
+[editor]
+auto-save = true # TODO: 動いてる？
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-type", "read-only-indicator", "file-modification-indicator"]
+mode.normal ="NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+Z = { Z = ":wq" }
+
+[keys.insert]
+j = { k = "normal_mode" }
