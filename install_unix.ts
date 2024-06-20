@@ -227,6 +227,6 @@ $.logGroup("Set up complete🎉🎉🎉", () => {
     ...isWSL2 ? ["set -U NPIPERELAY_PATH {{ path to npiperelay }}"] : [],
   ];
   for (const step of nextSteps) {
-    $.log(step);
+    $.log(`- [ ] ${step}`);
   }
 });
