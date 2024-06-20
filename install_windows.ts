@@ -124,6 +124,7 @@ await $.logGroup("Installing winget packages", async () => {
     "Google.GoogleDrive",
     "Obsidian.Obsidian",
     "LINE.LINE",
+    "TheBrowserCompany.Arc",
     "SlackTechnologies.Slack",
     "Spotify.Spotify",
     // Common CLI
