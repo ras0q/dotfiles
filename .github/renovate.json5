@@ -12,6 +12,12 @@
         "patch"
       ],
       "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "neovim/neovim"
+      ],
+      "enabled": false
     }
   ]
 }
