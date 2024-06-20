@@ -23,6 +23,7 @@ const config = {
     [`${home}/.wezterm.lua`]: `./common/.wezterm.lua`,
     [`${home}/.wslconfig`]: `./win/.wslconfig`,
     [`${home}/AppData/Local/nvim/`]: `./common/nvim`,
+    [`${home}/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json`]: `./win/terminal/settings.json`,
     [`${home}/AppData/Roaming/Code/User/settings.json`]: `./win/vscode/settings.json`,
     [`${home}/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`]: `./win/Microsoft.PowerShell_profile.ps1`,
     [`${home}/Documents/PowerShell/Microsoft.VSCode_profile.ps1`]: `./win/Microsoft.PowerShell_profile.ps1`,
