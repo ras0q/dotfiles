@@ -34,7 +34,6 @@ await $.logGroup("Creating symlinks", async () => {
     [`${home}/.gittemplate.txt`, `./common/.gittemplate.txt`],
     [`${home}/.wezterm.lua`, `./common/.wezterm.lua`],
     [`${home}/.wslconfig`, `./win/.wslconfig`],
-    [`${home}/AppData/Local/helix/`, `./common/helix/`],
     [`${home}/AppData/Local/nvim/`, `./common/nvim/`],
     [
       `${home}/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json`,
@@ -44,6 +43,7 @@ await $.logGroup("Creating symlinks", async () => {
       `${home}/AppData/Roaming/Code/User/settings.json`,
       `./win/vscode/settings.json`,
     ],
+    [`${home}/AppData/Roaming/helix/`, `./common/helix/`],
     [
       `${home}/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`,
       `./win/Microsoft.PowerShell_profile.ps1`,
