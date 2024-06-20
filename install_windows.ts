@@ -58,6 +58,9 @@ await $.logGroup("Creating symlinks", async () => {
       const linkPath = $.path(resolve(link));
       const targetPath = $.path(resolve(dotfilesDir, target));
       await $`rm -rf ${link}`;
+      if (!(await exists(linkPath.dirname().toString()))) {
+        await $`mkdir -p ${linkPath.dirname()}`;
+      }
       await linkPath.symlinkTo(target, {
         kind: "absolute",
         type: targetPath.isDirSync() ? "dir" : "file", // only for Windows
