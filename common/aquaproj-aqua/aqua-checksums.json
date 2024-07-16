@@ -441,33 +441,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/ziglang.org/download/0.12.0/zig-linux-aarch64-0.12.0.tar.xz",
-      "checksum": "754F1029484079B7E0CA3B913A0A2F2A6AFD5A28990CB224FE8845E72F09DE63",
+      "id": "http/ziglang.org/download/0.13.0/zig-linux-aarch64-0.13.0.tar.xz",
+      "checksum": "041AC42323837EB5624068ACD8B00CD5777DAC4CF91179E8DAD7A7E90DD0C556",
       "algorithm": "sha256"
     },
     {
-      "id": "http/ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz",
-      "checksum": "C7AE866B8A76A568E2D5CFD31FE89CDB629BDD161FDD5018B29A4A0A17045CAD",
+      "id": "http/ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz",
+      "checksum": "D45312E61EBCC48032B77BC4CF7FD6915C11FA16E4AAD116B66C9468211230EA",
       "algorithm": "sha256"
     },
     {
-      "id": "http/ziglang.org/download/0.12.0/zig-macos-aarch64-0.12.0.tar.xz",
-      "checksum": "294E224C14FD0822CFB15A35CF39AA14BD9967867999BF8BDFE3DB7DDEC2A27F",
+      "id": "http/ziglang.org/download/0.13.0/zig-macos-aarch64-0.13.0.tar.xz",
+      "checksum": "46FAE219656545DFAF4DCE12FB4E8685CEC5B51D721BEEE9389AB4194D43394C",
       "algorithm": "sha256"
     },
     {
-      "id": "http/ziglang.org/download/0.12.0/zig-macos-x86_64-0.12.0.tar.xz",
-      "checksum": "4D411BF413E7667821324DA248E8589278180DBC197F4F282B7DBB599A689311",
+      "id": "http/ziglang.org/download/0.13.0/zig-macos-x86_64-0.13.0.tar.xz",
+      "checksum": "8B06ED1091B2269B700B3B07F8E3BE3B833000841BAE5AA6A09B1A8B4773EFFD",
       "algorithm": "sha256"
     },
     {
-      "id": "http/ziglang.org/download/0.12.0/zig-windows-aarch64-0.12.0.zip",
-      "checksum": "04C6B92689241CA7A8A59B5F12D2CA2820C09D5043C3C4808B7E93E41C7BF97B",
+      "id": "http/ziglang.org/download/0.13.0/zig-windows-aarch64-0.13.0.zip",
+      "checksum": "95FF88427AF7BA2B4F312F45D2377CE7A033E5E3C620C8CAAA396A9ABA20EFDA",
       "algorithm": "sha256"
     },
     {
-      "id": "http/ziglang.org/download/0.12.0/zig-windows-x86_64-0.12.0.zip",
-      "checksum": "2199EB4C2000DDB1FBA85BA78F1FCF9C1FB8B3E57658F6A627A8E513131893F5",
+      "id": "http/ziglang.org/download/0.13.0/zig-windows-x86_64-0.13.0.zip",
+      "checksum": "D859994725EF9402381E557C60BB57497215682E355204D754EE3DF75EE3C158",
       "algorithm": "sha256"
     },
     {
