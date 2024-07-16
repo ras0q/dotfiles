@@ -401,13 +401,13 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/ynqa/jnv/v0.2.3/jnv-x86_64-apple-darwin.tar.xz",
-      "checksum": "9C2B3F6B57A4B7AC438414717FFCA075537DF1E4A1C535DC28F16702E9037CBB",
+      "id": "github_release/github.com/ynqa/jnv/v0.3.0/jnv-x86_64-apple-darwin.tar.xz",
+      "checksum": "19444DAA6060AF9EEDAF141C7CEB2EBDE8DAFEC382558C648321CB3FACE673C8",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/ynqa/jnv/v0.2.3/jnv-x86_64-unknown-linux-gnu.tar.xz",
-      "checksum": "306A055AF3B7EA5EB9FBC696DEB9196E52D6216C081A0A7DB1D42F33FDF8BB05",
+      "id": "github_release/github.com/ynqa/jnv/v0.3.0/jnv-x86_64-unknown-linux-gnu.tar.xz",
+      "checksum": "1755327720B84189A4A8E718EF5A8C22EA3D6308D38E24C7E80A085A398B96A2",
       "algorithm": "sha256"
     },
     {
