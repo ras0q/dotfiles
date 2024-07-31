@@ -12,3 +12,4 @@
 # 🔧 co: Add or update configuration files.
 # 📝 do: Add or update documentation.
 # ⬆️  up: Upgrade dependencies.
+# ✅ ch: Add, update, or pass tests.

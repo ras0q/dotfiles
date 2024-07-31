@@ -27,5 +27,7 @@ augroup gitabbr
   autocmd FileType gitcommit iabbrev do :memo:
   " ⬆️ up: Upgrade dependencies.
   autocmd FileType gitcommit iabbrev up :arrow_up:
+  " ✅ ch: Add, update, or pass tests."
+  autocmd FileType gitcommit iabbrev ch :white_check_mark:
 augroup END
 ]])
