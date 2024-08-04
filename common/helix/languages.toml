@@ -4,7 +4,7 @@ roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = ["typescript-language-server", "deno-lsp"]
 
 [[language]]
-name = "tsc"
+name = "tsx"
 roots = ["deno.json", "deno.jsonc", "package.json"]
 language-servers = ["typescript-language-server", "deno-lsp"]
 
