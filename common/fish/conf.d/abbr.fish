@@ -17,6 +17,7 @@ abbr -a ls eza
 
 # others
 abbr -a bd 'brew bundle dump --global --tap --formula -f'
+abbr -a c 'code .'
 abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'
 abbr -a gg 'ghq get'
 abbr -a h 'hx .'
