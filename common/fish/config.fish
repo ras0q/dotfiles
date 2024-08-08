@@ -20,3 +20,6 @@ starship init fish --print-full-init \
 
 # zoxide
 zoxide init --cmd cd --hook pwd fish | source
+
+# fnm
+fnm completions --shell fish | source

@@ -56,6 +56,26 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/Schniz/fnm/v1.37.1/fnm-arm64.zip",
+      "checksum": "4BE98BCFE7BA5FF5F30E24CC0978474AE9E39F0714C967A2F7E8888B236B526B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/Schniz/fnm/v1.37.1/fnm-linux.zip",
+      "checksum": "1937297251AAAD0582EA3D07ED6AB6C523641A82EBBFB9F7541A3CB5AE31E1C5",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/Schniz/fnm/v1.37.1/fnm-macos.zip",
+      "checksum": "C7C6B72FACA8DB71AA78CF0189B38253BD39650D7EC3DE36CE4F32D21F7D2BFB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/Schniz/fnm/v1.37.1/fnm-windows.zip",
+      "checksum": "44E964B4B408836CD24675FF85CE410D37D61A6A5DF61E9C661BFD911670704F",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/ajeetdsouza/zoxide/v0.9.4/zoxide-0.9.4-aarch64-apple-darwin.tar.gz",
       "checksum": "19E9BCFFCF2B3EB7AFBA41BDAA56DB53BDF2211249868D833FE124E9E791E8B6",
       "algorithm": "sha256"
@@ -348,26 +368,6 @@
     {
       "id": "github_release/github.com/tree-sitter/tree-sitter/v0.22.6/tree-sitter-windows-x64.gz",
       "checksum": "75BB644474A817849BA4CAC071A6A051D40696A34C2C44DF7E4C8749547D3992",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/volta-cli/volta/v1.1.1/volta-1.1.1-linux.tar.gz",
-      "checksum": "AB14E5D50EF836F8F43B56323CFBE7BA95A004BAD05450B453C5B06A0B433D7B",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/volta-cli/volta/v1.1.1/volta-1.1.1-macos-aarch64.tar.gz",
-      "checksum": "013D419550525FA6A212C2693798F9E2E65737E887E3604B08BC15A6BE737E01",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/volta-cli/volta/v1.1.1/volta-1.1.1-macos.tar.gz",
-      "checksum": "778CCAA943DE8729D91E9DF02A2767B470D97E8D5551FAF6D89978DB6F5F3C64",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/volta-cli/volta/v1.1.1/volta-1.1.1-windows.zip",
-      "checksum": "5AD9BF1EEE764EDF2E341A3B616206BB4FB0449E1856EA6C7DBD646C912F2A1C",
       "algorithm": "sha256"
     },
     {
