@@ -26,7 +26,7 @@ packages:
 - name: denoland/deno@v1.45.5
 - name: ziglang/zig@0.13.0
 - name: sharkdp/fd@v10.1.0
-- name: ynqa/jnv@v0.3.0
+- name: ynqa/jnv@v0.4.0
 - name: JohnnyMorganz/StyLua@v0.20.0
 - name: helix-editor/helix@24.07
 - name: Schniz/fnm@v1.37.1
