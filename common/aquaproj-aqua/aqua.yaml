@@ -30,3 +30,4 @@ packages:
 - name: JohnnyMorganz/StyLua@v0.20.0
 - name: helix-editor/helix@24.07
 - name: Schniz/fnm@v1.37.1
+- name: biomejs/biome@cli/v1.8.3

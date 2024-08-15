@@ -131,6 +131,26 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-darwin-arm64",
+      "checksum": "9D707C28EE8E13158D2B9890DD9FAF064A4EA6DABDE2009A6A8607480AE8C24A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-darwin-x64",
+      "checksum": "2CC112178363FA0E11D8F26E0D80598EFF6CE481A1EE224B8A8AE2B8A5185124",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-linux-arm64",
+      "checksum": "D134E89F6F4FC29D32C8101EFB074969AC263EBDB0303E07039E3735002C6A2D",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-linux-x64",
+      "checksum": "5495F2F69EDD94E9F26ED1ADB9ED8023D7C143C3CC6F275F90ABDDED612217E4",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/cli/cli/v2.54.0/gh_2.54.0_linux_amd64.tar.gz",
       "checksum": "C4441B2ACFB63FEB5FC37A346B0A0A66080D657397F1EB81E3025961DCB06DD3",
       "algorithm": "sha256"
