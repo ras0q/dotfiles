@@ -2,6 +2,8 @@ theme = "catppuccin_latte"
 
 [editor]
 auto-save = true # TODO: 動いてる？
+cursorline = true
+cursorcolumn = true
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "file-type", "read-only-indicator", "file-modification-indicator"]
@@ -11,6 +13,7 @@ mode.select = "SELECT"
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -19,6 +22,12 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.whitespace.render]
+tab = "all"
+
+[editor.whitespace.characters]
+tabpad = "."
 
 [editor.indent-guides]
 render = true
