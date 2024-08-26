@@ -386,28 +386,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.22.6/tree-sitter-linux-arm64.gz",
-      "checksum": "9335AB8B5F5F25E6146DA955CA3586F3E1DB75A249A82B5857627EBC262A961D",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.23.0/tree-sitter-linux-arm64.gz",
+      "checksum": "ED69B56B87E2852F44F1D4868AA3CF4DEEE67712168CB0BF07884B8A97EE2887",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.22.6/tree-sitter-linux-x64.gz",
-      "checksum": "A3EF0FF0B0EC96A7782AD02A8393D455177E29800FEE257B1E74C19BBB7C2452",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.23.0/tree-sitter-linux-x64.gz",
+      "checksum": "337C4844B846FFAEF10B227ECFFEFAD5E761B304E185DE1A9327DBA88D12CCFE",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.22.6/tree-sitter-macos-arm64.gz",
-      "checksum": "3F1F2E85C165C633E5D17B72F462CC8F9E2D2F7241BD583D11083C8B7FA834E2",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.23.0/tree-sitter-macos-arm64.gz",
+      "checksum": "E18DEA1F47ABA950A12BB46D085734866A9115E0DF85E19C8124CB9FBD3511EA",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.22.6/tree-sitter-macos-x64.gz",
-      "checksum": "C131F5E92142146F27598D69797A7289503C18747B1AE696B5B22C2291E22C5D",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.23.0/tree-sitter-macos-x64.gz",
+      "checksum": "312FA3500F79299410F88EA14DCC0C7510CAA033862E2A7AE3C6410B4EF5394B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.22.6/tree-sitter-windows-x64.gz",
-      "checksum": "75BB644474A817849BA4CAC071A6A051D40696A34C2C44DF7E4C8749547D3992",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.23.0/tree-sitter-windows-x64.gz",
+      "checksum": "2CCD83BEA6D5A3F67FB3E2E6572A2032A1194B567D76BE03C44619D3CA6D3EF0",
       "algorithm": "sha256"
     },
     {
