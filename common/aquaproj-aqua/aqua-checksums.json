@@ -151,36 +151,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.55.0/gh_2.55.0_linux_amd64.tar.gz",
-      "checksum": "49700B3FEDB5BFCBEF696FE9F1F69091CEB9CAF2D40BD872B5028C451EFC52BC",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/cli/cli/v2.55.0/gh_2.55.0_linux_arm64.tar.gz",
-      "checksum": "2D5D2B965E0122C41752E64873DC33C213B068C1E7A9C396CBD8F6895FB9685F",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/cli/cli/v2.55.0/gh_2.55.0_macOS_amd64.zip",
-      "checksum": "58448671A680C2B5245333BB44466305A28CF65E8F090C1FFD7EF5E729AF4463",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/cli/cli/v2.55.0/gh_2.55.0_macOS_arm64.zip",
-      "checksum": "11B60CEF134DA32E001DEC47C897FE7023AC2059B1327F71F04436D1F4B59459",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/cli/cli/v2.55.0/gh_2.55.0_windows_amd64.zip",
-      "checksum": "257B53CE362D2FAE73CF1FD0792B2C3F2971BE2C6C5C91F749D7FE75DD487FED",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/cli/cli/v2.55.0/gh_2.55.0_windows_arm64.zip",
-      "checksum": "11254C845820C0764FFE8B79A4799B39386191015E8CFEA02301EFAC92154419",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/denoland/deno/v1.46.1/deno-aarch64-apple-darwin.zip",
       "checksum": "D250E5F38B0C0D5F4A0F3E063CA75467DBDD2339EA4ED4942CB4426C6D67BAEC",
       "algorithm": "sha256"

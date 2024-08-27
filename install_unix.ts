@@ -62,6 +62,8 @@ await $.logGroup("Creating symlinks", async () => {
       ? [
         [`${home}/.Brewfile`, "./mac/.Brewfile"],
         [`${home}/.Brewfile.lock.json`, "./mac/.Brewfile.lock.json"],
+        [`${home}/.config/skhd`, "./mac/skhd"],
+        [`${home}/.config/yabai`, "./mac/yabai"],
         [`${home}/.gitconfig.mac`, "./mac/.gitconfig.mac"],
         [`${home}/.wezterm.lua`, "./common/.wezterm.lua"],
       ]
@@ -183,7 +185,6 @@ if (isMacOS && !flags["nonroot"]) {
   });
 
   await $.logGroup("Installing Homebrew packages", async () => {
-    await $`brew cleanup`;
     await $`brew upgrade`;
     await $`brew doctor`;
     await $`brew bundle --global --force`;
