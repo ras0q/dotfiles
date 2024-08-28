@@ -144,6 +144,10 @@ if (isLinux && !flags["nonroot"]) {
 }
 
 if (isMacOS && !flags["nonroot"]) {
+  await $.logGroup("Disabling .DS_Store", async () => {
+    await $`defaults write com.apple.desktopservices DSDontWriteNetworkStores True`
+  })
+
   await $.logGroup("Installing up Homebrew", async () => {
     if (await $.commandExists("brew")) {
       $.log("Skipped Homebrew installation");
