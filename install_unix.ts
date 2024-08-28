@@ -65,7 +65,7 @@ await $.logGroup("Creating symlinks", async () => {
         [`${home}/.config/skhd`, "./mac/skhd"],
         [`${home}/.config/yabai`, "./mac/yabai"],
         [`${home}/.gitconfig.mac`, "./mac/.gitconfig.mac"],
-        [`${home}/.wezterm.lua`, "./common/.wezterm.lua"],
+        [`${home}/.warp`, "./mac/warp"],
       ]
       : [],
   ];

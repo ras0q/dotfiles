@@ -32,7 +32,6 @@ await $.logGroup("Creating symlinks", async () => {
     [`${home}/.gitconfig`, "./common/.gitconfig"],
     [`${home}/.gitconfig.win`, "./win/.gitconfig.win"],
     [`${home}/.gittemplate.txt`, `./common/.gittemplate.txt`],
-    [`${home}/.wezterm.lua`, `./common/.wezterm.lua`],
     [`${home}/.wslconfig`, `./win/.wslconfig`],
     [`${home}/AppData/Local/nvim/`, `./common/nvim/`],
     [
@@ -115,7 +114,6 @@ if (!$.commandExists("winget") || flags["upgrade-winget"]) {
 await $.logGroup("Installing winget packages", async () => {
   const wingetPackages = [
     // Common GUI
-    "wez.wezterm",
     "Microsoft.Edge",
     "Microsoft.VisualStudioCode",
     "AgileBits.1Password",
