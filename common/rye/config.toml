@@ -6,3 +6,4 @@ license = "MIT"
 
 [behavior]
 global-python = true
+use-uv = true
