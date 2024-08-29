@@ -75,6 +75,14 @@
                 "name": "Windows PowerShell"
             },
             {
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "guid": "{24cf895b-509b-40de-8b52-2a034074ac5f}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"

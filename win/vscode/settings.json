@@ -1,45 +1,17 @@
 {
   "C_Cpp.clang_format_style": "{BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true}",
-  "Lua.diagnostics.globals": ["vim"],
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[lua]": {
-    "editor.defaultFormatter": "JohnnyMorganz.stylua"
-  },
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "black-formatter.path": ["${userHome}\\.rye\\shims\\black.exe"],
-  "code-runner.runInTerminal": true,
   "debug.allowBreakpointsEverywhere": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
-  "editor.autoClosingBrackets": "beforeWhitespace",
   "editor.autoClosingQuotes": "beforeWhitespace",
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
@@ -81,27 +53,15 @@
   "git.ignoreLegacyWarning": true,
   "git.openRepositoryInParentFolders": "never",
   "git.suggestSmartCommit": false,
-  "github.copilot.enable": {
-    "*": true,
-    "cpp": true,
-    "ex3asm": false,
-    "go": true,
-    "javascript": true,
-    "json": true,
-    "markdown": true,
-    "njk": false,
-    "plaintext": true,
-    "rust": false,
-    "scminput": false,
-    "yaml": true
-  },
+  "github.copilot.enable": {},
+  "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
   },
   "go.lintTool": "golangci-lint",
+  "go.toolsManagement.autoUpdate": true,
   "http.proxySupport": "off",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
   "markdown-preview-enhanced.puppeteerWaitForTimeout": 3000,
   "markdownlint.config": {
@@ -109,7 +69,6 @@
     "no-inline-html": false,
     "ol-prefix": false
   },
-  "mypy-type-checker.path": ["${userHome}\\.rye\\shims\\mypy.exe"],
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -119,7 +78,6 @@
     "dlb": "linux"
   },
   "remote.SSH.showLoginTerminal": true,
-  "ruff.path": ["${userHome}\\.rye\\shims\\ruff.exe"],
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,
@@ -158,7 +116,10 @@
       "source": "PowerShell"
     },
     "Ubuntu (WSL)": {
-      "args": ["-d", "Ubuntu"],
+      "args": [
+        "-d",
+        "Ubuntu"
+      ],
       "path": "C:\\WINDOWS\\System32\\wsl.exe"
     }
   },
@@ -167,12 +128,15 @@
   "window.commandCenter": false,
   "window.zoomLevel": -1,
   "workbench.colorTheme": "Catppuccin Latte",
+  "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
   "workbench.tree.renderIndentGuides": "always",
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
+  "window.confirmSaveUntitledWorkspace": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "go.toolsManagement.autoUpdate": true
+  "explorer.confirmPasteNative": false,
+  "editor.linkedEditing": true
 }
