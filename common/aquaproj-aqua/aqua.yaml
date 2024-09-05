@@ -14,7 +14,7 @@ packages:
 # brew upgradeでaquaが見つからずattestation verificationがfailするので一旦brewのghを使う
 # - name: cli/cli@v2.55.0
 - name: x-motemen/ghq@v1.6.2
-- name: golang/go@go1.23.0
+- name: golang/go@go1.23.1
 - name: jqlang/jq@jq-1.7.1
 - name: neovim/neovim@v0.9.5
 - name: starship/starship@v1.20.1
