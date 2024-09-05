@@ -49,11 +49,19 @@ await $.logGroup("Creating symlinks", async () => {
     [`${home}/.config/nvim`, "./common/nvim"],
     [`${home}/.config/starship.toml`, "./common/starship.toml"],
     [`${home}/.gitconfig`, "./common/.gitconfig"],
-    [`${home}/.gittemplate.txt`, `./common/.gittemplate.txt`],
+    [`${home}/.gittemplate.txt`, "./common/.gittemplate.txt"],
     [`${home}/.rye/config.toml`, "./common/rye/config.toml"],
     // WSL2 only
     ...isWSL2
       ? [
+        [
+          `${home}/.vscode-server/extensions/extensions.json`,
+          "./common/vscode/extensions.json",
+        ],
+        [
+          `${home}/.vscode-server/data/Machine/settings.json`,
+          "./common/vscode/settings.json",
+        ],
         ["/etc/wsl.conf", "./wsl/wsl.conf"],
       ]
       : [],
