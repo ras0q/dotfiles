@@ -1,10 +1,15 @@
 {
-  "C_Cpp.clang_format_style": "{BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true}",
-  "Lua.diagnostics.globals": [
-    "vim"
-  ],
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
@@ -23,6 +28,7 @@
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
   "editor.lineHeight": 20,
+  "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
   "editor.tabSize": 2,
@@ -33,12 +39,8 @@
   "emmet.triggerExpansionOnTab": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
   "extensions.autoUpdate": true,
-  "files.associations": {
-    "*.conf": "properties",
-    "*.json5": "json",
-    "*.tmpl": "njk"
-  },
   "files.autoGuessEncoding": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
@@ -62,6 +64,7 @@
   "go.toolsManagement.autoUpdate": true,
   "http.proxySupport": "off",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "jupyter.askForKernelRestart": false,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
   "markdown-preview-enhanced.puppeteerWaitForTimeout": 3000,
   "markdownlint.config": {
@@ -73,11 +76,9 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "remote.SSH.configFile": "C:\\Users\\kira\\.ssh\\config",
-  "remote.SSH.remotePlatform": {
-    "dlb": "linux"
-  },
-  "remote.SSH.showLoginTerminal": true,
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,
@@ -126,17 +127,12 @@
   "terminal.integrated.tabs.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": false,
+  "window.confirmSaveUntitledWorkspace": false,
   "window.zoomLevel": -1,
   "workbench.colorTheme": "Catppuccin Latte",
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always",
-  "window.confirmSaveUntitledWorkspace": false,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "explorer.confirmPasteNative": false,
-  "editor.linkedEditing": true
+  "workbench.tree.renderIndentGuides": "always"
 }

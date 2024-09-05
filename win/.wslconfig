@@ -7,3 +7,4 @@ swap = 0
 [experimental]
 autoMemoryReclaim = gradual
 sparseVhd = true
+autoProxy = true
