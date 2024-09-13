@@ -11,8 +11,6 @@ registries:
   ref: v4.220.1 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: junegunn/fzf@v0.55.0
-# brew upgradeでaquaが見つからずattestation verificationがfailするので一旦brewのghを使う
-# - name: cli/cli@v2.56.0
 - name: x-motemen/ghq@v1.6.2
 - name: golang/go@go1.23.1
 - name: jqlang/jq@jq-1.7.1
@@ -33,3 +31,4 @@ packages:
 - name: Schniz/fnm@v1.37.1
 - name: biomejs/biome@cli/v1.8.3
 - name: koalaman/shellcheck@v0.10.0
+- name: Wilfred/difftastic@0.60.0
