@@ -146,6 +146,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/astral-sh/uv/0.4.10/uv-aarch64-apple-darwin.tar.gz",
+      "checksum": "E8CF273F464D36B72237347EB42A0BFE75D473A029BC4F89D5A2C098F971186C",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/uv/0.4.10/uv-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "E2FA68D49D83FAC5961AE57232D2896BDE52F1AAD40C9A88CFB3FFCDE6130043",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/uv/0.4.10/uv-x86_64-apple-darwin.tar.gz",
+      "checksum": "828B02DE490735955B2C5E83D2758EBA668A981B8A61D8AFE4F9DDF70C523C17",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/uv/0.4.10/uv-x86_64-pc-windows-msvc.zip",
+      "checksum": "B2A2257C1D3FECAF1258483465E82958A223E6AC2A057F090CD83D4DF41E948F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/astral-sh/uv/0.4.10/uv-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "C911E323F3EAF0486755FB5A109E3B1FC4FDBE07E3FED49054E78973F5B70226",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-darwin-arm64",
       "checksum": "9D707C28EE8E13158D2B9890DD9FAF064A4EA6DABDE2009A6A8607480AE8C24A",
       "algorithm": "sha256"
