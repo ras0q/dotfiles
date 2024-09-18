@@ -122,11 +122,14 @@ if (flags["download-fonts"]) {
 
 if (isLinux && !flags["nonroot"]) {
   await $.logGroup("Installing up apt packages", async () => {
-    const ppa = [
+    await $`sudo apt-get update`;
+    const ppas = [
       "ppa:git-core/ppa",
       "ppa:fish-shell/release-3",
     ];
-    await $`sudo add-apt-repository -y ${ppa}`;
+    for (const ppa of ppas) {
+      await $`sudo add-apt-repository -y ${ppa}`;
+    }
     await $`sudo apt-get update`;
     await $`sudo apt-get upgrade -y`;
 
