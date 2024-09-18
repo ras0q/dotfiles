@@ -124,6 +124,7 @@ if (isLinux && !flags["nonroot"]) {
   await $.logGroup("Installing up apt packages", async () => {
     const ppa = [
       "ppa:git-core/ppa",
+      "ppa:fish-shell/release-3",
     ];
     await $`sudo add-apt-repository -y ${ppa}`;
     await $`sudo apt-get update`;
