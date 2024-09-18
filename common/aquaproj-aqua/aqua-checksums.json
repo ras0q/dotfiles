@@ -461,6 +461,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "http/cache.agilebits.com/dist/1P/op2/pkg/v2.30.0/op_darwin_amd64_v2.30.0.zip",
+      "checksum": "DA3C1FD900A82A2D62AA197E5A984662AB2B237A0B6EE74C963FA28712BF6563",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/cache.agilebits.com/dist/1P/op2/pkg/v2.30.0/op_darwin_arm64_v2.30.0.zip",
+      "checksum": "3B31DBC413AD3E205BB68F055A2A76C1A3F0EA252270DB6A908083B852B76BE3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/cache.agilebits.com/dist/1P/op2/pkg/v2.30.0/op_linux_amd64_v2.30.0.zip",
+      "checksum": "CD5361B074CD40EB2B332885F35A4D61C74369919CED95190C885F4D4F739DC7",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/cache.agilebits.com/dist/1P/op2/pkg/v2.30.0/op_linux_arm64_v2.30.0.zip",
+      "checksum": "C0618A4D4DEFA5D61606DFB4EAF7D5F39CF6361382C4943449DF95FA1F7CC310",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/cache.agilebits.com/dist/1P/op2/pkg/v2.30.0/op_windows_amd64_v2.30.0.zip",
+      "checksum": "9F977D7E16684489B6F648126778489B97055636468946741EDED742F2ABCAA7",
+      "algorithm": "sha256"
+    },
+    {
       "id": "http/golang.org/dl/go1.23.1.darwin-amd64.tar.gz",
       "checksum": "488D9E4CA3E3ED513EE4EDD91BEF3A2360C65FA6D6BE59CF79640BF840130A58",
       "algorithm": "sha256"
