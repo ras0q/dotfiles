@@ -1,11 +1,10 @@
-import { exists } from "jsr:@std/fs@0.229.0";
-import { resolve } from "jsr:@std/path@0.225.0";
-import { parseArgs } from "jsr:@std/cli@0.224.0";
-import $ from "jsr:@david/dax@0.41.0";
+import { exists } from "@std/fs";
+import { resolve } from "@std/path";
+import { parseArgs } from "@std/cli";
+import $ from "@david/dax";
+import { cloneDotfiles, downloadFonts, infoLogger } from "./common.ts";
 
-$.setInfoLogger((...args) => {
-  console.log(`%c[INFO] ${args.join(" ")}`, "color: green; font-weight: bold;");
-});
+$.setInfoLogger(infoLogger);
 
 const flags: {
   "download-fonts"?: boolean;
@@ -15,15 +14,7 @@ const flags: {
 const home = Deno.env.get("USERPROFILE")!;
 const dotfilesDir = resolve(home, "ghq/github.com/ras0q/dotfiles-v2");
 
-await $.logGroup("Cloning dotfiles", async () => {
-  if (await exists(dotfilesDir)) {
-    $.log("Skipped dotfiles clone");
-    return;
-  }
-
-  await $`git clone https://github.com/ras0q/dotfiles-v2.git ${dotfilesDir} --depth 1`;
-  $.log(`Cloned dotfiles to ${dotfilesDir}`);
-});
+await $.logGroup("Cloning dotfiles", cloneDotfiles);
 
 await $.logGroup("Creating symlinks", async () => {
   const symlinks: string[][] = [
@@ -69,29 +60,7 @@ await $.logGroup("Creating symlinks", async () => {
   );
 });
 
-if (flags["download-fonts"]) {
-  await $.logGroup("Downloading fonts", async () => {
-    const fonts = [
-      // 源ノ角ゴシック
-      "https://github.com/adobe-fonts/source-han-sans/raw/release/Variable/OTF/Subset/SourceHanSansJP-VF.otf",
-      // 源ノ角ゴシック Code
-      "https://github.com/adobe-fonts/source-han-code-jp/raw/release/OTF/SourceHanCodeJP-Regular.otf",
-      // Source Code Pro (Nerd Font)
-      "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/SauceCodeProNerdFont-Regular.ttf",
-      // Nerd Font
-      "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf",
-    ];
-    const fontBaseDir = resolve(dotfilesDir, "./dist/fonts");
-
-    await $`mkdir -p ${fontBaseDir}`;
-    await Promise.all(fonts.map(async (font) => {
-      const fontPath = resolve(fontBaseDir, font.split("/").slice(-1)[0]);
-      const data = await $.request(font).showProgress();
-      await Deno.writeFile(fontPath, new Uint8Array(await data.arrayBuffer()));
-      $.log(`Downloaded ${fontPath}`);
-    }));
-  });
-}
+flags["download-fonts"] && await $.logGroup("Downloading fonts", downloadFonts);
 
 if (!$.commandExists("winget") || flags["upgrade-winget"]) {
   $.logGroup("Installing latest winget", async () => {
