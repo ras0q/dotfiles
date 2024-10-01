@@ -12,7 +12,7 @@ registries:
 packages:
 - name: junegunn/fzf@v0.55.0
 - name: x-motemen/ghq@v1.6.2
-- name: golang/go@go1.23.1
+- name: golang/go@go1.23.2
 - name: jqlang/jq@jq-1.7.1
 - name: neovim/neovim@v0.9.5
 - name: starship/starship@v1.20.1
