@@ -4,6 +4,7 @@ theme = "catppuccin_latte"
 auto-save = true # TODO: 動いてる？
 cursorline = true
 cursorcolumn = true
+true-color = true
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "file-type", "read-only-indicator", "file-modification-indicator"]
