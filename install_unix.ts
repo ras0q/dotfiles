@@ -63,14 +63,17 @@ await $.logGroup("Creating symlinks", async () => {
   ];
   await Promise.all(
     symlinks.map(async ([link, target]) => {
-      const linkPath = resolve(link);
-      const targetPath = resolve(dotfilesDir, target);
+      const linkPath = $.path(resolve(link));
+      const linkDir = linkPath.parent()!;
+      const targetPath = $.path(resolve(dotfilesDir, target));
       if (linkPath.startsWith(home)) {
         await $`rm -rf ${linkPath}`;
+        await linkDir.exists() || await $`mkdir -p ${linkDir}`;
         await $`ln -s ${targetPath} ${linkPath}`;
         $.log(`Created symlink: ${linkPath} -> ${targetPath}`);
       } else if (!flags["nonroot"]) {
         await $`sudo rm -rf ${linkPath}`;
+        await linkDir.exists() || await $`sudo mkdir -p ${linkDir}`;
         await $`sudo ln -s ${targetPath} ${linkPath}`;
         $.log(`Created symlink (with sudo): ${linkPath} -> ${targetPath}`);
       } else {
@@ -145,8 +148,8 @@ if (isLinux && !flags["nonroot"]) {
 
 if (isMacOS && !flags["nonroot"]) {
   await $.logGroup("Disabling .DS_Store", async () => {
-    await $`defaults write com.apple.desktopservices DSDontWriteNetworkStores True`
-  })
+    await $`defaults write com.apple.desktopservices DSDontWriteNetworkStores True`;
+  });
 
   await $.logGroup("Installing up Homebrew", async () => {
     if (await $.commandExists("brew")) {
@@ -195,7 +198,7 @@ await $.logGroup("Installing aquaproj", async () => {
 });
 
 await $.logGroup("Installing aquaproj packages", async () => {
-  await $`${home}/.local/share/aquaproj-aqua/bin/aqua install --all`;
+  await $`${home}/.local/share/aquaproj-aqua/bin/aqua install --all --only-link`;
   $.log("Installed aquaproj packages");
 });
 
