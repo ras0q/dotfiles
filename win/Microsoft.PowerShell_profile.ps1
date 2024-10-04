@@ -20,7 +20,6 @@ function Call($batfile) {
 }
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
-Set-PSReadLineOption -PredictionSource History
 
 # Environment variables
 $env:AQUA_GLOBAL_CONFIG = "$HOME\.config\aquaproj-aqua\aqua.yaml"
