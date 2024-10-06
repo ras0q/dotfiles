@@ -28,7 +28,7 @@ packages:
 - name: ynqa/jnv@v0.4.1
 - name: JohnnyMorganz/StyLua@v0.20.0
 - name: helix-editor/helix@24.07
-- name: Schniz/fnm@v1.37.1
+- name: Schniz/fnm@v1.37.2
 - name: biomejs/biome@cli/v1.8.3
 - name: koalaman/shellcheck@v0.10.0
 - name: Wilfred/difftastic@0.60.0
