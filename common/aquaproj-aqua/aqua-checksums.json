@@ -396,28 +396,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.2/tree-sitter-linux-arm64.gz",
-      "checksum": "BEEE663EDA42E035C8183463A9B15CA4D69C68CE7885374FD2CAAC932D46C841",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.3/tree-sitter-linux-arm64.gz",
+      "checksum": "319AA4FFBA11967CD3667658EE7DC588E374A58B5CC3179535078A3E6C19C7C6",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.2/tree-sitter-linux-x64.gz",
-      "checksum": "0FE47490D828AA70DDEECD29128448DE41649EBE77C284BA647A976B2CA116E9",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.3/tree-sitter-linux-x64.gz",
+      "checksum": "4F77807A8BAB1C166CD416648806BA3CBC2B20218C301B964EF65B68C7FE3DA0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.2/tree-sitter-macos-arm64.gz",
-      "checksum": "C40F1F41FB3178B93C9170E6107A0484D6C337354930290735143836C4AC8F95",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.3/tree-sitter-macos-arm64.gz",
+      "checksum": "03DCC32A30F6B66F28843C5DDC634E51114E655C6F2EFE72414400D6F1878CD5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.2/tree-sitter-macos-x64.gz",
-      "checksum": "E6CCB3A82EC9F74C2A171D9DF05A236A946889395B4318592F16D09DE45691CF",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.3/tree-sitter-macos-x64.gz",
+      "checksum": "9583E392A28470F2A8C4E5AC0937A8888966719E9DAD6D91389E1D7BAA371C2F",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.2/tree-sitter-windows-x64.gz",
-      "checksum": "9AC4CAB6E080A0B8EFC0CDF78F21E686F512534918BEDC2FAEDE7FA29B34ABF8",
+      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.3/tree-sitter-windows-x64.gz",
+      "checksum": "F58A7D59A5499EEAF76288C633EBBC56B5CD2839CFED9C8C2D55005A47709D3B",
       "algorithm": "sha256"
     },
     {
