@@ -19,9 +19,18 @@ function Call($batfile) {
   }
 }
 
+Set-PsReadLineKeyHandler -Chord Ctrl+r -ScriptBlock {
+  $command = Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --scheme=history --tac
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert($command)
+}
+
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
+# mute
+Set-PSReadLineOption -BellStyle None
+
 # Environment variables
+$env:LESSCHARSET = "utf-8"
 $env:AQUA_GLOBAL_CONFIG = "$HOME\.config\aquaproj-aqua\aqua.yaml"
 
 # Set PATH
@@ -42,3 +51,6 @@ function gg($repo) { ghq get $repo }
 
 # Starship
 Invoke-Expression (&starship init powershell)
+
+# fnm
+fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
