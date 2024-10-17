@@ -8,6 +8,7 @@
 [core]
 	editor = nvim
 	autoCRLF = false
+	quotepath = false
 
 [init]
 	defaultBranch = main
