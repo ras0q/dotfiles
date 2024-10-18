@@ -15,7 +15,7 @@ packages:
 - name: golang/go@go1.23.2
 - name: jqlang/jq@jq-1.7.1
 - name: neovim/neovim@v0.9.5
-- name: starship/starship@v1.21.0
+- name: starship/starship@v1.21.1
 - name: ajeetdsouza/zoxide@v0.9.6
 - name: mitsuhiko/rye@0.41.0
 - name: BurntSushi/ripgrep@14.1.1
