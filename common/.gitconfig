@@ -1,0 +1,46 @@
+# Path: $HOME/.gitconfig
+
+[user]
+	name = ras0q
+	email = ras0q@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwlDquvYaQtT4cq1KWEC/S+W7et8oSyQjdib2VDObz8
+
+[core]
+	editor = nvim
+	autoCRLF = false
+	quotepath = false
+
+[init]
+	defaultBranch = main
+
+[fetch]
+	prune = true
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgsign = true
+	template = ~/.gittemplate.txt
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[alias]
+	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs git branch -d
+	lo = log --oneline
+	inico = commit --allow-empty -m \":seedling: initial commit\"
+	fixup = commit --fixup HEAD
+
+[gpg]
+	format = ssh
+
+# Include system-wide .gitconfig
+# XXX:
+#		If multiple keys are specified, the last one takes precedence,
+#   and even if the path does not exist, it will not cause an error.
+#   (simply not including the path)
+[include]
+	path = ~/.gitconfig.mac
+	path = ~/.gitconfig.win

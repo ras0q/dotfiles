@@ -1,0 +1,8 @@
+[core]
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = op-ssh-sign
