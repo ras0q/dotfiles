@@ -9,12 +9,14 @@ if [[ "$os" != "Linux" && "$os" != "Darwin" ]]; then
     exit 1
 fi
 
-command -v sudo && sudo -v && is_sudoer=true || is_sudoer=false
+sudoer_mode=false
+read -n1 -p "Sudoer mode? (y/N)" yn
+echo ""
+if [[ $yn = [yY] ]]; then
+    command -v sudo >/dev/null 2>&1 && sudo -v && sudoer_mode=true || exit 1
+fi
 
-echo "Environment:
-    OS: $os
-    Sudoer: $is_sudoer
-"
+read -p "Press enter to continue (OS: $os, Sudoer mode: $sudoer_mode)"
 
 root=$(git rev-parse --show-toplevel)
 cd $root
@@ -42,11 +44,11 @@ case "$os" in
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
             ln -sfn $root/common/vscode/extensions.json ~/.vscode-server/extensions/extensions.json
             ln -sfn $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
-            $is_sudoer && sudo ln -sfn $root/wsl/wsl.conf /etc/wsl.conf
+            $sudoer_mode && sudo ln -sfn $root/wsl/wsl.conf /etc/wsl.conf
         fi
     
         if command -v apt >/dev/null 2>&1; then
-            $is_sudoer && ./setup/apt.sh
+            $sudoer_mode && ./setup/apt.sh
             ./setup/aqua.sh
             ./setup/font.sh
         else
