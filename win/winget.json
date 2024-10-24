@@ -1,0 +1,140 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2024-08-29T15:55:56.870-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Git.Git",
+					"Version" : "2.45.2"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Office",
+					"Version" : "16.0.17928.20114"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive",
+					"Version" : "24.156.0804.0002"
+				},
+				{
+					"PackageIdentifier" : "Google.GoogleDrive",
+					"Version" : "96.0.0.0"
+				},
+				{
+					"PackageIdentifier" : "Logitech.OptionsPlus",
+					"Version" : "1.78.588966"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.GeForceExperience",
+					"Version" : "3.28.0.417"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge",
+					"Version" : "128.0.2739.42"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
+					"Version" : "128.0.2739.42"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell",
+					"Version" : "7.4.5.0"
+				},
+				{
+					"PackageIdentifier" : "AgileBits.1Password",
+					"Version" : "8.10.40"
+				},
+				{
+					"PackageIdentifier" : "Discord.Discord",
+					"Version" : "1.0.9154"
+				},
+				{
+					"PackageIdentifier" : "Figma.Figma",
+					"Version" : "124.2.9"
+				},
+				{
+					"PackageIdentifier" : "Figma.FigmaAgent",
+					"Version" : "124.1.15"
+				},
+				{
+					"PackageIdentifier" : "LINE.LINE",
+					"Version" : "9.1.2.3379"
+				},
+				{
+					"PackageIdentifier" : "Rye.Rye",
+					"Version" : "0.36.0"
+				},
+				{
+					"PackageIdentifier" : "Spotify.Spotify",
+					"Version" : "1.2.40.599.g606b7f29"
+				},
+				{
+					"PackageIdentifier" : "Zoom.Zoom.EXE",
+					"Version" : "6.1.1 (41705)"
+				},
+				{
+					"PackageIdentifier" : "aquaproj.aqua",
+					"Version" : "2.30.0"
+				},
+				{
+					"PackageIdentifier" : "Obsidian.Obsidian",
+					"Version" : "1.6.3"
+				},
+				{
+					"PackageIdentifier" : "jstarks.npiperelay",
+					"Version" : "0.1.0"
+				},
+				{
+					"PackageIdentifier" : "SlackTechnologies.Slack",
+					"Version" : "4.39.95"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode",
+					"Version" : "1.92.2"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys",
+					"Version" : "0.82.1"
+				},
+				{
+					"PackageIdentifier" : "Canonical.Ubuntu.2204",
+					"Version" : "2204.3.49.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.AppInstaller",
+					"Version" : "1.23.1911.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7",
+					"Version" : "7.2208.15002.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8",
+					"Version" : "8.2310.30001.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14",
+					"Version" : "14.0.33728.0"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal.Preview",
+					"Version" : "1.21.1772.0"
+				},
+				{
+					"PackageIdentifier" : "TheBrowserCompany.Arc",
+					"Version" : "1.11.1.38413"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.8.1911"
+}
