@@ -4,10 +4,6 @@ export PS4='\[\e[1;36m\]+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME:+$FUNCNAME(): }\
 export __STEP__="echo -e \e[1;32m\n#"
 
 os=$(uname)
-if [[ "$os" != "Linux" && "$os" != "Darwin" ]]; then
-    echo "Unsupported OS"
-    exit 1
-fi
 
 sudoer_mode=false
 read -n1 -p "Sudoer mode? (y/N)" yn
@@ -83,5 +79,10 @@ case "$os" in
         ./setup/winget.sh
         ./setup/aqua.sh
         ./setup/font.sh
+        ;;
+
+    *)
+        echo "Unsupported OS"
+        exit 1
         ;;
 esac
