@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 $__STEP__ "Install WinGet (if not exists)"
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # REF: https://brew.sh/
 $__STEP__ "Install Homebrew"
