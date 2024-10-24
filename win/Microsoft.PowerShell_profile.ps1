@@ -2,7 +2,6 @@
 
 function Set-Path() {
   $env:Path = "$HOME\AppData\Local\1Password\app\8;" `
-  + "$HOME\.rye\shims;" `
   + "$HOME\AppData\Local\volta\bin;" `
   + "$HOME\AppData\Local\aquaproj-aqua\bat;" `
   + "$HOME\AppData\Local\aquaproj-aqua\bin;" `

@@ -34,8 +34,6 @@ ln -sfn $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
 ln -sfn $root/common/fish             ~/.config/fish
 ln -sfn $root/common/helix            ~/.config/helix
 ln -sfn $root/common/nvim             ~/.config/nvim
-mkdir -p ~/.rye
-ln -sfn $root/rye/config.toml         ~/.rye/config.toml
 
 $__STEP__ "Setup for $os"
 

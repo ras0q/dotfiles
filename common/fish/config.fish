@@ -2,7 +2,6 @@
 fish_add_path \
     ~/.local/share/aquaproj-aqua/bin \
     ~/go/bin \
-    ~/.rye/shims \
     ~/.volta/bin \
     ~/.cargo/bin \
     ~/.deno/bin \
