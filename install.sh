@@ -70,4 +70,20 @@ case "$os" in
         ./setup/aqua.sh
         ./setup/font.sh
         ;;
+
+    MINGW*)
+        # enable to create synlinks in Git Bash
+        export MSYS=winsymlinks:nativestrict
+        ln -sfn $root/win/.wslconfig                       ~/.wslconfig
+        ln -sfn $root/common/nvim                          ~/AppData/Local/nvim
+        ln -sfn $root/win/terminal/settings.json           ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
+        ln -sfn $root/win/vscode/settings.json             ~/AppData/Roaming/Code/User/settings.json
+        ln -sfn $root/common/helix                         ~/AppData/Roaming/helix
+        ln -sfn $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+        ln -sfn $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
+
+        ./setup/winget.sh
+        ./setup/aqua.sh
+        ./setup/font.sh
+        ;;
 esac
