@@ -6,7 +6,7 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwlDquvYaQtT4cq1KWEC/S+W7et8oSyQjdib2VDObz8
 
 [core]
-	editor = nvim
+	editor = hx
 	autoCRLF = false
 	quotepath = false
 
@@ -21,7 +21,6 @@
 
 [commit]
 	gpgsign = true
-	template = ~/.gittemplate.txt
 
 [push]
 	default = current
