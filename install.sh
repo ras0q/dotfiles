@@ -27,6 +27,7 @@ ln -sfn $root/common/.gitconfig       ~/.gitconfig
 ln -sfn $root/common/.gittemplate.txt ~/.gittemplate.txt
 mkdir -p ~/.config
 ln -sfn $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
+ln -sfn $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
 ln -sfn $root/common/fish             ~/.config/fish
 ln -sfn $root/common/helix            ~/.config/helix
 ln -sfn $root/common/nvim             ~/.config/nvim
