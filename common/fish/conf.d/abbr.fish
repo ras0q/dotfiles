@@ -22,7 +22,5 @@ abbr -a c 'code .'
 abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'
 abbr -a gg 'ghq get'
 abbr -a h 'hx .'
-abbr -a n nvim
-abbr -a nn 'nvim .'
 abbr -a pp pnpm
 abbr -a sc systemctl

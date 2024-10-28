@@ -306,21 +306,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/neovim/neovim/v0.9.5/nvim-linux64.tar.gz",
-      "checksum": "44EE395D9B5F8A14BE8EC00D3B8EAD34E18FE6461E40C9C8C50E6956D643B6CA",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/neovim/neovim/v0.9.5/nvim-macos.tar.gz",
-      "checksum": "19D2366E0D6DA001583BD0B8A3DB59F69CE3DDA5FA41F3064C6778CEF3EDD34C",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/neovim/neovim/v0.9.5/nvim-win64.zip",
-      "checksum": "DE6DC1F0EDB45F5F225EE24CE80A4FCBC3A337932037E98AE143975FCA2556BF",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/sharkdp/fd/v10.2.0/fd-v10.2.0-aarch64-unknown-linux-gnu.tar.gz",
       "checksum": "6DE8BE7A3D8CA27954A6D1E22BC327AF4CF6FC7622791E68B820197F915C422B",
       "algorithm": "sha256"

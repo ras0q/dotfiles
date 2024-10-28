@@ -30,7 +30,6 @@ ln -sfn $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
 ln -sfn $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
 ln -sfn $root/common/fish             ~/.config/fish
 ln -sfn $root/common/helix            ~/.config/helix
-ln -sfn $root/common/nvim             ~/.config/nvim
 
 $__STEP__ "Setup for $os"
 
@@ -70,7 +69,6 @@ case "$os" in
         # enable to create synlinks in Git Bash
         export MSYS=winsymlinks:nativestrict
         ln -sfn $root/win/.wslconfig                       ~/.wslconfig
-        ln -sfn $root/common/nvim                          ~/AppData/Local/nvim
         ln -sfn $root/win/terminal/settings.json           ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
         ln -sfn $root/win/vscode/settings.json             ~/AppData/Roaming/Code/User/settings.json
         ln -sfn $root/common/helix                         ~/AppData/Roaming/helix
