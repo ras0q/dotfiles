@@ -11,7 +11,7 @@ registries:
   ref: v4.249.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: junegunn/fzf@v0.56.0
-- name: x-motemen/ghq@v1.6.3
+- name: x-motemen/ghq@v1.7.0
 - name: golang/go@go1.23.3
 - name: jqlang/jq@jq-1.7.1
 - name: starship/starship@v1.21.1
