@@ -121,28 +121,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.5.1/uv-aarch64-apple-darwin.tar.gz",
-      "checksum": "240BC4DC0D424CE652746EA030E61798C07E3D22426C0E0FB46D1B408078DF91",
+      "id": "github_release/github.com/astral-sh/uv/0.5.2/uv-aarch64-apple-darwin.tar.gz",
+      "checksum": "B4DC200D88EE9A8C9C3D5C755D9641FDF0E22B7D77239B4EEDA08F204571F871",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.5.1/uv-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "F7B2B4DFB45D6A6C1B98CE1B40B0A3B67B72263F5F722FC8B452D340325FD169",
+      "id": "github_release/github.com/astral-sh/uv/0.5.2/uv-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "4DE0933B3A2DBDBF0BC17579DDDA21E13D1A2CD6DFBC644E45DDAB558F45E827",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.5.1/uv-x86_64-apple-darwin.tar.gz",
-      "checksum": "817C11EE1808A775290D694C28090E032076BE2C97E04C3FB7D5563A2AA52041",
+      "id": "github_release/github.com/astral-sh/uv/0.5.2/uv-x86_64-apple-darwin.tar.gz",
+      "checksum": "00BF6B346CC8FCF57DF7653F48FC4BAD1B47C6024F75E96E32E3193E9BC8FF73",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.5.1/uv-x86_64-pc-windows-msvc.zip",
-      "checksum": "3DCB47A9334D7527E402EBA8BA5AAE3A62C77CDDC3CE400F57FE2A40A621000D",
+      "id": "github_release/github.com/astral-sh/uv/0.5.2/uv-x86_64-pc-windows-msvc.zip",
+      "checksum": "0E97899B5C800DA39730D3A612D8359AD2F346BDEA540F973FA6C6AD17129A17",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/astral-sh/uv/0.5.1/uv-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "C446A98876ED86C810A80621A43E2378C35F39794020F8DE99DA72B003B17DD5",
+      "id": "github_release/github.com/astral-sh/uv/0.5.2/uv-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "61C386972CE13850CF20308DE0BE98A056D932E58D4154D1AEC663714AC57067",
       "algorithm": "sha256"
     },
     {
