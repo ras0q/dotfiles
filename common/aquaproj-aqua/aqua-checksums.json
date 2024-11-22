@@ -31,28 +31,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-linux-aarch64.zip",
-      "checksum": "376B675766BC0B9261B2B82C8D0F624C7E5F78E83BD8490330E0BF3D8F770AD7",
+      "id": "github_release/github.com/JohnnyMorganz/StyLua/v2.0.1/stylua-linux-aarch64.zip",
+      "checksum": "3DB53CD00A685D0B59F4A4AB188BFA6ACB804DCA489D810A852ED2EA32EB2B1C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-linux-x86_64.zip",
-      "checksum": "28EDDB9257BF85B20B1C337E536B7A3D16BA308863F067D447C1F4D24C6DEC64",
+      "id": "github_release/github.com/JohnnyMorganz/StyLua/v2.0.1/stylua-linux-x86_64.zip",
+      "checksum": "9087E42F599855192CF4F6A7FB0CB7353E23DEBD7C749C6E3A76FC58ABDE3C89",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-macos-aarch64.zip",
-      "checksum": "F1B1CF758FD4346248C78640C9B62610B811B87190942EA828A8228DD8292EE6",
+      "id": "github_release/github.com/JohnnyMorganz/StyLua/v2.0.1/stylua-macos-aarch64.zip",
+      "checksum": "3D9CAAA660DA4B3BC092E805D09AF59E42B7504F1253C863B682EA3FC80944F2",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-macos-x86_64.zip",
-      "checksum": "858A3F6B69AAF4A1F94809F0371EDB4B27FA8D1DB230B55780C4B51194BC7125",
+      "id": "github_release/github.com/JohnnyMorganz/StyLua/v2.0.1/stylua-macos-x86_64.zip",
+      "checksum": "D22E6F1005A191C5A41BDF9F51ED07737EBF2C776CF8AF0FEFF372AA1DC0ED78",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-windows-x86_64.zip",
-      "checksum": "1623AF48183BBDDA9A03C39EF35C1888CED8D4D14C9730F8B92783A7EBE3B3B6",
+      "id": "github_release/github.com/JohnnyMorganz/StyLua/v2.0.1/stylua-windows-x86_64.zip",
+      "checksum": "D414D01CD08D7EFE60E12C217DB2758584B6AB36BD01C56197896B7B89A41385",
       "algorithm": "sha256"
     },
     {
