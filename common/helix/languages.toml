@@ -18,3 +18,8 @@ command = "deno"
 args = ["lsp"]
 config = { deno = { enable = true } }
 required-root-patterns = ["deno.*"]
+
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt" }
+auto-format = true
