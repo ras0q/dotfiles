@@ -31,31 +31,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-linux-aarch64.zip",
-      "checksum": "376B675766BC0B9261B2B82C8D0F624C7E5F78E83BD8490330E0BF3D8F770AD7",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-linux-x86_64.zip",
-      "checksum": "28EDDB9257BF85B20B1C337E536B7A3D16BA308863F067D447C1F4D24C6DEC64",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-macos-aarch64.zip",
-      "checksum": "F1B1CF758FD4346248C78640C9B62610B811B87190942EA828A8228DD8292EE6",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-macos-x86_64.zip",
-      "checksum": "858A3F6B69AAF4A1F94809F0371EDB4B27FA8D1DB230B55780C4B51194BC7125",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/JohnnyMorganz/StyLua/v0.20.0/stylua-windows-x86_64.zip",
-      "checksum": "1623AF48183BBDDA9A03C39EF35C1888CED8D4D14C9730F8B92783A7EBE3B3B6",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/Schniz/fnm/v1.38.1/fnm-arm64.zip",
       "checksum": "69FEDA9455931C26C84BE9F95F5E6F69E8B64686E68069FAB7CFC34756CD2944",
       "algorithm": "sha256"
@@ -73,21 +48,6 @@
     {
       "id": "github_release/github.com/Schniz/fnm/v1.38.1/fnm-windows.zip",
       "checksum": "377796E8F2F51EB8B5DE8983974CAA8922B83C167197B68B33962775703AD4A0",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/Wilfred/difftastic/0.61.0/difft-x86_64-apple-darwin.tar.gz",
-      "checksum": "4398816AF7110CEFC802D26D3D9E78C37C408464927BE97243D37700442D276A",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/Wilfred/difftastic/0.61.0/difft-x86_64-pc-windows-msvc.zip",
-      "checksum": "F2C8151B8BB03B17FE7314834E7A24E35F8FC2C2B1B18BD9C022EF68B21439D9",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/Wilfred/difftastic/0.61.0/difft-x86_64-unknown-linux-gnu.tar.gz",
-      "checksum": "0CBDD259B868D8F12D028E4982085E8A91D4CBA08CD314D320731E1F1F9CCAFB",
       "algorithm": "sha256"
     },
     {
@@ -143,26 +103,6 @@
     {
       "id": "github_release/github.com/astral-sh/uv/0.5.4/uv-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "054016BCB6C7171FECCD4234738D65727E67D39EDDB500146EDC779845B8846F",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-darwin-arm64",
-      "checksum": "9D707C28EE8E13158D2B9890DD9FAF064A4EA6DABDE2009A6A8607480AE8C24A",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-darwin-x64",
-      "checksum": "2CC112178363FA0E11D8F26E0D80598EFF6CE481A1EE224B8A8AE2B8A5185124",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-linux-arm64",
-      "checksum": "D134E89F6F4FC29D32C8101EFB074969AC263EBDB0303E07039E3735002C6A2D",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/biomejs/biome/cli/v1.8.3/biome-linux-x64",
-      "checksum": "5495F2F69EDD94E9F26ED1ADB9ED8023D7C143C3CC6F275F90ABDDED612217E4",
       "algorithm": "sha256"
     },
     {
@@ -316,26 +256,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/koalaman/shellcheck/v0.10.0/shellcheck-v0.10.0.darwin.x86_64.tar.xz",
-      "checksum": "EF27684F23279D112D8AD84E0823642E43F838993BBB8C0963DB9B58A90464C2",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/koalaman/shellcheck/v0.10.0/shellcheck-v0.10.0.linux.aarch64.tar.xz",
-      "checksum": "324A7E89DE8FA2AED0D0C28F3DAB59CF84C6D74264022C00C22AF665ED1A09BB",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/koalaman/shellcheck/v0.10.0/shellcheck-v0.10.0.linux.x86_64.tar.xz",
-      "checksum": "6C881AB0698E4E6EA235245F22832860544F17BA386442FE7E9D629F8CBEDF87",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/koalaman/shellcheck/v0.10.0/shellcheck-v0.10.0.zip",
-      "checksum": "EB6CD53A54EA97A56540E9D296CE7E2FA68715AA507FF23574646C1E12B2E143",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/sharkdp/fd/v10.2.0/fd-v10.2.0-aarch64-unknown-linux-gnu.tar.gz",
       "checksum": "6DE8BE7A3D8CA27954A6D1E22BC327AF4CF6FC7622791E68B820197F915C422B",
       "algorithm": "sha256"
@@ -383,31 +303,6 @@
     {
       "id": "github_release/github.com/starship/starship/v1.21.1/starship-x86_64-unknown-linux-musl.tar.gz",
       "checksum": "744E21EB2E61B85B0C11378520EBB9E94218DE965BCA5B8C2266F6C3E23FF5BE",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.4/tree-sitter-linux-arm64.gz",
-      "checksum": "79552AD4943A8CCDC2285F8BE807B27629C45DA6998C707E8FE0219F441666D1",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.4/tree-sitter-linux-x64.gz",
-      "checksum": "60578F6E563E046D311D7CAC4BF27207EB6982B97DDEC6B78022A4AFDF736A9B",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.4/tree-sitter-macos-arm64.gz",
-      "checksum": "7BEE5649DF5AE3965E132493C597F9E51772C3812C7751BA862FED5662BD106C",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.4/tree-sitter-macos-x64.gz",
-      "checksum": "DEB56B34878161D25008B52D9215EA45475DC7611DBDAE0118FED26C70CFC232",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/tree-sitter/tree-sitter/v0.24.4/tree-sitter-windows-x64.gz",
-      "checksum": "1FA29EB05F82B1D473E14ECCE83B6204671765807D096FE5CEA1CCD8CFA90C5B",
       "algorithm": "sha256"
     },
     {
