@@ -36,7 +36,6 @@ $__STEP__ "Setup for $os"
 case "$os" in
     Linux)
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
-            ln -sfn $root/common/vscode/extensions.json ~/.vscode-server/extensions/extensions.json
             ln -sfn $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
             $sudoer_mode && sudo ln -sfn $root/wsl/wsl.conf /etc/wsl.conf
         fi
