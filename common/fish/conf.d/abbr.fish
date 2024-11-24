@@ -24,3 +24,4 @@ abbr -a gg 'ghq get'
 abbr -a h 'hx .'
 abbr -a pp pnpm
 abbr -a sc systemctl
+abbr -a zj zellij

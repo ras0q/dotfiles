@@ -30,6 +30,8 @@ ln -sfn $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
 ln -sfn $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
 ln -sfn $root/common/fish             ~/.config/fish
 ln -sfn $root/common/helix            ~/.config/helix
+ln -sfn $root/common/starship.toml    ~/.config/starship.toml
+ln -sfn $root/common/zellij           ~/.config/zellij
 
 $__STEP__ "Setup for $os"
 

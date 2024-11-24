@@ -346,6 +346,26 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/zellij-org/zellij/v0.41.2/zellij-aarch64-apple-darwin.tar.gz",
+      "checksum": "B4CB9F9B66053BC88A0FF86001A077E06AA77A2F8C74C82C1300B7CEFA9ED575",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/zellij-org/zellij/v0.41.2/zellij-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "1D6ACE4ED4831B5CDF7BE87E2D40E1A85FE4A022372814C1B8F08E5B71C58583",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/zellij-org/zellij/v0.41.2/zellij-x86_64-apple-darwin.tar.gz",
+      "checksum": "EF28CF8BECA946DD8BE1BF6131265C7B1F16078480A4A656B2580BBDB1B64C81",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/zellij-org/zellij/v0.41.2/zellij-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "B1C321A817D8A5BAF55C2798F6AC7495BBA925D686D9877E9604A50784BF6C78",
+      "algorithm": "sha256"
+    },
+    {
       "id": "http/cache.agilebits.com/dist/1P/op2/pkg/v2.30.0/op_darwin_amd64_v2.30.0.zip",
       "checksum": "DA3C1FD900A82A2D62AA197E5A984662AB2B237A0B6EE74C963FA28712BF6563",
       "algorithm": "sha256"
