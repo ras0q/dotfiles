@@ -17,29 +17,38 @@ read -p "Press enter to continue (OS: $os, Sudoer mode: $sudoer_mode)"
 root=$(git rev-parse --show-toplevel)
 cd $root
 
+backup_dir=$root/.backup/$(date --iso-8601=seconds)
+mkdir -p $backup_dir
+echo "*" > $backup_dir/.gitignore
+
+function symlink() {
+    [[ -e $2 ]] && mv $2 $backup_dir
+    ln -sfn $1 $2
+}
+
 set -eux
 
 $__STEP__ "Create symlinks"
 
-ln -sfn $root/common/.bash_profile    ~/.bash_profile
-ln -sfn $root/common/.bashrc          ~/.bashrc
-ln -sfn $root/common/.gitconfig       ~/.gitconfig
-ln -sfn $root/common/.gittemplate.txt ~/.gittemplate.txt
+symlink $root/common/.bash_profile    ~/.bash_profile
+symlink $root/common/.bashrc          ~/.bashrc
+symlink $root/common/.gitconfig       ~/.gitconfig
+symlink $root/common/.gittemplate.txt ~/.gittemplate.txt
 mkdir -p ~/.config
-ln -sfn $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
-ln -sfn $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
-ln -sfn $root/common/fish             ~/.config/fish
-ln -sfn $root/common/helix            ~/.config/helix
-ln -sfn $root/common/starship.toml    ~/.config/starship.toml
-ln -sfn $root/common/zellij           ~/.config/zellij
+symlink $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
+symlink $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
+symlink $root/common/fish             ~/.config/fish
+symlink $root/common/helix            ~/.config/helix
+symlink $root/common/starship.toml    ~/.config/starship.toml
+symlink $root/common/zellij           ~/.config/zellij
 
 $__STEP__ "Setup for $os"
 
 case "$os" in
     Linux)
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
-            ln -sfn $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
-            $sudoer_mode && sudo ln -sfn $root/wsl/wsl.conf /etc/wsl.conf
+            symlink $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
+            $sudoer_mode && sudo symlink $root/wsl/wsl.conf /etc/wsl.conf
         fi
     
         if command -v apt >/dev/null 2>&1; then
@@ -53,12 +62,12 @@ case "$os" in
         ;;
 
     Darwin)
-        ln -sfn $root/mac/.Brewfile           ~/.Brewfile
-        ln -sfn $root/mac/.Brewfile.lock.json ~/.Brewfile.lock.json
-        ln -sfn $root/mac/.gitconfig.mac      ~/.gitconfig.mac
-        ln -sfn $root/mac/skhd                ~/.config/skhd
-        ln -sfn $root/mac/yabai               ~/.config/yabai
-        ln -sfn $root/mac/warp                ~/.warp
+        symlink $root/mac/.Brewfile           ~/.Brewfile
+        symlink $root/mac/.Brewfile.lock.json ~/.Brewfile.lock.json
+        symlink $root/mac/.gitconfig.mac      ~/.gitconfig.mac
+        symlink $root/mac/skhd                ~/.config/skhd
+        symlink $root/mac/yabai               ~/.config/yabai
+        symlink $root/mac/warp                ~/.warp
 
         ./setup/brew.sh
         ./setup/rustup.sh
@@ -69,12 +78,12 @@ case "$os" in
     MINGW*)
         # enable to create synlinks in Git Bash
         export MSYS=winsymlinks:nativestrict
-        ln -sfn $root/win/.wslconfig                       ~/.wslconfig
-        ln -sfn $root/win/terminal/settings.json           ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
-        ln -sfn $root/win/vscode/settings.json             ~/AppData/Roaming/Code/User/settings.json
-        ln -sfn $root/common/helix                         ~/AppData/Roaming/helix
-        ln -sfn $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-        ln -sfn $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
+        symlink $root/win/.wslconfig                       ~/.wslconfig
+        symlink $root/win/terminal/settings.json           ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
+        symlink $root/win/vscode/settings.json             ~/AppData/Roaming/Code/User/settings.json
+        symlink $root/common/helix                         ~/AppData/Roaming/helix
+        symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+        symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
 
         ./setup/winget.sh
         ./setup/aqua.sh
