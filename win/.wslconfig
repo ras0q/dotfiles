@@ -1,7 +1,8 @@
 [wsl2]
 localhostForwarding = true
 kernelCommandLine = vsyscall=emulate
-memory = 6GB
+memory = 4GB
+processors = 10
 swap = 0
 
 [experimental]

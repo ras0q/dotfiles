@@ -55,7 +55,12 @@
   "git.ignoreLegacyWarning": true,
   "git.openRepositoryInParentFolders": "never",
   "git.suggestSmartCommit": false,
-  "github.copilot.enable": {},
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
@@ -134,5 +139,9 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "remote.autoForwardPortsSource": "hybrid"
 }
