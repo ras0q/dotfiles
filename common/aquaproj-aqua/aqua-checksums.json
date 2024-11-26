@@ -306,6 +306,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-aarch64-apple-darwin.zip",
+      "checksum": "B804F7719BCA720308189CC40A0907CACFCD5713CF7746B7000E3AC2C86BF7F3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-aarch64-unknown-linux-gnu.zip",
+      "checksum": "07F1F8E316F7595757741CD6478E69F1AA1EBA7E7278370F3A424BF6B6D28DCE",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-x86_64-apple-darwin.zip",
+      "checksum": "4E39B1A277C629D5D3E72A4F62B287E043AC52E3D4A738716344C8FAF26284C3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-x86_64-pc-windows-msvc.zip",
+      "checksum": "3D118DA841F689DAD0F8026B62EFB3C58BF709E74D8F3E547F0A759FB9084DF9",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-x86_64-unknown-linux-gnu.zip",
+      "checksum": "5367C2DE32788558CAB0BD748C9A7DE4509B98C2DDC6EFBF04382B916016A0A9",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/x-motemen/ghq/v1.7.1/ghq_darwin_amd64.zip",
       "checksum": "5FFA377C52AADFD46AA6B4546AA88F9FFE30D1DFCB30B76A79DB52C79C531470",
       "algorithm": "sha256"
