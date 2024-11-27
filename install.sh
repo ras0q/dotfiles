@@ -17,7 +17,7 @@ read -p "Press enter to continue (OS: $os, Sudoer mode: $sudoer_mode)"
 root=$(git rev-parse --show-toplevel)
 cd $root
 
-backup_dir=$root/.backup/$(date --iso-8601=seconds)
+backup_dir=$root/.backup/$(date -Iseconds)
 mkdir -p $backup_dir
 echo "*" > $backup_dir/.gitignore
 
