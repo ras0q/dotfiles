@@ -69,7 +69,7 @@ case "$os" in
         symlink $root/mac/yabai               ~/.config/yabai
         symlink $root/mac/warp                ~/.warp
 
-        ./setup/brew.sh
+        $sudoer_mode && ./setup/brew.sh
         ./setup/rustup.sh
         ./setup/aqua.sh
         ./setup/font.sh
