@@ -23,3 +23,6 @@ zoxide init --cmd cd --hook pwd fish | source
 
 # fnm
 fnm completions --shell fish | source
+
+# Zellij
+set -q ZELLIJ; or zellij
