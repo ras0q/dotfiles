@@ -1,3 +1,5 @@
+# Use Deno on TypeScript
+
 [[language]]
 name = "typescript"
 roots = ["deno.json", "deno.jsonc", "package.json"]
@@ -19,7 +21,20 @@ args = ["lsp"]
 config = { deno = { enable = true } }
 required-root-patterns = ["deno.*"]
 
+# Use rustfmt on Rust
+
 [[language]]
 name = "rust"
 formatter = { command = "rustfmt" }
 auto-format = true
+
+# Use Ruff on Python
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "pylsp"]
+auto-format = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
