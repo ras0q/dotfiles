@@ -13,9 +13,14 @@ $git_status\
 $line_break\
 $character"""
 
+[username]
+style_user = 'bold yellow'
+style_root = 'bold red'
+
 [hostname]
 ssh_symbol = '\[ssh\]'
 format = '[$hostname$ssh_symbol]($style) '
+style = 'bold green'
 
 [directory]
 truncation_length = 4
