@@ -32,7 +32,12 @@ auto-format = true
 
 [[language]]
 name = "python"
-language-servers = ["ruff", "pylsp"]
+language-servers = [
+  { name = "pylsp", except-features = [
+    "format",
+  ] },
+  { name = "ruff" },
+]
 auto-format = true
 
 [language-server.ruff]

@@ -331,6 +331,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/tamasfe/taplo/0.9.3/taplo-full-darwin-aarch64.gz",
+      "checksum": "0FB943582243A67520B06328A86979D5969FB7236066BF80876DEAE8FDDA3A70",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tamasfe/taplo/0.9.3/taplo-full-darwin-x86_64.gz",
+      "checksum": "EF7D77ACD988D5B5765FDDB8C57E24C82D560B1A57529177626B6FFCE1605673",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tamasfe/taplo/0.9.3/taplo-full-linux-aarch64.gz",
+      "checksum": "404F8A7992F7702FD145D80C9791D482D431B42EE7445D498E812DA139D3997E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tamasfe/taplo/0.9.3/taplo-full-linux-x86_64.gz",
+      "checksum": "71D655DC3F69CE30454CFADE92FDBE846C0BA4AA3AFA68F3FF0D216966D0D3C2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/tamasfe/taplo/0.9.3/taplo-full-windows-x86_64.zip",
+      "checksum": "8E24648E698CB5C6443DE240C36A82287D00CD5B98406F6CB18B06D9DDD46BA6",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/x-motemen/ghq/v1.7.1/ghq_darwin_amd64.zip",
       "checksum": "5FFA377C52AADFD46AA6B4546AA88F9FFE30D1DFCB30B76A79DB52C79C531470",
       "algorithm": "sha256"
