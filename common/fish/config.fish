@@ -25,4 +25,4 @@ zoxide init --cmd cd --hook pwd fish | source
 fnm completions --shell fish | source
 
 # Zellij
-set -q ZELLIJ; or zellij
+set -q ZELLIJ_AUTOSTART; and not set -q ZELLIJ; and zellij
