@@ -36,7 +36,7 @@ language-servers = [
   { name = "pylsp", except-features = [
     "format",
   ] },
-  { name = "ruff" },
+  { name = "ruff", only-features = ["format"] },
 ]
 auto-format = true
 
