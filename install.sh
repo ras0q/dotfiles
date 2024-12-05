@@ -57,6 +57,7 @@ case "$os" in
     
         if command -v apt >/dev/null 2>&1; then
             $sudoer_mode && ./setup/apt.sh
+            ./setup/rustup.sh
             ./setup/aqua.sh
             ./setup/font.sh
         else
