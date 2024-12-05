@@ -1,7 +1,12 @@
 #!/bin/bash -eu
 
-export PS4='\[\e[1;36m\]+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME:+$FUNCNAME(): }\[\e[m\]'
-export __STEP__="echo -e \e[1;32m\n#"
+export ESC=$(printf '\033')
+export RESET="${ESC}[0m"
+export GREEN="${ESC}[32m"
+export CYAN="${ESC}[36m"
+
+export PS4='${CYAN}+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME:+$FUNCNAME(): }${RESET}'
+export __STEP__="echo -e \n${GREEN}#"
 
 trap "echo SIGINT; exit 1" SIGINT
 
