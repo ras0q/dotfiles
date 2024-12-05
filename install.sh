@@ -1,16 +1,15 @@
-#!/bin/bash
+#!/bin/bash -eu
 
 export PS4='\[\e[1;36m\]+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME:+$FUNCNAME(): }\[\e[m\]'
 export __STEP__="echo -e \e[1;32m\n#"
 
+trap "echo SIGINT; exit 1" SIGINT
+
 os=$(uname)
 
 sudoer_mode=false
-read -n1 -p "Sudoer mode? (y/N)" yn
-echo ""
-if [[ $yn = [yY] ]]; then
-    command -v sudo >/dev/null 2>&1 && sudo -v && sudoer_mode=true || exit 1
-fi
+read -n1 -p "Sudoer mode? (y/N)" yn; echo
+[[ $yn = [yY] ]] && sudo -v >/dev/null 2>&1 && sudoer_mode=true
 
 read -p "Press enter to continue (OS: $os, Sudoer mode: $sudoer_mode)"
 
@@ -26,7 +25,7 @@ function symlink() {
     ln -sfn $1 $2
 }
 
-set -eux
+set -x
 
 $__STEP__ "Create symlinks"
 
