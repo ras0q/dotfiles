@@ -25,7 +25,7 @@ packages:
 - name: ynqa/jnv@v0.4.1
 - name: helix-editor/helix@24.07
 - name: Schniz/fnm@v1.38.1
-- name: astral-sh/uv@0.5.6
+- name: astral-sh/uv@0.5.7
 - name: 1password/cli@v2.30.0
 - name: cli/cli@v2.63.2
 - name: zellij-org/zellij@v0.41.2
