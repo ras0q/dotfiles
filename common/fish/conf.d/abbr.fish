@@ -4,7 +4,7 @@ abbr -a gc 'git commit'
 abbr -a gs 'git switch'
 abbr -a gst 'git status'
 abbr -a gp 'git push'
-abbr -a gpp 'git pull && git bprune'
+abbr -a gpp 'git pull --rebase && git bprune'
 
 # docker
 abbr -a d docker
