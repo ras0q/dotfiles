@@ -10,6 +10,7 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$cmd_duration\
 $line_break\
 $character"""
 
@@ -44,6 +45,10 @@ behind = '<'
 diverged = '<>'
 renamed = 'r'
 deleted = 'x'
+
+[cmd_duration]
+show_milliseconds = true
+show_notifications = true
 
 [character]
 success_symbol = '[\$](bold green)'
