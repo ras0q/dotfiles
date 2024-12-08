@@ -29,5 +29,5 @@ packages:
 - name: 1password/cli@v2.30.0
 - name: cli/cli@v2.63.2
 - name: zellij-org/zellij@v0.41.2
-- name: sxyazi/yazi@v0.3.3
+- name: sxyazi/yazi@v0.4.0
 - name: tamasfe/taplo/full@0.9.3
