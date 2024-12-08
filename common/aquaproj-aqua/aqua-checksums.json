@@ -306,28 +306,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-aarch64-apple-darwin.zip",
-      "checksum": "B804F7719BCA720308189CC40A0907CACFCD5713CF7746B7000E3AC2C86BF7F3",
+      "id": "github_release/github.com/sxyazi/yazi/v0.4.0/yazi-aarch64-apple-darwin.zip",
+      "checksum": "198DACFBE3E2C33BE9140C5F434F98F41BBD3A7E40F1EE131654480A6E161B1D",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-aarch64-unknown-linux-gnu.zip",
-      "checksum": "07F1F8E316F7595757741CD6478E69F1AA1EBA7E7278370F3A424BF6B6D28DCE",
+      "id": "github_release/github.com/sxyazi/yazi/v0.4.0/yazi-aarch64-unknown-linux-gnu.zip",
+      "checksum": "122E308DA1C3A781A178FA5283AFF688880B1D1680532BE377F8D84BC942EC70",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-x86_64-apple-darwin.zip",
-      "checksum": "4E39B1A277C629D5D3E72A4F62B287E043AC52E3D4A738716344C8FAF26284C3",
+      "id": "github_release/github.com/sxyazi/yazi/v0.4.0/yazi-x86_64-apple-darwin.zip",
+      "checksum": "03CF5A839B9448C10299E578D8D8FB6CE73911A427B4013CB8D23D678277BFC5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-x86_64-pc-windows-msvc.zip",
-      "checksum": "3D118DA841F689DAD0F8026B62EFB3C58BF709E74D8F3E547F0A759FB9084DF9",
+      "id": "github_release/github.com/sxyazi/yazi/v0.4.0/yazi-x86_64-pc-windows-msvc.zip",
+      "checksum": "EBBF05C37C09B145FA3A87D4E7B2C9F5D0A6C6F0320AC023E9B519AF2F8C82DA",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/sxyazi/yazi/v0.3.3/yazi-x86_64-unknown-linux-gnu.zip",
-      "checksum": "5367C2DE32788558CAB0BD748C9A7DE4509B98C2DDC6EFBF04382B916016A0A9",
+      "id": "github_release/github.com/sxyazi/yazi/v0.4.0/yazi-x86_64-unknown-linux-gnu.zip",
+      "checksum": "763288531B929D8FD52B90A69028E2AFBEAA983366CEAC82E6B46316E4703177",
       "algorithm": "sha256"
     },
     {
