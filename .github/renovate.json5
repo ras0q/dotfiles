@@ -1,23 +1,23 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    "github>aquaproj/aqua-renovate-config#2.6.0"
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    'github>aquaproj/aqua-renovate-config#2.6.0',
   ],
-  "packageRules": [
+  packageRules: [
     {
-      "description": "Automerge non-major update",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
+      description: 'Automerge non-major update',
+      matchUpdateTypes: [
+        'minor',
+        'patch',
       ],
-      "automerge": true
+      automerge: true,
     },
     {
-      "matchPackageNames": [
-        "neovim/neovim"
+      matchPackageNames: [
+        'neovim/neovim',
       ],
-      "enabled": false
-    }
-  ]
+      enabled: false,
+    },
+  ],
 }
