@@ -26,8 +26,10 @@ mkdir -p $backup_dir
 echo "*" > $backup_dir/.gitignore
 
 function symlink() {
-    [[ -e $2 ]] && mv $2 $backup_dir
-    ln -sfn $1 $2
+    sudo_prefix=""
+    [[ $2 == $HOME/* ]] || sudo_prefix="sudo"
+    [[ -e $2 ]] && $sudo_prefix mv $2 $backup_dir
+    $sudo_prefix ln -sfn $1 $2
 }
 
 set -x
@@ -53,7 +55,7 @@ case "$os" in
     Linux)
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
             symlink $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
-            $sudoer_mode && sudo symlink $root/wsl/wsl.conf /etc/wsl.conf
+            $sudoer_mode && symlink $root/wsl/wsl.conf /etc/wsl.conf
         fi
     
         if command -v apt >/dev/null 2>&1; then
