@@ -43,6 +43,7 @@ symlink $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
 symlink $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
 symlink $root/common/fish             ~/.config/fish
 symlink $root/common/helix            ~/.config/helix
+symlink $root/common/mise             ~/.config/mise
 symlink $root/common/starship.toml    ~/.config/starship.toml
 symlink $root/common/zellij           ~/.config/zellij
 
