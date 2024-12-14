@@ -25,7 +25,7 @@ jobs:
             v1-aqua-installer-${{runner.os}}-
       - uses: aquaproj/aqua-installer@v3.1.0
         with:
-          aqua_version: v2.38.4
+          aqua_version: v2.39.0
           working_directory: common/aquaproj-aqua
       - run: aqua update-checksum -deep -prune
         working-directory: common/aquaproj-aqua
