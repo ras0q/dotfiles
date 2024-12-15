@@ -30,4 +30,5 @@ winget install \
     Microsoft.PowerShell \
     Microsoft.PowerToys \
     Microsoft.WindowsTerminal.Preview \
-    gerardog.gsudo
+    gerardog.gsudo \
+    mise

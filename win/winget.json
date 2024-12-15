@@ -71,10 +71,6 @@
 					"Version" : "6.1.1 (41705)"
 				},
 				{
-					"PackageIdentifier" : "aquaproj.aqua",
-					"Version" : "2.30.0"
-				},
-				{
 					"PackageIdentifier" : "Obsidian.Obsidian",
 					"Version" : "1.6.3"
 				},

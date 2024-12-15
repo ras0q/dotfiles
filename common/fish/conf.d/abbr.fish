@@ -16,7 +16,6 @@ abbr -a ll 'eza -l'
 abbr -a ls eza
 
 # others
-abbr -a aqi 'aqua g -i && aqua upc -a -deep -prune && aqua i -a'
 abbr -a bd 'brew bundle dump --global --tap --formula -f'
 abbr -a c 'code .'
 abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'

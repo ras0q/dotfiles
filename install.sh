@@ -41,7 +41,6 @@ symlink $root/common/.bashrc          ~/.bashrc
 symlink $root/common/.gitconfig       ~/.gitconfig
 symlink $root/common/.gittemplate.txt ~/.gittemplate.txt
 mkdir -p ~/.config
-symlink $root/common/aquaproj-aqua    ~/.config/aquaproj-aqua
 symlink $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
 symlink $root/common/fish             ~/.config/fish
 symlink $root/common/helix            ~/.config/helix
@@ -61,7 +60,6 @@ case "$os" in
         if command -v apt >/dev/null 2>&1; then
             $sudoer_mode && ./setup/apt.sh
             ./setup/rustup.sh
-            ./setup/aqua.sh
             ./setup/font.sh
         else
             echo "Unsupported Linux distribution"
@@ -79,7 +77,6 @@ case "$os" in
 
         $sudoer_mode && ./setup/brew.sh
         ./setup/rustup.sh
-        ./setup/aqua.sh
         ./setup/font.sh
         ;;
 
@@ -94,7 +91,6 @@ case "$os" in
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
 
         ./setup/winget.sh
-        ./setup/aqua.sh
         ./setup/font.sh
         ;;
 

@@ -1,7 +1,5 @@
 PATH=$PATH:/usr/local/cuda/bin/
 PATH=$PATH:~/.local/bin
-# add Go Path for VSCode
-PATH=$PATH:~/.local/share/aquaproj-aqua/bin
 
 complete -C /home/ras/go/bin/xc xc
 
