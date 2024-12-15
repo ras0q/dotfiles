@@ -1,5 +1,4 @@
-# mise (call first!)
-mise hook-env -s fish | source
+# mise
 mise completion fish | source
 
 # fzf

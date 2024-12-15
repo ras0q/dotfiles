@@ -6,7 +6,6 @@ set -q GOPATH; or set -Ux GOPATH ~/go
 set -q LANG; or set -Ux LANG POSIX
 
 fish_add_path \
-    ~/.local/bin \
     ~/go/bin \
     ~/.cargo/bin \
     ~/.deno/bin \
@@ -14,3 +13,6 @@ fish_add_path \
     /opt/homebrew/opt/openjdk/bin
 set -q CODE_BIN; and fish_add_path $CODE_BIN
 set -q PWSH_BIN; and fish_add_path $PWSH_BIN
+
+mise activate fish --shims | source
+mise activate fish | source
