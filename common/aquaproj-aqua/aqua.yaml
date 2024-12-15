@@ -10,7 +10,7 @@ registries:
 - type: standard
   ref: v4.276.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: junegunn/fzf@v0.56.3
+- name: junegunn/fzf@v0.57.0
 - name: x-motemen/ghq@v1.7.1
 - name: golang/go@go1.23.4
 - name: jqlang/jq@jq-1.7.1
