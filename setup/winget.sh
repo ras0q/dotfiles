@@ -12,9 +12,11 @@ fi
 $__STEP__ "Install WinGet Packages"
 
 winget install \
+    --source winget \
     --accept-source-agreements \
     --accept-package-agreements \
     --silent \
+    --no-upgrade \
     Microsoft.Edge \
     Microsoft.VisualStudioCode \
     AgileBits.1Password \
@@ -22,7 +24,6 @@ winget install \
     Figma.Figma \
     Google.GoogleDrive \
     Obsidian.Obsidian \
-    LINE.LINE \
     SlackTechnologies.Slack \
     Spotify.Spotify \
     Git.Git \
@@ -31,4 +32,4 @@ winget install \
     Microsoft.PowerToys \
     Microsoft.WindowsTerminal.Preview \
     gerardog.gsudo \
-    mise
+    jdx.mise

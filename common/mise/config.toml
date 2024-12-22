@@ -19,4 +19,6 @@
 "cargo:eza" = "latest"
 deno = "latest"
 usage = "latest"
-zig = "latest"
+
+[settings]
+exec_auto_install = false

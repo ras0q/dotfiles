@@ -36,6 +36,9 @@ set -x
 
 $__STEP__ "Create symlinks"
 
+# enable to create synlinks in Git Bash
+[[ "$os" = MINGW* ]] && export MSYS=winsymlinks:nativestrict
+
 symlink $root/common/.bash_profile    ~/.bash_profile
 symlink $root/common/.bashrc          ~/.bashrc
 symlink $root/common/.gitconfig       ~/.gitconfig
@@ -43,7 +46,6 @@ symlink $root/common/.gittemplate.txt ~/.gittemplate.txt
 mkdir -p ~/.config
 symlink $root/common/gitmoji-nodejs   ~/.config/gitmoji-nodejs
 symlink $root/common/fish             ~/.config/fish
-symlink $root/common/helix            ~/.config/helix
 symlink $root/common/mise             ~/.config/mise
 symlink $root/common/starship.toml    ~/.config/starship.toml
 symlink $root/common/zellij           ~/.config/zellij
@@ -52,11 +54,13 @@ $__STEP__ "Setup for $os"
 
 case "$os" in
     Linux)
+        symlink $root/common/helix            ~/.config/helix
+
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
             symlink $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
             $sudoer_mode && symlink $root/wsl/wsl.conf /etc/wsl.conf
         fi
-    
+
         if command -v apt >/dev/null 2>&1; then
             $sudoer_mode && ./setup/apt.sh
             ./setup/rustup.sh
@@ -68,6 +72,7 @@ case "$os" in
         ;;
 
     Darwin)
+        symlink $root/common/helix            ~/.config/helix
         symlink $root/mac/.Brewfile           ~/.Brewfile
         symlink $root/mac/.Brewfile.lock.json ~/.Brewfile.lock.json
         symlink $root/mac/.gitconfig.mac      ~/.gitconfig.mac
@@ -81,8 +86,6 @@ case "$os" in
         ;;
 
     MINGW*)
-        # enable to create synlinks in Git Bash
-        export MSYS=winsymlinks:nativestrict
         symlink $root/win/.wslconfig                       ~/.wslconfig
         symlink $root/win/terminal/settings.json           ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
         symlink $root/win/vscode/settings.json             ~/AppData/Roaming/Code/User/settings.json
@@ -91,6 +94,7 @@ case "$os" in
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
 
         ./setup/winget.sh
+        ./setup/rustup.sh
         ./setup/font.sh
         ;;
 

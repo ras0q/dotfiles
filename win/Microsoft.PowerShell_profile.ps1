@@ -1,8 +1,8 @@
 # Path: $PROFILE/Microsoft.PowerShell_profile.ps1
 
 function Set-Path() {
-  $env:Path = "$HOME\AppData\Local\1Password\app\8;" `
-  + [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + `
+  $env:Path = "$HOME\AppData\Local\1Password\app\8;$HOME\.cargo\bin;$HOME\AppData\Local\mise\shims;" `
+    + [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + `
     [System.Environment]::GetEnvironmentVariable("Path", "User")
 }
 
