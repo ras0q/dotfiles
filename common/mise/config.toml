@@ -1,5 +1,7 @@
-[env]
-_.file = "./.envrc"
+[[env]]
+ _.file = "{{ cwd }}/.env"
+[[env]]
+ _.file = "{{ cwd }}/.envrc"
 
 [tools]
 "aqua:1password/cli" = "v2.30.0"
