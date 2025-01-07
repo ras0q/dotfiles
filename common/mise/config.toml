@@ -1,3 +1,6 @@
+[env]
+_.file = "./.envrc"
+
 [tools]
 "aqua:1password/cli" = "v2.30.0"
 "aqua:BurntSushi/ripgrep" = "latest"
