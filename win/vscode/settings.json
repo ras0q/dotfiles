@@ -1,4 +1,7 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -8,11 +11,19 @@
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
+  },
+  "catppuccin.accentColor": "lavender",
+  "catppuccin.customUIColors": {
+    "latte": {
+      "editorInlayHint.background": "surface0",
+      "editorInlayHint.foreground": "mauve",
+      "editorInlayHint.parameterBackground": "surface0",
+      "editorInlayHint.parameterForeground": "pink",
+      "editorInlayHint.typeBackground": "surface0",
+      "editorInlayHint.typeForeground": "lavender"
+    }
   },
   "debug.allowBreakpointsEverywhere": true,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -57,8 +68,8 @@
   "git.suggestSmartCommit": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
     "markdown": true,
+    "plaintext": false,
     "scminput": false
   },
   "githubPullRequests.pullBranch": "never",
@@ -84,6 +95,8 @@
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
+  "remote.autoForwardPortsSource": "hybrid",
+  "rust-analyzer.inlayHints.typeHints.enable": false,
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,
@@ -139,9 +152,5 @@
   "workbench.iconTheme": "catppuccin-latte",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
-  "workbench.tree.renderIndentGuides": "always",
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  "remote.autoForwardPortsSource": "hybrid"
+  "workbench.tree.renderIndentGuides": "always"
 }
