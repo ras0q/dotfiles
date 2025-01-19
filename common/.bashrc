@@ -35,9 +35,17 @@ fi
 # Fallback
 
 # mise
-eval "$(mise activate bash --shims)"
-eval "$(mise activate bash)"
-eval "$(mise completion bash)"
+if [[ "$OSTYPE" == "msys"* ]]; then
+  # https://github.com/jdx/mise/issues/4011
+  add_paths ~/AppData/Local/mise/shims
+  for file in /c/Users/asymp/AppData/Local/mise/shims/*.cmd; do
+    alias "$(basename "${file%.cmd}")"="\"$file\""
+  done
+else
+  eval "$(mise activate bash --shims)"
+  eval "$(mise activate bash)"
+  eval "$(mise completion bash)"
+fi
 
 # fzf
 eval "$(fzf --bash)"
@@ -45,8 +53,8 @@ eval "$(fzf --bash)"
 # starship
 eval "$(starship init bash --print-full-init)"
 
-# zoxide
-eval "$(zoxide init --cmd cd --hook pwd bash)"
+# # zoxide
+# eval "$(zoxide init --cmd cd --hook pwd bash)"
 
 # fnm
 eval "$(fnm completions --shell bash)"
