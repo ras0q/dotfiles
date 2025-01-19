@@ -23,6 +23,7 @@
 "aqua:zellij-org/zellij" = "latest"
 "cargo:eza" = "latest"
 deno = "latest"
+"pipx:nvitop" = "latest"
 usage = "latest"
 
 [settings]
