@@ -11,25 +11,9 @@ fi
 
 $__STEP__ "Install WinGet Packages"
 
-winget install \
-    --source winget \
+winget import \
     --accept-source-agreements \
     --accept-package-agreements \
-    --silent \
     --no-upgrade \
-    Microsoft.Edge \
-    Microsoft.VisualStudioCode \
-    AgileBits.1Password \
-    Discord.Discord \
-    Figma.Figma \
-    Google.GoogleDrive \
-    Obsidian.Obsidian \
-    SlackTechnologies.Slack \
-    Spotify.Spotify \
-    Git.Git \
-    jstarks.npiperelay \
-    Microsoft.PowerShell \
-    Microsoft.PowerToys \
-    Microsoft.WindowsTerminal.Preview \
-    gerardog.gsudo \
-    jdx.mise
+    --disable-interactivity \
+    ./win/winget.jsonc
