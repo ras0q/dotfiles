@@ -27,7 +27,7 @@
 	autoSetupRemote = true
 
 [alias]
-	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs git branch -d
+	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs -r git branch -d
 	lo = log --oneline
 	inico = commit --allow-empty -m \":seedling: initial commit\"
 	fixup = commit --fixup HEAD
