@@ -43,7 +43,7 @@ tabpad = "."
 render = true
 
 [keys.normal]
-space = { space = ":wq" }
+space = { space = ":wq!" }
 
 # https://yazi-rs.github.io/docs/tips/#helix-with-zellij
 [keys.normal.C-y]
