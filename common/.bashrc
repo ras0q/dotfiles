@@ -38,9 +38,14 @@ fi
 if [[ "$OSTYPE" == "msys"* ]]; then
   # https://github.com/jdx/mise/issues/4011
   add_paths ~/AppData/Local/mise/shims
-  for file in /c/Users/asymp/AppData/Local/mise/shims/*.cmd; do
-    alias "$(basename "${file%.cmd}")"="\"$file\""
-  done
+  command_not_found_handle() {
+    [[ $1 == *.* || $1 == */* ]] && { echo "$1: command not found"; return 127; }
+    local name=$1; shift
+    for ext in bat cmd; do
+      command -v "$name.$ext" &>/dev/null && exec "$name.$ext" "$@"
+    done
+    echo "$name: command not found"; return 127
+  }
 else
   eval "$(mise activate bash --shims)"
   eval "$(mise activate bash)"
@@ -57,5 +62,5 @@ eval "$(starship init bash --print-full-init)"
 # eval "$(zoxide init --cmd cd --hook pwd bash)"
 
 # fnm
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --shell bash)"
 eval "$(fnm completions --shell bash)"
