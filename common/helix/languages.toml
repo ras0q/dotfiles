@@ -25,7 +25,7 @@ required-root-patterns = ["deno.*"]
 
 [[language]]
 name = "rust"
-formatter = { command = "rustfmt" }
+formatter = { command = "rustfmt", args = ["--edition", "2024"] }
 auto-format = true
 
 # Use Ruff on Python
