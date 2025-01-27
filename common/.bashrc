@@ -19,9 +19,9 @@ add_paths \
   /usr/local/cuda/bin \
   /opt/homebrew/bin \
   /opt/homebrew/opt/openjdk/bin \
-  /c/Users/$(windows_user)/AppData/Local/Programs/Microsoft\ VS\ Code/bin \
-  /c/Users/$(windows_user)/AppData/Local/Microsoft/WindowsApps \
-  /c/Users/$(windows_user)/AppData/Local/Microsoft/WinGet/Links \
+  /c/Users/$windows_user/AppData/Local/Programs/Microsoft\ VS\ Code/bin \
+  /c/Users/$windows_user/AppData/Local/Microsoft/WindowsApps \
+  /c/Users/$windows_user/AppData/Local/Microsoft/WinGet/Links \
   /c/Program\ Files/PowerShell/7
 
 [[ -z "$EDITOR" ]] && export EDITOR="hx"
