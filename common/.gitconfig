@@ -35,13 +35,6 @@
 [gpg]
 	format = ssh
 
-[credential "https://github.com"]
-	helper =
-	helper = !gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !gh auth git-credential
-
 # Include system-wide .gitconfig
 # XXX:
 #		If multiple keys are specified, the last one takes precedence,
