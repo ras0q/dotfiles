@@ -23,7 +23,10 @@
 "aqua:zellij-org/zellij" = "latest"
 "cargo:eza" = "latest"
 deno = "latest"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
 usage = "latest"
 
 [settings]
 exec_auto_install = false
+experimental = true
