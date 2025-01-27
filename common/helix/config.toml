@@ -42,17 +42,10 @@ tabpad = "."
 [editor.indent-guides]
 render = true
 
-[keys.normal]
-space = { space = ":wq!" }
-
+[keys.normal.space]
+space = ":wq!"
 # https://yazi-rs.github.io/docs/tips/#helix-with-zellij
-[keys.normal.C-y]
-# Open the file(s) in the current window
-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
-# Open the file(s) in a vertical pane
-v = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh vsplit"
-# Open the file(s) in a horizontal pane
-h = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh hsplit"
+t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
 
 [keys.insert]
 j = { k = "normal_mode" }
