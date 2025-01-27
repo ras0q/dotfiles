@@ -108,6 +108,14 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "commandline": "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -msys -shell bash -use-full-path",
+                "guid": "{6bfa33b6-971f-457a-8298-452f3a7f0439}",
+                "hidden": false,
+                "icon": "C:\\msys64\\msys2.ico",
+                "name": "MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
             }
         ]
     },

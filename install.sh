@@ -27,9 +27,9 @@ echo "*" > $backup_dir/.gitignore
 
 function symlink() {
     sudo_prefix=""
-    [[ $2 == $HOME/* ]] || sudo_prefix="sudo"
-    [[ -e $2 ]] && $sudo_prefix mv $2 $backup_dir
-    $sudo_prefix ln -sfn $1 $2
+    [[ $# -ge 3 && "$3" == "--sudo" ]] && sudo_prefix="sudo"
+    [[ -e "$2" ]] && $sudo_prefix mv "$2" $backup_dir
+    $sudo_prefix ln -sfn "$1" "$2"
 }
 
 set -x
@@ -58,11 +58,12 @@ case "$os" in
 
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
             symlink $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
-            $sudoer_mode && symlink $root/wsl/wsl.conf /etc/wsl.conf
+            $sudoer_mode && symlink $root/wsl/wsl.conf /etc/wsl.conf --sudo
         fi
 
         if command -v apt >/dev/null 2>&1; then
             $sudoer_mode && ./setup/apt.sh
+            ./setup/mise.sh
             ./setup/rustup.sh
             ./setup/font.sh
         else
@@ -81,6 +82,7 @@ case "$os" in
         symlink $root/mac/warp                ~/.warp
 
         $sudoer_mode && ./setup/brew.sh
+        ./setup/mise.sh
         ./setup/rustup.sh
         ./setup/font.sh
         ;;
@@ -97,6 +99,22 @@ case "$os" in
         ./setup/rustup.sh
         ./setup/font.sh
         ;;
+
+    MSYS*)
+        windows_home=/c/Users/$(whoami)
+        localappdata=$windows_home/AppData/Local
+
+        symlink $root/win/.wslconfig                       $windows_home/.wslconfig
+        symlink $root/win/terminal/settings.json           $windows_home/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
+        symlink $root/win/vscode/settings.json             $windows_home/AppData/Roaming/Code/User/settings.json
+        symlink $root/common/helix                         $windows_home/AppData/Roaming/helix
+
+        ./setup/pacman.sh
+        ./setup/winget.sh
+        ./setup/rustup.sh
+        ./setup/font.sh
+	;;
+
 
     *)
         echo "Unsupported OS"

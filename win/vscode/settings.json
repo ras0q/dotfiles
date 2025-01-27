@@ -66,6 +66,8 @@
   "git.ignoreLegacyWarning": true,
   "git.openRepositoryInParentFolders": "never",
   "git.suggestSmartCommit": false,
+  "gitblame.inlineMessageFormat": "${author.name} (${time.ago})",
+  "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
@@ -96,7 +98,9 @@
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
   "remote.autoForwardPortsSource": "hybrid",
+  "rust-analyzer.check.command": "clippy",
   "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.lens.implementations.enable": false,
   "security.workspace.trust.untrustedFiles": "open",
   "sortJSON.contextMenu": {
     "sortJSONAlphaNum": false,

@@ -14,9 +14,6 @@
 					"PackageIdentifier": "Microsoft.WSL"
 				},
 				{
-					"PackageIdentifier": "Yamaha.SYNCROOM"
-				},
-				{
 					"PackageIdentifier": "gerardog.gsudo"
 				},
 				{

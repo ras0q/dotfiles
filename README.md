@@ -8,8 +8,9 @@ Cross-platform dotfiles for Windows, Mac, and Ubuntu.
 > In Windows environment, Run it in Git Bash (not cmd or PowerShell!)
 
 ```bash
-git clone https://github.com/ras0q/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+DOTFILES_DIR=~/ghq/github.com/ras0q/dotfiles
+git clone https://github.com/ras0q/dotfiles.git $DOTFILES_DIR
+cd $DOTFILES_DIR
 ./install.sh
 ```
 
