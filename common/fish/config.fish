@@ -13,7 +13,7 @@ starship init fish --print-full-init | source
 zoxide init --cmd cd --hook pwd fish | source
 
 # fnm
-fnm env --use-on-cd | source
+fnm env --use-on-cd --shell fish | source
 fnm completions --shell fish | source
 
 # Zellij
