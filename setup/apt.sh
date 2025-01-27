@@ -13,16 +13,6 @@ sudo apt-get install -y \
     socat \
     wget
 
-$__STEP__ "Install Go (using PPA if needed)"
-
-source /etc/os-release
-# Ubuntu 24.04以前はGo toolchainを使えないGoが入るのでppaを追加する
-if [[ $(echo "$VERSION_ID < 24.04" | bc) = 1 ]]; then
-  sudo apt-add-repository -y ppa:longsleep/golang-backports
-  sudo apt-get update
-fi
-sudo apt-get install -y golang-go
-
 $__STEP__ "Install Git using PPA"
 
 sudo apt-add-repository -y ppa:git-core/ppa

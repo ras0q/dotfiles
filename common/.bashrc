@@ -63,7 +63,3 @@ eval "$(starship init bash --print-full-init)"
 
 # # zoxide
 # eval "$(zoxide init --cmd cd --hook pwd bash)"
-
-# fnm
-eval "$(fnm env --use-on-cd --shell bash)"
-eval "$(fnm completions --shell bash)"

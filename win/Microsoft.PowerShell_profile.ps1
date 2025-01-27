@@ -46,6 +46,3 @@ function gg($repo) { ghq get $repo }
 
 # Starship
 Invoke-Expression (&starship init powershell)
-
-# fnm
-fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
