@@ -26,7 +26,7 @@ go = "latest"
 node = "lts"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
-python = "latest"
+"pipx:nvitop" = "latest"
 rust = "latest"
 usage = "latest"
 
