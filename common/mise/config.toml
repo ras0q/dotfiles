@@ -28,6 +28,7 @@ node = "lts"
 "npm:typescript-language-server" = "latest"
 "pipx:nvitop" = "latest"
 rust = "latest"
+"ubi:wilfred/difftastic" = { version = "latest", exe = "difft" }
 usage = "latest"
 
 [settings]
