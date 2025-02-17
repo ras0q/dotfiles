@@ -7,7 +7,7 @@ add_paths() {
   done
 
   if [ -n "$new_paths" ]; then
-    export PATH="$new_paths$PATH"
+    export PATH="$new_paths:$PATH"
   fi
 }
 
@@ -51,15 +51,18 @@ if [[ "$OSTYPE" == "msys"* ]]; then
   }
 else
   eval "$(mise activate bash --shims)"
-  eval "$(mise activate bash)"
-  eval "$(mise completion bash)"
 fi
 
-# fzf
-eval "$(fzf --bash)"
+if [[ $- == *i* ]]
+  eval "$(mise activate bash)"
+  eval "$(mise completion bash)"
 
-# starship
-eval "$(starship init bash --print-full-init)"
+  # fzf
+  eval "$(fzf --bash)"
 
-# # zoxide
-# eval "$(zoxide init --cmd cd --hook pwd bash)"
+  # starship
+  eval "$(starship init bash --print-full-init)"
+
+  # # zoxide
+  # eval "$(zoxide init --cmd cd --hook pwd bash)"
+fi
