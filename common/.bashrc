@@ -2,7 +2,7 @@ add_paths() {
   local new_paths=""
   for dir in "$@"; do
     if [ -d "$dir" ] && [[ ":$PATH:" != *":$dir:"* ]]; then
-      new_paths="$dir:$new_paths"
+      new_paths="$new_paths:$dir"
     fi
   done
 
@@ -13,6 +13,7 @@ add_paths() {
 
 windows_user=${WINDOWS_USER:-$(whoami)}
 add_paths \
+  ~/.local/bin \
   ~/go/bin \
   ~/.cargo/bin \
   ~/.deno/bin \
@@ -38,31 +39,4 @@ fi
 # Fallback
 
 # mise
-if [[ "$OSTYPE" == "msys"* ]]; then
-  # https://github.com/jdx/mise/issues/4011
-  add_paths ~/AppData/Local/mise/shims
-  command_not_found_handle() {
-    [[ $1 == *.* || $1 == */* ]] && { echo "$1: command not found"; return 127; }
-    local name=$1; shift
-    for ext in bat cmd; do
-      command -v "$name.$ext" &>/dev/null && exec "$name.$ext" "$@"
-    done
-    echo "$name: command not found"; return 127
-  }
-else
-  eval "$(mise activate bash --shims)"
-fi
-
-if [[ $- == *i* ]]
-  eval "$(mise activate bash)"
-  eval "$(mise completion bash)"
-
-  # fzf
-  eval "$(fzf --bash)"
-
-  # starship
-  eval "$(starship init bash --print-full-init)"
-
-  # # zoxide
-  # eval "$(zoxide init --cmd cd --hook pwd bash)"
-fi
+eval "$(mise activate bash --shims)"
