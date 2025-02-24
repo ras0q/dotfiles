@@ -61,10 +61,10 @@ case "$os" in
         fi
 
         if command -v apt >/dev/null 2>&1; then
-            $sudoer_mode && ./setup/apt.sh
-            ./setup/mise.sh
-            ./setup/rustup.sh
-            ./setup/font.sh
+            $sudoer_mode && ./_setup/apt.sh
+            ./_setup/mise.sh
+            ./_setup/rustup.sh
+            ./_setup/font.sh
         else
             echo "Unsupported Linux distribution"
             exit 1
@@ -80,10 +80,10 @@ case "$os" in
         symlink $root/mac/yabai               ~/.config/yabai
         symlink $root/mac/warp                ~/.warp
 
-        $sudoer_mode && ./setup/brew.sh
-        ./setup/mise.sh
-        ./setup/rustup.sh
-        ./setup/font.sh
+        $sudoer_mode && ./_setup/brew.sh
+        ./_setup/mise.sh
+        ./_setup/rustup.sh
+        ./_setup/font.sh
         ;;
 
     MINGW*)
@@ -93,9 +93,9 @@ case "$os" in
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
 
-        ./setup/winget.sh
-        ./setup/rustup.sh
-        ./setup/font.sh
+        ./_setup/winget.sh
+        ./_setup/rustup.sh
+        ./_setup/font.sh
         ;;
 
     MSYS*)
@@ -107,10 +107,10 @@ case "$os" in
         symlink $root/win/vscode/settings.json             $windows_home/AppData/Roaming/Code/User/settings.json
         symlink $root/common/helix                         $windows_home/AppData/Roaming/helix
 
-        ./setup/pacman.sh
-        ./setup/winget.sh
-        ./setup/rustup.sh
-        ./setup/font.sh
+        ./_setup/pacman.sh
+        ./_setup/winget.sh
+        ./_setup/rustup.sh
+        ./_setup/font.sh
 	;;
 
 
