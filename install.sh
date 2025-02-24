@@ -57,8 +57,7 @@ case "$os" in
         symlink $root/common/helix            ~/.config/helix
 
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
-            symlink $root/common/vscode/settings.json   ~/.vscode-server/data/Machine/settings.json
-            $sudoer_mode && symlink $root/wsl/wsl.conf /etc/wsl.conf --sudo
+            $sudoer_mode && symlink $root/win/wsl.conf /etc/wsl.conf --sudo
         fi
 
         if command -v apt >/dev/null 2>&1; then
@@ -90,7 +89,6 @@ case "$os" in
     MINGW*)
         symlink $root/win/.wslconfig                       ~/.wslconfig
         symlink $root/win/terminal/settings.json           ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json
-        symlink $root/win/vscode/settings.json             ~/AppData/Roaming/Code/User/settings.json
         symlink $root/common/helix                         ~/AppData/Roaming/helix
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
