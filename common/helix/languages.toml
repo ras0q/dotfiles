@@ -2,12 +2,14 @@
 
 [[language]]
 name = "typescript"
+shebangs = ["node", "deno"]
 roots = ["deno.json", "deno.jsonc", "package.json"]
 auto-format = true
 language-servers = ["typescript-language-server", "deno-lsp"]
 
 [[language]]
 name = "tsx"
+shebangs = ["node", "deno"]
 roots = ["deno.json", "deno.jsonc", "package.json"]
 auto-format = true
 language-servers = ["typescript-language-server", "deno-lsp"]
@@ -19,7 +21,7 @@ required-root-patterns = ["package.json"]
 command = "deno"
 args = ["lsp"]
 config = { deno = { enable = true } }
-required-root-patterns = ["deno.*"]
+# required-root-patterns = ["deno.*"]
 
 # Use rustfmt on Rust
 
