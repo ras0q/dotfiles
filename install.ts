@@ -12,17 +12,12 @@ const args = parseArgs(Deno.args, {
 // TODO: remove this
 Deno.env.set("__STEP__", "echo");
 
-const homeDir = $.path(Deno.env.get("HOME")!);
-const configDir = homeDir.join(".config");
-configDir.mkdirSync();
+const home = $.path(Deno.env.get("HOME")!);
+home.join(".config").mkdirSync();
 
-// const rootDir = $.path(await $`git rev-parse --show-toplevel`.text());
-const rootDir = $.path(Deno.cwd());
-const setupDir = rootDir.join("_setup");
-const commonDir = rootDir.join("common");
-const macDir = rootDir.join("mac");
-const winDir = rootDir.join("win");
-const backupDir = rootDir.join(".backup", new Date().toISOString());
+// const root = $.path(await $`git rev-parse --show-toplevel`.text());
+const root = $.path(Deno.cwd());
+const backupDir = root.join(".backup", new Date().toISOString());
 const logsDir = backupDir.join("logs");
 logsDir.mkdirSync({ recursive: true });
 backupDir.join(".gitignore").writeTextSync("*");
@@ -32,6 +27,8 @@ async function createSymlink(
   target: Path,
   useSudo: boolean = false,
 ) {
+  if (!source.existsSync()) throw `${source} not exist`;
+
   if (!args["sudo"] && useSudo) {
     $.log(`Symlink skipped (${source} -> ${target})`);
     return;
@@ -53,7 +50,7 @@ const gray = encoder.encode("\x1b[90m");
 const red = encoder.encode("\x1b[31m");
 const reset = encoder.encode("\x1b[0m");
 async function runSetup(name: string) {
-  const setupPath = setupDir.join(`${name}.sh`);
+  const setupPath = root.join("_setup", `${name}.sh`);
   if (!setupPath.existsSync()) throw `${setupPath} not exist`;
 
   await $`bash ${setupPath}`
@@ -79,15 +76,18 @@ async function runSetup(name: string) {
 
 const symlinks = [
   ...[".bash_profile", ".bashrc", ".gitconfig", ".gittemplate.txt"].map(
-    (f) => [commonDir.join(f), homeDir.join(f)],
+    (f) => [root.join("common", f), home.join(f)],
   ),
   ...["fish", "mise", "starship.toml", "zellij"].map(
-    (f) => [commonDir.join(f), configDir.join(f)],
+    (f) => [root.join("common", f), home.join(".config", f)],
   ),
 ];
 switch (Deno.build.os) {
   case "linux": {
-    symlinks.push([commonDir.join("helix"), configDir.join("helix")]);
+    symlinks.push([
+      root.join("common", "helix"),
+      home.join(".config", "helix"),
+    ]);
 
     for (const [source, target] of symlinks) {
       await createSymlink(source, target);
@@ -96,7 +96,7 @@ switch (Deno.build.os) {
     const isWSL2 = Deno.env.get("WSL_DISTRO_NAME") !== undefined;
     isWSL2 &&
       await createSymlink(
-        winDir.join("wsl.conf"),
+        root.join("win", "wsl.conf"),
         $.path("/etc").join("wsl.conf"),
         true,
       );
@@ -110,14 +110,14 @@ switch (Deno.build.os) {
 
   case "darwin": {
     symlinks.push(
-      [commonDir.join("helix"), configDir.join("helix")],
+      [root.join("common", "helix"), home.join(".config", "helix")],
       ...[".Brewfile", ".Brewfile.lock.json", ".gitconfig.mac"].map(
-        (f) => [macDir.join(f), homeDir.join(f)],
+        (f) => [root.join("mac", f), home.join(f)],
       ),
       ...["skhd", "yabai"].map(
-        (f) => [macDir.join(f), configDir.join(f)],
+        (f) => [root.join("mac", f), home.join(".config", f)],
       ),
-      [macDir.join("warp"), homeDir.join(".warp")],
+      [root.join("mac", "warp"), home.join(".warp")],
     );
 
     for (const [source, target] of symlinks) {
@@ -133,10 +133,10 @@ switch (Deno.build.os) {
 
   case "windows": {
     symlinks.push(
-      [winDir.join(".wslconfig"), homeDir.join(".wslconfig")],
+      [root.join("win", ".wslconfig"), home.join(".wslconfig")],
       [
-        winDir.join("terminal/settings.json"),
-        homeDir.join(
+        root.join("win", "terminal/settings.json"),
+        home.join(
           "AppData",
           "Local",
           "Packages",
@@ -145,18 +145,18 @@ switch (Deno.build.os) {
           "settings.json",
         ),
       ],
-      [commonDir.join("helix"), homeDir.join("AppData", "Roaming", "helix")],
+      [root.join("common", "helix"), home.join("AppData", "Roaming", "helix")],
       [
-        winDir.join("Microsoft.PowerShell_profile.ps1"),
-        homeDir.join(
+        root.join("win", "Microsoft.PowerShell_profile.ps1"),
+        home.join(
           "Documents",
           "PowerShell",
           "Microsoft.PowerShell_profile.ps1",
         ),
       ],
       [
-        winDir.join("Microsoft.PowerShell_profile.ps1"),
-        homeDir.join(
+        root.join("win", "Microsoft.PowerShell_profile.ps1"),
+        home.join(
           "Documents",
           "PowerShell",
           "Microsoft.VSCode_profile.ps1",
