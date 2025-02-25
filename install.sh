@@ -16,7 +16,16 @@ sudoer_mode=false
 read -n1 -p "Sudoer mode? (y/N)" yn; echo
 [[ $yn = [yY] ]] && sudo -v >/dev/null 2>&1 && sudoer_mode=true
 
-read -p "Press enter to continue (OS: $os, Sudoer mode: $sudoer_mode)"
+needs_font_install=false
+read -n1 -p "Install fonts? (y/N)" yn; echo
+[[ $yn = [yY] ]] && needs_font_install=true
+
+echo "${GREEN}Configuration:
+    OS: $os
+    Sudoer mode: $sudoer_mode
+    Install fonts: $needs_font_install
+${RESET}"
+read -p "Press enter to continue... "
 
 root=$(git rev-parse --show-toplevel)
 cd $root
@@ -54,7 +63,7 @@ $__STEP__ "Setup for $os"
 
 case "$os" in
     Linux)
-        symlink $root/common/helix            ~/.config/helix
+        symlink $root/common/helix ~/.config/helix
 
         if [[ "$(uname -r)" == *-microsoft-standard-WSL2 ]]; then
             $sudoer_mode && symlink $root/win/wsl.conf /etc/wsl.conf --sudo
@@ -63,8 +72,7 @@ case "$os" in
         if command -v apt >/dev/null 2>&1; then
             $sudoer_mode && ./_setup/apt.sh
             ./_setup/mise.sh
-            ./_setup/rustup.sh
-            ./_setup/font.sh
+            $needs_font_install && ./_setup/font.sh
         else
             echo "Unsupported Linux distribution"
             exit 1
@@ -82,8 +90,7 @@ case "$os" in
 
         $sudoer_mode && ./_setup/brew.sh
         ./_setup/mise.sh
-        ./_setup/rustup.sh
-        ./_setup/font.sh
+        $needs_font_install && ./_setup/font.sh
         ;;
 
     MINGW*)
@@ -94,8 +101,7 @@ case "$os" in
         symlink $root/win/Microsoft.PowerShell_profile.ps1 ~/Documents/PowerShell/Microsoft.VSCode_profile.ps1
 
         ./_setup/winget.sh
-        ./_setup/rustup.sh
-        ./_setup/font.sh
+        $needs_font_install && ./_setup/font.sh
         ;;
 
     MSYS*)
@@ -109,8 +115,7 @@ case "$os" in
 
         ./_setup/pacman.sh
         ./_setup/winget.sh
-        ./_setup/rustup.sh
-        ./_setup/font.sh
+        $needs_font_install && ./_setup/font.sh
 	;;
 
 
@@ -119,3 +124,5 @@ case "$os" in
         exit 1
         ;;
 esac
+
+exit 0
