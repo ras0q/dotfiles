@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-$__STEP__ "Install pacman packages"
+$__STEP__ "Install mise"
 
 curl https://mise.run | sh
 mise install
