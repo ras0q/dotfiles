@@ -1,10 +1,4 @@
-# mise
-mise activate fish --shims | source
-
 if status is-interactive
-    # Zellij
-    eval (zellij setup --generate-auto-start fish | string collect)
-
     # mise
     mise activate fish | source
     mise completion fish | source
@@ -17,4 +11,7 @@ if status is-interactive
 
     # zoxide
     zoxide init --cmd cd --hook pwd fish | source
+
+    # Zellij
+    eval (zellij setup --generate-auto-start fish | string collect)
 end
