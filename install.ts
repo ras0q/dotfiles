@@ -12,12 +12,12 @@ const args = parseArgs(Deno.args, {
 // TODO: remove this
 Deno.env.set("__STEP__", "echo");
 
-const home = $.path(Deno.env.get("HOME")!);
+const home = $.path(Deno.env.get("HOME") || Deno.env.get("USERPROFILE")!);
 home.join(".config").mkdirSync();
 
 // const root = $.path(await $`git rev-parse --show-toplevel`.text());
 const root = $.path(Deno.cwd());
-const backupDir = root.join(".backup", new Date().toISOString());
+const backupDir = root.join(".backup", `${Date.now()}`);
 const logsDir = backupDir.join("logs");
 logsDir.mkdirSync({ recursive: true });
 backupDir.join(".gitignore").writeTextSync("*");
