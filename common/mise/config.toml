@@ -29,7 +29,6 @@ node = "lts"
 "pipx:nvitop" = "latest"
 python = "latest"
 rust = "latest"
-"ubi:wilfred/difftastic" = { version = "latest", exe = "difft" }
 usage = "latest"
 
 [settings]
