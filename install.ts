@@ -5,55 +5,123 @@ import { $, Path } from "jsr:@david/dax@0.42.0";
 
 $.setPrintCommand(true);
 
-const args = parseArgs(Deno.args, {
-  boolean: ["sudo", "install-fonts"],
-});
-
-// TODO: remove this
-Deno.env.set("__STEP__", "echo");
-
 const home = $.path(Deno.env.get("HOME") || Deno.env.get("USERPROFILE")!);
-home.join(".config").mkdirSync();
+home.join(".config").mkdirSync({ recursive: true });
 
-// const root = $.path(await $`git rev-parse --show-toplevel`.text());
 const root = $.path(Deno.cwd());
 const backupDir = root.join(".backup", `${Date.now()}`);
-const logsDir = backupDir.join("logs");
-logsDir.mkdirSync({ recursive: true });
 backupDir.join(".gitignore").writeTextSync("*");
+
+if (import.meta.main) {
+  // TODO: remove this
+  Deno.env.set("__STEP__", "echo");
+
+  const args = parseArgs(Deno.args, {
+    boolean: ["sudo", "install-fonts"],
+  });
+  const canUseSudo = args["sudo"];
+  const canInstallFonts = args["install-fonts"];
+
+  const { os } = Deno.build;
+  const isLinux = os === "linux";
+  const isMac = os === "darwin";
+  const isWindows = os === "windows";
+  const isWSL2 = isLinux && Deno.env.get("WSL_DISTRO_NAME") !== undefined;
+
+  const symlinks = [
+    ["./common/.bash_profile", "~/.bash_profile"],
+    ["./common/.bashrc", "~/.bashrc"],
+    ["./common/.gitconfig", "~/.gitconfig"],
+    ["./common/.gittemplate.txt", "~/.gittemplate.txt"],
+    ["./common/fish", "~/.config/fish"],
+    ["./common/mise", "~/.config/mise"],
+    ["./common/starship.toml", "~/.config/starship.toml"],
+    ["./common/zellij", "~/.config/zellij"],
+    ...(isLinux ? [["./common/helix", "~/.config/helix"]] : []),
+    ...(isWSL2 ? [["./win/wsl.conf", "/etc/wsl.conf"]] : []),
+    ...(isMac
+      ? [
+        ["./common/helix", "~/.config/helix"],
+        ["./mac/.Brewfile", "~/.Brewfile"],
+        ["./mac/.Brewfile.lock.json", "~/.Brewfile.lock.json"],
+        ["./mac/.gitconfig.mac", "~/.gitconfig.mac"],
+        ["./mac/skhd", "~/.config/skhd"],
+        ["./mac/yabai", "~/.config/yabai"],
+        ["./mac/warp", "~/.warp"],
+      ]
+      : []),
+    ...(isWindows
+      ? [
+        ["./win/.wslconfig", "~/.wslconfig"],
+        [
+          "./win/terminal/settings.json",
+          "~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json",
+        ],
+        ["./common/helix", "~/AppData/Roaming/helix"],
+        [
+          "./win/Microsoft.PowerShell_profile.ps1",
+          "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1",
+        ],
+        [
+          "./win/Microsoft.PowerShell_profile.ps1",
+          "~/Documents/PowerShell/Microsoft.VSCode_profile.ps1",
+        ],
+      ]
+      : []),
+  ];
+
+  await Promise.all(
+    symlinks.map(([source, target]) => {
+      const sourcePath = root.join(source);
+      const targetPath = $.path(target.replace(/^~\//, `${home}/`));
+      return createSymlink(sourcePath, targetPath, backupDir, canUseSudo);
+    }),
+  );
+
+  const tasks = [
+    ...(isLinux && canUseSudo ? ["apt"] : []),
+    ...(isLinux && canUseSudo ? ["brew"] : []),
+    ...(isWindows ? ["winget"] : []),
+    "mise",
+    ...(canInstallFonts ? ["font"] : []),
+  ].map((task) => root.join(`_setup/${task}.sh`));
+
+  for (const task of tasks) {
+    await runShellScript(task);
+  }
+}
 
 async function createSymlink(
   source: Path,
   target: Path,
-  useSudo: boolean = false,
+  backupDir: Path,
+  canUseSudo: boolean,
 ) {
   if (!source.existsSync()) throw `${source} not exist`;
 
-  if (!args["sudo"] && useSudo) {
+  const needsSudo = !target.startsWith(home);
+  if (!canUseSudo && needsSudo) {
     $.log(`Symlink skipped (${source} -> ${target})`);
     return;
   }
 
   if (target.existsSync()) {
-    // useSudo
-    //  ? await $`sudo mv ${target} ${backupDir}`
-    //  : await $`mv ${target} ${backupDir}`;
+    needsSudo
+      ? await $`sudo mv ${target} ${backupDir}`
+      : await $`mv ${target} ${backupDir}`;
   }
 
-  useSudo
+  needsSudo
     ? await $`sudo ln -sfn ${source} ${target}`
     : await $`ln -sfn ${source} ${target}`;
 }
 
-const encoder = new TextEncoder();
-const gray = encoder.encode("\x1b[90m");
-const red = encoder.encode("\x1b[31m");
-const reset = encoder.encode("\x1b[0m");
-async function runSetup(name: string) {
-  const setupPath = root.join("_setup", `${name}.sh`);
-  if (!setupPath.existsSync()) throw `${setupPath} not exist`;
-
-  await $`bash ${setupPath}`
+async function runShellScript(path: Path) {
+  const encoder = new TextEncoder();
+  const gray = encoder.encode("\x1b[90m");
+  const red = encoder.encode("\x1b[31m");
+  const reset = encoder.encode("\x1b[0m");
+  await $`bash ${path}`
     .stdout(
       new WritableStream({
         write(chunk) {
@@ -72,109 +140,4 @@ async function runSetup(name: string) {
         },
       }),
     );
-}
-
-const symlinks = [
-  ...[".bash_profile", ".bashrc", ".gitconfig", ".gittemplate.txt"].map(
-    (f) => [root.join("common", f), home.join(f)],
-  ),
-  ...["fish", "mise", "starship.toml", "zellij"].map(
-    (f) => [root.join("common", f), home.join(".config", f)],
-  ),
-];
-switch (Deno.build.os) {
-  case "linux": {
-    symlinks.push([
-      root.join("common", "helix"),
-      home.join(".config", "helix"),
-    ]);
-
-    for (const [source, target] of symlinks) {
-      await createSymlink(source, target);
-    }
-
-    const isWSL2 = Deno.env.get("WSL_DISTRO_NAME") !== undefined;
-    isWSL2 &&
-      await createSymlink(
-        root.join("win", "wsl.conf"),
-        $.path("/etc").join("wsl.conf"),
-        true,
-      );
-
-    args["sudo"] && await runSetup("apt");
-    await runSetup("mise");
-    args["install-fonts"] && await runSetup("font");
-
-    break;
-  }
-
-  case "darwin": {
-    symlinks.push(
-      [root.join("common", "helix"), home.join(".config", "helix")],
-      ...[".Brewfile", ".Brewfile.lock.json", ".gitconfig.mac"].map(
-        (f) => [root.join("mac", f), home.join(f)],
-      ),
-      ...["skhd", "yabai"].map(
-        (f) => [root.join("mac", f), home.join(".config", f)],
-      ),
-      [root.join("mac", "warp"), home.join(".warp")],
-    );
-
-    for (const [source, target] of symlinks) {
-      await createSymlink(source, target);
-    }
-
-    args["sudo"] && await runSetup("brew");
-    await runSetup("mise");
-    args["install-fonts"] && await runSetup("font");
-
-    break;
-  }
-
-  case "windows": {
-    symlinks.push(
-      [root.join("win", ".wslconfig"), home.join(".wslconfig")],
-      [
-        root.join("win", "terminal/settings.json"),
-        home.join(
-          "AppData",
-          "Local",
-          "Packages",
-          "Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe",
-          "LocalState",
-          "settings.json",
-        ),
-      ],
-      [root.join("common", "helix"), home.join("AppData", "Roaming", "helix")],
-      [
-        root.join("win", "Microsoft.PowerShell_profile.ps1"),
-        home.join(
-          "Documents",
-          "PowerShell",
-          "Microsoft.PowerShell_profile.ps1",
-        ),
-      ],
-      [
-        root.join("win", "Microsoft.PowerShell_profile.ps1"),
-        home.join(
-          "Documents",
-          "PowerShell",
-          "Microsoft.VSCode_profile.ps1",
-        ),
-      ],
-    );
-
-    for (const [source, target] of symlinks) {
-      createSymlink(source, target);
-    }
-
-    await runSetup("winget");
-    args["install-fonts"] && await runSetup("font");
-
-    break;
-  }
-
-  default: {
-    throw `Unsupported OS: ${Deno.build.os}`;
-  }
 }
