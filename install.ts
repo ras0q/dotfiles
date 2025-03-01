@@ -2,6 +2,7 @@
 
 import { parseArgs } from "jsr:@std/cli@1.0.13/parse-args";
 import { $, Path } from "jsr:@david/dax@0.42.0";
+import symlinksJSON from "./symlinks.json" with { "type": "json" };
 
 $.setPrintCommand(true);
 
@@ -24,54 +25,19 @@ if (import.meta.main) {
 
   const { os } = Deno.build;
   const isLinux = os === "linux";
+  const isWSL2 = isLinux && Deno.env.get("WSL_DISTRO_NAME") !== undefined;
   const isMac = os === "darwin";
   const isWindows = os === "windows";
-  const isWSL2 = isLinux && Deno.env.get("WSL_DISTRO_NAME") !== undefined;
 
-  const symlinks = [
-    ["./common/.bash_profile", "~/.bash_profile"],
-    ["./common/.bashrc", "~/.bashrc"],
-    ["./common/.gitconfig", "~/.gitconfig"],
-    ["./common/.gittemplate.txt", "~/.gittemplate.txt"],
-    ["./common/fish", "~/.config/fish"],
-    ["./common/mise", "~/.config/mise"],
-    ["./common/starship.toml", "~/.config/starship.toml"],
-    ["./common/zellij", "~/.config/zellij"],
-    ...(isLinux ? [["./common/helix", "~/.config/helix"]] : []),
-    ...(isWSL2 ? [["./win/wsl.conf", "/etc/wsl.conf"]] : []),
-    ...(isMac
-      ? [
-        ["./common/helix", "~/.config/helix"],
-        ["./mac/.Brewfile", "~/.Brewfile"],
-        ["./mac/.Brewfile.lock.json", "~/.Brewfile.lock.json"],
-        ["./mac/.gitconfig.mac", "~/.gitconfig.mac"],
-        ["./mac/skhd", "~/.config/skhd"],
-        ["./mac/yabai", "~/.config/yabai"],
-        ["./mac/warp", "~/.warp"],
-      ]
-      : []),
-    ...(isWindows
-      ? [
-        ["./win/.wslconfig", "~/.wslconfig"],
-        [
-          "./win/terminal/settings.json",
-          "~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json",
-        ],
-        ["./common/helix", "~/AppData/Roaming/helix"],
-        [
-          "./win/Microsoft.PowerShell_profile.ps1",
-          "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1",
-        ],
-        [
-          "./win/Microsoft.PowerShell_profile.ps1",
-          "~/Documents/PowerShell/Microsoft.VSCode_profile.ps1",
-        ],
-      ]
-      : []),
-  ];
+  const symlinks = {
+    ...symlinksJSON._common,
+    ...isWSL2 ? symlinksJSON.wsl2 : {},
+    ...isMac ? symlinksJSON.darwin : {},
+    ...isWindows ? symlinksJSON.windows : {},
+  };
 
   await Promise.all(
-    symlinks.map(([source, target]) => {
+    Object.entries(symlinks).map(([target, source]) => {
       const sourcePath = root.join(source);
       const targetPath = $.path(target.replace(/^~\//, `${home}/`));
       return createSymlink(sourcePath, targetPath, backupDir, canUseSudo);
@@ -79,11 +45,15 @@ if (import.meta.main) {
   );
 
   const tasks = [
-    ...(isLinux && canUseSudo ? ["apt"] : []),
-    ...(isLinux && canUseSudo ? ["brew"] : []),
-    ...(isWindows ? ["winget"] : []),
+    ...canUseSudo
+      ? [
+        ...isLinux ? ["apt"] : [],
+        ...isMac ? ["brew"] : [],
+        ...isWindows ? ["winget"] : [],
+      ]
+      : [],
     "mise",
-    ...(canInstallFonts ? ["font"] : []),
+    ...canInstallFonts ? ["font"] : [],
   ].map((task) => root.join(`_setup/${task}.sh`));
 
   for (const task of tasks) {

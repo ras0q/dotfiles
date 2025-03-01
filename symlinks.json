@@ -1,0 +1,31 @@
+{
+  "_common": {
+    "~/.bash_profile": "./common/.bash_profile",
+    "~/.bashrc": "./common/.bashrc",
+    "~/.gitconfig": "./common/.gitconfig",
+    "~/.gittemplate.txt": "./common/.gittemplate.txt",
+    "~/.config/fish": "./common/fish",
+    "~/.config/helix": "./common/helix",
+    "~/.config/mise": "./common/mise",
+    "~/.config/starship.toml": "./common/starship.toml",
+    "~/.config/zellij": "./common/zellij"
+  },
+  "wsl2": {
+    "/etc/wsl.conf": "./win/wsl.conf"
+  },
+  "darwin": {
+    "~/.Brewfile": "./mac/.Brewfile",
+    "~/.Brewfile.lock.json": "./mac/.Brewfile.lock.json",
+    "~/.gitconfig.mac": "./mac/.gitconfig.mac",
+    "~/.config/skhd": "./mac/skhd",
+    "~/.config/yabai": "./mac/yabai",
+    "~/.warp": "./mac/warp"
+  },
+  "windows": {
+    "~/.wslconfig": "./win/.wslconfig",
+    "~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json": "./win/terminal/settings.json",
+    "~/AppData/Roaming/helix": "./common/helix",
+    "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1": "./win/Microsoft.PowerShell_profile.ps1",
+    "~/Documents/PowerShell/Microsoft.VSCode_profile.ps1": "./win/Microsoft.PowerShell_profile.ps1"
+  }
+}
