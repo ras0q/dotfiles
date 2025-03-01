@@ -65,23 +65,26 @@ if (import.meta.main) {
       : await $`ln -sfn ${source} ${target}`;
   }
 
+  const packageManagerTask = ({
+    "linux": "apt",
+    "darwin": "brew",
+    "windows": "winget",
+  } as Record<string, string>)[Deno.build.os];
   const tasks = [
-    ...canUseSudo
-      ? [
-        ...isLinux ? ["apt"] : [],
-        ...isMac ? ["brew"] : [],
-        ...isWindows ? ["winget"] : [],
-      ]
-      : [],
+    ...canUseSudo && packageManagerTask ? [packageManagerTask] : [],
     "mise",
     ...canInstallFonts ? ["font"] : [],
-  ].map((task) => root.join(`_setup/${task}.sh`));
+  ];
+
+  $.log(`Tasks ${tasks} will be executed`);
 
   // TODO: remove this
   Deno.env.set("__STEP__", "echo");
 
   for (const task of tasks) {
-    await $`bash ${task}`
+    $.log(`Task: ${task}`);
+    const script = root.join(`_setup/${task}.sh`);
+    await $`bash ${script}`
       .stdout(coloredWriter(gray))
       .stderr(coloredWriter(red));
   }
