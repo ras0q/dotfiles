@@ -13,10 +13,9 @@ sudo apt-get install -y \
     socat \
     wget
 
-$__STEP__ "Add apt PPAs (Git, Fish)"
+$__STEP__ "Add apt PPAs (Git)"
 
 sudo apt-add-repository -y ppa:git-core/ppa
-sudo apt-add-repository -y ppa:fish-shell/release-3
 
 # REF: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 $__STEP__ "Add an apt repository for Docker and Compose"
@@ -34,5 +33,4 @@ $__STEP__ "Install additional packages"
 sudo apt-get update
 sudo apt-get install -y \
   git \
-  fish \
   docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin

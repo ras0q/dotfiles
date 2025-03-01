@@ -10,6 +10,7 @@
 "aqua:astral-sh/uv" = "latest"
 "aqua:cli/cli" = "latest"
 "aqua:dylanaraps/neofetch" = "latest"
+"aqua:fish-shell/fish-shell" = "latest"
 "aqua:helix-editor/helix" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:junegunn/fzf" = "latest"
