@@ -2,7 +2,7 @@
 
 import { concat } from "jsr:@std/bytes@1.0.5/concat";
 import { parseArgs } from "jsr:@std/cli@1.0.13/parse-args";
-import { build$, CommandBuilder } from "jsr:@david/dax@0.42.0";
+import { $ } from "jsr:@david/dax@0.42.0";
 import symlinksJSON from "./symlinks.json" with { "type": "json" };
 
 const encoder = new TextEncoder();
@@ -15,12 +15,6 @@ const coloredWriter = (color: Uint8Array) =>
       Deno.stdout.writeSync(concat([color, chunk, reset]));
     },
   });
-
-const $ = build$({
-  commandBuilder: new CommandBuilder()
-    .stdout(coloredWriter(gray))
-    .stderr(coloredWriter(red)),
-});
 
 if (import.meta.main) {
   const args = parseArgs(Deno.args, {
@@ -60,12 +54,15 @@ if (import.meta.main) {
       continue;
     }
 
-    const sudo = needsSudo ? "sudo " : "";
     if (target.existsSync()) {
-      await $`${sudo + "mv"} ${target} ${backupDir}`;
+      needsSudo
+        ? await $`sudo mv ${target} ${backupDir}`
+        : await $`mv ${target} ${backupDir}`;
     }
 
-    await $`${sudo + "ln"} -sfn ${source} ${target}`;
+    needsSudo
+      ? await $`sudo ln -sfn ${source} ${target}`
+      : await $`ln -sfn ${source} ${target}`;
   }
 
   const tasks = [
@@ -84,6 +81,8 @@ if (import.meta.main) {
   Deno.env.set("__STEP__", "echo");
 
   for (const task of tasks) {
-    await $`bash ${task}`;
+    await $`bash ${task}`
+      .stdout(coloredWriter(gray))
+      .stderr(coloredWriter(red));
   }
 }
