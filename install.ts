@@ -1,27 +1,42 @@
 #!/usr/bin/env -S deno run -A
 
+import { concat } from "jsr:@std/bytes@1.0.5/concat";
 import { parseArgs } from "jsr:@std/cli@1.0.13/parse-args";
-import { $, Path } from "jsr:@david/dax@0.42.0";
+import { build$, CommandBuilder } from "jsr:@david/dax@0.42.0";
 import symlinksJSON from "./symlinks.json" with { "type": "json" };
 
-$.setPrintCommand(true);
+const encoder = new TextEncoder();
+const gray = encoder.encode("\x1b[90m");
+const red = encoder.encode("\x1b[31m");
+const reset = encoder.encode("\x1b[0m");
+const coloredWriter = (color: Uint8Array) =>
+  new WritableStream({
+    write(chunk) {
+      Deno.stdout.writeSync(concat([color, chunk, reset]));
+    },
+  });
 
-const home = $.path(Deno.env.get("HOME") || Deno.env.get("USERPROFILE")!);
-home.join(".config").mkdirSync({ recursive: true });
-
-const root = $.path(Deno.cwd());
-const backupDir = root.join(".backup", `${Date.now()}`);
-backupDir.join(".gitignore").writeTextSync("*");
+const $ = build$({
+  commandBuilder: new CommandBuilder()
+    .stdout(coloredWriter(gray))
+    .stderr(coloredWriter(red)),
+});
 
 if (import.meta.main) {
-  // TODO: remove this
-  Deno.env.set("__STEP__", "echo");
-
   const args = parseArgs(Deno.args, {
     boolean: ["sudo", "install-fonts"],
   });
   const canUseSudo = args["sudo"];
   const canInstallFonts = args["install-fonts"];
+
+  $.setPrintCommand(true);
+
+  const home = $.path(Deno.env.get("HOME") || Deno.env.get("USERPROFILE")!);
+  home.join(".config").mkdirSync({ recursive: true });
+
+  const root = $.path(Deno.cwd());
+  const backupDir = root.join(".backup", `${Date.now()}`);
+  backupDir.join(".gitignore").writeTextSync("*");
 
   const { os } = Deno.build;
   const isLinux = os === "linux";
@@ -36,13 +51,22 @@ if (import.meta.main) {
     ...isWindows ? symlinksJSON.windows : {},
   };
 
-  await Promise.all(
-    Object.entries(symlinks).map(([target, source]) => {
-      const sourcePath = root.join(source);
-      const targetPath = $.path(target.replace(/^~\//, `${home}/`));
-      return createSymlink(sourcePath, targetPath, backupDir, canUseSudo);
-    }),
-  );
+  for (const [_target, _source] of Object.entries(symlinks)) {
+    const source = root.join(_source);
+    const target = $.path(_target.replace(/^~\//, `${home}/`));
+    const needsSudo = !target.startsWith(home);
+    if (!canUseSudo && needsSudo) {
+      $.log(`Symlink skipped (${_source} -> ${_target})`);
+      continue;
+    }
+
+    const sudo = needsSudo ? "sudo " : "";
+    if (target.existsSync()) {
+      await $`${sudo + "mv"} ${target} ${backupDir}`;
+    }
+
+    await $`${sudo + "ln"} -sfn ${source} ${target}`;
+  }
 
   const tasks = [
     ...canUseSudo
@@ -56,58 +80,10 @@ if (import.meta.main) {
     ...canInstallFonts ? ["font"] : [],
   ].map((task) => root.join(`_setup/${task}.sh`));
 
+  // TODO: remove this
+  Deno.env.set("__STEP__", "echo");
+
   for (const task of tasks) {
-    await runShellScript(task);
+    await $`bash ${task}`;
   }
-}
-
-async function createSymlink(
-  source: Path,
-  target: Path,
-  backupDir: Path,
-  canUseSudo: boolean,
-) {
-  if (!source.existsSync()) throw `${source} not exist`;
-
-  const needsSudo = !target.startsWith(home);
-  if (!canUseSudo && needsSudo) {
-    $.log(`Symlink skipped (${source} -> ${target})`);
-    return;
-  }
-
-  if (target.existsSync()) {
-    needsSudo
-      ? await $`sudo mv ${target} ${backupDir}`
-      : await $`mv ${target} ${backupDir}`;
-  }
-
-  needsSudo
-    ? await $`sudo ln -sfn ${source} ${target}`
-    : await $`ln -sfn ${source} ${target}`;
-}
-
-async function runShellScript(path: Path) {
-  const encoder = new TextEncoder();
-  const gray = encoder.encode("\x1b[90m");
-  const red = encoder.encode("\x1b[31m");
-  const reset = encoder.encode("\x1b[0m");
-  await $`bash ${path}`
-    .stdout(
-      new WritableStream({
-        write(chunk) {
-          Deno.stdout.writeSync(gray);
-          Deno.stdout.writeSync(chunk);
-          Deno.stdout.writeSync(reset);
-        },
-      }),
-    )
-    .stderr(
-      new WritableStream({
-        write(chunk) {
-          Deno.stdout.writeSync(red);
-          Deno.stdout.writeSync(chunk);
-          Deno.stdout.writeSync(reset);
-        },
-      }),
-    );
 }
