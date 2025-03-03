@@ -1,40 +1,43 @@
 # Path: $HOME/.gitconfig
 
-[user]
-	name = ras0q
-	email = ras0q@users.noreply.github.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwlDquvYaQtT4cq1KWEC/S+W7et8oSyQjdib2VDObz8
+[alias]
+	bprune = !git branch --merged | egrep -v "\\*|develop|main|master" | xargs -r git branch -d
+	fixup = commit --fixup HEAD
+	inico = commit --allow-empty -m ":seedling: initial commit"
+	lo = log --oneline
+	pushf = push --force-with-lease --force-if-includes
+
+[branch]
+	sort = -committerdate
+
+[commit]
+	gpgsign = true
+	verbose = true
+
+[column]
+	ui = auto
 
 [core]
-	editor = hx
 	autoCRLF = false
+	editor = hx
+	fsmonitor = true
 	quotepath = false
+	untrackedCache = true
 
-[init]
-	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 
 [fetch]
 	prune = true
 
-[pull]
-	ff = only
-
-[commit]
-	gpgsign = true
-
-[push]
-	default = current
-	autoSetupRemote = true
-
-[alias]
-	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs -r git branch -d
-	lo = log --oneline
-	inico = commit --allow-empty -m \":seedling: initial commit\"
-	fixup = commit --fixup HEAD
-	pushf = push --force-with-lease --force-if-includes
-
 [gpg]
 	format = ssh
+
+[help]
+	autocorrect = prompt
 
 # Include system-wide .gitconfig
 # XXX:
@@ -44,3 +47,35 @@
 [include]
 	path = ~/.gitconfig.mac
 	path = ~/.gitconfig.win
+
+[init]
+	defaultBranch = main
+
+[merge]
+	conflictStyle = zdiff3
+
+[pull]
+	ff = only
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = current
+	followTags = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[rerere]
+	autoupdate = true
+	enabled = true
+
+[tag]
+	sort = version:refname
+
+[user]
+	email = ras0q@users.noreply.github.com
+	name = ras0q
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwlDquvYaQtT4cq1KWEC/S+W7et8oSyQjdib2VDObz8
