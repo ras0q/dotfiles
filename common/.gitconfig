@@ -1,9 +1,9 @@
 # Path: $HOME/.gitconfig
 
 [alias]
-	bprune = !git branch --merged | egrep -v "\\*|develop|main|master" | xargs -r git branch -d
+	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs -r git branch -d
 	fixup = commit --fixup HEAD
-	inico = commit --allow-empty -m ":seedling: initial commit"
+	inico = commit --allow-empty -m ':seedling: initial commit'
 	lo = log --oneline
 	pushf = push --force-with-lease --force-if-includes
 
