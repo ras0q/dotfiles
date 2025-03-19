@@ -1,10 +1,11 @@
 # git
+abbr -a g git
 abbr -a ga 'git add -A && git commit'
 abbr -a gc 'git commit'
 abbr -a gs 'git switch'
-abbr -a gst 'git status'
+abbr -a gt 'git stash -u'
 abbr -a gp 'git push'
-abbr -a gpp 'git pull && git bprune'
+abbr -a gl 'git pull'
 
 # docker
 abbr -a d docker
@@ -19,7 +20,7 @@ abbr -a ls eza
 abbr -a bd 'brew bundle dump --global --tap --formula -f'
 abbr -a c 'code .'
 abbr -a cdf 'cd (fd -td | fzf || echo $PWD)'
-abbr -a e '/mnt/c/Windows/explorer.exe'
+abbr -a e '/mnt/c/Windows/explorer.exe .'
 abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'
 abbr -a gg 'ghq get'
 abbr -a h 'hx .'
