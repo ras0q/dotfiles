@@ -5,6 +5,7 @@
     "~/.gitconfig": "./common/.gitconfig",
     "~/.gittemplate.txt": "./common/.gittemplate.txt",
     "~/.config/fish": "./common/fish",
+    "~/.config/git": "./common/git",
     "~/.config/helix": "./common/helix",
     "~/.config/mise": "./common/mise",
     "~/.config/starship.toml": "./common/starship.toml",

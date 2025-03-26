@@ -3,6 +3,7 @@ abbr -a g git
 abbr -a ga 'git add -A && git commit'
 abbr -a gc 'git commit'
 abbr -a gs 'git switch'
+abbr -a gss 'git status'
 abbr -a gt 'git stash -u'
 abbr -a gp 'git push'
 abbr -a gl 'git pull'
