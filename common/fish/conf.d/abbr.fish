@@ -2,11 +2,13 @@
 abbr -a g git
 abbr -a ga 'git add -A && git commit'
 abbr -a gc 'git commit'
+abbr -a gd 'git diff'
+abbr -a gl 'git log --oneline'
+abbr -a gp 'git push'
 abbr -a gs 'git switch'
 abbr -a gss 'git status'
 abbr -a gt 'git stash -u'
-abbr -a gp 'git push'
-abbr -a gl 'git pull'
+abbr -a gu 'git pull'
 
 # docker
 abbr -a d docker
