@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    - resource: Microsoft.Windows.Developer/DeveloperMode
+      directives:
+          description: Enable Developer Mode
+          allowPrerelease: true
+      settings:
+        Ensure: Present
+    - resource: Microsoft.WinGet.DSC/WinGetPackageManager
+      settings:
+        UseLatest: true
+    # - resource: Microsoft.WinGet.DSC/WinGetPackage
+    #   settings:
+    #     id: Git.Git
+    #     useLatest: true
+    - resource: Microsoft.Windows.Developer/WindowsExplorer
+      settings:
+        FileExtensions: Show
+        HiddenFiles: Show
+        ItemCheckBoxes: Hide
+        RestartExplorer: true

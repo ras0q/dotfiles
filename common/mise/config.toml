@@ -30,6 +30,7 @@ go = "latest"
 node = "lts"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
+"npm:yaml-language-server" = "latest"
 rust = "latest"
 usage = "latest"
 
