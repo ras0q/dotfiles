@@ -1,8 +1,8 @@
-# If fish is installed, use it
-# NOTE: This command should be at the end of this file
-if [[ $- == *i* ]] && \
-  [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]] && \
-  command -v fish >/dev/null 2>&1; then
-  exec fish
-  exit 0
-fi
+# Interactive mode
+[[ $- == *i* && $- != *c* && $- != *s* ]] || exit 0
+
+# Execute fish if installed
+FISH=$(which fish || exit 0)
+[[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]] || exit 0
+
+exec $FISH -l
