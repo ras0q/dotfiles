@@ -6,6 +6,7 @@
 	inico = commit --allow-empty -m ':seedling: initial commit'
 	lo = log --oneline
 	pushf = push --force-with-lease --force-if-includes
+	cp = cherry-pick
 
 [branch]
 	sort = -committerdate
@@ -78,7 +79,7 @@
 
 [rerere]
 	autoupdate = true
-	enabled = true
+	enabled = false
 
 [tag]
 	sort = version:refname
