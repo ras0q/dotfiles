@@ -27,6 +27,7 @@ abbr -a e '/mnt/c/Windows/explorer.exe .'
 abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'
 abbr -a gg 'ghq get'
 abbr -a h 'hx .'
+abbr -a n 'nvim .'
 abbr -a pp pnpm
 abbr -a sc systemctl
 abbr -a zj zellij
