@@ -19,7 +19,17 @@ return {
   build = "make",
   -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
   dependencies = {
-    "nvim-treesitter/nvim-treesitter",
+    {
+      "nvim-treesitter/nvim-treesitter",
+      opts = {
+        ensure_installed = { "bash", "json", "jsonc", "markdown", "yaml" },
+        sync_install = true,
+        auto_install = true,
+        highlight = {
+          enable = true,
+        },
+      },
+    },
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",

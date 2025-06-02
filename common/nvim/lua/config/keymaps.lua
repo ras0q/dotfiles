@@ -8,6 +8,7 @@ keymap("n", "<Down>", "gj", opts)
 keymap("n", "<Up>", "gk", opts)
 keymap("n", "gh", "^", opts)
 keymap("n", "gl", "$", opts)
+keymap("n", "ge", "G", opts)
 keymap("n", "<Space><Space>", "ZZ", opts)
 
 -- insert mode
