@@ -43,15 +43,16 @@ return {
     --- The below dependencies are optional,
     {
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-      config = function()
-        require ("telescope").setup({
-          defaults = {
-            sorting_strategy = "ascending",
-            layout_config = {
-              prompt_position = "top",
-            },
+      cmd = "Telescope",
+      opts = {
+        defaults = {
+          sorting_strategy = "ascending",
+          layout_config = {
+            prompt_position = "top",
           },
-        })
+        },
+      },
+      keys = function()
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Telescope find files' })
         vim.keymap.set('n', '<leader>g', builtin.live_grep, { desc = 'Telescope live grep' })
