@@ -5,7 +5,7 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "openai",
+    provider = "gemini",
     openai = {
       endpoint = "https://api.openai.com/v1",
       model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
@@ -13,6 +13,13 @@ return {
       temperature = 0,
       max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
       --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+    },
+    gemini = {
+      endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+      model = "gemini-2.5-flash-preview-05-20",
+      timeout = 30000, -- Timeout in milliseconds
+      temperature = 0.75,
+      max_tokens = 8192,
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
@@ -34,10 +41,17 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
     {
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       config = function()
+        require ("telescope").setup({
+          defaults = {
+            sorting_strategy = "ascending",
+            layout_config = {
+              prompt_position = "top",
+            },
+          },
+        })
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Telescope find files' })
         vim.keymap.set('n', '<leader>g', builtin.live_grep, { desc = 'Telescope live grep' })
