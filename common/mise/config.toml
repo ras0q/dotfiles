@@ -30,6 +30,7 @@ deno = "latest"
 go = "latest"
 java = "latest"
 node = "lts"
+"npm:svelte-language-server" = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
@@ -39,3 +40,4 @@ usage = "latest"
 [settings]
 exec_auto_install = false
 experimental = true
+idiomatic_version_file_enable_tools = []

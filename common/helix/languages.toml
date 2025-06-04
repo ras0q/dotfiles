@@ -23,6 +23,11 @@ args = ["lsp"]
 config = { deno = { enable = true } }
 # required-root-patterns = ["deno.*"]
 
+[[language]]
+name = "svelte"
+formatter = { command = "deno", args = ["fmt", "--unstable-component", "--ext", "svelte", "-"] }
+auto-format = true
+
 # Use rustfmt on Rust
 
 [[language]]
