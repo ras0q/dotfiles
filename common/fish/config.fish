@@ -6,6 +6,7 @@ if status is-interactive
     fzf --fish | source
 
     # starship
+    set -U fish_color_command 0087ff
     starship init fish --print-full-init | source
 
     # zoxide

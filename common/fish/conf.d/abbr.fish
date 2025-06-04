@@ -1,5 +1,5 @@
 # git
-abbr -a g git
+abbr -a g 'git status'
 abbr -a ga 'git add -A && git commit'
 abbr -a gc 'git commit'
 abbr -a gd 'git diff'
