@@ -1,13 +1,13 @@
 return {
-  {
-    "echasnovski/mini.nvim",
-    version = "*",
-    lazy = false,
-    config = function()
-      -- General workflow
-      require("mini.files").setup()
-    end,
-  },
+  -- {
+  --   "echasnovski/mini.nvim",
+  --   version = "*",
+  --   lazy = false,
+  --   config = function()
+  --     -- General workflow
+  --     -- require("mini.files").setup()
+  --   end,
+  -- },
   {
     "echasnovski/mini.nvim",
     version = "*",
@@ -39,5 +39,8 @@ return {
       -- Other
       require("mini.fuzzy").setup()
     end,
+    keys = {
+      { "<leader>t", "<cmd>lua MiniFiles.open()<cr>", desc = "mini.files open explorer" }
+    },
   },
 }
