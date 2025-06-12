@@ -20,11 +20,17 @@ add_paths \
   ~/go/bin \
   /usr/local/cuda/bin \
   /opt/homebrew/bin \
-  /opt/homebrew/opt/openjdk/bin \
-  /c/Users/$windows_user/AppData/Local/Programs/Microsoft\ VS\ Code/bin \
-  /c/Users/$windows_user/AppData/Local/Microsoft/WindowsApps \
-  /c/Users/$windows_user/AppData/Local/Microsoft/WinGet/Links \
-  /c/Program\ Files/PowerShell/7
+  /opt/homebrew/opt/openjdk/bin
+
+if [[ -n "$WINDOWS_HOME" ]]; then
+  add_paths \
+    $WINDOWS_HOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin \
+    $WINDOWS_HOME/AppData/Local/Programs/cursor/resources/app/bin \
+    $WINDOWS_HOME/AppData/Local/Microsoft/WindowsApps \
+    $WINDOWS_HOME/AppData/Local/Microsoft/WinGet/Links \
+    /c/Program\ Files/PowerShell/7 \
+    /mnt/c/Program\ Files/PowerShell/7
+fi
 
 [[ -z "$EDITOR" ]] && export EDITOR="hx"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
