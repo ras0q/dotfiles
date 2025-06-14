@@ -2,3 +2,5 @@
 node_modules
 DerivedData
 *.xcuserdatad
+.env
+.env.*
