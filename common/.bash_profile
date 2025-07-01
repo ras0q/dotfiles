@@ -34,7 +34,8 @@ fi
 
 [[ -z "$EDITOR" ]] && export EDITOR="hx"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
-[[ -z "$LANG" ]] && export LANG POSIX
+[[ -z "$LANG" ]] && export LANG=POSIX
+[[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 
 # NOTE: this command should be at the end
 [ -f ~/.bashrc ] && source ~/.bashrc
