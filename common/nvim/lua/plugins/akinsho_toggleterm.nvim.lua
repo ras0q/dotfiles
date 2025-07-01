@@ -4,7 +4,11 @@ return {
   config = function()
     require("toggleterm").setup()
   end,
+  cmd = {
+    "ToggleTerm",
+  },
   keys = {
-    { "<leader>t", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "ToggleTerm" }
+    { "<leader>tt", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "ToggleTerm" },
+    { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm (float)" },
   }
 }
