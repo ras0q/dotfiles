@@ -24,6 +24,8 @@ abbr -a bd 'brew bundle dump --global --tap --formula -f'
 abbr -a c 'code .'
 abbr -a cdf 'cd (fd -td | fzf || echo $PWD)'
 abbr -a e '/mnt/c/Windows/explorer.exe .'
+abbr -a ge gemini
+abbr -a gep 'gemini -p'
 abbr -a grm 'rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)'
 abbr -a gg 'ghq get'
 abbr -a h 'hx .'
