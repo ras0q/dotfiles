@@ -13,3 +13,6 @@ keymap("n", "<Space><Space>", "ZZ", opts)
 
 -- insert mode
 keymap("i", "jk", "<ESC>", opts)
+
+-- terminal mode
+keymap("t", "<ESC><ESC>", "<C-\\><C-n>", opts)
