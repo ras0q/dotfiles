@@ -16,6 +16,12 @@ return {
         icon = " ",
         placeholder = "Enter your API key...",
       }
+    },
+    windows = {
+      ask = {
+        floating = true,
+        border = "rounded",
+      }
     }
   },
   build = "make",
