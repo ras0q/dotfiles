@@ -3,6 +3,9 @@ local M = {}
 M.ensure_installed = {
   "ts_ls",
   "lua_ls",
+  "gopls",
+  "clangd",
+  "pylsp",
 }
 
 vim.lsp.config("lua_ls", {
