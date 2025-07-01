@@ -20,7 +20,7 @@
 
 [core]
 	autoCRLF = false
-	editor = hx
+	editor = nvim
 	fsmonitor = true
 	quotepath = false
 	untrackedCache = true
