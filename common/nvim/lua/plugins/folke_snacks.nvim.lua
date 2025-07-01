@@ -5,7 +5,10 @@ return {
   ---@type snacks.Config
   opts = {
     explorer = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      hidden = true,
+    },
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers() end, desc = "Buffers" },
