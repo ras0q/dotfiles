@@ -19,7 +19,13 @@ return {
 
       -- General workflow
       -- require("mini.basics").setup() -- nonlazy
-      require("mini.diff").setup()
+      require("mini.diff").setup({
+        mappings = {
+          apply = "dh",
+          reset = "dH",
+          textobject = "dh",
+        }
+      })
       require("mini.git").setup()
 
     -- Appearance
