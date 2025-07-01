@@ -9,6 +9,8 @@ keymap("n", "<Up>", "gk", opts)
 keymap("n", "gh", "g^", opts)
 keymap("n", "gl", "g$", opts)
 keymap("n", "ge", "G", opts)
+keymap("n", "gp", ":bprevious<CR>", opts)
+keymap("n", "gn", ":bnext<CR>", opts)
 keymap("n", "<Space><Space>", "ZZ", opts)
 
 -- insert mode
