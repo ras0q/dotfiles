@@ -20,3 +20,6 @@ opt.smartcase = true
 opt.incsearch = true
 opt.hlsearch = true
 opt.wrapscan = true
+
+-- netrw
+vim.g.netrw_liststyle = 3 -- tree style listing
