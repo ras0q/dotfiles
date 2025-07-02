@@ -7,28 +7,6 @@ M.ensure_installed = {
   "clangd",
   -- "pylsp",
 }
-
-vim.lsp.config("lua_ls", {
-  ---@type vim.lsp.Config
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" }
-      },
-      runtime = {
-        version = "LuaJIT",
-      },
-      workspace = {
-        checkThirdParty = false,
-        library = vim.list_extend(vim.api.nvim_get_runtime_file("lua", true), {
-          "${3rd}/luv/library",
-          "${3rd}/busted/library",
-          "${3rd}/luassert/library",
-        })
-      }
-    }
-  }
-})
 vim.lsp.enable(M.ensure_installed)
 
 vim.api.nvim_create_autocmd("LspAttach", {
