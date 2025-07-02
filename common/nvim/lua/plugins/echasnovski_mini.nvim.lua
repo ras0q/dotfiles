@@ -9,6 +9,7 @@ return {
         option_toggle_prefix = "m",
       }
     })
+    require("mini.sessions").setup()
     require("mini.starter").setup()
     require("mini.statusline").setup()
     require("mini.tabline").setup()
