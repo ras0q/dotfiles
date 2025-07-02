@@ -21,13 +21,16 @@ opt.incsearch = true
 opt.hlsearch = true
 opt.wrapscan = true
 
---- completion
+--- LSP
 opt.completeopt = {
   "fuzzy",
   "popup",
   "menuone",
   "noinsert",
 }
+vim.diagnostic.config({
+  virtual_lines = true,
+})
 
 -- netrw
 vim.g.netrw_liststyle = 3 -- tree style listing
