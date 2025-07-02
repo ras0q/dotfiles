@@ -16,6 +16,7 @@
 "aqua:fish-shell/fish-shell" = "latest"
 "aqua:hadolint/hadolint" = "latest"
 "aqua:helix-editor/helix" = "latest"
+"aqua:jesseduffield/lazygit" = "latest"
 "aqua:joerdav/xc" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:junegunn/fzf" = "latest"
