@@ -7,7 +7,7 @@ abbr -a gl 'git log --oneline'
 abbr -a gp 'git push'
 abbr -a gs 'git switch'
 abbr -a gss 'git status'
-abbr -a gt 'git stash -u'
+abbr -a gt 'git stash'
 abbr -a gu 'git pull'
 
 # docker

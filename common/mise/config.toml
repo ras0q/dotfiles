@@ -14,7 +14,7 @@
 # TODO: macで使えない
 # "aqua:eza-community/eza" = "latest"
 "aqua:fish-shell/fish-shell" = "latest"
-"aqua:golangci/golangci-lint" = "latest"
+"aqua:hadolint/hadolint" = "latest"
 "aqua:helix-editor/helix" = "latest"
 "aqua:joerdav/xc" = "latest"
 "aqua:jqlang/jq" = "latest"
@@ -28,7 +28,6 @@
 "cargo:eza" = "latest"
 # "cargo:https://github.com/fish-shell/fish-shell" = "tag:4.0.0"
 deno = "latest"
-go = "latest"
 java = "latest"
 node = "lts"
 "npm:@google/gemini-cli" = "latest"

@@ -34,6 +34,7 @@ fi
 
 [[ -z "$EDITOR" ]] && export EDITOR="hx"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
+[[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
 [[ -z "$LANG" ]] && export LANG=POSIX
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 
