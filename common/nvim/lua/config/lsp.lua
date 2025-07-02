@@ -68,7 +68,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     setup_lsp_keymap({
       method = "textDocument/hover",
       keys = "<leader>k",
-      func = vim.lsp.buf.hover,
+      func = function()
+        vim.lsp.buf.hover({ border = "single" })
+      end,
       desc =
       "Show hover documentation"
     })
