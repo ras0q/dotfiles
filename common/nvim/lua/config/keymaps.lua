@@ -12,6 +12,7 @@ keymap("n", "ge", "G", opts)
 keymap("n", "gp", ":bprevious<CR>", opts)
 keymap("n", "gn", ":bnext<CR>", opts)
 keymap("n", "<Space><Space>", "ZZ", opts)
+keymap("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 
 -- insert mode
 keymap("i", "jk", "<ESC>", opts)
@@ -20,4 +21,4 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "jk", "<ESC>", opts)
 
 -- terminal mode
-keymap("t", "<ESC><ESC>", "<C-\\><C-n>", opts)
+keymap("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
