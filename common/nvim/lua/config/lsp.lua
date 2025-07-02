@@ -5,7 +5,7 @@ M.ensure_installed = {
   "lua_ls",
   "gopls",
   "clangd",
-  "pylsp",
+  -- "pylsp",
 }
 
 vim.lsp.config("lua_ls", {
