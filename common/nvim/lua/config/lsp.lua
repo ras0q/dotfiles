@@ -15,57 +15,32 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
     local buf = args.buf
 
-    -- Helper function to set up keymaps for LSP features
-    local function setup_lsp_keymap(opts)
-      if client:supports_method(opts.method) then
-        vim.keymap.set("n", opts.keys, opts.func, { buffer = buf, desc = opts.desc })
-      end
+    -- Set up keymaps for LSP features
+    if client:supports_method("textDocument/definition") then
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
     end
 
-    setup_lsp_keymap({
-      method = "textDocument/definition",
-      keys = "gd",
-      func = vim.lsp.buf.definition,
-      desc =
-      "Go to definition"
-    })
-    setup_lsp_keymap({
-      method = "textDocument/implementation",
-      keys = "gi",
-      func = vim.lsp.buf.implementation,
-      desc =
-      "Go to implementation"
-    })
-    setup_lsp_keymap({
-      method = "textDocument/references",
-      keys = "gr",
-      func = vim.lsp.buf.references,
-      desc =
-      "Find references"
-    })
-    setup_lsp_keymap({
-      method = "textDocument/hover",
-      keys = "<leader>k",
-      func = function()
-        vim.lsp.buf.hover({ border = "single" })
-      end,
-      desc =
-      "Show hover documentation"
-    })
-    setup_lsp_keymap({
-      method = "textDocument/rename",
-      keys = "<leader>rn",
-      func = vim.lsp.buf.rename,
-      desc =
-      "Rename symbol"
-    })
-    setup_lsp_keymap({
-      method = "textDocument/codeAction",
-      keys = "<leader>ca",
-      func = vim.lsp.buf.code_action,
-      desc =
-      "Code actions"
-    })
+    if client:supports_method("textDocument/implementation") then
+      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = buf, desc = "Go to implementation" })
+    end
+
+    if client:supports_method("textDocument/references") then
+      vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = buf, desc = "Find references" })
+    end
+
+    if client:supports_method("textDocument/hover") then
+      vim.keymap.set("n", "<leader>k",
+        function() vim.lsp.buf.hover({ border = "single" }) end,
+        { buffer = buf, desc = "Show hover documentation" })
+    end
+
+    if client:supports_method("textDocument/rename") then
+      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = buf, desc = "Rename symbol" })
+    end
+
+    if client:supports_method("textDocument/codeAction") then
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = buf, desc = "Code actions" })
+    end
 
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     if client:supports_method('textDocument/completion') then
