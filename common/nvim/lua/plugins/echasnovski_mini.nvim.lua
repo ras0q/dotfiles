@@ -32,9 +32,9 @@ return {
         -- General workflow
         require("mini.diff").setup({
           mappings = {
-            apply = "dh",
-            reset = "dH",
-            textobject = "dh",
+            apply = "",
+            reset = "",
+            textobject = "",
           }
         })
         require("mini.git").setup()
