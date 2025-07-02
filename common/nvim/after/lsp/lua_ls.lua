@@ -12,7 +12,6 @@ return {
         path = { "?.lua", "?/init.lua" },
       },
       workspace = {
-        -- checkThirdParty = false,
         library = {
           vim.fn.stdpath("config") .. "/lua",
           vim.env.VIMRUNTIME .. "/lua",
