@@ -20,7 +20,7 @@
 "aqua:joerdav/xc" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:junegunn/fzf" = "latest"
-"aqua:neovim/neovim" = "latest"
+"aqua:neovim/neovim" = "nightly"
 "aqua:sharkdp/fd" = "latest"
 "aqua:starship/starship" = "latest"
 "aqua:sxyazi/yazi" = "latest"
