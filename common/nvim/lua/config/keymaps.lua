@@ -18,7 +18,9 @@ keymap("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- visual mode
-keymap("v", "jk", "<ESC>", opts)
+keymap("v", "gh", "g^", opts)
+keymap("v", "gl", "g$", opts)
+keymap("v", "ge", "G", opts)
 
 -- terminal mode
 keymap("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
