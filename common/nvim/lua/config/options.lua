@@ -21,6 +21,14 @@ opt.incsearch = true
 opt.hlsearch = true
 opt.wrapscan = true
 
+--- completion
+opt.completeopt = {
+  "fuzzy",
+  "popup",
+  "menuone",
+  "noinsert",
+}
+
 -- netrw
 vim.g.netrw_liststyle = 3 -- tree style listing
 

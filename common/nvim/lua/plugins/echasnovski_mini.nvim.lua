@@ -13,7 +13,6 @@ return {
           textobject = "<C-c>",
         }
       })
-      require("mini.completion").setup()
       require("mini.pairs").setup()
       require("mini.surround").setup()
 
@@ -28,7 +27,7 @@ return {
       })
       require("mini.git").setup()
 
-    -- Appearance
+      -- Appearance
       require("mini.cursorword").setup()
       require("mini.hipatterns").setup()
       require("mini.icons").setup()
