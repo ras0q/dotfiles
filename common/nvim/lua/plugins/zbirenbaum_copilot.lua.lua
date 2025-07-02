@@ -1,3 +1,4 @@
 return {
-  "zbirenbaum/copilot.lua"
+  "zbirenbaum/copilot.lua",
+  enabled = require("config.options").ai_enabled,
 }

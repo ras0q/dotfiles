@@ -1,5 +1,6 @@
 return {
   "yetone/avante.nvim",
+  enabled = require("config.options").ai_enabled,
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
