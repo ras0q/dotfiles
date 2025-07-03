@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
+      { out,                            "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -21,15 +21,23 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+local specs = {}
+local config_path = vim.fn.stdpath("config") .. "/lua"
+local subdirs = vim.fn.globpath(config_path, "plugins/**/", true, true)
+for _, dir in ipairs(subdirs) do
+  local module = dir
+      :gsub(config_path, "")
+      :gsub("/$", "")
+      :gsub("/", ".")
+  table.insert(specs, { import = module })
+end
+
 -- Setup lazy.nvim
 require("lazy").setup({
   defaults = {
     lazy = true,
   },
-  spec = {
-    -- import your plugins
-    { import = "plugins" },
-  },
+  spec = specs,
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
