@@ -7,7 +7,7 @@ return {
     provider = "copilot",
     providers = {
       copilot = {
-        model = "claude-3.7-sonnet",
+        model = "gpt-4.1",
       },
     },
     input = {
