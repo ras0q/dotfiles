@@ -24,10 +24,3 @@ keymap("v", "ge", "G", opts)
 
 -- terminal mode
 keymap("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
-
--- clipboard
-if vim.fn.system('uname -a | grep microsoft') ~= '' then
-  local command = '"+y:lua vim.fn.system("clip.exe", vim.fn.getreg(\'"\'))<CR>'
-  keymap("n", "<leader>y", command, opts)
-  keymap("v", "<leader>y", command, opts)
-end

@@ -2,7 +2,6 @@ local opt = vim.opt
 
 -- core
 opt.fileencoding = "utf-8"
-opt.clipboard = "unnamedplus"
 
 -- appearance
 opt.number = true
@@ -11,7 +10,7 @@ opt.virtualedit = "onemore"
 opt.smartindent = true
 
 -- tabs
-opt.expandtab = vim.fn.expand("%:r") ~= 'Makefile' -- Makefileのときはタブ、それ以外はスペース
+opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
 opt.tabstop = 2
 opt.shiftwidth = 2
 
@@ -32,6 +31,18 @@ opt.completeopt = {
 vim.diagnostic.config({
   virtual_lines = true,
 })
+
+--- clipboard
+opt.clipboard = "unnamedplus"
+if vim.fn.system("uname -a | grep microsoft") ~= "" then
+  vim.api.nvim_create_augroup("myYank", { clear = true })
+  vim.api.nvim_create_autocmd("TextYankPost", {
+    group = "myYank",
+    callback = function()
+      vim.fn.system("clip.exe", vim.fn.getreg("\""))
+    end,
+  })
+end
 
 -- netrw
 vim.g.netrw_liststyle = 3 -- tree style listing
