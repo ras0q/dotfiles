@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- core
 opt.fileencoding = "utf-8"
+opt.clipboard = "unnamedplus"
 
 -- appearance
 opt.number = true
