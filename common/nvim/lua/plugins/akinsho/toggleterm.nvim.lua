@@ -1,14 +1,16 @@
 return {
   "akinsho/toggleterm.nvim",
   version = "*",
-  config = function()
-    require("toggleterm").setup()
-  end,
   cmd = {
     "ToggleTerm",
   },
+  opts = {
+    float_opts = {
+      border = "curved",
+      height = 35,
+    }
+  },
   keys = {
-    { "<leader>tt", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "ToggleTerm" },
-    { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm (float)" },
+    { "<leader>t", "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm (float)" },
   }
 }
