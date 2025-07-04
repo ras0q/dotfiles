@@ -38,7 +38,6 @@ return {
           }
         })
         require("mini.git").setup()
-        require("mini.sessions").setup()
 
         -- Appearance
         require("mini.cursorword").setup()
