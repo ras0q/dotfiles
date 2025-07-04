@@ -1,5 +1,9 @@
+---@type LazyPluginSpec
 return {
   "nvim-treesitter/nvim-treesitter",
+  lazy = false,
+  branch = "main",
+  build = ":TSUpdate",
   opts = {
     ensure_installed = { "bash", "json", "jsonc", "markdown", "yaml" },
     sync_install = true,
@@ -9,4 +13,3 @@ return {
     },
   },
 }
- 

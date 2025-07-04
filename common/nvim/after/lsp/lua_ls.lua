@@ -15,6 +15,7 @@ return {
         library = {
           vim.fn.stdpath("config") .. "/lua",
           vim.env.VIMRUNTIME .. "/lua",
+          plugins["lazy.nvim"].dir .. "/lua",
           plugins["snacks.nvim"].dir .. "/lua",
           "${3rd}/luv/library",
           "${3rd}/busted/library",
