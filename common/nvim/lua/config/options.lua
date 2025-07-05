@@ -2,6 +2,11 @@ local opt = vim.opt
 
 -- core
 opt.fileencoding = "utf-8"
+if vim.fn.has("win32") == 1 then
+  opt.shell = "pwsh.exe"
+  opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
+  opt.shellxquote = ''
+end
 
 -- appearance
 opt.number = true
