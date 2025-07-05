@@ -22,14 +22,19 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local specs = {}
-local config_path = vim.fn.stdpath("config") .. "/lua"
-local subdirs = vim.fn.globpath(config_path, "plugins/**/", true, true)
+local sep = package.config:sub(1, 1)
+local config_path = vim.fn.stdpath("config") .. sep .. "lua"
+local pattern = "plugins" .. sep .. "**" .. sep
+local subdirs = vim.fn.globpath(config_path, pattern, true, true)
 for _, dir in ipairs(subdirs) do
-  local module = dir
-      :gsub(config_path, "")
-      :gsub("/$", "")
-      :gsub("/", ".")
-  table.insert(specs, { import = module })
+  if not dir:match("lua" .. sep .. "$") then
+    local module = dir
+        :gsub(config_path, "")
+        :gsub(sep .. "$", "")
+        :gsub(sep, ".")
+        :gsub("^%.", "")
+    table.insert(specs, { import = module })
+  end
 end
 
 -- Setup lazy.nvim

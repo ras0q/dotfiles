@@ -4,7 +4,8 @@ vim.api.nvim_create_user_command("AddPlugin", function(opts)
     return vim.notify("Argument must be in 'author/repo' format", vim.log.levels.ERROR)
   end
 
-  local path = string.format("%s/lua/plugins/%s.lua", vim.fn.stdpath("config"), spec)
+  local filename = spec:gsub('%.', '_')
+  local path = string.format("%s/lua/plugins/%s.lua", vim.fn.stdpath("config"), filename)
   vim.fn.mkdir(vim.fn.fnamemodify(path, ":h"), "p")
 
   local file = io.open(path, "w")
