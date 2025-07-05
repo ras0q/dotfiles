@@ -66,10 +66,10 @@
             "colorScheme": "Catppuccin Latte",
             "font": 
             {
-                "face": "\u6e90\u30ce\u89d2\u30b4\u30b7\u30c3\u30af Code JP, Symbols Nerd Font",
+                "face": "\u6e90\u30ce\u89d2\u30b4\u30b7\u30c3\u30af Code JP, SauceCodePro Nerd Font",
                 "size": 10
             },
-            "opacity": 30,
+            "opacity": 70,
             "useAcrylic": true
         },
         "list": 
@@ -108,6 +108,7 @@
             {
                 "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
+                "icon": null,
                 "name": "Ubuntu",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
             },
@@ -154,7 +155,7 @@
         }
     ],
     "tabWidthMode": "equal",
-    "theme": "Catppuccin Latte",
+    "theme": "system",
     "themes": 
     [
         {
