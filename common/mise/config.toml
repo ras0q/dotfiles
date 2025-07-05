@@ -25,7 +25,6 @@
 "aqua:starship/starship" = "latest"
 "aqua:sxyazi/yazi" = "latest"
 "aqua:x-motemen/ghq" = "latest"
-"aqua:zellij-org/zellij" = "latest"
 deno = "latest"
 java = "latest"
 node = "lts"
@@ -40,4 +39,3 @@ usage = "latest"
 [settings]
 exec_auto_install = false
 experimental = true
-idiomatic_version_file_enable_tools = []

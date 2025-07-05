@@ -2,9 +2,13 @@
 
 $__STEP__ "Install mise"
 
-curl https://mise.run | sh
-~/.local/bin/mise install
+if ! command -v mise >/dev/null 2>&1; then
+  curl https://mise.run | sh
+  source ~/.bash_profile
+fi
+MISE_PATH=$(command -v mise || echo ~/.local/bin/mise)
+
+$MISE_PATH install
 if [[ "$(uname)" == "Linux" || "$(uname)" == "Darwin" ]]; then
-  ~/.local/bin/mise install aqua:eza-community/eza
-  ~/.local/bin/mise install aqua:fish-shell/fish-shell
+  $MISE_PATH install --path ~/.config/mise/config.linux.toml
 fi

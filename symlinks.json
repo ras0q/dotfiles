@@ -25,6 +25,7 @@
   },
   "windows": {
     "~/.wslconfig": "./win/.wslconfig",
+    "~/AppData/Local/nvim": "./common/nvim",
     "~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json": "./win/terminal/settings.json",
     "~/AppData/Roaming/helix": "./common/helix",
     "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1": "./win/Microsoft.PowerShell_profile.ps1",
