@@ -33,7 +33,6 @@ Set-Path
 
 # Aliases & Functions
 Set-Alias powershell pwsh
-Set-Alias ls eza
 # Git
 function ga() { git add -A && git commit }
 function gc() { git commit }
