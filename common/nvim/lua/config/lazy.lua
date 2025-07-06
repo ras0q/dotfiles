@@ -27,13 +27,16 @@ local config_path = vim.fn.stdpath("config") .. sep .. "lua"
 local pattern = "plugins" .. sep .. "**" .. sep
 local subdirs = vim.fn.globpath(config_path, pattern, true, true)
 for _, dir in ipairs(subdirs) do
-  if not dir:match("lua" .. sep .. "$") then
-    local module = dir
-        :gsub(config_path, "")
-        :gsub(sep .. "$", "")
-        :gsub(sep, ".")
-        :gsub("^%.", "")
-    table.insert(specs, { import = module })
+  if not dir:match("\\.lua" .. sep .. "$") then
+    local lua_files = vim.fn.globpath(dir, "*.lua", true, true)
+    if #lua_files > 0 then
+      local module = dir
+          :gsub(config_path, "")
+          :gsub(sep .. "$", "")
+          :gsub(sep, ".")
+          :gsub("^%.", "")
+      table.insert(specs, { import = module })
+   end
   end
 end
 
