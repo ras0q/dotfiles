@@ -19,5 +19,11 @@ return {
       }
     },
   },
-  build = "make",
+  build = function()
+    if vim.fn.has("win32") == 1 then
+      return "pwsh.exe -ExecutionPolycy Bypass -File Build.ps1 -BuildFromSource -false"
+    else
+      return "make"
+    end
+  end,
 }
