@@ -26,6 +26,7 @@
 "aqua:sxyazi/yazi" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 deno = "latest"
+go = "1.24"
 java = "latest"
 node = "lts"
 "npm:@google/gemini-cli" = "latest"
