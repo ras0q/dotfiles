@@ -4,3 +4,4 @@ DerivedData
 *.xcuserdatad
 .env
 .env.*
+!.env.example
