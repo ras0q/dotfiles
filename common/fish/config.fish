@@ -1,5 +1,6 @@
 if status is-interactive
     # mise
+    mise activate fish | source
     mise completion fish | source
 
     # fzf
