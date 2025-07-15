@@ -1,5 +1,6 @@
 local plugins = require("lazy.core.config").plugins
 
+---@type vim.lsp.Config
 return {
   settings = {
     Lua = {
