@@ -15,6 +15,7 @@
 # "aqua:eza-community/eza" = "latest"
 # "aqua:fish-shell/fish-shell" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
+"aqua:hadolint/hadolint" = "latest"
 "aqua:helix-editor/helix" = "latest"
 "aqua:jesseduffield/lazygit" = "latest"
 "aqua:joerdav/xc" = "latest"
