@@ -1,4 +1,3 @@
 [tools]
-"aqua:eza-community/eza" = "latest"
 "aqua:fish-shell/fish-shell" = "latest"
 "aqua:zellij-org/zellij" = "latest"

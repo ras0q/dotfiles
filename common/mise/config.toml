@@ -26,6 +26,7 @@
 "aqua:starship/starship" = "latest"
 "aqua:sxyazi/yazi" = "latest"
 "aqua:x-motemen/ghq" = "latest"
+"cargo:eza" = "latest"
 deno = "latest"
 go = "1.24"
 java = "latest"
