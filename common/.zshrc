@@ -19,6 +19,11 @@ setopt inc_append_history_time
 # Plugin manager
 eval "$(sheldon source)"
 
+mkdir -p ~/.zsh
+local shl_catppuccin=~/.zsh/catppuccin_latte-zsh-syntax-highlighting.zsh
+[[ -f $shl_catppuccin ]] || curl -o $shl_catppuccin https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
+source $shl_catppuccin
+
 # Abbreviations
 export ABBR_SET_EXPANSION_CURSOR=1
 export ABBR_GET_AVAILABLE_ABBREVIATION=1
