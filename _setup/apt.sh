@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-$__STEP__ "Install apt packages"
+echo "Install apt packages"
 
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -13,12 +13,12 @@ sudo apt-get install -y \
     socat \
     wget
 
-$__STEP__ "Add apt PPAs (Git)"
+echo "Add apt PPAs (Git)"
 
 sudo apt-add-repository -y ppa:git-core/ppa
 
 # REF: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
-$__STEP__ "Add an apt repository for Docker and Compose"
+echo "Add an apt repository for Docker and Compose"
 
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
@@ -28,7 +28,7 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-$__STEP__ "Install additional packages"
+echo "Install additional packages"
 
 sudo apt-get update
 sudo apt-get install -y \

@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-$__STEP__ "Install WinGet (if not exists)"
+echo "Install WinGet (if not exists)"
 
 if ! command -v winget >/dev/null 2>&1; then
     bundle=winget.msixbundle
@@ -9,7 +9,7 @@ if ! command -v winget >/dev/null 2>&1; then
     rm $bundle
 fi
 
-$__STEP__ "Install WinGet Packages"
+echo "Install WinGet Packages"
 
 winget import \
     --accept-source-agreements \

@@ -78,9 +78,6 @@ if (import.meta.main) {
 
   $.log(`Tasks ${tasks} will be executed`);
 
-  // TODO: remove this
-  Deno.env.set("__STEP__", "echo");
-
   for (const task of tasks) {
     $.log(`Task: ${task}`);
     const script = root.join(`_setup/${task}.sh`);

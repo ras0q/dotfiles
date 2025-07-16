@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-$__STEP__ "Install mise"
+echo "Install mise"
 
 if ! command -v mise >/dev/null 2>&1; then
   curl https://mise.run | sh

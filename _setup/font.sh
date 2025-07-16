@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-$__STEP__ "Download fonts"
+echo "Download fonts"
 
 mkdir -p ./dist
 cd ./dist

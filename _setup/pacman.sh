@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$__STEP__ "Install pacman packages"
+echo "Install pacman packages"
 
 pacman -Syu --noconfirm
 pacman -S --noconfirm \

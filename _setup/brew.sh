@@ -1,11 +1,11 @@
 #!/bin/bash -eux
 
 # REF: https://brew.sh/
-$__STEP__ "Install Homebrew"
+echo "Install Homebrew"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-$__STEP__ "Install Homebrew packages"
+echo "Install Homebrew packages"
 
 brew upgrade
 brew doctor
