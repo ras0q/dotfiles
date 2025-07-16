@@ -24,21 +24,9 @@ export ABBR_SET_EXPANSION_CURSOR=1
 export ABBR_GET_AVAILABLE_ABBREVIATION=1
 export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
-# mise
-eval "$(mise activate zsh)"
-eval "$(mise completion zsh)"
-
-# fzf
-eval "$(fzf --zsh)"
-
-# starship
-eval "$(starship init zsh --print-full-init)"
-
-# zoxide
-eval "$(zoxide init --cmd cd --hook pwd zsh)"
-
-# setup 1Password SSH agent for WSL2
+# WSL2
 if [[ $(uname -r) == *microsoft* ]]; then
+  # setup 1Password SSH agent for WSL2
   if command -v npiperelay.exe >/dev/null 2>&1; then
     if ! ss -a | grep -q "$SSH_AUTH_SOCK" >/dev/null 2>&1; then
       if [[ -e "$SSH_AUTH_SOCK" ]]; then
@@ -51,7 +39,24 @@ if [[ $(uname -r) == *microsoft* ]]; then
   else
     echo "Install npiperelay (https://github.com/jstarks/npiperelay) in Windows, then symlink to ~/.local/bin/npiperelay"
   fi
+
+  function wsl2_fix_time() {
+    sudo ntpdate ntp.nict.jp
+  }
 fi
+
+# mise
+eval "$(mise activate zsh)"
+eval "$(mise completion zsh)"
+
+# fzf
+eval "$(fzf --zsh)"
+
+# starship
+eval "$(starship init zsh --print-full-init)"
+
+# zoxide
+eval "$(zoxide init --cmd cd --hook pwd zsh)"
 
 # cursor
 # eval "$(code --locate-shell-integration-path zsh)"
