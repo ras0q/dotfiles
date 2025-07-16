@@ -15,6 +15,7 @@ windows_user=${WINDOWS_USER:-$(whoami)}
 add_paths \
   ~/.local/bin \
   ~/.local/share/mise/shims \
+  ~/.rd/bin \
   ~/.cargo/bin \
   ~/.deno/bin \
   ~/go/bin \
