@@ -10,7 +10,11 @@
     "~/.config/mise": "./common/mise",
     "~/.config/nvim": "./common/nvim",
     "~/.config/starship.toml": "./common/starship.toml",
-    "~/.config/zellij": "./common/zellij"
+    "~/.config/sheldon": "./common/sheldon",
+    "~/.config/zellij": "./common/zellij",
+    "~/.config/zsh-abbr": "./common/zsh-abbr",
+    "~/.zshenv": "./common/.zshenv",
+    "~/.zshrc": "./common/.zshrc"
   },
   "wsl2": {
     "/etc/wsl.conf": "./win/wsl.conf"

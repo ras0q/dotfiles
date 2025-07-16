@@ -1,0 +1,35 @@
+# git
+abbr "g"="git status"
+abbr "ga"="git add -A && git commit"
+abbr "gc"="git commit"
+abbr "gd"="git diff"
+abbr "gl"="git log --oneline"
+abbr "gp"="git push"
+abbr "gs"="git switch"
+abbr "gss"="git status"
+abbr "gt"="git stash"
+abbr "gu"="git pull"
+
+# docker
+abbr "d"="docker"
+abbr "dc"="docker compose"
+
+# ls (eza)
+abbr "la"="eza -al"
+abbr "ll"="eza -l"
+abbr "ls"="eza"
+
+# others
+abbr "bd"="brew bundle dump --global --tap --formula -f"
+abbr "c"="code ."
+abbr "cdf"="cd (fd -td | fzf || echo $PWD)"
+abbr "e"="/mnt/c/Windows/explorer.exe ."
+abbr "ge"="gemini"
+abbr "gep"="gemini -p"
+abbr "grm"="rm -i $GOPATH/bin/(ls $GOPATH/bin | fzf)"
+abbr "gg"="ghq get"
+abbr "h"="hx ."
+abbr "n"="nvim ."
+abbr "pp"="pnpm"
+abbr "sc"="systemctl"
+abbr "zj"="zellij"

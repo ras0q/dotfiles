@@ -27,6 +27,7 @@
 "aqua:sxyazi/yazi" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 "cargo:eza" = "latest"
+"cargo:sheldon" = "latest"
 deno = "latest"
 go = "1.24"
 java = "latest"
