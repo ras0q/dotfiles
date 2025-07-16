@@ -13,6 +13,9 @@ if status is-interactive
     # zoxide
     zoxide init --cmd cd --hook pwd fish | source
 
+    # cursor
+    source $(code --locate-shell-integration-path fish)
+
     # Zellij
     # eval (zellij setup --generate-auto-start fish | string collect)
 end
