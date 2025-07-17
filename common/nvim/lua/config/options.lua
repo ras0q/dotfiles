@@ -3,9 +3,17 @@ local opt = vim.opt
 -- core
 opt.fileencoding = "utf-8"
 if vim.fn.has("win32") == 1 then
-  opt.shell = "pwsh.exe"
-  opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
-  opt.shellxquote = ''
+  local msystem = vim.fn.getenv("MSYSTEM")
+
+  if msystem == "MINGW64" or msystem == "MINGW32" then
+    opt.shell = '"C:\\Program Files\\Git\\bin\\bash.exe"'
+    opt.shellcmdflag = "-c"
+    opt.shellxquote = ""
+  else
+    opt.shell = "pwsh.exe"
+    opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+    opt.shellxquote = ""
+  end
 end
 
 -- appearance
