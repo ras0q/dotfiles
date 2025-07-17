@@ -17,7 +17,8 @@
     "~/.zshrc": "./common/.zshrc"
   },
   "wsl2": {
-    "/etc/wsl.conf": "./win/wsl.conf"
+    "/etc/wsl.conf": "./win/wsl.conf",
+    "~/.local/bin/clip.exe": "/mnt/c/Windows/system32/clip.exe"
   },
   "darwin": {
     "~/.Brewfile": "./mac/.Brewfile",

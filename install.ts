@@ -46,7 +46,9 @@ if (import.meta.main) {
   };
 
   for (const [_target, _source] of Object.entries(symlinks)) {
-    const source = root.join(_source);
+    const source = _source.startsWith("/")
+      ? $.path(_source)
+      : root.join(_source);
     const target = $.path(_target.replace(/^~\//, `${home}/`));
     const needsSudo = !target.startsWith(home);
     if (!canUseSudo && needsSudo) {
