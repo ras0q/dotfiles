@@ -17,8 +17,11 @@ setopt hist_verify
 setopt inc_append_history_time
 
 # Plugin manager
-eval "$(sheldon source)"
+[[ -d ~/.antidote ]] || git clone --depth 1 https://github.com/mattmc3/antidote.git ~/.antidote
+source ~/.antidote/antidote.zsh
+antidote load
 
+# Syntax highlight theme
 mkdir -p ~/.zsh
 local shl_catppuccin=~/.zsh/catppuccin_latte-zsh-syntax-highlighting.zsh
 [[ -f $shl_catppuccin ]] || curl -o $shl_catppuccin https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/refs/heads/main/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
@@ -51,8 +54,8 @@ if [[ $(uname -r) == *microsoft* ]]; then
 fi
 
 # mise
-eval "$(mise activate zsh)"
-eval "$(mise completion zsh)"
+# eval "$(mise activate zsh)"
+# eval "$(mise completion zsh)"
 
 # fzf
 eval "$(fzf --zsh)"
