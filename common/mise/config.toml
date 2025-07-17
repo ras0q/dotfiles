@@ -11,9 +11,6 @@
 "aqua:cargo-bins/cargo-binstall" = "latest"
 "aqua:charmbracelet/glow" = "latest"
 "aqua:cli/cli" = "latest"
-# TODO: macで使えない
-# "aqua:eza-community/eza" = "latest"
-# "aqua:fish-shell/fish-shell" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:hadolint/hadolint" = "latest"
 "aqua:helix-editor/helix" = "latest"
@@ -27,7 +24,6 @@
 "aqua:sxyazi/yazi" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 "cargo:eza" = "latest"
-"cargo:sheldon" = "latest"
 deno = "latest"
 go = "1.24"
 java = "latest"
