@@ -46,16 +46,21 @@ vim.diagnostic.config({
 })
 
 --- clipboard
-opt.clipboard = "unnamedplus"
-if vim.fn.system("uname -a | grep microsoft") ~= "" then
-  vim.api.nvim_create_augroup("myYank", { clear = true })
-  vim.api.nvim_create_autocmd("TextYankPost", {
-    group = "myYank",
-    callback = function()
-      vim.fn.system("clip.exe", vim.fn.getreg("\""))
-    end,
-  })
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = "Wsl2Clipboard",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = "pwsh.exe",
+      ["*"] = "pwsh.exe",
+    },
+    cache_enabled = true,
+  }
 end
+opt.clipboard = "unnamedplus"
 
 -- netrw
 vim.g.netrw_liststyle = 3 -- tree style listing
