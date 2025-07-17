@@ -35,7 +35,7 @@ export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 # WSL2
 if [[ $(uname -r) == *microsoft* ]]; then
   # setup 1Password SSH agent for WSL2
-  if command -v npiperelay.exe >/dev/null 2>&1; then
+  if command -v npiperelay >/dev/null 2>&1; then
     if ! ss -a | grep -q "$SSH_AUTH_SOCK" >/dev/null 2>&1; then
       if [[ -e "$SSH_AUTH_SOCK" ]]; then
         echo "removing previous socket..."
@@ -54,8 +54,8 @@ if [[ $(uname -r) == *microsoft* ]]; then
 fi
 
 # mise
-# eval "$(mise activate zsh)"
-# eval "$(mise completion zsh)"
+eval "$(mise activate zsh)"
+eval "$(mise completion zsh)"
 
 # fzf
 eval "$(fzf --zsh)"
