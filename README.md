@@ -23,4 +23,10 @@ cd $DOTFILES_DIR
 
 ### WSL2
 
-- [ ] `set -U NPIPERELAY_PATH {{ path to npiperelay }}`
+- [ ] `ln -sf {{ path to npiperelay }} ~/.local/bin/npiperelay`
+
+### Windows
+
+- [ ] Install pacman and zsh into "Git for Windows"
+    - `eval "$(curl https://raw.githubusercontent.com/alexsarmiento/gitportable-pacman/refs/heads/master/install-pacman-git-bash.sh)"`
+    - `pacman -Syu && pacman -S zsh`
