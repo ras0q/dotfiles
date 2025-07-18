@@ -1,3 +1,5 @@
+autoload -Uz compinit && compinit
+
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(cd|pwd|1[sal])"
 HISTSIZE=10000
