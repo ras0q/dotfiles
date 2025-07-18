@@ -1,3 +1,3 @@
 [tools]
-"aqua:fish-shell/fish-shell" = "latest"
+# "aqua:fish-shell/fish-shell" = "latest"
 "aqua:zellij-org/zellij" = "latest"
