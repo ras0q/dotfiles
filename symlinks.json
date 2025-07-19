@@ -18,7 +18,8 @@
   },
   "wsl2": {
     "/etc/wsl.conf": "./win/wsl.conf",
-    "~/.local/bin/clip.exe": "/mnt/c/Windows/system32/clip.exe"
+    "~/.local/bin/clip.exe": "/mnt/c/Windows/system32/clip.exe",
+    "~/.local/bin/pwsh.exe": "/mnt/c/Program Files/PowerShell/7/pwsh.exe"
   },
   "darwin": {
     "~/.Brewfile": "./mac/.Brewfile",
