@@ -54,8 +54,10 @@ if vim.fn.has("wsl") == 1 then
       ["*"] = "clip.exe",
     },
     paste = {
-      ["+"] = "pwsh.exe",
-      ["*"] = "pwsh.exe",
+      ["+"] =
+      "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+      ["*"] =
+      "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
     },
     cache_enabled = true,
   }
