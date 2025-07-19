@@ -1,3 +1,5 @@
+Aloxaf/fzf-tab
+olets/zsh-abbr
+zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
-olets/zsh-abbr
