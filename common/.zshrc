@@ -34,6 +34,9 @@ export ABBR_SET_EXPANSION_CURSOR=1
 export ABBR_GET_AVAILABLE_ABBREVIATION=1
 export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
+# Completions
+eval "$(gh completion -s zsh)"
+
 # WSL2
 if [[ $(uname -r) == *microsoft* ]]; then
   # setup 1Password SSH agent for WSL2
