@@ -39,3 +39,4 @@ usage = "latest"
 [settings]
 exec_auto_install = false
 experimental = true
+idiomatic_version_file_enable_tools = ["node"]
