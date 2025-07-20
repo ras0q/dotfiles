@@ -7,7 +7,6 @@ return {
   opts = {
     float_opts = {
       border = "curved",
-      height = 35,
     }
   },
   keys = {
