@@ -42,3 +42,5 @@ fi
 if [[ $(uname -r) == *microsoft* ]]; then
   [[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
 fi
+
+[[ -f ~/.env ]] && source ~/.env
