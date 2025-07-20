@@ -38,6 +38,7 @@ fi
 [[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
 [[ -z "$LANG" ]] && export LANG=POSIX
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
+[[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
 
 if [[ $(uname -r) == *microsoft* ]]; then
   [[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
