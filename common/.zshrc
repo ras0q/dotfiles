@@ -59,8 +59,10 @@ if [[ $(uname -r) == *microsoft* ]]; then
 fi
 
 # mise
-eval "$(mise activate zsh)"
-eval "$(mise completion zsh)"
+if [[ ! "$(uname -s)" =~ "MINGW" ]]; then
+  eval "$(mise activate zsh)"
+  eval "$(mise completion zsh)"
+fi
 
 # fzf
 eval "$(fzf --zsh)"
