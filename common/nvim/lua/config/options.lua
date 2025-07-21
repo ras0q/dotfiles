@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- core
 opt.fileencoding = "utf-8"
+opt.autoread = true
 if vim.fn.has("win32") == 1 then
   local msystem = vim.fn.getenv("MSYSTEM")
 
