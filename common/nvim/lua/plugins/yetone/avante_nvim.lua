@@ -25,9 +25,6 @@ return {
         incoming = "DiffAdd",
       },
     },
-    web_search_engine = {
-      provider = os.getenv("TAVILY_API_KEY") ~= "" and "tavily" or ""
-    },
     -- system_prompt as function ensures LLM always has latest MCP server state
     -- This is evaluated for every message, even in existing chats
     system_prompt = function()
