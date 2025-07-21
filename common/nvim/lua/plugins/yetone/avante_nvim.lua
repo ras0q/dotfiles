@@ -2,7 +2,7 @@
 return {
   "yetone/avante.nvim",
   enabled = require("config.options").ai_enabled,
-  event = "VeryLazy",
+  event = "BufReadPre",
   version = false, -- Never set this value to "*"! Never!
   opts = {
     provider = "copilot",
