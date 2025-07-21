@@ -17,13 +17,11 @@ return {
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end, desc = "Buffers" },
-    { "<leader>c", function() Snacks.picker.commands() end,               desc = "Commands" },
-    { "<leader>e", function() Snacks.explorer() end,                      desc = "File Explorer" },
-    { "<leader>f", function() Snacks.picker.files({ hidden = true }) end, desc = "Find Files" },
-    { "<leader>g", function() Snacks.picker.grep({ hidden = true }) end,  desc = "Live Grep" },
-    { "<leader>h", function() Snacks.picker.help() end,                   desc = "Help Tags" },
-    { "<leader>l", function() Snacks.lazygit() end,                       desc = "LazyGit" },
-    { "<leader>p", function() Snacks.picker.pickers() end,                desc = "List Pickers" },
+    { "<leader>e", function() Snacks.explorer() end,                        desc = "File Explorer" },
+    { "<leader>f", function() Snacks.picker.files({ hidden = true }) end,   desc = "Find Files" },
+    { "<leader>g", function() Snacks.picker.grep({ hidden = true }) end,    desc = "Live Grep" },
+    { "<leader>l", function() Snacks.lazygit() end,                         desc = "LazyGit" },
+    { "<leader>p", function() Snacks.picker.pickers() end,                  desc = "List Pickers" },
     {
       "<leader>gf",
       function()
@@ -41,7 +39,7 @@ return {
           end
         })
       end,
-      desc = "List Pickers"
+      desc = "List Repositories"
     },
   },
 }
