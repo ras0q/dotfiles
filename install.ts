@@ -57,9 +57,13 @@ if (import.meta.main) {
     }
 
     if (target.existsSync()) {
-      needsSudo
-        ? await $`sudo mv ${target} ${backupDir}`
-        : await $`mv ${target} ${backupDir}`;
+      if (target.isSymlinkSync()) {
+        needsSudo ? await $`sudo unlink ${target}` : await $`unlink ${target}`;
+      } else {
+        needsSudo
+          ? await $`sudo mv ${target} ${backupDir}`
+          : await $`mv ${target} ${backupDir}`;
+      }
     }
 
     needsSudo
