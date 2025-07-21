@@ -25,6 +25,9 @@ return {
         incoming = "DiffAdd",
       },
     },
+    web_search_engine = {
+      provider = os.getenv("TAVILY_API_KEY") ~= "" and "tavily" or ""
+    }
   },
   config = function(_, opts)
     require("avante").setup(opts)
