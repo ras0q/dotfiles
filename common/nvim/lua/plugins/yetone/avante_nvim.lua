@@ -33,6 +33,6 @@ return {
     vim.api.nvim_set_hl(0, "AvanteToBeDeletedWOStrikethrough", { link = "DiffDelete" })
   end,
   build = vim.fn.has("win32") == 1
-      and "pwsh.exe -ExecutionPolycy Bypass -File Build.ps1 -BuildFromSource -false"
+      and "pwsh.exe -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource -false"
       or "make",
 }
