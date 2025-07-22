@@ -51,8 +51,8 @@ if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "Wsl2Clipboard",
     copy = {
-      ["+"] = "clip.exe",
-      ["*"] = "clip.exe",
+      ["+"] = { "sh", "-c", "nkf -Ws | clip.exe" },
+      ["*"] = { "sh", "-c", "nkf -Ws | clip.exe" },
     },
     paste = {
       ["+"] =
