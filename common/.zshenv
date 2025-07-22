@@ -33,7 +33,7 @@ if [[ -n "$WINDOWS_HOME" ]]; then
     /mnt/c/Program\ Files/PowerShell/7
 fi
 
-[[ -z "$EDITOR" ]] && export EDITOR="hx"
+[[ -z "$EDITOR" ]] && export EDITOR="nvim"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
 [[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
 [[ -z "$LANG" ]] && export LANG=POSIX
