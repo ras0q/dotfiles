@@ -47,7 +47,7 @@ if [[ $(uname -r) == *microsoft* ]]; then
         rm -f "$SSH_AUTH_SOCK"
       fi
       echo "Starting SSH-Agent relay..."
-      (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
+      (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"npiperelay -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
     fi
   else
     echo "Install npiperelay (https://github.com/jstarks/npiperelay) in Windows, then symlink to ~/.local/bin/npiperelay"

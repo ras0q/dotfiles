@@ -60,6 +60,7 @@
 [include]
 	path = ~/.gitconfig.mac
 	path = ~/.gitconfig.win
+	path = ~/.gitconfig.wsl2
 
 [init]
 	defaultBranch = main
