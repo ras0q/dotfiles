@@ -1,6 +1,7 @@
 local M = {}
 
 M.ensure_installed = {
+  "denols",
   "ts_ls",
   "lua_ls",
   "gopls",
