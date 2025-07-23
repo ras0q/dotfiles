@@ -28,5 +28,5 @@ cd $DOTFILES_DIR
 ### Windows
 
 - [ ] Install pacman and zsh into "Git for Windows"
-    - `eval "$(curl https://raw.githubusercontent.com/alexsarmiento/gitportable-pacman/refs/heads/master/install-pacman-git-bash.sh)"`
-    - `pacman -Syu && pacman -S zsh`
+  - `eval "$(curl https://raw.githubusercontent.com/alexsarmiento/gitportable-pacman/refs/heads/master/install-pacman-git-bash.sh)"`
+  - `pacman -Syu && pacman -S zsh`
