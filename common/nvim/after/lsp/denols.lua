@@ -1,5 +1,17 @@
 ---@type vim.lsp.Config
 return {
+  -- https://docs.deno.com/runtime/reference/lsp_integration/#language-ids
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+    "json",
+    "jsonc",
+    "markdown",
+  },
   single_file_support = true,
   workspace_required = true,
   root_markers = {},
