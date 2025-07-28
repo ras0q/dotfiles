@@ -8,6 +8,7 @@
     "~/.config/git": "./common/git",
     "~/.config/helix": "./common/helix",
     "~/.config/lazygit": "./common/lazygit",
+    "~/.config/logrotate.d": "./common/logrotate.d",
     "~/.config/mise": "./common/mise",
     "~/.config/nvim": "./common/nvim",
     "~/.config/starship.toml": "./common/starship.toml",
