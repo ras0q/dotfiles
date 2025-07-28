@@ -10,7 +10,6 @@ return {
     "typescript.tsx",
     "json",
     "jsonc",
-    "markdown",
   },
   single_file_support = true,
   workspace_required = true,
