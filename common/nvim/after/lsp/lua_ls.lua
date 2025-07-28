@@ -14,6 +14,7 @@ return {
       },
       workspace = {
         library = {
+          vim.loop.cwd(),
           vim.fn.stdpath("config") .. "/lua",
           vim.env.VIMRUNTIME .. "/lua",
           plugins["lazy.nvim"].dir .. "/lua",
