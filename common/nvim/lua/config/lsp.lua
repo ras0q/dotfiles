@@ -10,6 +10,8 @@ M.ensure_installed = {
 }
 vim.lsp.enable(M.ensure_installed)
 
+vim.lsp.set_log_level("warn")
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", {}),
   callback = function(args)
