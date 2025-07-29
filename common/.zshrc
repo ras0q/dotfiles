@@ -73,6 +73,12 @@ eval "$(starship init zsh --print-full-init)"
 # zoxide
 eval "$(zoxide init --cmd cd --hook pwd zsh)"
 
+# gomi
+if command -v gomi >/dev/null 2>&1; then
+  alias rm=gomi
+  gomi --prune=3m
+fi
+
 # cursor
 # eval "$(code --locate-shell-integration-path zsh)"
 

@@ -25,6 +25,7 @@
 "aqua:x-motemen/ghq" = "latest"
 "cargo:eza" = "latest"
 deno = "latest"
+"github:babarot/gomi" = "latest"
 go = "1.24"
 java = "latest"
 node = "lts"

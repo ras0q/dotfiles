@@ -11,6 +11,8 @@ add_paths() {
   fi
 }
 
+[[ -f ~/.env ]] && source ~/.env
+
 add_paths \
   ~/.local/bin \
   ~/.local/share/mise/shims \
@@ -47,5 +49,3 @@ fi
 if [[ "$(uname -s)" =~ "MINGW" ]]; then
   [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
 fi
-
-[[ -f ~/.env ]] && source ~/.env
