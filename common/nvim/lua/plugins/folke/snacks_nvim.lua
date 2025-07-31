@@ -23,7 +23,7 @@ return {
     { "<leader>l", function() Snacks.lazygit() end,                         desc = "LazyGit" },
     { "<leader>p", function() Snacks.picker.pickers() end,                  desc = "List Pickers" },
     {
-      "<leader>gf",
+      "<leader>h",
       function()
         Snacks.picker({
           finder = "proc",
