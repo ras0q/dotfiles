@@ -8,7 +8,7 @@
 	lo = log --oneline
 	pushf = push --force-with-lease --force-if-includes
 	cp = cherry-pick
-	vibecommit = !gemini -p \"Generate a conventional commit message about this change. Output a plaintext, not a codeblock\\n$(git diff HEAD)\" -m \"gemini-2.5-flash\" | git commit --author \"gemini-cli <gemini-cli@example.com>\" -F -
+	vibecommit = !gemini -p \"Generate a conventional commit message about this change. Output a plaintext, not a codeblock\\n$(git diff HEAD)\" -m \"gemini-2.5-flash\" | git commit --author \"vibe-coder <vibe-coder@example.com>\" -F -
 
 [branch]
 	sort = -committerdate
