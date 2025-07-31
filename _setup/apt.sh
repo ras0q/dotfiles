@@ -12,6 +12,7 @@ sudo apt-get install -y \
     gcc \
     socat \
     wget \
+    xdg-utils \
     zsh
 
 echo "Add apt PPAs (Git)"
