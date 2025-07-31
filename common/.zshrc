@@ -34,6 +34,10 @@ export ABBR_SET_EXPANSION_CURSOR=1
 export ABBR_GET_AVAILABLE_ABBREVIATION=1
 export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
+# fzf-tab
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:git-reset:*' sort false
+
 # Completions
 eval "$(gh completion -s zsh)"
 
