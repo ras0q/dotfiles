@@ -12,7 +12,6 @@ vim.keymap.set("n", "gp", ":bprevious<CR>", opts)
 vim.keymap.set("n", "gn", ":bnext<CR>", opts)
 vim.keymap.set("n", "<Space>o", ":SearchInBrowser<CR>", opts)
 vim.keymap.set("n", "<Space><Space>", "ZZ", opts)
-vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 
 -- insert mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
@@ -23,4 +22,6 @@ vim.keymap.set("v", "gl", "g$", opts)
 vim.keymap.set("v", "ge", "G", opts)
 
 -- terminal mode
-vim.keymap.set("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
+vim.keymap.set("t", "jk", "<C-\\><C-n>", opts)
+vim.keymap.set("t", "<A-j>", "<Down>", opts)
+vim.keymap.set("t", "<A-k>", "<Up>", opts)
