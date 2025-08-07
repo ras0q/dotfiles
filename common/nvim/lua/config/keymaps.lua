@@ -10,6 +10,7 @@ vim.keymap.set("n", "gl", "$", opts)
 vim.keymap.set("n", "ge", "G", opts)
 vim.keymap.set("n", "gp", ":bprevious<CR>", opts)
 vim.keymap.set("n", "gn", ":bnext<CR>", opts)
+vim.keymap.set("n", "<Space>o", ":SearchInBrowser<CR>", opts)
 vim.keymap.set("n", "<Space><Space>", "ZZ", opts)
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 

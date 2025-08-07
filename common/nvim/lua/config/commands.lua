@@ -15,3 +15,24 @@ vim.api.nvim_create_user_command("AddPlugin", function(opts)
     vim.notify("✅ Created: " .. vim.fn.fnamemodify(path, ":~"), vim.log.levels.INFO)
   end
 end, { nargs = 1 })
+
+vim.api.nvim_create_user_command("SearchInBrowser", function()
+  vim.ui.input({ prompt = 'Search: ' }, function(input)
+    if input ~= nil and input ~= '' then
+      local url = 'https://www.google.com/search?q=' .. input
+
+      if vim.g.netrw_browsex_viewer ~= nil and vim.g.netrw_browsex_viewer ~= '' then
+        vim.fn.system({ vim.g.netrw_browsex_viewer, url })
+        return
+      end
+
+      if vim.fn.has('mac') then
+        vim.fn.system({ 'open', url })
+      elseif vim.fn.has('win32') then
+        vim.fn.system({ 'start', url })
+      else
+        vim.fn.system({ 'xdg-open', url })
+      end
+    end
+  end)
+end, {})
