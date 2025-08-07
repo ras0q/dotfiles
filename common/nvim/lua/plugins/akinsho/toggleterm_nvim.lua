@@ -10,6 +10,7 @@ return {
     }
   },
   keys = {
+    { "<leader>T", "<cmd>ToggleTerm<cr>",                 desc = "ToggleTerm" },
     { "<leader>t", "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm (float)" },
   }
 }
