@@ -6,3 +6,4 @@ DerivedData
 .env.*
 !.env.example
 mise.local.toml
+.crush/
