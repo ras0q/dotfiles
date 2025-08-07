@@ -80,7 +80,7 @@ eval "$(zoxide init --cmd cd --hook pwd zsh)"
 # gomi
 if command -v gomi >/dev/null 2>&1; then
   alias rm=gomi
-  gomi --prune=3m
+  gomi --prune=3m > /dev/null
 fi
 
 # cursor
