@@ -14,6 +14,11 @@ return {
       hidden = true,
     },
     quickfile = { enabled = true },
+    terminal = {
+      win = {
+        border = "rounded",
+      }
+    },
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end, desc = "Buffers" },
