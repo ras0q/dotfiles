@@ -22,6 +22,7 @@ opt.number = true
 opt.cursorline = true
 opt.virtualedit = "onemore"
 opt.smartindent = true
+opt.laststatus = 3
 
 -- tabs
 opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
