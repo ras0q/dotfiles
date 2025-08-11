@@ -1,5 +1,6 @@
-Aloxaf/fzf-tab
-olets/zsh-abbr
-zsh-users/zsh-completions
-zsh-users/zsh-autosuggestions
+Aloxaf/fzf-tab kind:defer
+olets/zsh-abbr kind:defer
+romkatv/zsh-defer
+zsh-users/zsh-completions kind:defer
+zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-syntax-highlighting

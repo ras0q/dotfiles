@@ -1,4 +1,4 @@
-autoload -Uz compinit && compinit
+# zmodload zsh/zprof
 
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(cd|pwd|1[sal])"
@@ -22,6 +22,18 @@ setopt inc_append_history_time
 [[ -d ~/.antidote ]] || git clone --depth 1 https://github.com/mattmc3/antidote.git ~/.antidote
 source ~/.antidote/antidote.zsh
 antidote load
+
+# compinit
+autoload -Uz compinit
+local now=$(date +"%s")
+local updated=$(date -r ~/.zcompdump +"%s")
+local threshold=$((60 * 60 * 24))
+if [ $((${now} - ${updated})) -gt ${threshold} ]; then
+  zsh-defer compinit
+else
+  # if there are new functions can be omitted by giving the option -C.
+  zsh-defer compinit -C
+fi
 
 # Syntax highlight theme
 mkdir -p ~/.zsh
@@ -63,19 +75,22 @@ if [[ $(uname -r) == *microsoft* ]]; then
 fi
 
 # mise
-if [[ ! "$(uname -s)" =~ "MINGW" ]]; then
+function load-mise() {
   eval "$(mise activate zsh)"
   eval "$(mise completion zsh)"
+}
+if [[ ! "$(uname -s)" =~ "MINGW" ]]; then
+  zsh-defer load-mise
 fi
 
 # fzf
-eval "$(fzf --zsh)"
+eval "$($(mise which fzf) --zsh)"
 
 # starship
-eval "$(starship init zsh --print-full-init)"
+eval "$($(mise which starship) init zsh --print-full-init)"
 
 # zoxide
-eval "$(zoxide init --cmd cd --hook pwd zsh)"
+eval "$($(mise which zoxide) init --cmd cd --hook pwd zsh)"
 
 # gomi
 if command -v gomi >/dev/null 2>&1; then
@@ -88,3 +103,5 @@ fi
 
 # Zellij
 # eval "$(zellij setup --generate-auto-start zsh)"
+
+# zprof
