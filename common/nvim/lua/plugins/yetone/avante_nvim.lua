@@ -1,3 +1,10 @@
+local custom_highlights = {
+  -- https://github.com/yetone/avante.nvim/issues/1797
+  AvanteSidebarWinSeparator        = "AvanteSidebarWinHorizontalSeparator",
+  -- https://github.com/yetone/avante.nvim/issues/2491
+  AvanteToBeDeletedWOStrikethrough = "DiffDelete",
+}
+
 ---@type LazyPluginSpec
 return {
   "yetone/avante.nvim",
@@ -19,6 +26,11 @@ return {
         placeholder = "Enter your API key...",
       }
     },
+    windows = {
+      input = {
+        height = 10,
+      }
+    },
     highlights = {
       diff = {
         current = "DiffText",
@@ -38,9 +50,9 @@ return {
   },
   config = function(_, opts)
     require("avante").setup(opts)
-    -- In light theme, visibility of the diff view is bad.
-    -- https://github.com/yetone/avante.nvim/issues/2491
-    vim.api.nvim_set_hl(0, "AvanteToBeDeletedWOStrikethrough", { link = "DiffDelete" })
+    for avante_hl, default_hl in pairs(custom_highlights) do
+      vim.api.nvim_set_hl(0, avante_hl, { link = default_hl })
+    end
   end,
   build = vim.fn.has("win32") == 1
       and "pwsh.exe -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource -false"
