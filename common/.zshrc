@@ -83,14 +83,22 @@ if [[ ! "$(uname -s)" =~ "MINGW" ]]; then
   zsh-defer load-mise
 fi
 
+function mise-which() {
+  if [[ "$(uname -s)" =~ "MINGW" ]]; then
+    echo "$1"
+  else
+    mise which "$1"
+  fi
+}
+
 # fzf
-eval "$($(mise which fzf) --zsh)"
+eval "$($(mise-which fzf) --zsh)"
 
 # starship
-eval "$($(mise which starship) init zsh --print-full-init)"
+eval "$($(mise-which starship) init zsh --print-full-init)"
 
 # zoxide
-eval "$($(mise which zoxide) init --cmd cd --hook pwd zsh)"
+eval "$($(mise-which zoxide) init --cmd cd --hook pwd zsh)"
 
 # gomi
 if command -v gomi >/dev/null 2>&1; then
