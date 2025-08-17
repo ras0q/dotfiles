@@ -26,7 +26,7 @@ antidote load
 # compinit
 autoload -Uz compinit
 local now=$(date +"%s")
-local updated=$(date -r ~/.zcompdump +"%s")
+[[ -f ~/.zcompdump ]] && local updated=$(date -r ~/.zcompdump +"%s") || local updated=0
 local threshold=$((60 * 60 * 24))
 if [ $((${now} - ${updated})) -gt ${threshold} ]; then
   zsh-defer compinit
@@ -51,7 +51,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:git-reset:*' sort false
 
 # Completions
-eval "$(gh completion -s zsh)"
+zsh-defer eval "$(gh completion -s zsh)"
 
 # WSL2
 if [[ $(uname -r) == *microsoft* ]]; then
