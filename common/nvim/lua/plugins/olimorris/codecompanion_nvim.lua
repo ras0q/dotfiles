@@ -66,5 +66,6 @@ return {
     { "<leader>ai", "<cmd>CodeCompanion<cr>",            mode = { "n", "v" },             desc = "CodeCompanion - inline" },
     { "<leader>at", "<cmd>CodeCompanionChat toggle<cr>", desc = "CodeCompanion - toggle" },
     { "<leader>ap", "<cmd>CodeCompanionAction<cr>",      desc = "CodeCompanion - palette" },
+    { "<leader>ac", "<cmd>CodeCompanionCmd<cr>",         desc = "CodeCompanion - command" },
   },
 }
