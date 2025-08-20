@@ -25,6 +25,7 @@
 "aqua:sxyazi/yazi" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 "asdf:mise-plugins/mise-1password-cli" = "latest"
+bun = "latest"
 "cargo:eza" = "latest"
 deno = "latest"
 go = "1.24"
