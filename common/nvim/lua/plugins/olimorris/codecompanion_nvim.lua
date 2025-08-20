@@ -62,4 +62,10 @@ return {
       },
     },
   },
+  keys = {
+    { "<leader>an", "<cmd>CodeCompanionChat<cr>",        mode = { "n", "v" },             desc = "CodeCompanion - new" },
+    { "<leader>ai", "<cmd>CodeCompanion<cr>",            mode = { "n", "v" },             desc = "CodeCompanion - inline" },
+    { "<leader>at", "<cmd>CodeCompanionChat toggle<cr>", desc = "CodeCompanion - toggle" },
+    { "<leader>ap", "<cmd>CodeCompanionAction<cr>",      desc = "CodeCompanion - palette" },
+  },
 }
