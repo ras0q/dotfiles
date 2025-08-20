@@ -13,6 +13,9 @@ return {
   "olimorris/codecompanion.nvim",
   enabled = require("config.options").ai_enabled,
   event = "BufReadPre",
+  dependencies = {
+    "ravitemer/codecompanion-history.nvim",
+  },
   opts = {
     strategies = {
       chat = {
@@ -44,6 +47,9 @@ return {
       language = "Japanese",
     },
     extensions = {
+      history = {
+        enabled = true,
+      },
       mcphub = {
         callback = "mcphub.extensions.codecompanion",
         opts = {
