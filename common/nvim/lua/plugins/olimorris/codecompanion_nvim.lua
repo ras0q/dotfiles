@@ -34,6 +34,12 @@ return {
       action_palette = {
         provider = "snacks",
       },
+      chat = {
+        show_settings = true,
+        window = {
+          width = 0.3,
+        },
+      },
     },
     opts = {
       language = "Japanese",

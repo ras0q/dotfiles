@@ -1,8 +1,11 @@
+local file_types = { "markdown", "Avante", "codecompanion" }
+
+---@type LazyPluginSpec
 return {
   -- Make sure to set this up properly if you have lazy=true
   "MeanderingProgrammer/render-markdown.nvim",
   opts = {
-    file_types = { "markdown", "Avante" },
+    file_types = file_types,
   },
-  ft = { "markdown", "Avante" },
+  ft = file_types,
 }

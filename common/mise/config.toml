@@ -23,6 +23,7 @@
 "aqua:sigstore/cosign" = "latest"
 "aqua:starship/starship" = "latest"
 "aqua:sxyazi/yazi" = "latest"
+"aqua:tree-sitter/tree-sitter" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 "asdf:mise-plugins/mise-1password-cli" = "latest"
 bun = "latest"

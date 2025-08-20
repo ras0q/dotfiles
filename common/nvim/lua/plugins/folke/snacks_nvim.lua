@@ -2,6 +2,7 @@
 return {
   "folke/snacks.nvim",
   lazy = false,
+  priority = 1000,
   ---@type snacks.Config
   opts = {
     explorer = { enabled = true },
@@ -17,7 +18,7 @@ return {
     terminal = {
       win = {
         border = "rounded",
-      }
+      },
     },
   },
   keys = {
@@ -41,10 +42,10 @@ return {
           confirm = function(picker, item)
             picker:close()
             vim.cmd("cd " .. item.text)
-          end
+          end,
         })
       end,
-      desc = "List Repositories"
+      desc = "List Repositories",
     },
   },
 }
