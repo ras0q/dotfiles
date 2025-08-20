@@ -2,6 +2,7 @@
   "avante.nvim": { "branch": "main", "commit": "9ccf721435215e240c80b9b52d3723014600587f" },
   "catppuccin": { "branch": "main", "commit": "fa42eb5e26819ef58884257d5ae95dd0552b9a66" },
   "chowcho.nvim": { "branch": "main", "commit": "c87ba3be2059070e16c89bf1710762dd70cb3007" },
+  "codecompanion.nvim": { "branch": "main", "commit": "69d75795d82bc7d1ff77cf4461d59104b432c740" },
   "copilot.lua": { "branch": "master", "commit": "14bf786180b2ca4578915c56989b6d676dddc6f3" },
   "img-clip.nvim": { "branch": "main", "commit": "d8b6b030672f9f551a0e3526347699985a779d93" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },

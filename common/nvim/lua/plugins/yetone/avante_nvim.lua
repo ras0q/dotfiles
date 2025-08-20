@@ -8,7 +8,8 @@ local custom_highlights = {
 ---@type LazyPluginSpec
 return {
   "yetone/avante.nvim",
-  enabled = require("config.options").ai_enabled,
+  -- enabled = require("config.options").ai_enabled,
+  enabled = false,
   event = "BufReadPre",
   version = false, -- Never set this value to "*"! Never!
   opts = {
