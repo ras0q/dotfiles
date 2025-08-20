@@ -15,6 +15,7 @@ return {
   event = "BufReadPre",
   dependencies = {
     "ravitemer/codecompanion-history.nvim",
+    "franco-ruggeri/codecompanion-spinner.nvim",
   },
   opts = {
     strategies = {
@@ -47,9 +48,7 @@ return {
       language = "Japanese",
     },
     extensions = {
-      history = {
-        enabled = true,
-      },
+      history = {},
       mcphub = {
         callback = "mcphub.extensions.codecompanion",
         opts = {
@@ -65,6 +64,7 @@ return {
           make_slash_commands = true,           -- Add MCP prompts as /slash commands
         },
       },
+      spinner = {},
     },
   },
   keys = {

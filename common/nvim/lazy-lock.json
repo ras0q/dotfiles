@@ -3,6 +3,8 @@
   "catppuccin": { "branch": "main", "commit": "30fa4d122d9b22ad8b2e0ab1b533c8c26c4dde86" },
   "chowcho.nvim": { "branch": "main", "commit": "c87ba3be2059070e16c89bf1710762dd70cb3007" },
   "codecompanion-history.nvim": { "branch": "main", "commit": "336987afe9aca1fca30c20ca27dc91e1f7690c77" },
+  "codecompanion-spinner.nvim": { "branch": "main", "commit": "1f53b8d402de2a5ee6f9d64793f5eda49ed12a64" },
+  "codecompanion.nvim": { "branch": "main", "commit": "33fe6576c626499acf5ceec356b2912ca999f684" },
   "copilot.lua": { "branch": "master", "commit": "0753a440b0eed13ff32366ef5e21c215012fd1d8" },
   "img-clip.nvim": { "branch": "main", "commit": "d8b6b030672f9f551a0e3526347699985a779d93" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
