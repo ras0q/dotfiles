@@ -15,7 +15,6 @@ local list_repos = {
 -- for avante.nvim's input provider and replacing telescope functionality
 return {
   "folke/snacks.nvim",
-  version = "v2.22.0",
   lazy = false,
   priority = 1000,
   ---@type snacks.Config
