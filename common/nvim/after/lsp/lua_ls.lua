@@ -5,7 +5,14 @@ return {
   settings = {
     Lua = {
       diagnostics = {
-        globals = { "vim" }
+        globals = { "vim" },
+      },
+      format = {
+        defaultConfig = {
+          quote_style = "double",
+          call_arg_parentheses = "always",
+          trailing_table_separator = "smart",
+        },
       },
       runtime = {
         version = "LuaJIT",
@@ -22,9 +29,8 @@ return {
           "${3rd}/luv/library",
           "${3rd}/busted/library",
           "${3rd}/luassert/library",
-        }
-      }
-    }
-  }
-
+        },
+      },
+    },
+  },
 }
