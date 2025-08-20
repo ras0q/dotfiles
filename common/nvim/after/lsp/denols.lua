@@ -27,5 +27,5 @@ return {
     if #node_files == 0 then
       return cb(dir)
     end
-  end
+  end,
 }

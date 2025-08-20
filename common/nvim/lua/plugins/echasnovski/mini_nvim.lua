@@ -7,7 +7,7 @@ return {
     require("mini.basics").setup({
       mappings = {
         option_toggle_prefix = "m",
-      }
+      },
     })
     require("mini.sessions").setup()
     require("mini.starter").setup()
@@ -24,7 +24,7 @@ return {
             comment_line = "<C-c>",
             comment_visual = "<C-c>",
             textobject = "<C-c>",
-          }
+          },
         })
         require("mini.pairs").setup()
         require("mini.surround").setup()
@@ -35,7 +35,7 @@ return {
             apply = "",
             reset = "",
             textobject = "",
-          }
+          },
         })
         require("mini.git").setup()
 
@@ -48,7 +48,7 @@ return {
 
         -- Other
         require("mini.fuzzy").setup()
-      end
+      end,
     })
   end,
 }

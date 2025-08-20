@@ -7,5 +7,5 @@ return {
   keys = {
     { "gd", "<cmd>lua vim.lsp.buf.definition()  <CR>", "Go to definition" },
     { "gD", "<cmd>lua vim.lsp.buf.declaration() <CR>", "Go to declaration" },
-  }
+  },
 }

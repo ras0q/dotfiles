@@ -2,6 +2,6 @@
 return {
   "tkmpypy/chowcho.nvim",
   keys = {
-    { "<leader>w", function() require("chowcho").run() end, desc = "Select window" }
-  }
+    { "<leader>w", function() require("chowcho").run() end, desc = "Select window" },
+  },
 }

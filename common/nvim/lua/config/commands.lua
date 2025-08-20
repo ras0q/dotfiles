@@ -4,7 +4,7 @@ vim.api.nvim_create_user_command("AddPlugin", function(opts)
     return vim.notify("Argument must be in 'author/repo' format", vim.log.levels.ERROR)
   end
 
-  local filename = spec:gsub('%.', '_')
+  local filename = spec:gsub("%.", "_")
   local path = string.format("%s/lua/plugins/%s.lua", vim.fn.stdpath("config"), filename)
   vim.fn.mkdir(vim.fn.fnamemodify(path, ":h"), "p")
 
@@ -17,21 +17,21 @@ vim.api.nvim_create_user_command("AddPlugin", function(opts)
 end, { nargs = 1 })
 
 vim.api.nvim_create_user_command("SearchInBrowser", function()
-  vim.ui.input({ prompt = 'Search: ' }, function(input)
-    if input ~= nil and input ~= '' then
-      local url = 'https://www.google.com/search?q=' .. input
+  vim.ui.input({ prompt = "Search: " }, function(input)
+    if input ~= nil and input ~= "" then
+      local url = "https://www.google.com/search?q=" .. input
 
-      if vim.g.netrw_browsex_viewer ~= nil and vim.g.netrw_browsex_viewer ~= '' then
+      if vim.g.netrw_browsex_viewer ~= nil and vim.g.netrw_browsex_viewer ~= "" then
         vim.fn.system({ vim.g.netrw_browsex_viewer, url })
         return
       end
 
-      if vim.fn.has('mac') then
-        vim.fn.system({ 'open', url })
-      elseif vim.fn.has('win32') then
-        vim.fn.system({ 'start', url })
+      if vim.fn.has("mac") then
+        vim.fn.system({ "open", url })
+      elseif vim.fn.has("win32") then
+        vim.fn.system({ "start", url })
       else
-        vim.fn.system({ 'xdg-open', url })
+        vim.fn.system({ "xdg-open", url })
       end
     end
   end)

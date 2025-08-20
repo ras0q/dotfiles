@@ -12,5 +12,5 @@ return {
     if #node_files > 0 and #deno_files == 0 then
       return cb(vim.fs.dirname(node_files[1]))
     end
-  end
+  end,
 }

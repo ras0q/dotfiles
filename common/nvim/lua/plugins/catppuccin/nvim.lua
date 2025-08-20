@@ -10,6 +10,6 @@ return {
       transparent_background = true,
       auto_integrations = true,
     })
-    vim.cmd.colorscheme "catppuccin-latte"
+    vim.cmd.colorscheme("catppuccin-latte")
   end,
 }

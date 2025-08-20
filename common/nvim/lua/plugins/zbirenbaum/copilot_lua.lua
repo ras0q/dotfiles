@@ -4,5 +4,5 @@ return {
   event = "VeryLazy",
   config = function()
     require("copilot").setup()
-  end
+  end,
 }

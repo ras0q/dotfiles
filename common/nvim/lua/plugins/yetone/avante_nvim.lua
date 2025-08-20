@@ -25,12 +25,12 @@ return {
         title = "Avante Input",
         icon = " ",
         placeholder = "Enter your API key...",
-      }
+      },
     },
     windows = {
       input = {
         height = 10,
-      }
+      },
     },
     highlights = {
       diff = {
