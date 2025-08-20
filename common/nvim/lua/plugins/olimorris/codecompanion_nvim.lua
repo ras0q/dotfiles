@@ -35,7 +35,6 @@ return {
         provider = "snacks",
       },
       chat = {
-        show_settings = true,
         window = {
           width = 0.3,
         },
