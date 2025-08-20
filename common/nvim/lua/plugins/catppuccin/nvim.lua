@@ -8,6 +8,9 @@ return {
     require("catppuccin").setup({
       flavour = "auto",
       transparent_background = true,
+      float = {
+        transparent = true,
+      },
       auto_integrations = true,
     })
     vim.cmd.colorscheme("catppuccin-latte")
