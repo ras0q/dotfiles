@@ -48,3 +48,6 @@ usage = "latest"
 exec_auto_install = false
 experimental = true
 idiomatic_version_file_enable_tools = ["node"]
+
+[settings.npm]
+bun = true
