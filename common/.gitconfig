@@ -52,15 +52,6 @@
 [help]
 	autocorrect = prompt
 
-# Include system-wide .gitconfig
-# XXX:
-#		If multiple keys are specified, the last one takes precedence,
-#   and even if the path does not exist, it will not cause an error.
-#   (simply not including the path)
-[include]
-	path = ~/.gitconfig.mac
-	path = ~/.gitconfig.win
-	path = ~/.gitconfig.wsl2
 
 [init]
 	defaultBranch = main
@@ -96,3 +87,14 @@
 	email = ras0q@users.noreply.github.com
 	name = ras0q
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAX3CmJvy8KC9p0m5MtgxdetvZBlVzh5r3kg3T/LJeJW
+
+# Include system-wide .gitconfig
+# XXX:
+#		If multiple keys are specified, the last one takes precedence,
+#   and even if the path does not exist, it will not cause an error.
+#   (simply not including the path)
+[include]
+	path = ~/.gitconfig.mac
+	path = ~/.gitconfig.win
+  path = ~/.gitconfig.wsl2
+  path = ~/.gitconfig.private
