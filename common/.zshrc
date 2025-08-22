@@ -25,14 +25,10 @@ antidote load
 
 # compinit
 autoload -Uz compinit
-local now=$(date +"%s")
-[[ -f ~/.zcompdump ]] && local updated=$(date -r ~/.zcompdump +"%s") || local updated=0
-local threshold=$((60 * 60 * 24))
-if [ $((${now} - ${updated})) -gt ${threshold} ]; then
-  zsh-defer compinit
+if [ "$(date +'%j')" != "$(date -r ~/.zcompdump +"%j" 2>/dev/null)" ]; then
+    compinit
 else
-  # if there are new functions can be omitted by giving the option -C.
-  zsh-defer compinit -C
+    compinit -C
 fi
 
 # Syntax highlight theme
