@@ -25,7 +25,7 @@ antidote load
 
 # compinit
 autoload -Uz compinit
-if [ "$(date +'%j')" != "$(date -r ~/.zcompdump +"%j" 2>/dev/null)" ]; then
+if [ "$(date +'%j')" != "$(date -r ~/.zcompdump +'%j' 2>/dev/null)" ]; then
     compinit
 else
     compinit -C
