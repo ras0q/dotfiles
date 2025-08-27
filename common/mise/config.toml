@@ -5,6 +5,7 @@
 
 [tools]
 "aqua:BurntSushi/ripgrep" = "latest"
+"aqua:LuaLS/lua-language-server" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"
 "aqua:astral-sh/uv" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
@@ -44,6 +45,7 @@ node = "lts"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
 rust = "latest"
+stylua = "latest"
 usage = "latest"
 
 [settings]
