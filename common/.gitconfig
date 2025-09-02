@@ -28,6 +28,7 @@
 	; fsmonitor = true
 	quotepath = false
 	untrackedCache = true
+	pager = LESSCHARSET=utf-8 less
 
 [credential "https://github.com"]
 	helper =
