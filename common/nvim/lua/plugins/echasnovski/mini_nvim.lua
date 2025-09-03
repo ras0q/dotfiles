@@ -30,12 +30,14 @@ return {
         require("mini.surround").setup()
 
         -- General workflow
-        require("mini.diff").setup({
+        local diff = require("mini.diff")
+        diff.setup({
           mappings = {
             apply = "",
             reset = "",
             textobject = "",
           },
+          source = diff.gen_source.none(),
         })
         require("mini.git").setup()
 
