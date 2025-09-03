@@ -49,6 +49,7 @@ vim.diagnostic.config({
 })
 
 --- clipboard
+vim.opt.clipboard = ""
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "Wsl2Clipboard",
@@ -65,7 +66,6 @@ if vim.fn.has("wsl") == 1 then
     cache_enabled = true,
   }
 end
-opt.clipboard = "unnamedplus"
 
 -- netrw
 vim.g.netrw_liststyle = 3 -- tree style listing
