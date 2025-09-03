@@ -1,13 +1,3 @@
-local copilot_adapter = function()
-  return require("codecompanion.adapters").extend("copilot", {
-    schema = {
-      model = {
-        default = "gpt-5-mini",
-      },
-    },
-  })
-end
-
 ---@type LazyPluginSpec
 return {
   "olimorris/codecompanion.nvim",
@@ -20,7 +10,10 @@ return {
   opts = {
     strategies = {
       chat = {
-        adapter = copilot_adapter,
+        adapter = {
+          name = "copilot",
+          model = "gpt-5-mini",
+        },
         roles = {
           llm = function(adapter)
             return "CodeCompanion (" .. adapter.formatted_name .. ", " .. adapter.model.name .. ")"
@@ -28,10 +21,16 @@ return {
         },
       },
       inline = {
-        adapter = copilot_adapter,
+        adapter = {
+          name = "copilot",
+          model = "gpt-4.1",
+        },
       },
       agent = {
-        adapter = copilot_adapter,
+        adapter = {
+          name = "copilot",
+          model = "gpt-4.1",
+        },
       },
     },
     display = {
