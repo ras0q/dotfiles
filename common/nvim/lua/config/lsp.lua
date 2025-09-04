@@ -8,6 +8,9 @@ M.ensure_installed = {
   "clangd",
   -- "pylsp",
 }
+if require("config.options").ai_enabled then
+  table.insert(M.ensure_installed, "copilot")
+end
 vim.lsp.enable(M.ensure_installed)
 
 vim.lsp.log.set_level("warn")
@@ -69,6 +72,19 @@ vim.api.nvim_create_autocmd("LspAttach", {
         callback = function()
           vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
         end,
+      })
+    end
+
+    if client:supports_method("textDocument/inlineCompletion") then
+      vim.lsp.inline_completion.enable()
+      vim.keymap.set("i", "<Tab>", function()
+        if not vim.lsp.inline_completion.get() then
+          return "<Tab>"
+        end
+      end, {
+        expr = true,
+        replace_keycodes = true,
+        desc = "Get the current inline completion",
       })
     end
   end,

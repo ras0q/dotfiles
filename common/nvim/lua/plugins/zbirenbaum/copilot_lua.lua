@@ -1,8 +1,6 @@
 return {
   "zbirenbaum/copilot.lua",
-  enabled = require("config.options").ai_enabled,
+  -- enabled = require("config.options").ai_enabled,
+  enabled = false,
   event = "VeryLazy",
-  config = function()
-    require("copilot").setup()
-  end,
 }
