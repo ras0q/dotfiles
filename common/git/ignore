@@ -8,3 +8,4 @@ NUL
 !.env.example
 mise.local.toml
 .crush/
+.trash/
