@@ -9,6 +9,7 @@ abbr "gs"="git switch"
 abbr "gss"="git status"
 abbr "gt"="git stash"
 abbr "gu"="git pull"
+abbr "gur"="git pull --rebase"
 
 # docker
 abbr "d"="docker"
