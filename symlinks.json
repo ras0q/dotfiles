@@ -35,6 +35,7 @@
   },
   "windows": {
     "~/.gitconfig.win": "./win/.gitconfig.win",
+    "~/.inputrc": "./win/.inputrc",
     "~/.wslconfig": "./win/.wslconfig",
     "~/AppData/Local/nvim": "./common/nvim",
     "~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json": "./win/terminal/settings.json",
