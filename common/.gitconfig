@@ -46,6 +46,7 @@
 
 [fetch]
 	prune = true
+	recurseSubmodules = on-demand
 
 [gpg]
 	format = ssh
