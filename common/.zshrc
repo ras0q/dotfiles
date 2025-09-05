@@ -107,9 +107,9 @@ fi
 # eval "$(code --locate-shell-integration-path zsh)"
 
 # Zellij
-if ! is_mingw && command_exists zellij; then
-  eval "$(zellij setup --generate-auto-start zsh)"
-fi
+# if ! is_mingw && command_exists zellij; then
+#   eval "$(zellij setup --generate-auto-start zsh)"
+# fi
 
 # NOTE: Redirecting to /dev/null creates a file named NUL.
 is_mingw && rm -rf ./NUL
