@@ -1,14 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": 
+    "actions":
     [
         {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
@@ -16,11 +12,15 @@
             "id": "User.copy"
         },
         {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
             "command": "paste",
             "id": "User.paste"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -31,18 +31,18 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{24cf895b-509b-40de-8b52-2a034074ac5f}",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialCols": 80,
     "initialRows": 30,
-    "keybindings": 
+    "keybindings":
     [
-        {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
         {
             "id": "User.paste",
             "keys": "ctrl+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
         },
         {
             "id": "User.copy",
@@ -53,26 +53,45 @@
             "keys": "alt+shift+d"
         }
     ],
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
+        },
+        {
+            "allowEmpty": false,
+            "entries":
+            [
+                {
+                    "commandline": null,
+                    "name": null,
+                    "source": "Windows.Terminal.SSH",
+                    "type": "matchProfiles"
+                }
+            ],
+            "icon": "\ue969",
+            "inline": "auto",
+            "name": "SSH",
+            "type": "folder"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "colorScheme": "Catppuccin Latte",
-            "font": 
+            "experimental.rainbowSuggestions": true,
+            "experimental.repositionCursorWithMouse": true,
+            "font":
             {
-                "face": "\u6e90\u30ce\u89d2\u30b4\u30b7\u30c3\u30af Code JP, SauceCodePro Nerd Font",
-                "size": 10
+                "face": "Source Code Pro, BIZ UDGothic, Symbols Nerd Font",
+                "size": 12,
+                "weight": "medium"
             },
             "opacity": 70,
             "useAcrylic": true
         },
-        "list": 
+        "list":
         [
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -88,47 +107,21 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
-                "guid": "{24cf895b-509b-40de-8b52-2a034074ac5f}",
-                "hidden": false,
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash",
-                "startingDirectory": "%USERPROFILE%"
-            },
-            {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
             {
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-                "hidden": false,
-                "icon": null,
-                "name": "Ubuntu",
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-            },
-            {
-                "commandline": "C:\\msys64\\msys2_shell.cmd -defterm -here -no-start -msys -shell bash -use-full-path",
-                "guid": "{6bfa33b6-971f-457a-8298-452f3a7f0439}",
-                "hidden": false,
-                "icon": "C:\\msys64\\msys2.ico",
-                "name": "MSYS2",
-                "startingDirectory": "C:/msys64/home/%USERNAME%"
-            },
-            {
+                "commandline": "\"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i  \"C:\\Program Files\\Git\\etc\\usr\\bin\"",
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "name": "Git Bash",
+                "pathTranslationStyle": "msys2",
                 "source": "Git"
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#EFF1F5",
@@ -156,23 +149,23 @@
     ],
     "tabWidthMode": "equal",
     "theme": "system",
-    "themes": 
+    "themes":
     [
         {
             "name": "Catppuccin Latte",
-            "tab": 
+            "tab":
             {
                 "background": "#EFF1F5FF",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": 
+            "tabRow":
             {
                 "background": "#E6E9EFFF",
                 "unfocusedBackground": "#DCE0E8FF"
             },
-            "window": 
+            "window":
             {
                 "applicationTheme": "light",
                 "experimental.rainbowFrame": false,
