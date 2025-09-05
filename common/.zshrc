@@ -1,5 +1,12 @@
 # zmodload zsh/zprof
 
+local kernel=$(uname -s)
+local kernel_version=$(uname -r)
+local function is_mingw() { [[ "$kernel" == *MINGW* ]] }
+local function is_wsl2() { [[ "$kernel_version" == *microsoft* ]] }
+
+local function command_exists() { command -v "$1" >/dev/null 2>&1 }
+
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(cd|pwd|1[sal])"
 HISTSIZE=10000
@@ -50,9 +57,9 @@ zstyle ':completion:*:git-reset:*' sort false
 zsh-defer eval "$(gh completion -s zsh)"
 
 # WSL2
-if [[ $(uname -r) == *microsoft* ]]; then
+if is_wsl2; then
   # setup 1Password SSH agent for WSL2
-  if command -v npiperelay >/dev/null 2>&1; then
+  if command_exists npiperelay; then
     if ! ss -a | grep -q "$SSH_AUTH_SOCK" >/dev/null 2>&1; then
       if [[ -e "$SSH_AUTH_SOCK" ]]; then
         echo "removing previous socket..."
@@ -75,17 +82,11 @@ function load-mise() {
   eval "$(mise activate zsh)"
   eval "$(mise completion zsh)"
 }
-if [[ ! "$(uname -s)" =~ "MINGW" ]]; then
+if ! is_mingw; then
   zsh-defer load-mise
 fi
 
-function mise-which() {
-  if [[ "$(uname -s)" =~ "MINGW" ]]; then
-    echo "$1"
-  else
-    mise which "$1"
-  fi
-}
+function mise-which() { is_mingw && echo "$1" || mise which "$1"; }
 
 # fzf
 eval "$($(mise-which fzf) --zsh)"
@@ -97,7 +98,7 @@ eval "$($(mise-which starship) init zsh --print-full-init)"
 eval "$($(mise-which zoxide) init --cmd cd --hook pwd zsh)"
 
 # gomi
-if command -v gomi >/dev/null 2>&1; then
+if ! is_mingw && command_exists gomi; then
   alias rm=gomi
   gomi --prune=3m > /dev/null
 fi
@@ -106,6 +107,11 @@ fi
 # eval "$(code --locate-shell-integration-path zsh)"
 
 # Zellij
-# eval "$(zellij setup --generate-auto-start zsh)"
+if ! is_mingw && command_exists zellij; then
+  eval "$(zellij setup --generate-auto-start zsh)"
+fi
+
+# NOTE: Redirecting to /dev/null creates a file named NUL.
+is_mingw && rm -rf ./NUL
 
 # zprof
