@@ -101,7 +101,7 @@ eval "$($(mise-which zoxide) init --cmd cd --hook pwd zsh)"
 # gomi
 if ! is_mingw && command_exists gomi; then
   alias rm=gomi
-  zsh-defer gomi --prune=3m > /dev/null
+  # zsh-defer gomi --prune=3m & > /dev/null
 fi
 
 # cursor
