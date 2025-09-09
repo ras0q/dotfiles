@@ -55,6 +55,7 @@ zstyle ':completion:*:git-reset:*' sort false
 
 # Completions
 zsh-defer eval "$(gh completion -s zsh)"
+zsh-defer eval "$(op completion zsh)"
 
 # WSL2
 if is_wsl2; then
