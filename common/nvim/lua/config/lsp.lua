@@ -1,12 +1,13 @@
 local M = {}
 
 M.ensure_installed = {
-  "denols",
-  "ts_ls",
-  "lua_ls",
-  "gopls",
   "clangd",
+  "denols",
+  "gopls",
+  "lua_ls",
   -- "pylsp",
+  "svelte",
+  "ts_ls",
 }
 if require("config.options").ai_enabled then
   table.insert(M.ensure_installed, "copilot")
