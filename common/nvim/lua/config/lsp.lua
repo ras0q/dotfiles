@@ -22,31 +22,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
     local buf = args.buf
 
-    -- Set up keymaps for LSP features
+    -- Set LSP keybindings
+    -- See https://neovim.io/doc/user/lsp.html#lsp-defaults
     if client:supports_method("textDocument/definition") then
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
-    end
-
-    if client:supports_method("textDocument/implementation") then
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = buf, desc = "Go to implementation" })
-    end
-
-    if client:supports_method("textDocument/references") then
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = buf, desc = "Find references" })
     end
 
     if client:supports_method("textDocument/hover") then
       vim.keymap.set("n", "<leader>k",
         function() vim.lsp.buf.hover({ border = "single" }) end,
         { buffer = buf, desc = "Show hover documentation" })
-    end
-
-    if client:supports_method("textDocument/rename") then
-      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = buf, desc = "Rename symbol" })
-    end
-
-    if client:supports_method("textDocument/codeAction") then
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = buf, desc = "Code actions" })
     end
 
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
