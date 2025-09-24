@@ -74,7 +74,7 @@ local M = {
   ai_enabled = os.getenv("NVIM_AI_ENABLED") == "true",
 }
 if (not M.ai_enabled) then
-  vim.notify("Tips: You can enable AI feature with setting `$NVIM_AI_ENABLED` to `true`")
+  vim.print("Tips: You can enable AI feature with setting `$NVIM_AI_ENABLED` to `true`")
 end
 
 return M
