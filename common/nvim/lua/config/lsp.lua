@@ -2,8 +2,12 @@ local M = {}
 
 M.ensure_installed = {
   "clangd",
+  "cssls",
   "denols",
+  "eslint",
   "gopls",
+  "html",
+  -- "jsonls",
   "lua_ls",
   -- "pylsp",
   "svelte",

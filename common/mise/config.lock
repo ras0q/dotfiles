@@ -14,6 +14,11 @@ backend = "aqua:ajeetdsouza/zoxide"
 version = "0.8.22"
 backend = "aqua:astral-sh/uv"
 
+[tools."aqua:astral-sh/uv".platforms.linux-x64]
+checksum = "sha256:06b891ef144bd8390fecb150838f0ff8a34ccaeecf9d744d97945d02ec7389c0"
+size = 21507045
+url = "https://github.com/astral-sh/uv/releases/download/0.8.22/uv-x86_64-unknown-linux-musl.tar.gz"
+
 [tools."aqua:astral-sh/uv".platforms.macos-arm64]
 checksum = "sha256:3f61099e261e449527141dbf125629fab33ad696468c8c90cebbac40185a306c"
 size = 18194566
@@ -23,6 +28,11 @@ url = "https://github.com/astral-sh/uv/releases/download/0.8.22/uv-aarch64-apple
 version = "1.15.5"
 backend = "aqua:cargo-bins/cargo-binstall"
 
+[tools."aqua:cargo-bins/cargo-binstall".platforms.linux-x64]
+checksum = "blake3:1a5fa23fb172db04713b8acd854227ad5df08480dcc0a2fbd71f4fd93c0693ca"
+size = 6790102
+url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.5/cargo-binstall-x86_64-unknown-linux-musl.tgz"
+
 [tools."aqua:cargo-bins/cargo-binstall".platforms.macos-arm64]
 checksum = "blake3:4eff2c4ed16a8864b20b55fbe855821e60dfb633c04e40ab67679a0639f08b2f"
 size = 6004395
@@ -31,6 +41,11 @@ url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.5/ca
 [tools."aqua:charmbracelet/crush"]
 version = "0.9.2"
 backend = "aqua:charmbracelet/crush"
+
+[tools."aqua:charmbracelet/crush".platforms.linux-x64]
+checksum = "sha256:5f651f670667a6e3f219541d7153adf633b1d520941acad48e69fdb89621342f"
+size = 16715514
+url = "https://github.com/charmbracelet/crush/releases/download/v0.9.2/crush_0.9.2_Linux_x86_64.tar.gz"
 
 [tools."aqua:charmbracelet/crush".platforms.macos-arm64]
 checksum = "sha256:38619f2c2f9d9739c5aba0b03833ca18ad128566d32772ceb4fef5ab98c67b84"
@@ -45,6 +60,11 @@ backend = "aqua:charmbracelet/glow"
 version = "2.80.0"
 backend = "aqua:cli/cli"
 
+[tools."aqua:cli/cli".platforms.linux-x64]
+checksum = "sha256:e0afffbf36548194aed8a1bdaf474314857a808b1b1cfa38743e2f4ed6a35b0b"
+size = 18079593
+url = "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_linux_amd64.tar.gz"
+
 [tools."aqua:cli/cli".platforms.macos-arm64]
 checksum = "sha256:4e3567687d714272be3664244c045785573660803eabf41dff9a3a701b39f3b6"
 size = 17561757
@@ -54,6 +74,11 @@ url = "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_macOS_arm6
 version = "2.5.0"
 backend = "aqua:golangci/golangci-lint"
 
+[tools."aqua:golangci/golangci-lint".platforms.linux-x64]
+checksum = "sha256:c77313a77e19b06123962c411d9943cc0d092bbec76b956104d18964e274902e"
+size = 14221503
+url = "https://github.com/golangci/golangci-lint/releases/download/v2.5.0/golangci-lint-2.5.0-linux-amd64.tar.gz"
+
 [tools."aqua:golangci/golangci-lint".platforms.macos-arm64]
 checksum = "sha256:0b3cbdc2a2472f60b538ebccb1b2e1ae5d938a051c010591aa68c6efd3706672"
 size = 13629335
@@ -62,6 +87,11 @@ url = "https://github.com/golangci/golangci-lint/releases/download/v2.5.0/golang
 [tools."aqua:hadolint/hadolint"]
 version = "2.12.0"
 backend = "aqua:hadolint/hadolint"
+
+[tools."aqua:hadolint/hadolint".platforms.linux-x64]
+checksum = "sha256:56de6d5e5ec427e17b74fa48d51271c7fc0d61244bf5c90e828aab8362d55010"
+size = 2426420
+url = "https://github.com/hadolint/hadolint/releases/download/v2.12.0/hadolint-Linux-x86_64"
 
 [tools."aqua:helix-editor/helix"]
 version = "25.07.1"
@@ -75,6 +105,11 @@ url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.
 [tools."aqua:jesseduffield/lazygit"]
 version = "0.55.1"
 backend = "aqua:jesseduffield/lazygit"
+
+[tools."aqua:jesseduffield/lazygit".platforms.linux-x64]
+checksum = "sha256:6385a699dde302b7fdcd1cc8910ae225ed0c19a230285569c586051576f0d6a3"
+size = 7929493
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.55.1/lazygit_0.55.1_linux_x86_64.tar.gz"
 
 [tools."aqua:jesseduffield/lazygit".platforms.macos-arm64]
 checksum = "sha256:d5761da15dc95348e4d508ce3245a132a6129dbace866144b24591f2a5c73b8e"
@@ -111,6 +146,11 @@ url = "https://github.com/sharkdp/fd/releases/download/v10.3.0/fd-v10.3.0-aarch6
 version = "2.6.0"
 backend = "aqua:sigstore/cosign"
 
+[tools."aqua:sigstore/cosign".platforms.linux-x64]
+checksum = "sha256:ea5c65f99425d6cfbb5c4b5de5dac035f14d09131c1a0ea7c7fc32eab39364f9"
+size = 155329864
+url = "https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-linux-amd64"
+
 [tools."aqua:sigstore/cosign".platforms.macos-arm64]
 checksum = "sha256:dea5b83b8b375b99ac803c7bdb1f798963dbeb47789ceb72153202e7f20e8d07"
 size = 154611890
@@ -127,6 +167,11 @@ backend = "aqua:sxyazi/yazi"
 [tools."aqua:tree-sitter/tree-sitter"]
 version = "0.25.10"
 backend = "aqua:tree-sitter/tree-sitter"
+
+[tools."aqua:tree-sitter/tree-sitter".platforms.linux-x64]
+checksum = "blake3:7be7cee5f139c18c1b46143b52dbd2f9c5ebc7459c25e0a26ca3bb74df32735a"
+size = 6521182
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.25.10/tree-sitter-linux-x64.gz"
 
 [tools."aqua:tree-sitter/tree-sitter".platforms.macos-arm64]
 checksum = "blake3:d5aa9afa9f9c8f5bec9795ea5a1461539c30ae21586dde1120e688c9c82bc351"
@@ -154,6 +199,10 @@ backend = "asdf:mise-plugins/mise-1password-cli"
 version = "1.2.22"
 backend = "core:bun"
 
+[tools.bun.platforms.linux-x64]
+checksum = "blake3:bf32acffd6e77803ba760caf8d2909389da01c95613b81fe155fe87e2a8f8004"
+size = 39256266
+
 [tools.bun.platforms.macos-arm64]
 checksum = "blake3:ec41528ae2badd9c5d41cefe2c463a307c46d9b5f0ccf157d6f406890340833e"
 size = 22178114
@@ -165,6 +214,10 @@ backend = "cargo:eza"
 [tools.deno]
 version = "2.5.1"
 backend = "core:deno"
+
+[tools.deno.platforms.linux-x64]
+checksum = "blake3:28f70242a417ac61ab6476ba32c131bed590269de6e50b000b5462e3c752b7fa"
+size = 45359922
 
 [tools.deno.platforms.macos-arm64]
 checksum = "blake3:f6385ff0a552732f553fa548202368cb0d6283d05990483a1feb0af289b68c7b"
@@ -241,6 +294,10 @@ backend = "npm:mcp-hub"
 version = "5.0.0"
 backend = "npm:typescript-language-server"
 
+[tools."npm:vscode-langservers-extracted"]
+version = "4.10.0"
+backend = "npm:vscode-langservers-extracted"
+
 [tools."npm:yaml-language-server"]
 version = "1.18.0"
 backend = "npm:yaml-language-server"
@@ -252,6 +309,11 @@ backend = "core:rust"
 [tools.stylua]
 version = "2.2.0"
 backend = "aqua:JohnnyMorganz/StyLua"
+
+[tools.stylua.platforms.linux-x64]
+checksum = "blake3:6e60dea187cbb93c4213123fa1c3821c17fbf7e81a74558ae7e26b3a6821840e"
+size = 3289679
+url = "https://github.com/JohnnyMorganz/StyLua/releases/download/v2.2.0/stylua-linux-x86_64-musl.zip"
 
 [tools.stylua.platforms.macos-arm64]
 checksum = "blake3:e4d7d8d670883316de35beabe439718cc7ee5a2ddfff20f5f33b7197ae4e4c1e"
