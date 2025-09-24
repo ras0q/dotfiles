@@ -24,6 +24,9 @@ return {
       return cb(vim.fs.dirname(deno_files[1]))
     end
 
+    if vim.bo.filetype == "markdown" then
+      return
+    end
     local node_files = vim.fs.find({ "package.json" }, findopts)
     if #node_files == 0 then
       return cb(dir)
