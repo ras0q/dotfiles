@@ -1,0 +1,266 @@
+[tools."aqua:BurntSushi/ripgrep"]
+version = "14.1.1"
+backend = "aqua:BurntSushi/ripgrep"
+
+[tools."aqua:LuaLS/lua-language-server"]
+version = "3.15.0"
+backend = "aqua:LuaLS/lua-language-server"
+
+[tools."aqua:ajeetdsouza/zoxide"]
+version = "0.9.8"
+backend = "aqua:ajeetdsouza/zoxide"
+
+[tools."aqua:astral-sh/uv"]
+version = "0.8.22"
+backend = "aqua:astral-sh/uv"
+
+[tools."aqua:astral-sh/uv".platforms.macos-arm64]
+checksum = "sha256:3f61099e261e449527141dbf125629fab33ad696468c8c90cebbac40185a306c"
+size = 18194566
+url = "https://github.com/astral-sh/uv/releases/download/0.8.22/uv-aarch64-apple-darwin.tar.gz"
+
+[tools."aqua:cargo-bins/cargo-binstall"]
+version = "1.15.5"
+backend = "aqua:cargo-bins/cargo-binstall"
+
+[tools."aqua:cargo-bins/cargo-binstall".platforms.macos-arm64]
+checksum = "blake3:4eff2c4ed16a8864b20b55fbe855821e60dfb633c04e40ab67679a0639f08b2f"
+size = 6004395
+url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.5/cargo-binstall-aarch64-apple-darwin.zip"
+
+[tools."aqua:charmbracelet/crush"]
+version = "0.9.2"
+backend = "aqua:charmbracelet/crush"
+
+[tools."aqua:charmbracelet/crush".platforms.macos-arm64]
+checksum = "sha256:38619f2c2f9d9739c5aba0b03833ca18ad128566d32772ceb4fef5ab98c67b84"
+size = 16083368
+url = "https://github.com/charmbracelet/crush/releases/download/v0.9.2/crush_0.9.2_Darwin_arm64.tar.gz"
+
+[tools."aqua:charmbracelet/glow"]
+version = "2.1.1"
+backend = "aqua:charmbracelet/glow"
+
+[tools."aqua:cli/cli"]
+version = "2.80.0"
+backend = "aqua:cli/cli"
+
+[tools."aqua:cli/cli".platforms.macos-arm64]
+checksum = "sha256:4e3567687d714272be3664244c045785573660803eabf41dff9a3a701b39f3b6"
+size = 17561757
+url = "https://github.com/cli/cli/releases/download/v2.80.0/gh_2.80.0_macOS_arm64.zip"
+
+[tools."aqua:golangci/golangci-lint"]
+version = "2.5.0"
+backend = "aqua:golangci/golangci-lint"
+
+[tools."aqua:golangci/golangci-lint".platforms.macos-arm64]
+checksum = "sha256:0b3cbdc2a2472f60b538ebccb1b2e1ae5d938a051c010591aa68c6efd3706672"
+size = 13629335
+url = "https://github.com/golangci/golangci-lint/releases/download/v2.5.0/golangci-lint-2.5.0-darwin-arm64.tar.gz"
+
+[tools."aqua:hadolint/hadolint"]
+version = "2.12.0"
+backend = "aqua:hadolint/hadolint"
+
+[tools."aqua:helix-editor/helix"]
+version = "25.07.1"
+backend = "aqua:helix-editor/helix"
+
+[tools."aqua:helix-editor/helix".platforms.macos-arm64]
+checksum = "blake3:7656cec73907d5794fe7940dab8a7c8ec0c3744e27425e76af55f409f8b26f35"
+size = 16114028
+url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-macos.tar.xz"
+
+[tools."aqua:jesseduffield/lazygit"]
+version = "0.55.1"
+backend = "aqua:jesseduffield/lazygit"
+
+[tools."aqua:jesseduffield/lazygit".platforms.macos-arm64]
+checksum = "sha256:d5761da15dc95348e4d508ce3245a132a6129dbace866144b24591f2a5c73b8e"
+size = 7598349
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.55.1/lazygit_0.55.1_darwin_arm64.tar.gz"
+
+[tools."aqua:joerdav/xc"]
+version = "0.8.6"
+backend = "aqua:joerdav/xc"
+
+[tools."aqua:jqlang/jq"]
+version = "1.8.1"
+backend = "aqua:jqlang/jq"
+
+[tools."aqua:junegunn/fzf"]
+version = "0.65.2"
+backend = "aqua:junegunn/fzf"
+
+[tools."aqua:junegunn/fzf".platforms.macos-arm64]
+checksum = "sha256:a1464f1d4b75c3a92975f67055f9e407800ed35820ea7d73f2afb90aeb0491e8"
+size = 1658005
+url = "https://github.com/junegunn/fzf/releases/download/v0.65.2/fzf-0.65.2-darwin_arm64.tar.gz"
+
+[tools."aqua:sharkdp/fd"]
+version = "10.3.0"
+backend = "aqua:sharkdp/fd"
+
+[tools."aqua:sharkdp/fd".platforms.macos-arm64]
+checksum = "blake3:e7a554aed4fea189f2aa297e82087ceaebb844eac55a2503e5321cce88fbb636"
+size = 1337349
+url = "https://github.com/sharkdp/fd/releases/download/v10.3.0/fd-v10.3.0-aarch64-apple-darwin.tar.gz"
+
+[tools."aqua:sigstore/cosign"]
+version = "2.6.0"
+backend = "aqua:sigstore/cosign"
+
+[tools."aqua:sigstore/cosign".platforms.macos-arm64]
+checksum = "sha256:dea5b83b8b375b99ac803c7bdb1f798963dbeb47789ceb72153202e7f20e8d07"
+size = 154611890
+url = "https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-darwin-arm64"
+
+[tools."aqua:starship/starship"]
+version = "1.23.0"
+backend = "aqua:starship/starship"
+
+[tools."aqua:sxyazi/yazi"]
+version = "25.5.31"
+backend = "aqua:sxyazi/yazi"
+
+[tools."aqua:tree-sitter/tree-sitter"]
+version = "0.25.10"
+backend = "aqua:tree-sitter/tree-sitter"
+
+[tools."aqua:tree-sitter/tree-sitter".platforms.macos-arm64]
+checksum = "blake3:d5aa9afa9f9c8f5bec9795ea5a1461539c30ae21586dde1120e688c9c82bc351"
+size = 5938770
+url = "https://github.com/tree-sitter/tree-sitter/releases/download/v0.25.10/tree-sitter-macos-arm64.gz"
+
+[tools."aqua:x-motemen/ghq"]
+version = "1.8.0"
+backend = "aqua:x-motemen/ghq"
+
+[tools."aqua:zellij-org/zellij"]
+version = "0.43.1"
+backend = "aqua:zellij-org/zellij"
+
+[tools."aqua:zellij-org/zellij".platforms.macos-arm64]
+checksum = "blake3:97e9636ab8056399fd92b2573e95e1ac6b08092a4ff2def2e2274f3c065f5dcd"
+size = 15905749
+url = "https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-aarch64-apple-darwin.tar.gz"
+
+[tools."asdf:mise-plugins/mise-1password-cli"]
+version = "2.32.0"
+backend = "asdf:mise-plugins/mise-1password-cli"
+
+[tools.bun]
+version = "1.2.22"
+backend = "core:bun"
+
+[tools.bun.platforms.macos-arm64]
+checksum = "blake3:ec41528ae2badd9c5d41cefe2c463a307c46d9b5f0ccf157d6f406890340833e"
+size = 22178114
+
+[tools."cargo:eza"]
+version = "0.22.1"
+backend = "cargo:eza"
+
+[tools.deno]
+version = "2.5.1"
+backend = "core:deno"
+
+[tools.deno.platforms.macos-arm64]
+checksum = "blake3:f6385ff0a552732f553fa548202368cb0d6283d05990483a1feb0af289b68c7b"
+size = 40765111
+
+[tools."github:neovim/neovim"]
+version = "nightly"
+backend = "github:neovim/neovim"
+
+[tools.go]
+version = "1.24.7"
+backend = "core:go"
+
+[tools.go.platforms.macos-arm64]
+checksum = "sha256:d06bad763f8820d3e29ee11f2c0c71438903c007e772a159c5760a300298302e"
+size = 76295172
+url = "https://dl.google.com/go/go1.24.7.darwin-arm64.tar.gz"
+
+[tools."go:github.com/babarot/gomi"]
+version = "1.6.1"
+backend = "go:github.com/babarot/gomi"
+
+[tools."go:golang.org/x/tools/gopls"]
+version = "0.20.0"
+backend = "go:golang.org/x/tools/gopls"
+
+[tools.java]
+version = "25.0.0"
+backend = "core:java"
+
+[tools.java.platforms.macos-arm64]
+checksum = "sha256:2006337bf326fdfdf6117081751ba38c1c8706d63419ecac7ff102ff7c776876"
+size = 215390344
+url = "https://download.java.net/java/GA/jdk25/bd75d5f9689641da8e1daabeccb5528b/36/GPL/openjdk-25_macos-aarch64_bin.tar.gz"
+
+[tools.node]
+version = "22.19.0"
+backend = "core:node"
+
+[tools.node.platforms.macos-arm64]
+checksum = "sha256:c59006db713c770d6ec63ae16cb3edc11f49ee093b5c415d667bb4f436c6526d"
+size = 47739366
+url = "https://nodejs.org/dist/v22.19.0/node-v22.19.0-darwin-arm64.tar.gz"
+
+[tools."npm:@antfu/ni"]
+version = "26.0.1"
+backend = "npm:@antfu/ni"
+
+[tools."npm:@github/copilot-language-server"]
+version = "1.375.0"
+backend = "npm:@github/copilot-language-server"
+
+[tools."npm:@google/gemini-cli"]
+version = "0.6.0"
+backend = "npm:@google/gemini-cli"
+
+[tools."npm:@mizchi/lsmcp"]
+version = "0.10.0"
+backend = "npm:@mizchi/lsmcp"
+
+[tools."npm:difit"]
+version = "2.2.2"
+backend = "npm:difit"
+
+[tools."npm:markdownlint-cli2"]
+version = "0.18.1"
+backend = "npm:markdownlint-cli2"
+
+[tools."npm:mcp-hub"]
+version = "4.2.1"
+backend = "npm:mcp-hub"
+
+[tools."npm:typescript-language-server"]
+version = "5.0.0"
+backend = "npm:typescript-language-server"
+
+[tools."npm:yaml-language-server"]
+version = "1.18.0"
+backend = "npm:yaml-language-server"
+
+[tools.rust]
+version = "1.90.0"
+backend = "core:rust"
+
+[tools.stylua]
+version = "2.2.0"
+backend = "aqua:JohnnyMorganz/StyLua"
+
+[tools.stylua.platforms.macos-arm64]
+checksum = "blake3:e4d7d8d670883316de35beabe439718cc7ee5a2ddfff20f5f33b7197ae4e4c1e"
+size = 2918859
+url = "https://github.com/JohnnyMorganz/StyLua/releases/download/v2.2.0/stylua-macos-aarch64.zip"
+
+[tools.usage]
+version = "2.2.2"
+backend = "ubi:jdx/usage"
+
+[tools.usage.platforms.macos-arm64-usage]
+checksum = "blake3:8a7b96db5e8d04f208a9728f6eaa7e10d17de5357b091fa83e87c591225cf87b"
