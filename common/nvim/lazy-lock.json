@@ -1,8 +1,9 @@
 {
   "catppuccin": { "branch": "main", "commit": "f19cab18ec4dc86d415512c7a572863b2adbcc18" },
   "chowcho.nvim": { "branch": "main", "commit": "c87ba3be2059070e16c89bf1710762dd70cb3007" },
-  "codecompanion.nvim": { "branch": "main", "commit": "9544c1feac7298d8ef6f3c92bc45da57b6acffb6" },
-  "copilot.lua": { "branch": "master", "commit": "407fbd5cd3397e1e46b7dedbd928eefcaf621e76" },
+  "codecompanion-history.nvim": { "branch": "main", "commit": "eb99d256352144cf3b6a1c45608ec25544a0813d" },
+  "codecompanion-spinner.nvim": { "branch": "main", "commit": "c1fa2a84ea1aed687aaed60df65e347c280f4f22" },
+  "codecompanion.nvim": { "branch": "main", "commit": "c3f3f82cefd211d401a0359a62e9bc19186a1238" },
   "img-clip.nvim": { "branch": "main", "commit": "f33f3af9ba50f99d70f8fcb1a8575750ada4ea4a" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mcphub.nvim": { "branch": "main", "commit": "5e39057c4405bc7b83ef9fd38a37d18c9330e403" },
