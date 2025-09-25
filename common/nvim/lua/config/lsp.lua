@@ -73,7 +73,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
         -- close the completion popup if it's open
         if vim.fn.pumvisible() == 1 then
-          return "<C-y>"
+          return "<C-e>"
         end
       end, {
         expr = true,
