@@ -1,8 +1,8 @@
-[tools.aqua]
+[[tools.aqua]]
 version = "2.45.0"
 backend = "ubi:aquaproj/aqua"
 
-[tools."aqua:BurntSushi/ripgrep"]
+[[tools."aqua:BurntSushi/ripgrep"]]
 version = "14.1.1"
 backend = "aqua:BurntSushi/ripgrep"
 
@@ -91,6 +91,11 @@ backend = "aqua:hadolint/hadolint"
 checksum = "sha256:6bf226944684f56c84dd014e8b979d27425c0148f61b3bd99bcc6f39e9dc5a47"
 size = 54727336
 url = "https://github.com/hadolint/hadolint/releases/download/v2.14.0/hadolint-linux-x86_64"
+
+[tools."aqua:hadolint/hadolint".platforms.macos-arm64]
+checksum = "sha256:3625e2e9f43dcfe7bd38738a5f5520ed50ce39ed28485266e6803dd7bc197b10"
+size = 100982664
+url = "https://github.com/hadolint/hadolint/releases/download/v2.14.0/hadolint-macos-arm64"
 
 [[tools."aqua:helix-editor/helix"]]
 version = "25.07.1"
@@ -249,13 +254,8 @@ size = 215390344
 url = "https://download.java.net/java/GA/jdk25/bd75d5f9689641da8e1daabeccb5528b/36/GPL/openjdk-25_macos-aarch64_bin.tar.gz"
 
 [[tools.node]]
-version = "22.20.0"
+version = "22.19.0"
 backend = "core:node"
-
-[tools.node.platforms.linux-x64]
-checksum = "sha256:eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29"
-size = 56645685
-url = "https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz"
 
 [[tools."npm:@antfu/ni"]]
 version = "26.0.1"
