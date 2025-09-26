@@ -1,11 +1,12 @@
-local M = {}
+vim.lsp.log.set_level("warn")
 
-M.ensure_installed = {
+local ensure_installed = {
   "clangd",
   "cssls",
   "denols",
   "eslint",
   "gopls",
+  "golangci_lint_ls",
   "html",
   -- "jsonls",
   "lua_ls",
@@ -14,11 +15,9 @@ M.ensure_installed = {
   "ts_ls",
 }
 if require("config.options").ai_enabled then
-  table.insert(M.ensure_installed, "copilot")
+  table.insert(ensure_installed, "copilot")
 end
-vim.lsp.enable(M.ensure_installed)
-
-vim.lsp.log.set_level("warn")
+vim.lsp.enable(ensure_installed)
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", {}),
@@ -83,5 +82,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
-
-return M
