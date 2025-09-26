@@ -4,6 +4,7 @@
  _.file = "{{ cwd }}/.envrc"
 
 [tools]
+aqua = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:LuaLS/lua-language-server" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"

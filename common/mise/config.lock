@@ -1,4 +1,8 @@
-[[tools."aqua:BurntSushi/ripgrep"]]
+[tools.aqua]
+version = "2.45.0"
+backend = "ubi:aquaproj/aqua"
+
+[tools."aqua:BurntSushi/ripgrep"]
 version = "14.1.1"
 backend = "aqua:BurntSushi/ripgrep"
 
