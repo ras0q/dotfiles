@@ -37,7 +37,9 @@ return {
             reset = "",
             textobject = "",
           },
-          source = diff.gen_source.none(),
+          -- FIXME: need to disable diff?
+          -- https://codecompanion.olimorris.dev/installation.html#mini-diff
+          -- source = diff.gen_source.none(),
         })
         require("mini.git").setup()
 
