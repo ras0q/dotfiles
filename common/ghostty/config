@@ -1,0 +1,17 @@
+# This is the configuration file for Ghostty.
+
+# appearance
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+background-opacity = 0.9
+background-blur = true
+font-family = "Source Code Pro"
+font-family = "Hiragino Maru Gothic ProN"
+font-variation = "wght=500"
+font-feature = -dlig
+# font-family = "CommitMono"
+
+# quick terminal
+quick-terminal-position = "bottom"
+quick-terminal-screen = "mouse"
+quick-terminal-size = "80%,80%"
+keybind = "global:super+space=toggle_quick_terminal"

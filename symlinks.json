@@ -31,7 +31,8 @@
     "~/.gitconfig.mac": "./mac/.gitconfig.mac",
     "~/.config/skhd": "./mac/skhd",
     "~/.config/yabai": "./mac/yabai",
-    "~/.warp": "./mac/warp"
+    "~/.warp": "./mac/warp",
+    "~/Library/Application Support/com.mitchellh.ghostty/config": "./common/ghostty/config"
   },
   "windows": {
     "~/.gitconfig.win": "./win/.gitconfig.win",
