@@ -39,6 +39,7 @@ fi
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
 [[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
 [[ -z "$LANG" ]] && export LANG=POSIX
+[[ -z "$MISE_ENV" ]] && export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 [[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
 
