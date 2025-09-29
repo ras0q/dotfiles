@@ -17,7 +17,7 @@ return {
     lspconfig = {},
     mise = {
       args = {
-        global = { "-e", "local" },
+        global = { "--env", "local" },
       },
     },
   },
