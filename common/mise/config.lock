@@ -1,0 +1,170 @@
+[tools.aqua]
+version = "2.55.0"
+backend = "ubi:aquaproj/aqua"
+
+[tools.aqua.platforms.linux-x64-aqua]
+checksum = "blake3:221287e073197c476537a6852ce656fdbed4fc0e0729f5ece00ecc6cf920fe1a"
+
+[tools."aqua:BurntSushi/ripgrep"]
+version = "14.1.1"
+backend = "aqua:BurntSushi/ripgrep"
+
+[tools."aqua:LuaLS/lua-language-server"]
+version = "3.15.0"
+backend = "aqua:LuaLS/lua-language-server"
+
+[tools."aqua:ajeetdsouza/zoxide"]
+version = "0.9.8"
+backend = "aqua:ajeetdsouza/zoxide"
+
+[tools."aqua:astral-sh/uv"]
+version = "0.8.22"
+backend = "aqua:astral-sh/uv"
+
+[tools."aqua:cargo-bins/cargo-binstall"]
+version = "1.15.6"
+backend = "aqua:cargo-bins/cargo-binstall"
+
+[tools."aqua:cargo-bins/cargo-binstall".platforms.linux-x64]
+checksum = "blake3:779d104f2f8a3b840a2a56659e3da44f96419d7a5378555b9c3dabe756ac4271"
+size = 6770808
+url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.6/cargo-binstall-x86_64-unknown-linux-musl.tgz"
+
+[tools."aqua:cli/cli"]
+version = "2.80.0"
+backend = "aqua:cli/cli"
+
+[tools."aqua:golangci/golangci-lint"]
+version = "2.5.0"
+backend = "aqua:golangci/golangci-lint"
+
+[tools."aqua:hadolint/hadolint"]
+version = "2.14.0"
+backend = "aqua:hadolint/hadolint"
+
+[tools."aqua:hadolint/hadolint".platforms.linux-x64]
+checksum = "sha256:6bf226944684f56c84dd014e8b979d27425c0148f61b3bd99bcc6f39e9dc5a47"
+size = 54727336
+url = "https://github.com/hadolint/hadolint/releases/download/v2.14.0/hadolint-linux-x86_64"
+
+[tools."aqua:jesseduffield/lazygit"]
+version = "0.55.1"
+backend = "aqua:jesseduffield/lazygit"
+
+[tools."aqua:joerdav/xc"]
+version = "0.8.6"
+backend = "aqua:joerdav/xc"
+
+[tools."aqua:jqlang/jq"]
+version = "1.8.1"
+backend = "aqua:jqlang/jq"
+
+[tools."aqua:junegunn/fzf"]
+version = "0.65.2"
+backend = "aqua:junegunn/fzf"
+
+[tools."aqua:sharkdp/fd"]
+version = "10.3.0"
+backend = "aqua:sharkdp/fd"
+
+[tools."aqua:sigstore/cosign"]
+version = "2.6.0"
+backend = "aqua:sigstore/cosign"
+
+[tools."aqua:starship/starship"]
+version = "1.23.0"
+backend = "aqua:starship/starship"
+
+[tools."aqua:tree-sitter/tree-sitter"]
+version = "0.25.10"
+backend = "aqua:tree-sitter/tree-sitter"
+
+[tools."aqua:x-motemen/ghq"]
+version = "1.8.0"
+backend = "aqua:x-motemen/ghq"
+
+[tools.bun]
+version = "1.2.23"
+backend = "core:bun"
+
+[tools.bun.platforms.linux-x64]
+checksum = "blake3:b8ea90017983cdbac0ef8f7292d91554f70c6986b73d656c213eabc19d68b9af"
+size = 39383658
+
+[tools."cargo:eza"]
+version = "0.23.3"
+backend = "cargo:eza"
+
+[tools.deno]
+version = "2.5.2"
+backend = "core:deno"
+
+[tools.deno.platforms.linux-x64]
+checksum = "blake3:287f6615d9fcc001d8b36adc7d156bc29c68fe55eb8a6df7f131e95bfa4500a5"
+size = 45074518
+
+[tools."github:neovim/neovim"]
+version = "nightly"
+backend = "github:neovim/neovim"
+
+[tools.go]
+version = "1.24.7"
+backend = "core:go"
+
+[tools."go:github.com/babarot/gomi"]
+version = "1.6.1"
+backend = "go:github.com/babarot/gomi"
+
+[tools."go:golang.org/x/tools/gopls"]
+version = "0.20.0"
+backend = "go:golang.org/x/tools/gopls"
+
+[tools.java]
+version = "25.0.0"
+backend = "core:java"
+
+[tools.node]
+version = "22.20.0"
+backend = "core:node"
+
+[tools.node.platforms.linux-x64]
+checksum = "sha256:eeaccb0378b79406f2208e8b37a62479c70595e20be6b659125eb77dd1ab2a29"
+size = 56645685
+url = "https://nodejs.org/dist/v22.20.0/node-v22.20.0-linux-x64.tar.gz"
+
+[tools."npm:@github/copilot-language-server"]
+version = "1.377.0"
+backend = "npm:@github/copilot-language-server"
+
+[tools."npm:markdownlint-cli2"]
+version = "0.18.1"
+backend = "npm:markdownlint-cli2"
+
+[tools."npm:mcp-hub"]
+version = "4.2.1"
+backend = "npm:mcp-hub"
+
+[tools."npm:typescript-language-server"]
+version = "5.0.0"
+backend = "npm:typescript-language-server"
+
+[tools."npm:vscode-langservers-extracted"]
+version = "4.10.0"
+backend = "npm:vscode-langservers-extracted"
+
+[tools."npm:yaml-language-server"]
+version = "1.19.1"
+backend = "npm:yaml-language-server"
+
+[tools.rust]
+version = "1.90.0"
+backend = "core:rust"
+
+[tools.stylua]
+version = "2.3.0"
+backend = "aqua:JohnnyMorganz/StyLua"
+
+[tools.stylua.platforms.linux-x64]
+checksum = "blake3:a508b37ebe1b00abb4d6033293b7b2f180402019dee9a50667c0444df82859bf"
+size = 3437035
+url = "https://github.com/JohnnyMorganz/StyLua/releases/download/v2.3.0/stylua-linux-x86_64-musl.zip"
