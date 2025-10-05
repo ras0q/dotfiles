@@ -11,7 +11,16 @@ return {
       float = {
         transparent = true,
       },
+      custom_highlights = function(colors)
+        return {
+          TreesitterContext = { bg = colors.base },
+          TreesitterContextLineNumber = { bg = colors.base, fg = colors.rosewater },
+        }
+      end,
       auto_integrations = true,
+      integrations = {
+        treesitter_context = false,
+      },
     })
     vim.cmd.colorscheme("catppuccin-latte")
   end,
