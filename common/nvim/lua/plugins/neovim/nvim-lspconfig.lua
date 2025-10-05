@@ -1,4 +1,4 @@
 return {
   "neovim/nvim-lspconfig",
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
 }
