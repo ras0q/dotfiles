@@ -1,7 +1,6 @@
 ---@type LazyPluginSpec
 return {
   "hrsh7th/nvim-cmp",
-  event = "VeryLazy",
   opts = function()
     local cmp = require("cmp")
     return {
