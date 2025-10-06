@@ -9,3 +9,4 @@ NUL
 mise.local.toml
 .crush/
 .trash/
+tmp/
