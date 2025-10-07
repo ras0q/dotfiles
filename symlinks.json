@@ -22,6 +22,7 @@
     "/etc/wsl.conf": "./win/wsl.conf",
     "~/.gitconfig.wsl2": "./win/.gitconfig.wsl2",
     "~/.local/bin/clip.exe": "/mnt/c/Windows/system32/clip.exe",
+    "~/.local/bin/explorer.exe": "/mnt/c/Windows/explorer.exe",
     "~/.local/bin/msedge.exe": "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
     "~/.local/bin/pwsh.exe": "/mnt/c/Program Files/PowerShell/7/pwsh.exe"
   },
