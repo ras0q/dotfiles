@@ -5,6 +5,9 @@ backend = "ubi:aquaproj/aqua"
 [tools.aqua.platforms.linux-x64-aqua]
 checksum = "blake3:221287e073197c476537a6852ce656fdbed4fc0e0729f5ece00ecc6cf920fe1a"
 
+[tools.aqua.platforms.macos-arm64-aqua]
+checksum = "blake3:595b1f3719b9f8fdc86b7c5b019fa443e54a8961f2577fe3a619439326f8facf"
+
 [[tools."aqua:BurntSushi/ripgrep"]]
 version = "14.1.1"
 backend = "aqua:BurntSushi/ripgrep"
@@ -16,6 +19,11 @@ backend = "aqua:ajeetdsouza/zoxide"
 [[tools."aqua:astral-sh/uv"]]
 version = "0.8.24"
 backend = "aqua:astral-sh/uv"
+
+[tools."aqua:astral-sh/uv".platforms.macos-arm64]
+checksum = "sha256:5f0d9d14b17ba3f0af4602a7a5a2e4faececf0a9463736cf8e6269c49569b2fa"
+size = 18218038
+url = "https://github.com/astral-sh/uv/releases/download/0.8.24/uv-aarch64-apple-darwin.tar.gz"
 
 [tools."aqua:astral-sh/uv".platforms.windows-x64]
 checksum = "sha256:5055be7909a844f703c54e8846d14ab676c34be6ea0d969ee74c5747feaedda0"
@@ -31,9 +39,19 @@ checksum = "blake3:779d104f2f8a3b840a2a56659e3da44f96419d7a5378555b9c3dabe756ac4
 size = 6770808
 url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.6/cargo-binstall-x86_64-unknown-linux-musl.tgz"
 
+[tools."aqua:cargo-bins/cargo-binstall".platforms.macos-arm64]
+checksum = "blake3:a9ec69060311d1073e50f2028b44a36f6d7b544183648adb5854fd235875d910"
+size = 5996733
+url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.6/cargo-binstall-aarch64-apple-darwin.zip"
+
 [[tools."aqua:cli/cli"]]
 version = "2.81.0"
 backend = "aqua:cli/cli"
+
+[tools."aqua:cli/cli".platforms.macos-arm64]
+checksum = "sha256:b0f5a81601291123a25792859f7ca82229c1f1ae05b4b9f1a7e9e8bb63e649d5"
+size = 17559059
+url = "https://github.com/cli/cli/releases/download/v2.81.0/gh_2.81.0_macOS_arm64.zip"
 
 [tools."aqua:cli/cli".platforms.windows-x64]
 checksum = "sha256:8f5a19ee2271d20477c5c8d8204b65cd0ff6d73279417f5cdab49135516ca1b5"
@@ -77,6 +95,11 @@ backend = "aqua:sharkdp/fd"
 version = "2.6.1"
 backend = "aqua:sigstore/cosign"
 
+[tools."aqua:sigstore/cosign".platforms.macos-arm64]
+checksum = "sha256:54047052cf46f40a5c3c95a510db276e164ba77e096aea1ca1b733f770359689"
+size = 154611874
+url = "https://github.com/sigstore/cosign/releases/download/v2.6.1/cosign-darwin-arm64"
+
 [tools."aqua:sigstore/cosign".platforms.windows-x64]
 checksum = "sha256:049026dae3246d6ea8201512ec3efce3aab0c7f1d338d52e26c525dd02b418a0"
 size = 217388926
@@ -102,6 +125,10 @@ backend = "core:bun"
 checksum = "blake3:b8ea90017983cdbac0ef8f7292d91554f70c6986b73d656c213eabc19d68b9af"
 size = 39383658
 
+[tools.bun.platforms.macos-arm64]
+checksum = "blake3:621c047bdd068c4972bf7b222a2e112908cd40b53256b690ec0921ea98676756"
+size = 22280328
+
 [[tools."cargo:eza"]]
 version = "0.23.4"
 backend = "cargo:eza"
@@ -109,6 +136,10 @@ backend = "cargo:eza"
 [[tools.deno]]
 version = "2.5.3"
 backend = "core:deno"
+
+[tools.deno.platforms.macos-arm64]
+checksum = "blake3:31bbe037626abcf56b0187bd0109f704e1cf965ac5327fec54f8e6e748b9e5e7"
+size = 40449898
 
 [tools.deno.platforms.windows-x64]
 checksum = "blake3:0d1a71ee83384df3c24f88afc62667ec87460d08a0fdbd4827c1d60b33d8a63c"
@@ -127,13 +158,8 @@ version = "1.6.1"
 backend = "go:github.com/babarot/gomi"
 
 [[tools.node]]
-version = "22.20.0"
+version = "22.19.0"
 backend = "core:node"
-
-[tools.node.platforms.windows-x64]
-checksum = "sha256:bb819d6eb8f5bfda294bbc83a7e4ec6539da67c4233d54b0d655b9248b15e29d"
-size = 35500968
-url = "https://nodejs.org/dist/v22.20.0/node-v22.20.0-win-x64.zip"
 
 [[tools."npm:markdownlint-cli2"]]
 version = "0.18.1"
