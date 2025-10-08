@@ -8,10 +8,11 @@ font-family = "Source Code Pro"
 font-family = "Hiragino Maru Gothic ProN"
 font-variation = "wght=500"
 font-feature = -dlig
+font-size = 16
 # font-family = "CommitMono"
 
 # quick terminal
-quick-terminal-position = "bottom"
+quick-terminal-position = "center"
 quick-terminal-screen = "mouse"
-quick-terminal-size = "80%,80%"
+quick-terminal-size = "10%,80%"
 keybind = "global:super+space=toggle_quick_terminal"
