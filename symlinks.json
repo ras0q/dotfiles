@@ -31,6 +31,7 @@
     "~/.gitconfig.mac": "./mac/.gitconfig.mac",
     "~/.config/skhd": "./mac/skhd",
     "~/.config/yabai": "./mac/yabai",
+    "~/.local/bin/op-ssh-sign": "/Applications/1Password.app/Contents/MacOS/op-ssh-sign",
     "~/.warp": "./mac/warp",
     "~/Library/Application Support/com.mitchellh.ghostty/config": "./common/ghostty/config"
   },
