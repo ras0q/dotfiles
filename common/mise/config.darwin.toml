@@ -1,0 +1,3 @@
+[tools]
+"aqua:zellij-org/zellij" = "latest"
+"asdf:mise-plugins/mise-1password-cli" = "latest"
