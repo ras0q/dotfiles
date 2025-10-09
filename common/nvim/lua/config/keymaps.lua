@@ -20,8 +20,8 @@ vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
 
 -- visual mode
-vim.keymap.set("v", "gh", "g^", opts)
-vim.keymap.set("v", "gl", "g$", opts)
+vim.keymap.set("v", "gh", "^", opts)
+vim.keymap.set("v", "gl", "$", opts)
 vim.keymap.set("v", "ge", "G", opts)
 vim.keymap.set("v", "<Space>p", '"+p', opts)
 vim.keymap.set("v", "<Space>y", '"+y', opts)
