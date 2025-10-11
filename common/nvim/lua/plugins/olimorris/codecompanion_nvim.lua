@@ -15,7 +15,8 @@ return {
         },
         roles = {
           llm = function(adapter)
-            return "CodeCompanion (" .. adapter.formatted_name .. ", " .. adapter.model.name .. ")"
+            local model = (adapter and adapter.model) and adapter.model.name or "unknown"
+            return "CodeCompanion (" .. adapter.formatted_name .. ", " .. model .. ")"
           end,
         },
       },
