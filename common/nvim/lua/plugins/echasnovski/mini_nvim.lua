@@ -18,6 +18,7 @@ return {
     vim.api.nvim_create_autocmd("VimEnter", {
       callback = function()
         -- Text editing
+        require("mini.ai").setup()
         require("mini.comment").setup({
           mappings = {
             comment = "<C-c>",
@@ -26,6 +27,7 @@ return {
             textobject = "<C-c>",
           },
         })
+        require("mini.move").setup()
         require("mini.pairs").setup()
         require("mini.surround").setup()
 
