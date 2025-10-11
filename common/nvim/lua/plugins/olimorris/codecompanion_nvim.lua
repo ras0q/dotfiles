@@ -2,7 +2,6 @@
 return {
   "olimorris/codecompanion.nvim",
   enabled = require("config.options").ai_enabled,
-  event = "BufReadPre",
   dependencies = {
     "ravitemer/codecompanion-history.nvim",
     "franco-ruggeri/codecompanion-spinner.nvim",
