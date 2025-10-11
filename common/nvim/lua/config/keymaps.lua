@@ -13,6 +13,13 @@ vim.keymap.set("n", "gn", ":bnext<CR>", opts)
 vim.keymap.set("n", "<Space>o", ":SearchInBrowser<CR>", opts)
 vim.keymap.set("n", "<Space>p", '"+p', opts)
 vim.keymap.set("n", "<Space>y", '"+y', opts)
+vim.keymap.set("n", "<Space>R", function()
+  local confirm = vim.fn.confirm("Do you want to save the session and restart?", "&Yes", 1)
+  if confirm == 1 then
+    -- vim.cmd("mksession! tmp/Session.vim | restart source tmp/Session.vim")
+    vim.cmd("restart")
+  end
+end, opts)
 vim.keymap.set("n", "<Space><Space>", "ZZ", opts)
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 
