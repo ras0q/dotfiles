@@ -37,17 +37,6 @@ opt.incsearch = true
 opt.hlsearch = true
 opt.wrapscan = true
 
---- LSP
-opt.completeopt = {
-  "fuzzy",
-  "popup",
-  "menuone",
-  "noinsert",
-}
-vim.diagnostic.config({
-  virtual_lines = true,
-})
-
 --- clipboard
 vim.opt.clipboard = ""
 if vim.fn.has("wsl") == 1 then

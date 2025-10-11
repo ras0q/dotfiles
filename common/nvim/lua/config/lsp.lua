@@ -1,3 +1,10 @@
+vim.opt.completeopt = {
+  "fuzzy",
+  "popup",
+  "menuone",
+  "noinsert",
+}
+
 vim.lsp.log.set_level("warn")
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -8,6 +15,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     -- Set LSP keybindings
     -- See https://neovim.io/doc/user/lsp.html#lsp-defaults
+    vim.diagnostic.config({
+      severity_sort = true,
+      virtual_text = true,
+      float = {
+        source = true,
+        border = "rounded",
+      },
+    })
+    vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { buffer = buf, desc = "Show diagnostics" })
+
     if client:supports_method("textDocument/definition") then
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
     end
@@ -17,6 +34,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         function() vim.lsp.buf.hover({ border = "single" }) end,
         { buffer = buf, desc = "Show hover documentation" })
     end
+
 
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     if client:supports_method("textDocument/completion") then
