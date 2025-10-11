@@ -19,7 +19,21 @@ return {
   priority = 1000,
   ---@type snacks.Config
   opts = {
+    bigfile = { enabled = true },
+    dashboard = {
+      enabled = true,
+      sections = {
+        { section = "header" },
+        { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+        { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        { section = "startup" },
+      },
+    },
     explorer = { enabled = true },
+    indent = {
+      enabled = true,
+      scope = { char = "╎" },
+    },
     notifier = {
       enabled = true,
       timeout = 5000,
@@ -34,15 +48,17 @@ return {
         border = "rounded",
       },
     },
+    words = { enabled = true },
   },
   keys = {
-    { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end, desc = "Buffers" },
-    { "<leader>e", function() Snacks.explorer() end,                        desc = "File Explorer" },
-    { "<leader>f", function() Snacks.picker.files({ hidden = true }) end,   desc = "Find Files" },
-    { "<leader>h", function() Snacks.picker(list_repos) end,                desc = "List Repositories" },
-    { "<leader>g", function() Snacks.picker.grep({ hidden = true }) end,    desc = "Live Grep" },
-    { "<leader>l", function() Snacks.lazygit() end,                         desc = "LazyGit" },
-    { "<leader>p", function() Snacks.picker.pickers() end,                  desc = "List Pickers" },
-    { "<leader>r", function() Snacks.picker.recent() end,                   desc = "List Recent files" },
+    { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end,                               desc = "Buffers" },
+    { "<leader>c", function() Snacks.picker.files({ hidden = true, cwd = vim.fn.stdpath("config") }) end, desc = "Config" },
+    { "<leader>e", function() Snacks.explorer() end,                                                      desc = "File Explorer" },
+    { "<leader>f", function() Snacks.picker.files({ hidden = true }) end,                                 desc = "Find Files" },
+    { "<leader>g", function() Snacks.picker.grep({ hidden = true }) end,                                  desc = "Live Grep" },
+    { "<leader>h", function() Snacks.picker(list_repos) end,                                              desc = "List Repositories" },
+    { "<leader>l", function() Snacks.lazygit() end,                                                       desc = "LazyGit" },
+    { "<leader>p", function() Snacks.picker.pickers() end,                                                desc = "List Pickers" },
+    { "<leader>r", function() Snacks.picker.recent() end,                                                 desc = "List Recent files" },
   },
 }
