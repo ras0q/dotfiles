@@ -16,8 +16,7 @@ vim.keymap.set("n", "<Space>y", '"+y', opts)
 vim.keymap.set("n", "<Space>R", function()
   local confirm = vim.fn.confirm("Do you want to save the session and restart?", "&Yes", 1)
   if confirm == 1 then
-    -- vim.cmd("mksession! tmp/Session.vim | restart source tmp/Session.vim")
-    vim.cmd("restart")
+    vim.cmd("restart +qall")
   end
 end, opts)
 vim.keymap.set("n", "<Space><Space>", "ZZ", opts)
