@@ -59,6 +59,9 @@ end
 -- netrw
 vim.g.netrw_liststyle = 3 -- tree style listing
 
+-- session
+opt.sessionoptions:remove({ "blank" })
+
 local M = {
   ai_enabled = os.getenv("NVIM_AI_ENABLED") == "true",
 }
