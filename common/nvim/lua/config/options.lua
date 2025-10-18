@@ -3,6 +3,8 @@ local opt = vim.opt
 -- core
 opt.fileencoding = "utf-8"
 opt.autoread = true
+opt.backup = false
+opt.swapfile = false
 opt.shell = "zsh"
 if vim.fn.has("win32") == 1 then
   local msystem = vim.fn.getenv("MSYSTEM")
@@ -24,6 +26,14 @@ opt.cursorline = true
 opt.virtualedit = "onemore"
 opt.smartindent = true
 opt.laststatus = 3
+opt.list = true
+opt.listchars = {
+  tab = "→ ",
+  trail = "·",
+  extends = "»",
+  precedes = "«",
+  nbsp = "␣",
+}
 
 -- tabs
 opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
