@@ -7,7 +7,15 @@ return {
   config = function()
     local ts = require("nvim-treesitter")
 
-    local ensure_installed = { "bash", "json", "jsonc", "markdown", "yaml", "regex" }
+    local ensure_installed = {
+      "bash",
+      "json",
+      "jsonc",
+      "lua",
+      "markdown",
+      "regex",
+      "yaml",
+    }
     ts.install(ensure_installed)
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "*",
