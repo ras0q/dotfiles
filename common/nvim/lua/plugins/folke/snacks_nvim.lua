@@ -49,7 +49,6 @@ return {
         border = "rounded",
       },
     },
-    words = { enabled = true },
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end,                               desc = "Buffers" },
