@@ -1,5 +1,5 @@
-vim.opt.spell = true
-vim.opt.spelllang = { "en", "cjk" }
+vim.opt_local.spell = true
+vim.opt_local.spelllang = { "en", "cjk" }
 local function get_eol()
   local ff = vim.bo.fileformat
   if ff == "dos" then
