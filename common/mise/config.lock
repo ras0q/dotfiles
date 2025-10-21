@@ -9,49 +9,44 @@ checksum = "blake3:221287e073197c476537a6852ce656fdbed4fc0e0729f5ece00ecc6cf920f
 checksum = "blake3:595b1f3719b9f8fdc86b7c5b019fa443e54a8961f2577fe3a619439326f8facf"
 
 [[tools."aqua:BurntSushi/ripgrep"]]
-version = "14.1.1"
+version = "15.0.0"
 backend = "aqua:BurntSushi/ripgrep"
+
+[tools."aqua:BurntSushi/ripgrep".platforms.linux-x64]
+checksum = "sha256:253ad0fd5fef0d64cba56c70dccdacc1916d4ed70ad057cc525fcdb0c3bbd2a7"
+size = 2262100
+url = "https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-x86_64-unknown-linux-musl.tar.gz"
 
 [[tools."aqua:ajeetdsouza/zoxide"]]
 version = "0.9.8"
 backend = "aqua:ajeetdsouza/zoxide"
 
 [[tools."aqua:astral-sh/uv"]]
-version = "0.9.0"
+version = "0.9.4"
 backend = "aqua:astral-sh/uv"
 
-[tools."aqua:astral-sh/uv".platforms.macos-arm64]
-checksum = "sha256:136e70984e3fd359f4119ef445bfd67d6e0d50f15400226ef8db7b738ebef6d0"
-size = 18240354
-url = "https://github.com/astral-sh/uv/releases/download/0.9.0/uv-aarch64-apple-darwin.tar.gz"
+[tools."aqua:astral-sh/uv".platforms.linux-x64]
+checksum = "sha256:89c128a9bb7a0086cc35922401c20099337db84294c7997dd3df79b9f3157c45"
+size = 21562650
+url = "https://github.com/astral-sh/uv/releases/download/0.9.4/uv-x86_64-unknown-linux-musl.tar.gz"
 
 [[tools."aqua:cargo-bins/cargo-binstall"]]
-version = "1.15.6"
+version = "1.15.7"
 backend = "aqua:cargo-bins/cargo-binstall"
 
 [tools."aqua:cargo-bins/cargo-binstall".platforms.linux-x64]
-checksum = "blake3:779d104f2f8a3b840a2a56659e3da44f96419d7a5378555b9c3dabe756ac4271"
-size = 6770808
-url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.6/cargo-binstall-x86_64-unknown-linux-musl.tgz"
-
-[tools."aqua:cargo-bins/cargo-binstall".platforms.macos-arm64]
-checksum = "blake3:a9ec69060311d1073e50f2028b44a36f6d7b544183648adb5854fd235875d910"
-size = 5996733
-url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.6/cargo-binstall-aarch64-apple-darwin.zip"
+checksum = "blake3:43c50bfc80bfe55dffeedfae7c43b34121b4fe2aa223b0ced25fa9bbb5f87595"
+size = 6756326
+url = "https://github.com/cargo-bins/cargo-binstall/releases/download/v1.15.7/cargo-binstall-x86_64-unknown-linux-musl.tgz"
 
 [[tools."aqua:cli/cli"]]
-version = "2.81.0"
+version = "2.82.0"
 backend = "aqua:cli/cli"
 
-[tools."aqua:cli/cli".platforms.macos-arm64]
-checksum = "sha256:b0f5a81601291123a25792859f7ca82229c1f1ae05b4b9f1a7e9e8bb63e649d5"
-size = 17559059
-url = "https://github.com/cli/cli/releases/download/v2.81.0/gh_2.81.0_macOS_arm64.zip"
-
-[tools."aqua:cli/cli".platforms.windows-x64]
-checksum = "sha256:8f5a19ee2271d20477c5c8d8204b65cd0ff6d73279417f5cdab49135516ca1b5"
-size = 18317085
-url = "https://github.com/cli/cli/releases/download/v2.81.0/gh_2.81.0_windows_amd64.zip"
+[tools."aqua:cli/cli".platforms.linux-x64]
+checksum = "sha256:aba32dd552112101464941c7b5ee5f097896e1e234eb99581ff1652f44c4009a"
+size = 18085983
+url = "https://github.com/cli/cli/releases/download/v2.82.0/gh_2.82.0_linux_amd64.tar.gz"
 
 [[tools."aqua:golangci/golangci-lint"]]
 version = "2.5.0"
@@ -79,21 +74,26 @@ version = "1.8.1"
 backend = "aqua:jqlang/jq"
 
 [[tools."aqua:junegunn/fzf"]]
-version = "0.65.2"
+version = "0.66.0"
 backend = "aqua:junegunn/fzf"
+
+[tools."aqua:junegunn/fzf".platforms.linux-x64]
+checksum = "sha256:362d5f92187560a87338b427dbe573d1e1bf8b4fb4bab1f44aca6a8f7fe8070f"
+size = 1799208
+url = "https://github.com/junegunn/fzf/releases/download/v0.66.0/fzf-0.66.0-linux_amd64.tar.gz"
 
 [[tools."aqua:sharkdp/fd"]]
 version = "10.3.0"
 backend = "aqua:sharkdp/fd"
 
 [[tools."aqua:sigstore/cosign"]]
-version = "3.0.1"
+version = "3.0.2"
 backend = "aqua:sigstore/cosign"
 
-[tools."aqua:sigstore/cosign".platforms.macos-arm64]
-checksum = "sha256:dad2a161d91fba199d1ebae7e5652a4c2dd412cbb1ab6b4cc8ad6a15378319fe"
-size = 154681746
-url = "https://github.com/sigstore/cosign/releases/download/v3.0.1/cosign-darwin-arm64"
+[tools."aqua:sigstore/cosign".platforms.linux-x64]
+checksum = "sha256:46dbdcb5467a3dfec2526923d0b3365e40c8d9dc00ec23d5aca3437449e8cbfd"
+size = 156288179
+url = "https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-linux-amd64"
 
 [[tools."aqua:starship/starship"]]
 version = "1.23.0"
@@ -108,58 +108,50 @@ version = "1.8.0"
 backend = "aqua:x-motemen/ghq"
 
 [[tools.bun]]
-version = "1.2.23"
+version = "1.3.0"
 backend = "core:bun"
 
 [tools.bun.platforms.linux-x64]
-checksum = "blake3:b8ea90017983cdbac0ef8f7292d91554f70c6986b73d656c213eabc19d68b9af"
-size = 39383658
-
-[tools.bun.platforms.macos-arm64]
-checksum = "blake3:621c047bdd068c4972bf7b222a2e112908cd40b53256b690ec0921ea98676756"
-size = 22280328
+checksum = "blake3:fa75018494a4add8c86fa10a5507a6c17aaa513aaea366e77ae1c6df84c7cb40"
+size = 39506212
 
 [[tools."cargo:eza"]]
 version = "0.23.4"
 backend = "cargo:eza"
 
 [[tools.deno]]
-version = "2.5.3"
+version = "2.5.4"
 backend = "core:deno"
 
-[tools.deno.platforms.macos-arm64]
-checksum = "blake3:31bbe037626abcf56b0187bd0109f704e1cf965ac5327fec54f8e6e748b9e5e7"
-size = 40449898
-
-[tools.deno.platforms.windows-x64]
-checksum = "blake3:0d1a71ee83384df3c24f88afc62667ec87460d08a0fdbd4827c1d60b33d8a63c"
-size = 44586481
+[tools.deno.platforms.linux-x64]
+checksum = "blake3:6b440f14aa00e02a213d5e8e5235dcd65598d54fe8612852aa61f68b02632cc9"
+size = 45663234
 
 [[tools."github:neovim/neovim"]]
 version = "nightly"
 backend = "github:neovim/neovim"
 
 [[tools.go]]
-version = "1.24.8"
+version = "1.25.3"
 backend = "core:go"
 
-[tools.go.platforms.macos-arm64]
-checksum = "sha256:0db27ff8c3e35fd93ccf9d31dd88a0f9c6454e8d9b30c28bd88a70b930cc4240"
-size = 76429684
-url = "https://dl.google.com/go/go1.24.8.darwin-arm64.tar.gz"
+[tools.go.platforms.linux-x64]
+checksum = "sha256:0335f314b6e7bfe08c3d0cfaa7c19db961b7b99fb20be62b0a826c992ad14e0f"
+size = 59767979
+url = "https://dl.google.com/go/go1.25.3.linux-amd64.tar.gz"
 
 [[tools."go:github.com/babarot/gomi"]]
 version = "1.6.1"
 backend = "go:github.com/babarot/gomi"
 
 [[tools.node]]
-version = "22.20.0"
+version = "22.21.0"
 backend = "core:node"
 
-[tools.node.platforms.macos-arm64]
-checksum = "sha256:cc04a76a09f79290194c0646f48fec40354d88969bec467789a5d55dd097f949"
-size = 49838299
-url = "https://nodejs.org/dist/v22.20.0/node-v22.20.0-darwin-arm64.tar.gz"
+[tools.node.platforms.linux-x64]
+checksum = "sha256:262b84b02f7e2bc017d4bdb81fec85ca0d6190a5cd0781d2d6e84317c08871f8"
+size = 56658152
+url = "https://nodejs.org/dist/v22.21.0/node-v22.21.0-linux-x64.tar.gz"
 
 [[tools."npm:markdownlint-cli2"]]
 version = "0.18.1"
