@@ -20,6 +20,7 @@ cd $DOTFILES_DIR
 
 - [ ] Install fonts to your OS
   - Font files are downloaded in `./dist`
+- Run `gh auth login`
 
 ### WSL2
 
