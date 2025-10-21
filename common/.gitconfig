@@ -58,8 +58,9 @@
 [init]
 	defaultBranch = main
 
+# TODO: migrate to zdiff3
 [merge]
-	conflictStyle = zdiff3
+	conflictstyle = merge
 
 [pull]
 	ff = only
