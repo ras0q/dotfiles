@@ -36,11 +36,7 @@ return {
           end
         end
 
-        vim.notify(
-          "TreeSitter parser for " .. ft .. " is not installed\n:TSInstall " .. ft,
-          "warn",
-          { title = "nvim-treesitter" }
-        )
+        vim.cmd("TSInstall " .. ft)
       end,
     })
   end,
