@@ -1,7 +1,0 @@
-[[tools."aqua:zellij-org/zellij"]]
-version = "0.43.1"
-backend = "aqua:zellij-org/zellij"
-
-[[tools."asdf:mise-plugins/mise-1password-cli"]]
-version = "2.32.0"
-backend = "asdf:mise-plugins/mise-1password-cli"
