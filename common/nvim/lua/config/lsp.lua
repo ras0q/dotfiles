@@ -36,17 +36,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
 
-    -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     if client:supports_method("textDocument/completion") then
-      -- Optional: trigger autocompletion on EVERY keypress except brackets. May be slow!
-      local chars = {}
-      for i = 32, 126 do
-        local c = string.char(i)
-        if c ~= "(" and c ~= ")" and c ~= "[" and c ~= "]" and c ~= "{" and c ~= "}" then
-          table.insert(chars, c)
-        end
-      end
-      client.server_capabilities.completionProvider.triggerCharacters = chars
+      client.server_capabilities.completionProvider.triggerCharacters =
+          vim.split("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.", "")
       vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
     end
 
