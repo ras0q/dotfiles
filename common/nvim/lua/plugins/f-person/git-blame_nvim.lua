@@ -4,5 +4,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     date_format = "%Y-%m-%d %H:%M:%S",
+    delay = 100,
   },
 }
