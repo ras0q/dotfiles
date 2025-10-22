@@ -19,6 +19,13 @@ return {
             return "CodeCompanion (" .. adapter.formatted_name .. ", " .. model .. ")"
           end,
         },
+        tools = {
+          opts = {
+            default_tools = {
+              "full_stack_dev",
+            },
+          },
+        },
       },
       inline = {
         adapter = {
