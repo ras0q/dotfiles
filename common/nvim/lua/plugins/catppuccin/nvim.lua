@@ -14,6 +14,7 @@ return {
     },
     custom_highlights = function(colors)
       return {
+        FloatBorder = { fg = colors.lavender },
         TreesitterContext = { bg = colors.base },
         TreesitterContextLineNumber = { bg = colors.base, fg = colors.rosewater },
       }
