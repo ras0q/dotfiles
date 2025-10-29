@@ -16,6 +16,7 @@ add_paths() {
 add_paths \
   ~/.local/bin \
   ~/.local/share/mise/shims \
+  ~/.local/share/nvim/mason/bin \
   ~/.rd/bin \
   ~/.cargo/bin \
   ~/.deno/bin \
