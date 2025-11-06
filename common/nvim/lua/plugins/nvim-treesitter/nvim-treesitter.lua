@@ -5,6 +5,10 @@ return {
   branch = "main",
   build = ":TSUpdate",
   config = function()
+    if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
+      return
+    end
+
     local ts = require("nvim-treesitter")
 
     local ensure_installed = {
