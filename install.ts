@@ -66,6 +66,13 @@ if (import.meta.main) {
       }
     }
 
+    const parent = target.parent();
+    if (parent && !parent.existsSync()) {
+      needsSudo
+        ? await $`sudo mkdir -p ${parent}`
+        : await $`mkdir -p ${parent}`;
+    }
+
     needsSudo
       ? await $`sudo ln -sfn ${source} ${target}`
       : await $`ln -sfn ${source} ${target}`;
