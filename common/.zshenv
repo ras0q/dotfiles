@@ -36,6 +36,7 @@ if [[ -n "$WINDOWS_HOME" ]]; then
     /mnt/c/Program\ Files/PowerShell/7
 fi
 
+[[ -z "$CC" ]] && export CC="zig"
 [[ -z "$EDITOR" ]] && export EDITOR="nvim"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
 [[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"

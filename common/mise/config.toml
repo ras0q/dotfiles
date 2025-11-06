@@ -31,6 +31,7 @@ node = "lts"
 "npm:markdownlint-cli2" = "latest"
 "npm:mcp-hub" = "latest"
 rust = "latest"
+zig = "latest"
 
 [settings]
 exec_auto_install = false
