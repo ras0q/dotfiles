@@ -36,19 +36,20 @@ if [[ -n "$WINDOWS_HOME" ]]; then
     /mnt/c/Program\ Files/PowerShell/7
 fi
 
-[[ -z "$CC" ]] && export CC="zig"
-[[ -z "$EDITOR" ]] && export EDITOR="nvim"
-[[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
-[[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
-[[ -z "$LANG" ]] && export LANG=POSIX
-[[ -z "$MISE_ENV" ]] && export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
-[[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
-[[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
-
 if [[ "$(uname -r)" == *microsoft* ]]; then
   [[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
 fi
 
 if [[ "$(uname -s)" =~ "MINGW" ]]; then
+  [[ -z "$BROWSER" ]] && export BROWSER="/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
   [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
 fi
+
+[[ -z "$CC" ]] && export CC="zig"
+[[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
+[[ -z "$EDITOR" ]] && export EDITOR="nvim"
+[[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
+[[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
+[[ -z "$LANG" ]] && export LANG=POSIX
+[[ -z "$MISE_ENV" ]] && export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
+[[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
