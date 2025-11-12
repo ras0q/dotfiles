@@ -28,6 +28,8 @@ vim.keymap.set("i", "<Space>", "<Space><C-g>u", opts)
 -- vim.keymap.set("i", "<CR>", "<CR><C-g>u", opts)
 vim.keymap.set("i", ",", ",<C-g>u", opts)
 vim.keymap.set("i", ".", ".<C-g>u", opts)
+vim.keymap.set("i", "、", "、<C-g>u", opts)
+vim.keymap.set("i", "。", "。<C-g>u", opts)
 
 -- visual mode
 vim.keymap.set("v", "gh", "^", opts)
