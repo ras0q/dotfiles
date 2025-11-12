@@ -56,6 +56,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     if client:supports_method("textDocument/inlineCompletion") then
+      local skip_fts = { "text", "toggleterm" }
+      for _, ft in ipairs(skip_fts) do
+        if vim.bo[buf].filetype == ft then
+          return
+        end
+      end
+
       vim.lsp.inline_completion.enable(true, { bufnr = buf })
       vim.keymap.set("i", "<Tab>", function()
         if not vim.lsp.inline_completion.get() then
