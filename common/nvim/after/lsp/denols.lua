@@ -16,20 +16,11 @@ return {
   workspace_required = true,
   root_markers = {},
   root_dir = function(bufnr, cb)
-    local bufname = vim.fs.normalize(vim.api.nvim_buf_get_name(bufnr))
-    local dir = vim.fs.dirname(bufname)
-    local findopts = { upward = true, path = dir }
-    local deno_files = vim.fs.find({ "deno.json", "deno.jsonc", "deno.lock" }, findopts)
-    if #deno_files > 0 then
-      return cb(vim.fs.dirname(deno_files[1]))
-    end
-
-    if vim.bo.filetype == "markdown" then
-      return
-    end
-    local node_files = vim.fs.find({ "package.json" }, findopts)
-    if #node_files == 0 then
-      return cb(dir)
+    local js_runtime = require("utils").get_js_runtime(bufnr)
+    local enabled = js_runtime.is_deno
+        or (not js_runtime.is_node and vim.bo.filetype ~= "markdown")
+    if enabled then
+      return cb(js_runtime.deno_root_dir)
     end
   end,
 }
