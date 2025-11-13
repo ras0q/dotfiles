@@ -7,7 +7,7 @@ return {
       "denols",
       "gopls",
       "lua_ls",
-      "ts_ls",
+      "tsgo",
       "yamlls",
     },
   },

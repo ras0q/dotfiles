@@ -1,2 +1,2 @@
 [gpg "ssh"]
-  program = "op-ssh-sign-wsl"
+  program = "op-ssh-sign-wsl.exe"
