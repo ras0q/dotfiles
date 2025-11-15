@@ -4,6 +4,7 @@ vim.opt.completeopt = {
   "menuone",
   "noinsert",
 }
+vim.opt.pumheight = 15
 
 vim.lsp.log.set_level("warn")
 
@@ -37,9 +38,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 
     if client:supports_method("textDocument/completion") then
-      client.server_capabilities.completionProvider.triggerCharacters =
-          vim.split("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.", "")
-      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+      vim.lsp.completion.enable(true, client.id, args.buf, {
+        autotrigger = true,
+        convert = function(item)
+          return { abbr = item.label:gsub("%b()", "") }
+        end,
+      })
     end
 
     -- Auto-format ("lint") on save.
