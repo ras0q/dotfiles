@@ -33,9 +33,12 @@ return {
         lsp_format = "fallback",
       },
       format_on_save = {
-        lsp_format = "fallback",
+        timeout_ms = 500,
       },
       formatters_by_ft = formatters_by_ft,
     }
+  end,
+  init = function()
+    vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
   end,
 }
