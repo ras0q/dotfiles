@@ -1,3 +1,4 @@
+--- @type LazyPluginSpec
 return {
   "echasnovski/mini.nvim",
   version = "*",
@@ -54,4 +55,7 @@ return {
       end,
     })
   end,
+  keys = {
+    { "<leader>D", function() require("mini.diff").toggle_overlay() end, desc = "Toggle diff overlay" },
+  },
 }
