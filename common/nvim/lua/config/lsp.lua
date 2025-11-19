@@ -48,6 +48,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
           return { abbr = item.label:gsub("%b()", "") }
         end,
       })
+      vim.keymap.set("i", "<CR>",
+        "pumvisible() ? '<C-y>' : '<CR>'",
+        { expr = true, buffer = buf, desc = "Confirm completion item" })
     end
 
     if client:supports_method("textDocument/inlineCompletion") then
