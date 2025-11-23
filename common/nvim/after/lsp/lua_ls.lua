@@ -26,6 +26,7 @@ return {
           vim.env.VIMRUNTIME .. "/lua",
           plugins["lazy.nvim"].dir .. "/lua",
           plugins["snacks.nvim"].dir .. "/lua",
+          plugins["wezterm-types"].dir .. "/lua",
           "${3rd}/luv/library",
           "${3rd}/busted/library",
           "${3rd}/luassert/library",
