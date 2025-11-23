@@ -39,7 +39,7 @@
     "~/Library/Application Support/com.mitchellh.ghostty/config": "./common/ghostty/config"
   },
   "windows": {
-    "~/.config/wezterm": "./common/wezterm",
+    "~/.wezterm.lua": "./common/wezterm/.wezterm.lua",
     "~/.gitconfig.win": "./win/.gitconfig.win",
     "~/.inputrc": "./win/.inputrc",
     "~/.wslconfig": "./win/.wslconfig",
