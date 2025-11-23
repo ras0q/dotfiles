@@ -22,7 +22,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local specs = {}
-local sep = package.config:sub(1, 1)
+local sep = "/"
 local config_path = vim.fn.stdpath("config") .. sep .. "lua"
 local pattern = "plugins" .. sep .. "**" .. sep
 local subdirs = vim.fn.globpath(config_path, pattern, true, true)

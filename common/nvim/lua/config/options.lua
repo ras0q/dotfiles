@@ -7,6 +7,8 @@ opt.backup = false
 opt.swapfile = false
 opt.shell = "zsh"
 if vim.fn.has("win32") == 1 then
+  opt.shellslash = true
+
   local msystem = vim.fn.getenv("MSYSTEM")
 
   if msystem == "MINGW64" or msystem == "MINGW32" then
