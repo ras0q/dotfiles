@@ -33,11 +33,13 @@
     "~/.gitconfig.mac": "./mac/.gitconfig.mac",
     "~/.config/skhd": "./mac/skhd",
     "~/.config/yabai": "./mac/yabai",
+    "~/.config/wezterm": "./common/wezterm",
     "~/.local/bin/op-ssh-sign": "/Applications/1Password.app/Contents/MacOS/op-ssh-sign",
     "~/.warp": "./mac/warp",
     "~/Library/Application Support/com.mitchellh.ghostty/config": "./common/ghostty/config"
   },
   "windows": {
+    "~/.config/wezterm": "./common/wezterm",
     "~/.gitconfig.win": "./win/.gitconfig.win",
     "~/.inputrc": "./win/.inputrc",
     "~/.wslconfig": "./win/.wslconfig",
