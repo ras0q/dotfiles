@@ -25,18 +25,27 @@ setopt hist_save_no_dups
 setopt hist_verify
 setopt inc_append_history_time
 
-# Plugin manager
-[[ -d ~/.antidote ]] || git clone --depth 1 https://github.com/mattmc3/antidote.git ~/.antidote
-source ~/.antidote/antidote.zsh
-antidote load
+# fzf-tab (configure → compinit → load)
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:git-reset:*' sort false
 
 # compinit
 autoload -Uz compinit
 if [ "$(date +'%j')" != "$(date -r ~/.zcompdump +'%j' 2>/dev/null)" ]; then
-    compinit
+  echo "init"
+  if ! -f ~/.zcompdump; then
+    touch ~/.zcompdump
+  fi
+  compinit
 else
-    compinit -C
+  echo "init -C"
+  compinit -C
 fi
+
+# Plugin manager
+[[ -d ~/.antidote ]] || git clone --depth 1 https://github.com/mattmc3/antidote.git ~/.antidote
+source ~/.antidote/antidote.zsh
+antidote load
 
 # Syntax highlight theme
 mkdir -p ~/.zsh
@@ -48,10 +57,6 @@ source $shl_catppuccin
 export ABBR_SET_EXPANSION_CURSOR=1
 export ABBR_GET_AVAILABLE_ABBREVIATION=1
 export ABBR_LOG_AVAILABLE_ABBREVIATION=1
-
-# fzf-tab
-zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':completion:*:git-reset:*' sort false
 
 # Completions
 zsh-defer eval "$(gh completion -s zsh)"
