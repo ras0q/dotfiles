@@ -144,13 +144,12 @@ config.use_ime = true
 
 -- Launch menu
 if is_windows then
-  -- config.default_prog = { "wsl", "~" }
+  config.default_prog = { "wsl", "~" }
   config.launch_menu = {
     { label = "WSL2",       args = { "wsl", "~" } },
     { label = "Git Bash",   args = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i", "zsh" } },
     { label = "PowerShell", args = { "pwsh" } },
   }
-  config.default_prog = config.launch_menu[2].args
 end
 
 return config
