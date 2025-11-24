@@ -100,6 +100,22 @@ config.keys = {
     action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS|FUZZY" }),
   },
 }
+local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
+smart_splits.apply_to_config(config, {
+  -- the default config is here, if you'd like to use the default keys,
+  -- you can omit this configuration table parameter and just use
+  -- smart_splits.apply_to_config(config)
+
+  -- directional keys to use in order of: left, down, up, right
+  direction_keys = { "h", "j", "k", "l" },
+  -- modifier keys to combine with direction_keys
+  modifiers = {
+    move = "CTRL",   -- modifier to use for pane movement, e.g. CTRL+h to move left
+    resize = "META", -- modifier to use for pane resize, e.g. META+h to resize to the left
+  },
+  -- log level to use: info, warn, error
+  log_level = "info",
+})
 
 -- Mouse bindings
 config.mouse_bindings = {
@@ -128,12 +144,13 @@ config.use_ime = true
 
 -- Launch menu
 if is_windows then
-  config.default_prog = { "wsl", "~" }
+  -- config.default_prog = { "wsl", "~" }
   config.launch_menu = {
     { label = "WSL2",       args = { "wsl", "~" } },
     { label = "Git Bash",   args = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i", "zsh" } },
     { label = "PowerShell", args = { "pwsh" } },
   }
+  config.default_prog = config.launch_menu[2].args
 end
 
 return config

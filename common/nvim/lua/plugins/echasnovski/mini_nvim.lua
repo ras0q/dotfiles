@@ -27,7 +27,6 @@ return {
             textobject = "<C-c>",
           },
         })
-        require("mini.move").setup()
         require("mini.surround").setup()
 
         -- General workflow
