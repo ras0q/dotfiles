@@ -2,6 +2,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local act_cb = wezterm.action_callback
+local nf = wezterm.nerdfonts
 
 -- Platform detection
 local target_triple = wezterm.target_triple
@@ -75,6 +76,23 @@ config.window_padding = {
   left = "2cell",
   right = "2cell",
 }
+
+-- Tab bar
+wezterm.on(
+  "format-tab-title",
+  function(tab)
+    local title = tab.active_pane.title
+    if title == "wsl.exe" or title == "wslhost.exe" then
+      return nf.dev_linux .. " WSL2"
+    elseif title == "bash.exe" or title == "zsh.exe" then
+      return nf.dev_git .. " Git Bash"
+    elseif title == "pwsh.exe" then
+      return nf.md_powershell .. " PowerShell"
+    else
+      return nf.md_console_line .. " " .. title:gsub("%.exe$", "")
+    end
+  end
+)
 
 -- Font
 config.font = wezterm.font_with_fallback({
