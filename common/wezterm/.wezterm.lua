@@ -10,35 +10,56 @@ local is_macos = target_triple == "x86_64-apple-darwin" or target_triple == "aar
 
 local config = wezterm.config_builder()
 
+-- General
+config.use_ime = true
+config.window_close_confirmation = "NeverPrompt"
+if is_windows then
+  config.default_prog = { "wsl", "~" }
+  config.launch_menu = {
+    { label = "WSL2",       args = { "wsl", "~" } },
+    { label = "Git Bash",   args = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i", "zsh" } },
+    { label = "PowerShell", args = { "pwsh" } },
+  }
+end
+
 -- Colorscheme
-config.color_scheme = "Catppuccin Latte"
-config.colors = {
-  tab_bar = {
-    active_tab = {
-      bg_color = "#eff1f5", -- latte base
-      fg_color = "#179299", -- latte teal
-    },
-    inactive_tab = {
-      bg_color = "#e6e9ef", -- latte mantle
-      fg_color = "#6c6f85", -- latte subtext0
-    },
-    inactive_tab_hover = {
-      bg_color = "#dce0e8", -- latte crust
-      fg_color = "#6c6f85", -- latte subtext0
-    },
-    new_tab = {
-      bg_color = "#ccd0da", -- latte surface0
-      fg_color = "#5c5f77", -- latte subtext1,
-    },
-    new_tab_hover = {
-      bg_color = "#ccd0da", -- latte surface0
-      fg_color = "#fe640b", -- latte peach
-    },
-  },
+local colorscheme                       = wezterm.color.get_builtin_schemes()["Catppuccin Latte"]
+local latte                             = {
+  rosewater = "#dc8a78",
+  flamingo = "#dd7878",
+  pink = "#ea76cb",
+  mauve = "#8839ef",
+  red = "#d20f39",
+  maroon = "#e64553",
+  peach = "#fe640b",
+  yellow = "#df8e1d",
+  green = "#40a02b",
+  teal = "#179299",
+  sky = "#04a5e5",
+  sapphire = "#209fb5",
+  blue = "#1e66f5",
+  lavender = "#7287fd",
+  text = "#4c4f69",
+  subtext1 = "#5c5f77",
+  subtext0 = "#6c6f85",
+  overlay2 = "#7c7f93",
+  overlay1 = "#8c8fa1",
+  overlay0 = "#9ca0b0",
+  surface2 = "#acb0be",
+  surface1 = "#bcc0cc",
+  surface0 = "#ccd0da",
+  crust = "#dce0e8",
+  mantle = "#e6e9ef",
+  base = "#eff1f5",
 }
+colorscheme.tab_bar.active_tab.bg_color = latte.base
+colorscheme.tab_bar.active_tab.fg_color = latte.teal
+colorscheme.tab_bar.inactive_tab_edge   = "None"
+config.color_schemes                    = config.color_schemes or {}
+config.colors                           = colorscheme
 
 -- Opacity
-config.window_background_opacity = 0.6
+config.window_background_opacity        = 0.6
 if is_windows then
   config.win32_system_backdrop = "Acrylic"
 elseif is_macos then
@@ -46,13 +67,9 @@ elseif is_macos then
 end
 
 -- Window
-config.initial_cols = 80
-config.initial_rows = 20
 config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
 config.window_frame = {
-  font_size = 12.0,
-  active_titlebar_bg = "#ccd0da",   -- latte surface0
-  inactive_titlebar_bg = "#bcc0cc", -- latte surface1
+  active_titlebar_bg = config.colors.background,
 }
 config.window_padding = {
   left = "2cell",
@@ -67,6 +84,10 @@ config.font = wezterm.font_with_fallback({
 config.font_size = is_macos and 12.0 or 10.0
 
 -- Keybindings
+config.leader = {
+  key = "q",
+  mods = "CTRL",
+}
 config.keys = {
   -- Ctrl+C to copy to clipboard
   {
@@ -93,28 +114,38 @@ config.keys = {
     mods = "SHIFT|META",
     action = act.ToggleFullScreen,
   },
-  -- Ctrl+Space to show launcher
+  -- Ctrl+Shift+T to show launcher
   {
-    key = "Space",
-    mods = "CTRL",
+    key = "t",
+    mods = "CTRL|SHIFT",
     action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS|FUZZY" }),
+  },
+  -- Leader+D to split vertically
+  {
+    key = "d",
+    mods = "LEADER",
+    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+  },
+  -- Leader+R to split horizontally
+  {
+    key = "r",
+    mods = "LEADER",
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  },
+  -- Leader+X to close current pane
+  {
+    key = "x",
+    mods = "LEADER",
+    action = act.CloseCurrentPane({ confirm = true }),
   },
 }
 local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 smart_splits.apply_to_config(config, {
-  -- the default config is here, if you'd like to use the default keys,
-  -- you can omit this configuration table parameter and just use
-  -- smart_splits.apply_to_config(config)
-
-  -- directional keys to use in order of: left, down, up, right
   direction_keys = { "h", "j", "k", "l" },
-  -- modifier keys to combine with direction_keys
   modifiers = {
     move = "CTRL",   -- modifier to use for pane movement, e.g. CTRL+h to move left
     resize = "META", -- modifier to use for pane resize, e.g. META+h to resize to the left
   },
-  -- log level to use: info, warn, error
-  log_level = "info",
 })
 
 -- Mouse bindings
@@ -138,18 +169,5 @@ config.mouse_bindings = {
     action = act.Nop,
   },
 }
-
--- IME support
-config.use_ime = true
-
--- Launch menu
-if is_windows then
-  config.default_prog = { "wsl", "~" }
-  config.launch_menu = {
-    { label = "WSL2",       args = { "wsl", "~" } },
-    { label = "Git Bash",   args = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i", "zsh" } },
-    { label = "PowerShell", args = { "pwsh" } },
-  }
-end
 
 return config
