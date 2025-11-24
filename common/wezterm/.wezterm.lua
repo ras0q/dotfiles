@@ -85,7 +85,7 @@ config.font_size = is_macos and 12.0 or 10.0
 
 -- Keybindings
 config.leader = {
-  key = "q",
+  key = "p",
   mods = "CTRL",
 }
 config.keys = {
@@ -136,7 +136,7 @@ config.keys = {
   {
     key = "x",
     mods = "LEADER",
-    action = act.CloseCurrentPane({ confirm = true }),
+    action = act.CloseCurrentPane({ confirm = false }),
   },
 }
 local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
