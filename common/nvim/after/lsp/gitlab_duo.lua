@@ -13,4 +13,6 @@ return {
       enabled = false,
     },
   },
+  on_init = function() end,
+  on_attach = function() end,
 }
