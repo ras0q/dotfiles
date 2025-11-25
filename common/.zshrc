@@ -32,7 +32,7 @@ zstyle ':completion:*:git-reset:*' sort false
 # compinit
 autoload -Uz compinit
 if [ "$(date +'%j')" != "$(date -r ~/.zcompdump +'%j' 2>/dev/null)" ]; then
-  if ! -f ~/.zcompdump; then
+  if [[ ! -f ~/.zcompdump ]]; then
     touch ~/.zcompdump
   fi
   compinit
