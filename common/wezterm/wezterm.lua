@@ -60,7 +60,7 @@ config.color_schemes                    = config.color_schemes or {}
 config.colors                           = colorscheme
 
 -- Opacity
-config.window_background_opacity        = 0.6
+config.window_background_opacity        = 0.7
 if is_windows then
   config.win32_system_backdrop = "Acrylic"
 elseif is_macos then
@@ -102,28 +102,25 @@ config.font = wezterm.font_with_fallback({
 config.font_size = is_macos and 12.0 or 10.0
 
 -- Keybindings
-config.leader = {
-  key = "p",
-  mods = "CTRL",
-}
+config.leader = { key = "p", mods = "SUPER" }
 config.keys = {
-  -- Ctrl+C to copy to clipboard
+  -- Cmd+C to copy to clipboard
   {
     key = "c",
-    mods = "CTRL",
+    mods = "SUPER",
     action = act_cb(function(window, pane)
       local is_selection_active = string.len(window:get_selection_text_for_pane(pane)) ~= 0
       if is_selection_active then
         window:perform_action(wezterm.action.CopyTo("ClipboardAndPrimarySelection"), pane)
       else
-        window:perform_action(wezterm.action.SendKey({ key = "c", mods = "CTRL" }), pane)
+        window:perform_action(wezterm.action.SendKey({ key = "c", mods = "SUPER" }), pane)
       end
     end),
   },
-  -- Ctrl+V to paste from clipboard
+  -- Cmd+V to paste from clipboard
   {
     key = "v",
-    mods = "CTRL",
+    mods = "SUPER",
     action = act.PasteFrom("Clipboard"),
   },
   -- Alt+Shift+F to toggle fullscreen
@@ -132,10 +129,10 @@ config.keys = {
     mods = "SHIFT|META",
     action = act.ToggleFullScreen,
   },
-  -- Ctrl+Shift+T to show launcher
+  -- Cmd+Shift+T to show launcher
   {
     key = "t",
-    mods = "CTRL|SHIFT",
+    mods = "SUPER|SHIFT",
     action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS|FUZZY" }),
   },
   -- Leader+D to split vertically
@@ -144,11 +141,23 @@ config.keys = {
     mods = "LEADER",
     action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
+  -- Leader+N to create a new window
+  {
+    key = "n",
+    mods = "LEADER",
+    action = act.SpawnWindow,
+  },
   -- Leader+R to split horizontally
   {
     key = "r",
     mods = "LEADER",
     action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  },
+  -- Leader+T to create a new tab
+  {
+    key = "t",
+    mods = "LEADER",
+    action = act.SpawnTab("CurrentPaneDomain"),
   },
   -- Leader+X to close current pane
   {
