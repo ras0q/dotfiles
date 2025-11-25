@@ -12,6 +12,7 @@ vim.lsp.log.set_level("warn")
 -- - Language server configuration: nvim-lspconfig
 -- - Language server installation: mason-lspconfig.nvim
 -- - Auto-formatting: conform.nvim
+-- - Completion: blink.cmp
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", {}),
   callback = function(args)
@@ -40,19 +41,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         { buffer = buf, desc = "Show hover documentation" })
     end
 
-
-    if client:supports_method("textDocument/completion") then
-      vim.lsp.completion.enable(true, client.id, args.buf, {
-        autotrigger = true,
-        convert = function(item)
-          return { abbr = item.label:gsub("%b()", "") }
-        end,
-      })
-      vim.keymap.set("i", "<CR>",
-        "pumvisible() ? '<C-y>' : '<CR>'",
-        { expr = true, buffer = buf, desc = "Confirm completion item" })
-    end
-
     if client:supports_method("textDocument/inlineCompletion") then
       local skip_fts = { "text", "toggleterm" }
       for _, ft in ipairs(skip_fts) do
@@ -61,7 +49,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
       end
 
-      vim.lsp.inline_completion.enable(true, { bufnr = buf })
+      vim.lsp.inline_completion.enable(true)
       vim.keymap.set("i", "<Tab>", function()
         if not vim.lsp.inline_completion.get() then
           return "<Tab>"
@@ -72,7 +60,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
       end, {
         expr = true,
-        buffer = buf,
         desc = "Accept the current inline completion",
       })
     end
