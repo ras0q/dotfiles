@@ -121,6 +121,12 @@ config.keys = {
     mods = "SUPER",
     action = spawn_tab,
   },
+  -- Ctrl+Shift+T to show launcher
+  {
+    key = "t",
+    mods = "CTRL|SHIFT",
+    action = spawn_tab,
+  },
   -- Cmd+Shift+T to show launcher
   {
     key = "t",
@@ -158,6 +164,34 @@ config.keys = {
     action = act.CloseCurrentPane({ confirm = false }),
   },
 }
+if is_windows then
+  -- Ctrl+C to copy to clipboard
+  table.insert(config.keys, {
+    key = "c",
+    mods = "CTRL",
+    action = act_cb(function(window, pane)
+      local is_selection_active = #window:get_selection_text_for_pane(pane) > 0
+      if is_selection_active then
+        window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
+      else
+        window:perform_action(act.SendKey({ key = "c", mods = "CTRL" }), pane)
+      end
+    end),
+  })
+  -- Ctrl+V to paste from clipboard
+  table.insert({
+    key = "v",
+    mods = "CTRL",
+    action = act.PasteFrom("Clipboard"),
+  })
+  -- Ctrl+W to close current tab
+  table.insert({
+    key = "w",
+    mods = "CTRL",
+    action = act.CloseCurrentPane({ confirm = true }),
+  })
+end
+
 local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 smart_splits.apply_to_config(config, {
   direction_keys = { "h", "j", "k", "l" },
