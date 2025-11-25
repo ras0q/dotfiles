@@ -14,6 +14,7 @@ local config = wezterm.config_builder()
 -- General
 config.use_ime = true
 config.window_close_confirmation = "NeverPrompt"
+config.launch_menu = {}
 if is_windows then
   config.default_prog = { "wsl", "~" }
   config.launch_menu = {
@@ -102,39 +103,29 @@ config.font = wezterm.font_with_fallback({
 })
 config.font_size = is_macos and 12.0 or 10.0
 
--- Keybindings
-config.leader = { key = "p", mods = "SUPER" }
+-- Keybindings (based on Zellij)
+local spawn_tab = act_cb(function(window, pane)
+  wezterm.log_info("perform", #config.launch_menu)
+  if #config.launch_menu <= 1 then
+    window:perform_action(act.SpawnTab("CurrentPaneDomain"), pane)
+  else
+    window:perform_action(act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS|FUZZY" }), pane)
+  end
+end)
+
+config.leader = { key = "p", mods = "CTRL" }
 config.keys = {
-  -- Cmd+C to copy to clipboard
+  -- Cmd+T to show launcher
   {
-    key = "c",
+    key = "t",
     mods = "SUPER",
-    action = act_cb(function(window, pane)
-      local is_selection_active = string.len(window:get_selection_text_for_pane(pane)) ~= 0
-      if is_selection_active then
-        window:perform_action(wezterm.action.CopyTo("ClipboardAndPrimarySelection"), pane)
-      else
-        window:perform_action(wezterm.action.SendKey({ key = "c", mods = "SUPER" }), pane)
-      end
-    end),
-  },
-  -- Cmd+V to paste from clipboard
-  {
-    key = "v",
-    mods = "SUPER",
-    action = act.PasteFrom("Clipboard"),
-  },
-  -- Alt+Shift+F to toggle fullscreen
-  {
-    key = "f",
-    mods = "SHIFT|META",
-    action = act.ToggleFullScreen,
+    action = spawn_tab,
   },
   -- Cmd+Shift+T to show launcher
   {
     key = "t",
     mods = "SUPER|SHIFT",
-    action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS|FUZZY" }),
+    action = spawn_tab,
   },
   -- Leader+D to split vertically
   {
@@ -146,7 +137,7 @@ config.keys = {
   {
     key = "n",
     mods = "LEADER",
-    action = act.SpawnWindow,
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
   -- Leader+R to split horizontally
   {
