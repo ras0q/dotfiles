@@ -71,6 +71,7 @@ end
 config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
 config.window_frame = {
   active_titlebar_bg = config.colors.background,
+  inactive_titlebar_bg = config.colors.background,
 }
 config.window_padding = {
   left = "2cell",
