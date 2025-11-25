@@ -9,6 +9,41 @@ local target_triple = wezterm.target_triple
 local is_windows = target_triple == "x86_64-pc-windows-msvc"
 local is_macos = target_triple == "x86_64-apple-darwin" or target_triple == "aarch64-apple-darwin"
 
+--- @type table<string, SpawnCommand>
+local windows_shells = {
+  wsl2 = {
+    label = nf.dev_linux .. " WSL2",
+    args = { "wsl", "~" },
+  },
+  gitbash = {
+    label = nf.dev_git .. " Git Bash",
+    args = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i", "zsh" },
+  },
+  pwsh = {
+    label = nf.md_powershell .. " PowerShell",
+    args = { "pwsh" },
+  },
+}
+
+--- @param title string
+--- @return SpawnCommand | nil
+local function get_windows_shell(title)
+  if not is_windows then
+    return nil
+  end
+
+  local t = (title or ""):lower()
+  if t:match("wsl") or t == "wsl.exe" or t == "wslhost.exe" then
+    return windows_shells.wsl2
+  elseif t:match("bash") or t:match("zsh") or t == "bash.exe" or t == "zsh.exe" then
+    return windows_shells.gitbash
+  elseif t:match("pwsh") or t == "pwsh.exe" then
+    return windows_shells.pwsh
+  else
+    return nil
+  end
+end
+
 local config = wezterm.config_builder()
 
 -- General
@@ -16,13 +51,14 @@ config.use_ime = true
 config.window_close_confirmation = "NeverPrompt"
 config.launch_menu = {}
 if is_windows then
-  config.default_prog = { "wsl", "~" }
+  config.default_prog = windows_shells.wsl2.args
   config.launch_menu = {
-    { label = "WSL2",       args = { "wsl", "~" } },
-    { label = "Git Bash",   args = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i", "zsh" } },
-    { label = "PowerShell", args = { "pwsh" } },
+    windows_shells.wsl2,
+    windows_shells.gitbash,
+    windows_shells.pwsh,
   }
 end
+
 
 -- Colorscheme
 local colorscheme                       = wezterm.color.get_builtin_schemes()["Catppuccin Latte"]
@@ -84,17 +120,14 @@ wezterm.on(
   "format-tab-title",
   function(tab)
     local title = tab.active_pane.title
-    if title == "wsl.exe" or title == "wslhost.exe" then
-      return nf.dev_linux .. " WSL2"
-    elseif title == "bash.exe" or title == "zsh.exe" then
-      return nf.dev_git .. " Git Bash"
-    elseif title == "pwsh.exe" then
-      return nf.md_powershell .. " PowerShell"
-    else
-      return nf.md_console_line .. " " .. title:gsub("%.exe$", "")
+    local shell = get_windows_shell(title)
+    if shell then
+      return shell.label
     end
+    return nf.md_console_line .. " " .. title:gsub("%.exe$", "")
   end
 )
+
 
 -- Font
 config.font = wezterm.font_with_fallback({
@@ -105,13 +138,13 @@ config.font_size = is_macos and 12.0 or 10.0
 
 -- Keybindings (based on Zellij)
 local spawn_tab = act_cb(function(window, pane)
-  wezterm.log_info("perform", #config.launch_menu)
   if #config.launch_menu <= 1 then
     window:perform_action(act.SpawnTab("CurrentPaneDomain"), pane)
   else
     window:perform_action(act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS|FUZZY" }), pane)
   end
 end)
+
 
 config.leader = { key = "p", mods = "CTRL" }
 config.keys = {
@@ -137,19 +170,40 @@ config.keys = {
   {
     key = "d",
     mods = "LEADER",
-    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+    action = act_cb(function(window, pane)
+      local param = { domain = "CurrentPaneDomain" }
+      local shell = get_windows_shell(pane:get_title())
+      if shell and shell.args then
+        param.args = shell.args
+      end
+      window:perform_action(act.SplitVertical(param), pane)
+    end),
   },
-  -- Leader+N to create a new window
+  -- Leader+N to create a new window (split horizontal)
   {
     key = "n",
     mods = "LEADER",
-    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    action = act_cb(function(window, pane)
+      local param = { domain = "CurrentPaneDomain" }
+      local shell = get_windows_shell(pane:get_title())
+      if shell and shell.args then
+        param.args = shell.args
+      end
+      window:perform_action(act.SplitHorizontal(param), pane)
+    end),
   },
   -- Leader+R to split horizontally
   {
     key = "r",
     mods = "LEADER",
-    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    action = act_cb(function(window, pane)
+      local param = { domain = "CurrentPaneDomain" }
+      local shell = get_windows_shell(pane:get_title())
+      if shell and shell.args then
+        param.args = shell.args
+      end
+      window:perform_action(act.SplitHorizontal(param), pane)
+    end),
   },
   -- Leader+T to create a new tab
   {
@@ -157,6 +211,7 @@ config.keys = {
     mods = "LEADER",
     action = spawn_tab,
   },
+
   -- Leader+X to close current pane
   {
     key = "x",
