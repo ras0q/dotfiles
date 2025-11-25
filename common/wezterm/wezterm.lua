@@ -149,7 +149,7 @@ config.keys = {
   {
     key = "t",
     mods = "LEADER",
-    action = act.SpawnTab("CurrentPaneDomain"),
+    action = spawn_tab,
   },
   -- Leader+X to close current pane
   {
