@@ -179,13 +179,13 @@ if is_windows then
     end),
   })
   -- Ctrl+V to paste from clipboard
-  table.insert({
+  table.insert(config.keys, {
     key = "v",
     mods = "CTRL",
     action = act.PasteFrom("Clipboard"),
   })
   -- Ctrl+W to close current tab
-  table.insert({
+  table.insert(config.keys, {
     key = "w",
     mods = "CTRL",
     action = act.CloseCurrentPane({ confirm = true }),
