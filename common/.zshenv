@@ -42,10 +42,10 @@ if [[ "$(uname -r)" == *microsoft* ]]; then
 fi
 
 if [[ "$(uname -s)" =~ "MINGW" ]]; then
-  [[ -z "$BROWSER" ]] && export BROWSER="/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
   [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
 fi
 
+[[ -z "$BROWSER" ]] && export BROWSER="msedge.exe"
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 [[ -z "$EDITOR" ]] && export EDITOR="nvim"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
