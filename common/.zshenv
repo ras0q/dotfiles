@@ -1,3 +1,4 @@
+#functions
 add_paths() {
   local new_paths=()
   for dir in "$@"; do
@@ -9,6 +10,11 @@ add_paths() {
   if [[ ${#new_paths[@]} -gt 0 ]]; then
     export PATH="$(IFS=:; echo "${new_paths[*]}"):${PATH}"
   fi
+}
+
+cdp() {
+  read -r DIR_PATH
+  [[ -n "$DIR_PATH" ]] && cd "$DIR_PATH" || exit 1
 }
 
 [[ -f ~/.env ]] && source ~/.env
