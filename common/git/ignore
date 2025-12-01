@@ -10,3 +10,4 @@ mise.local.toml
 .crush/
 .trash/
 tmp/
+worktree/
