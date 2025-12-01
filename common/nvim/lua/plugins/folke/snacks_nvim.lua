@@ -12,11 +12,12 @@ local list_repos = {
   end,
 }
 
--- for avante.nvim's input provider and replacing telescope functionality
+--- @type LazyPluginSpec
 return {
   "folke/snacks.nvim",
   lazy = false,
   priority = 1000,
+  enabled = vim.g.vscode == nil,
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
