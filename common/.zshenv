@@ -45,7 +45,6 @@ if [[ "$(uname -s)" =~ "MINGW" ]]; then
   [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
 fi
 
-[[ -z "$CC" ]] && export CC="zig cc"
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 [[ -z "$EDITOR" ]] && export EDITOR="nvim"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
