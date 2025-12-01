@@ -12,22 +12,6 @@ add_paths() {
   fi
 }
 
-cdp() {
-  read -r DIR_PATH
-  [[ -n "$DIR_PATH" ]] && cd "$DIR_PATH" || exit 1
-}
-
-git-worktree-add-interactive() {
-  local branch=$(git branch --format='%(refname:short)' | fzf --preview 'git log --oneline -20 --color=always {}')
-  [[ -z "$branch" ]] && return 1
-
-  local repo_path="$(git rev-parse --show-toplevel)+${branch//\//_}"
-  [[ -d "$repo_path" ]] && echo "warning: $repo_path already exists" && cd "${repo_path}"
-
-  git worktree add "${repo_path}" "${branch}" || return 1
-  cd "${repo_path}"
-}
-
 [[ -f ~/.env ]] && source ~/.env
 
 add_paths \
