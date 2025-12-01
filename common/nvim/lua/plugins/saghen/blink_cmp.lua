@@ -4,7 +4,10 @@ return {
   version = "1.*",
   event = { "InsertEnter", "CmdLineEnter" },
   opts = {
-    keymap = { preset = "enter" },
+    keymap = {
+      preset = "enter",
+      ["<Tab>"] = false,
+    },
   },
   dependencies = { "rafamadriz/friendly-snippets" },
 }
