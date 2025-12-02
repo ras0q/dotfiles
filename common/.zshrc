@@ -103,6 +103,7 @@ fi
 # mise
 function load-mise() {
   eval "$(mise activate zsh)"
+  add_paths ~/.local/share/mise/shims
   eval "$(mise completion zsh)"
 }
 if ! is_mingw; then
