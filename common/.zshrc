@@ -43,18 +43,26 @@ fi
 # Functions
 cdp() {
   read -r DIR_PATH
-  [[ -n "$DIR_PATH" ]] && cd "$DIR_PATH" || exit 1
+  [[ -n "$DIR_PATH" ]] && cd "$DIR_PATH" || return 1
 }
 
 git-worktree-add-interactive() {
   local branch=$(git branch --format='%(refname:short)' | fzf --preview 'git log --oneline -20 --color=always {}')
-  [[ -z "$branch" ]] && return 1
+  if [[ -z "$branch" ]]; then
+    return 1
+  fi
 
-  local repo_path="$(git rev-parse --show-toplevel)+${branch//\//_}"
-  [[ -d "$repo_path" ]] && echo "warning: $repo_path already exists" && cd "${repo_path}"
+  local repo_base_path="$(git rev-parse --show-toplevel)"
+  repo_base_path=${repo_base_path%+*}
+  local repo_path="${repo_base_path}+${branch//\//_}"
+  if [[ -d "$repo_path" ]]; then
+    echo "warning: ${repo_path} already exists" >&2
+    echo "${repo_path}"
+    return 0
+  fi
 
-  git worktree add "${repo_path}" "${branch}" || return 1
-  cd "${repo_path}"
+  git worktree add -q "${repo_path}" "${branch}" || return 1
+  echo "${repo_path}"
 }
 
 # Plugin manager

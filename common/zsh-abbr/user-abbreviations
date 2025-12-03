@@ -13,7 +13,7 @@ abbr "gt"="git stash"
 abbr "gu"="git pull origin"
 abbr "gur"="git pull --rebase"
 abbr "gw"="git worktree"
-abbr "gwa"="git-worktree-add-interactive"
+abbr "gwa"="git-worktree-add-interactive | cdp"
 
 # docker
 abbr "d"="docker"
