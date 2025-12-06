@@ -4,6 +4,7 @@
  _.file = "{{ cwd }}/.envrc"
 
 [tools]
+"asdf:richin13/asdf-neovim" = "nightly"
 aqua = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"
@@ -25,7 +26,6 @@ aqua = "latest"
 bun = "1.3.3"
 "cargo:eza" = "latest"
 deno = "latest"
-"github:neovim/neovim" = "nightly"
 go = "1.25"
 "go:github.com/babarot/gomi" = "latest"
 node = "lts"
