@@ -30,7 +30,6 @@ return {
         { section = "startup" },
       },
     },
-    explorer = { enabled = true },
     indent = {
       enabled = true,
       scope = { char = "╎" },
