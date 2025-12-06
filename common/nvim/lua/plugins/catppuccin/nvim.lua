@@ -24,10 +24,8 @@ return {
       treesitter_context = false,
     },
   },
-  config = true,
-  -- config = function()
-  --   require("catppuccin").setup({
-  --   })
-  --   vim.cmd.colorscheme("catppuccin-latte")
-  -- end,
+  config = function(_, opts)
+    require("catppuccin").setup(opts)
+    vim.cmd.colorscheme("catppuccin-latte")
+  end,
 }

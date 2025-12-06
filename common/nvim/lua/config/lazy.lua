@@ -56,6 +56,4 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("catppuccin-latte")
-
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
