@@ -1,6 +1,7 @@
 ---@type LazyPluginSpec
 return {
   "folke/sidekick.nvim",
+  enabled = require("config.options").ai_enabled,
   event = "VeryLazy",
   opts = {},
   keys = {
