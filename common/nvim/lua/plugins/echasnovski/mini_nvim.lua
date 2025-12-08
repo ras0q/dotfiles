@@ -33,9 +33,9 @@ return {
         local diff = require("mini.diff")
         diff.setup({
           mappings = {
-            apply = "",
-            reset = "",
-            textobject = "",
+            apply = "gda",
+            reset = "gdr",
+            textobject = "gda",
           },
           -- FIXME: need to disable diff?
           -- https://codecompanion.olimorris.dev/installation.html#mini-diff
