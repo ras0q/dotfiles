@@ -1,6 +1,4 @@
 ---@type vim.lsp.Config
 return {
-  settings = {
-    arg = { "-mcp.listen=localhost:8092" },
-  },
+  cmd = { "gopls", "serve", "-mcp.listen=localhost:8092" },
 }
