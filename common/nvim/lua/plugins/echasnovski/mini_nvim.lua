@@ -11,8 +11,6 @@ return {
       },
     })
     require("mini.sessions").setup()
-    require("mini.statusline").setup()
-    require("mini.tabline").setup()
 
     -- Lazy loading other plugins
     vim.api.nvim_create_autocmd("VimEnter", {
