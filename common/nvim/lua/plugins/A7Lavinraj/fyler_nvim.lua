@@ -15,6 +15,6 @@ return {
     },
   },
   keys = {
-    { "<leader>e", function() require("fyler").focus() end, desc = "File Explorer" },
+    { "<leader>e", function() require("fyler").toggle({ kind = "split_left_most" }) end, desc = "File Explorer" },
   },
 }
