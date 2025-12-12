@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { buffer = buf, desc = "Show diagnostics" })
 
     if client:supports_method("textDocument/definition") then
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
+      vim.keymap.set("n", "grd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
     end
 
     if client:supports_method("textDocument/hover") then
