@@ -17,10 +17,9 @@ return {
         },
       },
     },
-    "franco-ruggeri/codecompanion-spinner.nvim",
   },
   opts = {
-    strategies = {
+    interactions = {
       chat = {
         adapter = default_adapter,
         roles = {
@@ -31,6 +30,8 @@ return {
         },
         tools = {
           opts = {
+            auto_submit_errors = true,
+            auto_submit_success = true,
             default_tools = {
               "full_stack_dev",
               "mcp",
@@ -61,6 +62,9 @@ return {
     extensions = {
       history = {
         title_generation_opts = default_adapter,
+        opts = {
+          keymap = "gH",
+        },
       },
       mcphub = {
         callback = "mcphub.extensions.codecompanion",
@@ -77,7 +81,6 @@ return {
           make_slash_commands = true,           -- Add MCP prompts as /slash commands
         },
       },
-      spinner = {},
     },
   },
   keys = {
