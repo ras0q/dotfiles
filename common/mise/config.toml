@@ -4,7 +4,6 @@
  _.file = "{{ cwd }}/.envrc"
 
 [tools]
-"asdf:richin13/asdf-neovim" = "nightly"
 aqua = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"
@@ -13,7 +12,6 @@ aqua = "latest"
 "aqua:cli/cli" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:hadolint/hadolint" = "latest"
-"aqua:jdx/usage" = "latest"
 "aqua:jesseduffield/lazygit" = "latest"
 "aqua:joerdav/xc" = "latest"
 "aqua:jqlang/jq" = "latest"
@@ -33,6 +31,7 @@ node = "lts"
 "npm:mcp-hub" = "latest"
 rust = "1.91.1"
 zig = "0.15.2"
+"github:neovim/neovim" = "nightly"
 
 [settings]
 exec_auto_install = false

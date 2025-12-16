@@ -1,3 +1,4 @@
 [tools]
+"aqua:jdx/usage" = "latest"
 "aqua:zellij-org/zellij" = "latest"
 "asdf:mise-plugins/mise-1password-cli" = "latest"
