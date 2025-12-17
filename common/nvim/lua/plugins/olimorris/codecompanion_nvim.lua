@@ -59,6 +59,13 @@ return {
     opts = {
       language = "Japanese",
     },
+    rules = {
+      default = {
+        files = {
+          "~/.AGENTS.md", -- Additional global agent rules
+        },
+      },
+    },
     extensions = {
       history = {
         title_generation_opts = default_adapter,

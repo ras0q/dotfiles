@@ -1,5 +1,6 @@
 {
   "_common": {
+    "~/.AGENTS.md": "./common/AGENTS.md",
     "~/.bash_profile": "./common/.bash_profile",
     "~/.bashrc": "./common/.bashrc",
     "~/.gitconfig": "./common/.gitconfig",
