@@ -2,5 +2,14 @@
 return {
   "nvim-lualine/lualine.nvim",
   lazy = false,
-  opts = {},
+  dependencies = {
+    "franco-ruggeri/codecompanion-lualine.nvim",
+  },
+  opts = {
+    sections = {
+      lualine_x = {
+        "codecompanion",
+      },
+    },
+  },
 }
