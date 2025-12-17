@@ -4,7 +4,9 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   branch = "main",
   build = ":TSUpdate",
-  config = function()
+  config = function(_, opts)
+    require("nvim-treesitter").setup(opts)
+
     if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
       return
     end
