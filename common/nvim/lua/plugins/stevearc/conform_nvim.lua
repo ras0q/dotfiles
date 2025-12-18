@@ -1,7 +1,7 @@
 local js_formatter = function(bufnr)
   local js_runtime = require("utils").get_js_runtime(bufnr)
   if js_runtime.is_deno or not js_runtime.is_node then
-    return {}
+    return { "deno_fmt" }
   else
     return { "biome", "prettierd", "prettier", stop_after_first = true }
   end
