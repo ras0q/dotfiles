@@ -146,7 +146,7 @@ local spawn_tab = act_cb(function(window, pane)
 end)
 
 
-config.leader = { key = "p", mods = "CTRL" }
+config.leader = { key = "k", mods = "CTRL" }
 config.keys = {
   -- Cmd+T to show launcher
   {
