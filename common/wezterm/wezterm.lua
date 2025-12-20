@@ -59,7 +59,6 @@ if is_windows then
   }
 end
 
-
 -- Colorscheme
 local colorscheme                       = wezterm.color.get_builtin_schemes()["Catppuccin Latte"]
 local latte                             = {
@@ -128,7 +127,6 @@ wezterm.on(
   end
 )
 
-
 -- Font
 config.font = wezterm.font_with_fallback({
   { family = "源ノ角ゴシック Code JP", weight = "Medium" },
@@ -145,13 +143,12 @@ local spawn_tab = act_cb(function(window, pane)
   end
 end)
 
-
 config.leader = { key = "k", mods = "CTRL" }
 config.keys = {
   -- Cmd+T to show launcher
   {
     key = "t",
-    mods = "SUPER",
+    mods = "CTRL",
     action = spawn_tab,
   },
   -- Ctrl+Shift+T to show launcher
@@ -239,10 +236,10 @@ if is_windows then
     mods = "CTRL",
     action = act.PasteFrom("Clipboard"),
   })
-  -- Ctrl+W to close current tab
+  -- Ctrl+SHIFT+W to close current tab
   table.insert(config.keys, {
     key = "w",
-    mods = "CTRL",
+    mods = "CTRL|SHIFT",
     action = act.CloseCurrentPane({ confirm = true }),
   })
 end
