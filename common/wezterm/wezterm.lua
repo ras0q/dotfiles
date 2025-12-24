@@ -129,10 +129,12 @@ wezterm.on(
 
 -- Font
 config.font = wezterm.font_with_fallback({
-  { family = "源ノ角ゴシック Code JP", weight = "Medium" },
+  { family = "Source Code Pro", weight = "Medium" },
+  { family = "源ノ角ゴシック JP VF", weight = "Medium" },
   { family = "Symbols Nerd Font" },
 })
-config.font_size = is_macos and 12.0 or 10.0
+config.font_size = is_macos and 12.0 or 11.0
+config.cell_width = 0.9
 
 -- Keybindings (based on Zellij)
 local spawn_tab = act_cb(function(window, pane)
