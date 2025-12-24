@@ -40,3 +40,21 @@ vim.keymap.set("v", "<Space>y", '"+y', opts)
 
 -- terminal mode
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
+
+-- command mode
+vim.cmd([[
+  cabbr g   Git
+  cabbr ga  Git add -A
+  cabbr gc  Git commit
+  cabbr gd  Git diff
+  cabbr gf  Git fetch origin
+  cabbr gl  Git log --oneline
+  cabbr gm  Git merge origin
+  cabbr gp  Git push origin
+  cabbr gs  Git switch
+  cabbr gss Git status
+  cabbr gt  Git stash
+  cabbr gu  Git pull origin
+  cabbr gur Git pull --rebase
+  cabbr gw  Git worktree
+]])
