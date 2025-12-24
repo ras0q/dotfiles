@@ -49,6 +49,7 @@ return {
         border = "rounded",
       },
     },
+    zen = { enabled = true },
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end,                               desc = "Buffers" },
@@ -60,5 +61,6 @@ return {
     { "<leader>l", function() Snacks.lazygit() end,                                                       desc = "LazyGit" },
     { "<leader>p", function() Snacks.picker.pickers() end,                                                desc = "List Pickers" },
     { "<leader>r", function() Snacks.picker.recent() end,                                                 desc = "List Recent files" },
+    { "<leader>z", function() Snacks.zen() end,                                                           desc = "Zen Mode" },
   },
 }
