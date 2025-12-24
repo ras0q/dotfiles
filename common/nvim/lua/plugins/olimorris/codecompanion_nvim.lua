@@ -56,6 +56,7 @@ return {
         window = {
           width = 0.3,
         },
+        show_header_separator = true,
       },
     },
     opts = {
