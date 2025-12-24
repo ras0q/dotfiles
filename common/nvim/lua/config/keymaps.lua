@@ -43,6 +43,7 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
 
 -- command mode
 vim.cmd([[
+  " Git
   cabbr g   Git
   cabbr ga  Git add -A
   cabbr gc  Git commit
@@ -57,4 +58,8 @@ vim.cmd([[
   cabbr gu  Git pull origin
   cabbr gur Git pull --rebase
   cabbr gw  Git worktree
+
+  " Terminal
+  cabb ht split <bar> resize 10 <bar> terminal
+  cabb vt vsplit <bar> terminal
 ]])
