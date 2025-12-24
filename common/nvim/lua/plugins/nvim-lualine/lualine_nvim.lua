@@ -7,8 +7,12 @@ return {
   },
   opts = {
     sections = {
+      lualine_c = {
+        { "filename", path = 4 },
+      },
       lualine_x = {
         "codecompanion",
+        "filetype",
       },
     },
   },
