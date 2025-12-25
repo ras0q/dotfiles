@@ -48,28 +48,30 @@ vim.opt.infercase = true
 vim.opt.sessionoptions:remove({ "blank" })
 
 -- OS specific settings
-local is_win = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
 local is_wsl2 = vim.fn.has("wsl") == 1
+if is_wsl2 then
+  vim.g.clipboard = {
+    name = "Wsl2Clipboard",
+    copy = {
+      ["+"] = { "sh", "-c", "nkf -Ws | clip.exe" },
+      ["*"] = { "sh", "-c", "nkf -Ws | clip.exe" },
+    },
+    paste = {
+      ["+"] =
+      "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+      ["*"] =
+      "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+    },
+    cache_enabled = true,
+  }
+end
+
+local is_win = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
 local is_msys = vim.fn.getenv("MSYSTEM") ~= nil
 if is_win then
   vim.opt.shellslash = true
 
-  if is_wsl2 then
-    vim.g.clipboard = {
-      name = "Wsl2Clipboard",
-      copy = {
-        ["+"] = { "sh", "-c", "nkf -Ws | clip.exe" },
-        ["*"] = { "sh", "-c", "nkf -Ws | clip.exe" },
-      },
-      paste = {
-        ["+"] =
-        "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
-        ["*"] =
-        "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
-      },
-      cache_enabled = true,
-    }
-  elseif is_msys then
+  if is_msys then
     vim.opt.shell = '"C:\\Program Files\\Git\\bin\\bash.exe"'
     vim.opt.shellcmdflag = "-c"
     vim.opt.shellxquote = ""
