@@ -2,7 +2,7 @@
 return {
   "nvim-mini/mini.icons",
   version = "*",
-  event = "VeryLazy",
+  lazy = false,
   opts = {},
   config = function(_, opts)
     require("mini.icons").setup(opts)
