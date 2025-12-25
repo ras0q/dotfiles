@@ -62,10 +62,10 @@ return {
     opts = {
       language = "Japanese",
     },
-    rules = {
-      default = {
-        files = {
-          "~/.AGENTS.md", -- Additional global agent rules
+    prompt_library = {
+      markdown = {
+        dirs = {
+          vim.env.DOTFILES .. "/common/prompts",
         },
       },
     },
