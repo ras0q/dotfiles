@@ -4,12 +4,8 @@
     "~/.bash_profile": "./common/.bash_profile",
     "~/.bashrc": "./common/.bashrc",
     "~/.gitconfig": "./common/.gitconfig",
-    "~/.gittemplate.txt": "./common/.gittemplate.txt",
-    "~/.config/fish": "./common/fish",
     "~/.config/git": "./common/git",
-    "~/.config/helix": "./common/helix",
     "~/.config/lazygit": "./common/lazygit",
-    "~/.config/logrotate.d": "./common/logrotate.d",
     "~/.config/mise": "./common/mise",
     "~/.config/nvim": "./common/nvim",
     "~/.config/starship.toml": "./common/starship.toml",
@@ -33,12 +29,8 @@
     "~/.Brewfile": "./mac/.Brewfile",
     "~/.Brewfile.lock.json": "./mac/.Brewfile.lock.json",
     "~/.gitconfig.mac": "./mac/.gitconfig.mac",
-    "~/.config/skhd": "./mac/skhd",
-    "~/.config/yabai": "./mac/yabai",
     "~/.config/wezterm": "./common/wezterm",
-    "~/.local/bin/op-ssh-sign": "/Applications/1Password.app/Contents/MacOS/op-ssh-sign",
-    "~/.warp": "./mac/warp",
-    "~/Library/Application Support/com.mitchellh.ghostty/config": "./common/ghostty/config"
+    "~/.local/bin/op-ssh-sign": "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
   },
   "windows": {
     "~/.config/wezterm": "./common/wezterm",
@@ -46,8 +38,6 @@
     "~/.inputrc": "./win/.inputrc",
     "~/.wslconfig": "./win/.wslconfig",
     "~/AppData/Local/nvim": "./common/nvim",
-    "~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json": "./win/terminal/settings.json",
-    "~/AppData/Roaming/helix": "./common/helix",
     "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1": "./win/Microsoft.PowerShell_profile.ps1",
     "~/Documents/PowerShell/Microsoft.VSCode_profile.ps1": "./win/Microsoft.PowerShell_profile.ps1"
   }
