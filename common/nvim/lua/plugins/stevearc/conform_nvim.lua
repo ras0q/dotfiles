@@ -38,7 +38,8 @@ return {
       formatters_by_ft = formatters_by_ft,
     }
   end,
-  init = function()
+  config = function(_, opts)
+    require("conform").setup(opts)
     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
   end,
 }
