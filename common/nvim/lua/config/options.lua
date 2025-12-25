@@ -1,35 +1,33 @@
-local opt = vim.opt
-
 -- core
-opt.fileencoding = "utf-8"
-opt.autoread = true
-opt.backup = false
-opt.swapfile = false
-opt.shell = "zsh"
+vim.opt.fileencoding = "utf-8"
+vim.opt.autoread = true
+vim.opt.backup = false
+vim.opt.swapfile = false
+vim.opt.shell = "zsh"
 if vim.fn.has("win32") == 1 then
-  opt.shellslash = true
+  vim.opt.shellslash = true
 
   local msystem = vim.fn.getenv("MSYSTEM")
 
   if msystem == "MINGW64" or msystem == "MINGW32" then
-    opt.shell = '"C:\\Program Files\\Git\\bin\\bash.exe"'
-    opt.shellcmdflag = "-c"
-    opt.shellxquote = ""
+    vim.opt.shell = '"C:\\Program Files\\Git\\bin\\bash.exe"'
+    vim.opt.shellcmdflag = "-c"
+    vim.opt.shellxquote = ""
   else
-    opt.shell = "pwsh.exe"
-    opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
-    opt.shellxquote = ""
+    vim.opt.shell = "pwsh.exe"
+    vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+    vim.opt.shellxquote = ""
   end
 end
 
 -- appearance
-opt.number = true
-opt.cursorline = true
-opt.virtualedit = "onemore"
-opt.smartindent = true
-opt.laststatus = 3
-opt.list = true
-opt.listchars = {
+vim.opt.number = true
+vim.opt.cursorline = true
+vim.opt.virtualedit = "onemore"
+vim.opt.smartindent = true
+vim.opt.laststatus = 3
+vim.opt.list = true
+vim.opt.listchars = {
   tab = "→ ",
   trail = "·",
   extends = "»",
@@ -38,16 +36,16 @@ opt.listchars = {
 }
 
 -- tabs
-opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
-opt.tabstop = 2
-opt.shiftwidth = 2
+vim.opt.expandtab = vim.fn.expand("%:r") ~= "Makefile" -- Makefileのときはタブ、それ以外はスペース
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 -- search
-opt.ignorecase = true
-opt.smartcase = true
-opt.incsearch = true
-opt.hlsearch = true
-opt.wrapscan = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.wrapscan = true
 
 --- clipboard
 vim.opt.clipboard = ""
@@ -72,7 +70,7 @@ end
 vim.g.netrw_liststyle = 3 -- tree style listing
 
 -- session
-opt.sessionoptions:remove({ "blank" })
+vim.opt.sessionoptions:remove({ "blank" })
 
 local M = {
   ai_enabled = os.getenv("NVIM_AI_ENABLED") == "true",
