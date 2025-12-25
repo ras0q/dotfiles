@@ -4,14 +4,6 @@ return {
   version = "*",
   lazy = false,
   config = function()
-    -- Set up visually significant plugins during startup
-    require("mini.basics").setup({
-      mappings = {
-        option_toggle_prefix = "m",
-      },
-    })
-    require("mini.sessions").setup()
-
     -- Lazy loading other plugins
     vim.api.nvim_create_autocmd("VimEnter", {
       callback = function()

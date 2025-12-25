@@ -40,6 +40,13 @@ return {
             },
           },
         },
+        slash_commands = {
+          help = {
+            opts = {
+              max_lines = 1024,
+            },
+          },
+        },
       },
       inline = {
         adapter = default_adapter,
