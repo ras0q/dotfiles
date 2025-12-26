@@ -69,6 +69,14 @@ return {
     opts = {
       language = "Japanese",
     },
+    rules = {
+      default = {
+        files = {
+          "AGENTS.md",
+          "~/.AGENTS.md",
+        },
+      },
+    },
     prompt_library = {
       markdown = {
         dirs = {
