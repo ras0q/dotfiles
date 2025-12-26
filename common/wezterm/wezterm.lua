@@ -60,37 +60,11 @@ if is_windows then
 end
 
 -- Colorscheme
-local colorscheme                       = wezterm.color.get_builtin_schemes()["Catppuccin Latte"]
-local latte                             = {
-  rosewater = "#dc8a78",
-  flamingo = "#dd7878",
-  pink = "#ea76cb",
-  mauve = "#8839ef",
-  red = "#d20f39",
-  maroon = "#e64553",
-  peach = "#fe640b",
-  yellow = "#df8e1d",
-  green = "#40a02b",
-  teal = "#179299",
-  sky = "#04a5e5",
-  sapphire = "#209fb5",
-  blue = "#1e66f5",
-  lavender = "#7287fd",
-  text = "#4c4f69",
-  subtext1 = "#5c5f77",
-  subtext0 = "#6c6f85",
-  overlay2 = "#7c7f93",
-  overlay1 = "#8c8fa1",
-  overlay0 = "#9ca0b0",
-  surface2 = "#acb0be",
-  surface1 = "#bcc0cc",
-  surface0 = "#ccd0da",
-  crust = "#dce0e8",
-  mantle = "#e6e9ef",
-  base = "#eff1f5",
-}
-colorscheme.tab_bar.active_tab.bg_color = latte.base
-colorscheme.tab_bar.active_tab.fg_color = latte.teal
+local appearance                        = wezterm.gui and wezterm.gui.get_appearance() or "Light"
+local colorscheme_name                  = appearance == "Light" and "Catppuccin Latte" or "Catppuccin Mocha"
+local colorscheme                       = wezterm.color.get_builtin_schemes()[colorscheme_name]
+colorscheme.tab_bar.active_tab.bg_color = colorscheme.background -- base
+colorscheme.tab_bar.active_tab.fg_color = colorscheme.ansi[7]    -- teal
 colorscheme.tab_bar.inactive_tab_edge   = "None"
 config.color_schemes                    = config.color_schemes or {}
 config.colors                           = colorscheme
@@ -129,11 +103,11 @@ wezterm.on(
 
 -- Font
 config.font = wezterm.font_with_fallback({
-  { family = "Source Code Pro", weight = "Medium" },
-  { family = "源ノ角ゴシック JP VF", weight = "Medium" },
+  -- { family = "Source Code Pro", weight = "Medium" },
+  { family = "源ノ角ゴシック Code JP", weight = "Medium" },
   { family = "Symbols Nerd Font" },
 })
-config.font_size = is_macos and 12.0 or 11.0
+config.font_size = is_macos and 12.0 or 10.0
 config.cell_width = 0.9
 
 -- Keybindings (based on Zellij)
