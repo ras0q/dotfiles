@@ -45,18 +45,22 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)
 vim.cmd([[
   " Git
   cabbr g   Git
-  cabbr ga  Git add -A
-  cabbr gc  Git commit
+  cabbr G   Git
+  cabbr ga  Git add --all --verbose
+  cabbr gc  Git commit --verbose
   cabbr gd  Git diff
-  cabbr gf  Git fetch origin
+  cabbr gD  Git restore
+  cabbr gDS Git restore --staged
+  cabbr gf  Git fetch
   cabbr gl  Git log --oneline
-  cabbr gm  Git merge origin
-  cabbr gp  Git push origin
+  cabbr gm  Git merge
+  cabbr gp  Git pull
+  cabbr gpr Git pull --rebase
+  cabbr gP  Git push
+  cabbr gP! Git push --force-with-lease --force-if-includes
+  cabbr gr  Git rebase
   cabbr gs  Git switch
-  cabbr gss Git status
   cabbr gt  Git stash
-  cabbr gu  Git pull origin
-  cabbr gur Git pull --rebase
   cabbr gw  Git worktree
 
   " Terminal
