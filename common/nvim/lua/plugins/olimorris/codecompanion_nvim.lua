@@ -80,7 +80,7 @@ return {
     prompt_library = {
       markdown = {
         dirs = {
-          vim.env.DOTFILES .. "/common/prompts",
+          (vim.env.DOTFILES or "~") .. "/common/prompts",
         },
       },
     },
