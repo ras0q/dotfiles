@@ -8,6 +8,7 @@ return {
   "olimorris/codecompanion.nvim",
   enabled = require("config.options").ai_enabled,
   dependencies = {
+    "ras0q/codecompanion-wakatime.nvim",
     "ravitemer/codecompanion-history.nvim",
     {
       "ravitemer/mcphub.nvim",
@@ -85,6 +86,7 @@ return {
       },
     },
     extensions = {
+      wakatime = {},
       history = {
         title_generation_opts = default_adapter,
         opts = {
