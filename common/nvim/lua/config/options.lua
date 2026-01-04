@@ -7,6 +7,7 @@ vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.mouse = "a"
 vim.opt.shell = vim.env.SHELL or "zsh"
+vim.opt.exrc = true
 
 -- appearance
 vim.opt.number = true
