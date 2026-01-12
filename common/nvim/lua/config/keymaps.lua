@@ -9,8 +9,6 @@ vim.keymap.set("n", "gh", "^", opts)
 vim.keymap.set("n", "gl", "$", opts)
 vim.keymap.set("n", "ge", "G", opts)
 vim.keymap.set("n", "<Space>o", ":SearchInBrowser<CR>", opts)
-vim.keymap.set("n", "<Space>p", '"+p', opts)
-vim.keymap.set("n", "<Space>y", '"+y', opts)
 vim.keymap.set("n", "<Space>R", function()
   local confirm = vim.fn.confirm("Do you want to save the session and restart?", "&Yes", 1)
   if confirm == 1 then

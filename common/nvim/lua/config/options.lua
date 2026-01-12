@@ -48,20 +48,25 @@ vim.opt.infercase = true
 -- session
 vim.opt.sessionoptions:remove({ "blank" })
 
--- OS specific settings
+-- clipboard (OSC 52)
+vim.schedule(function()
+  vim.opt.clipboard = "unnamedplus"
+end)
 local is_wsl2 = vim.fn.has("wsl") == 1
-if is_wsl2 then
+local is_ssh = os.getenv("SSH_CLIENT") ~= nil or os.getenv("SSH_TTY") ~= nil
+if is_wsl2 or is_ssh then
   vim.g.clipboard = {
-    name = "Wsl2Clipboard",
+    name = "OSC 52",
     copy = {
-      ["+"] = { "sh", "-c", "nkf -Ws | clip.exe" },
-      ["*"] = { "sh", "-c", "nkf -Ws | clip.exe" },
+      ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
     },
     paste = {
-      ["+"] =
-      "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
-      ["*"] =
-      "pwsh.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+      ["+"] = function()
+        return {
+          vim.fn.split(vim.fn.getreg(""), "\n"),
+          vim.fn.getregtype(""),
+        }
+      end,
     },
     cache_enabled = true,
   }
