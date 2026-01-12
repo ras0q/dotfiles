@@ -16,7 +16,6 @@ return {
     local ensure_installed = {
       "bash",
       "json",
-      "jsonc",
       "lua",
       "markdown",
       "regex",
