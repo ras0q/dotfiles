@@ -44,6 +44,7 @@
 - Follow [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages
 - Format: `<type>(<scope>): <subject>` followed by optional body and footer
 - Common types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
+- For breaking changes, append `!` before the colon: `<type>(<scope>)!: <subject>`
 - Output commit messages at appropriate checkpoints during implementation (do not execute commits automatically)
 - Include `Assisted-by: {{agent name}} (model: {{model name}})` trailer in commit message body
 
