@@ -8,8 +8,6 @@ vim.keymap.set("n", "<Up>", "gk", opts)
 vim.keymap.set("n", "gh", "^", opts)
 vim.keymap.set("n", "gl", "$", opts)
 vim.keymap.set("n", "ge", "G", opts)
-vim.keymap.set("n", "gp", ":bprevious<CR>", opts)
-vim.keymap.set("n", "gn", ":bnext<CR>", opts)
 vim.keymap.set("n", "<Space>o", ":SearchInBrowser<CR>", opts)
 vim.keymap.set("n", "<Space>p", '"+p', opts)
 vim.keymap.set("n", "<Space>y", '"+y', opts)
@@ -19,13 +17,12 @@ vim.keymap.set("n", "<Space>R", function()
     vim.cmd("restart +qall")
   end
 end, opts)
-vim.keymap.set("n", "<Space><Space>", "ZZ", opts)
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 
 -- insert mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
+-- record undo breakpoints
 vim.keymap.set("i", "<Space>", "<Space><C-g>u", opts)
--- vim.keymap.set("i", "<CR>", "<CR><C-g>u", opts)
 vim.keymap.set("i", ",", ",<C-g>u", opts)
 vim.keymap.set("i", ".", ".<C-g>u", opts)
 vim.keymap.set("i", "、", "、<C-g>u", opts)
