@@ -1,10 +1,36 @@
-# General Guidelines for Agents
+# AGENTS.md - Global Agent Guidelines
 
-- After checking README.md, MUST output "README checked!!".
-- If a problem occurs, please avoid trying alternative solutions on your own. Check with the user first.
-- For third-party libraries with a known GitHub URL, actively use DeepWiki MCP to reference usage instructions.
-- If you need documentation for a library, first check with Context7 MCP to see if the relevant documentation is available.
-- If you want to show a Markdown code block inside another Markdown code block, use four backticks (````) to avoid conflicts.
-- For test code, always describe "What" is being tested.
-- For code comments, always describe "Why not" (the reason for not choosing alternative approaches).
-- Avoid adding unnecessary comments; only comment when it is essential for understanding or maintenance.
+## Core Principles
+
+### When in doubt, ask
+
+- Describe failures clearly with error details before proposing solutions
+- Ask before trying alternative approaches when stuck
+
+### Gather context before deciding
+
+- Use available tools to verify current state before making changes
+- Prioritize project-specific MCP tools if available, then standard tools
+- Tool order: project-specific tools → `grep_search` (exact patterns) → `file_search` (names) → `read_file` (with line ranges)
+- Check `get_changed_files` before starting work (understand what's already changed)
+
+### Check documentation first
+
+- Before implementing or making architectural decisions, search for relevant docs
+- Search broadly: `*.md` files in workspace, not limited to specific names
+- Common locations: project root, `docs/`, `.github/`, task-specific directories
+- Read docs that exist; respect documented patterns and conventions
+
+## Code Standards
+
+### Comments
+- Write self-documenting code (clear names, simple logic)
+- Comments should explain **why** not **what**: avoid restating code logic
+- Add comments for: non-obvious algorithms, performance tradeoffs, business rules, gotchas, workarounds, or design decisions
+- When choosing approach A over alternative B, explain why: `// Using [A] instead of [B] because [reason]`
+- Use document comments for public symbols (e.g., functions, types)
+- Use annotations (NOTE:, TODO:, FIXME:) for important callouts
+
+### Formatting
+- Use four backticks (`````) for nested Markdown code blocks to ensure accurate rendering of Markdown responses, especially for code blocks and agent instructions
+- Follow markdownlint style guidelines for Markdown responses
