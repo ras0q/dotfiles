@@ -24,6 +24,7 @@
 ## Code Standards
 
 ### Comments
+
 - Write self-documenting code (clear names, simple logic)
 - Comments should explain **why** not **what**: avoid restating code logic
 - Add comments for: non-obvious algorithms, performance tradeoffs, business rules, gotchas, workarounds, or design decisions
@@ -32,5 +33,17 @@
 - Use annotations (NOTE:, TODO:, FIXME:) for important callouts
 
 ### Formatting
+
 - Use four backticks (`````) for nested Markdown code blocks to ensure accurate rendering of Markdown responses, especially for code blocks and agent instructions
 - Follow markdownlint style guidelines for Markdown responses
+
+## Commit Guidelines
+
+### Conventional Commits
+
+- Follow [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages
+- Format: `<type>(<scope>): <subject>` followed by optional body and footer
+- Common types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
+- Output commit messages at appropriate checkpoints during implementation (do not execute commits automatically)
+- Include `Assisted-by: {{agent name}} (model: {{model name}})` trailer in commit message body
+
