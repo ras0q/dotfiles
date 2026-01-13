@@ -40,6 +40,26 @@ return {
               "full_stack_dev",
             },
           },
+          ["cmd_runner"] = {
+            opts = {
+              allowed_in_yolo_mode = true,
+            },
+          },
+          ["insert_edit_into_file"] = {
+            opts = {
+              require_confirmation_after = false,
+            },
+          },
+          ["create_file"] = {
+            opts = {
+              require_approval_before = false,
+            },
+          },
+          ["read_file"] = {
+            opts = {
+              require_approval_before = false,
+            },
+          },
         },
         slash_commands = {
           help = {
