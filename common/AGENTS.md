@@ -2,35 +2,40 @@
 
 ## Core Principles
 
-- Check changed files before starting work (understand what's already changed)
-- Code like Kent Beck
+### Understand context before acting
+
+- Check changed files before starting work to understand what's already modified
+- Check project structure and architecture if unclear
+- Before implementing or making architectural decisions, search for relevant documentation:
+  - Search broadly: `*.md` files across the workspace
+  - Common locations: project root, `docs/`, `.github/`, task-specific directories
+  - Read and respect documented patterns and conventions
 
 ### When in doubt, ask
 
+- Code like Kent Beck
 - Describe failures clearly with error details before proposing solutions
 - Ask before trying alternative approaches when stuck
-
-### Check documentation first
-
-- Before implementing or making architectural decisions, search for relevant docs
-- Search broadly: `*.md` files in workspace, not limited to specific names
-- Common locations: project root, `docs/`, `.github/`, task-specific directories
-- Read docs that exist; respect documented patterns and conventions
 
 ## Code Standards
 
 ### Comments
 
-- Write self-documenting code (clear names, simple logic)
-- Comments should explain **why** not **what**: avoid restating code logic
-- Add comments for: non-obvious algorithms, performance tradeoffs, business rules, gotchas, workarounds, or design decisions
+- Write self-explanatory code: use clear names and simple logic so that most code does not require comments.
+- Avoid obvious comments that restate what the code does (e.g., `// 1. Read text from file.`, `// Loop through array`).
+- Do NOT add comments describing changes or history (e.g., `// removed unneeded process`, `// fixed bug`). Code should reflect only its current state; use version control for history.
+- Only add comments to explain *why* something is done a certain way, especially when:
+  - The reasoning is not apparent from the code itself
+  - An alternative approach was considered but not chosen (explain "why not")
+  - A workaround or non-obvious algorithm is necessary
+  - Business rules or performance tradeoffs are involved
 - When choosing approach A over alternative B, explain why: `// Using [A] instead of [B] because [reason]`
-- Use document comments for public symbols (e.g., functions, types)
-- Use annotations (NOTE:, TODO:, FIXME:) for important callouts
+- Use document comments for public symbols (e.g., functions, types, classes).
+- Use annotations (NOTE:, TODO:, FIXME:) for important callouts.
 
 ### Formatting
 
-- Use four backticks (`````) for nested Markdown code blocks to ensure accurate rendering of Markdown responses, especially for code blocks and agent instructions
+- Use four backticks (````) for nested Markdown code blocks to ensure accurate rendering of Markdown responses, especially for code blocks and agent instructions
 - Follow markdownlint style guidelines for Markdown responses
 
 ## Commit Guidelines
