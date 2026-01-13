@@ -2,18 +2,13 @@
 
 ## Core Principles
 
+- Check changed files before starting work (understand what's already changed)
+- Code like Kent Beck
+
 ### When in doubt, ask
 
-- Code like Kent Beck
 - Describe failures clearly with error details before proposing solutions
 - Ask before trying alternative approaches when stuck
-
-### Gather context before deciding
-
-- Use available tools to verify current state before making changes
-- Prioritize project-specific MCP tools if available, then standard tools
-- Tool order: project-specific tools → grep search → file search → file reading
-- Check changed files before starting work (understand what's already changed)
 
 ### Check documentation first
 
