@@ -4,6 +4,7 @@
 
 ### When in doubt, ask
 
+- Code like Kent Beck
 - Describe failures clearly with error details before proposing solutions
 - Ask before trying alternative approaches when stuck
 
@@ -11,8 +12,8 @@
 
 - Use available tools to verify current state before making changes
 - Prioritize project-specific MCP tools if available, then standard tools
-- Tool order: project-specific tools → `grep_search` (exact patterns) → `file_search` (names) → `read_file` (with line ranges)
-- Check `get_changed_files` before starting work (understand what's already changed)
+- Tool order: project-specific tools → grep search → file search → file reading
+- Check changed files before starting work (understand what's already changed)
 
 ### Check documentation first
 
@@ -42,7 +43,7 @@
 ### Conventional Commits
 
 - Follow [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages
-- Format: `<type>(<scope>): <subject>` followed by optional body and footer
+- Format: `<type>(<scope>): <subject>` (in English) followed by optional body and footer
 - Common types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
 - For breaking changes, append `!` before the colon: `<type>(<scope>)!: <subject>`
 - Output commit messages at appropriate checkpoints during implementation (do not execute commits automatically)
