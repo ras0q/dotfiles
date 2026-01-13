@@ -5,7 +5,7 @@
 ### Understand context first
 
 - Check changed files and project structure before starting
-- Search docs (`*.md` in root/`docs/`/`.github/`) before implementing
+- Search docs (`**/*.md`) before implementing
 - Respect documented patterns and conventions
 
 ### When in doubt, ask
@@ -21,7 +21,7 @@
 ### Comments
 
 - Write self-explanatory code (clear names, simple logic)
-- Avoid obvious comments (`// Read file`) or history (`// fixed bug`)
+- Avoid obvious comments (`// 1. Read file`) or history (`// fixed bug`)
 - Only explain *why*, especially:
   - Non-obvious reasoning or "why not" alternative approaches
   - Workarounds, algorithms, business rules, performance tradeoffs
@@ -32,6 +32,14 @@
 
 - Use four backticks for nested Markdown code blocks
 - Follow markdownlint style
+
+````markdown
+## Example
+
+```sh
+echo "Nested code block"
+```
+````
 
 ### Commits
 
