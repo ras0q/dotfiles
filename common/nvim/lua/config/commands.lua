@@ -1,4 +1,22 @@
-vim.api.nvim_create_user_command("AddPlugin", function(opts)
+vim.api.nvim_create_user_command("DotfilesUpdate", function()
+  local dotfiles = vim.env.DOTFILES
+  if not dotfiles or dotfiles == "" then
+    vim.notify("$DOTFILES is not set", vim.log.levels.ERROR)
+    return
+  end
+
+  local cmd = "git -C " .. dotfiles .. " pull --rebase"
+  local output = vim.fn.systemlist(cmd)
+  local exit_code = vim.v.shell_error
+
+  if exit_code == 0 then
+    vim.notify("Dotfiles updated successfully", vim.log.levels.INFO)
+  else
+    vim.notify("Failed to update dotfiles:\n" .. table.concat(output, "\n"), vim.log.levels.ERROR)
+  end
+end, {})
+
+vim.api.nvim_create_user_command("PluginAdd", function(opts)
   local spec = opts.fargs[1]
   if not spec or not spec:match("^[^/]+/.+$") then
     return vim.notify("Argument must be in 'author/repo' format", vim.log.levels.ERROR)
