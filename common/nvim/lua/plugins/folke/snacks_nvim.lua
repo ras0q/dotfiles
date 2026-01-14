@@ -35,6 +35,14 @@ return {
       enabled = true,
       scope = { char = "╎" },
     },
+    lazygit = {
+      config = {
+        os = {
+          edit =
+          '[ -z "\"$NVIM\"" ] && (nvim -- {{filename}}) || (nvim --server "\"$NVIM\"" --remote-send "\"q\"" && nvim --server "\"$NVIM\"" --remote {{filename}})',
+        },
+      },
+    },
     notifier = {
       enabled = true,
       timeout = 5000,
