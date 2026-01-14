@@ -1,11 +1,6 @@
 # zmodload zsh/zprof
 
-local kernel=$(uname -s)
-local kernel_version=$(uname -r)
-local function is_mingw() { [[ "$kernel" == *MINGW* ]] }
-local function is_wsl2() { [[ "$kernel_version" == *microsoft* ]] }
-
-local function command_exists() { command -v "$1" >/dev/null 2>&1 }
+function _command_exists() { command -v "$1" >/dev/null 2>&1 }
 
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(cd|pwd|1[sal])"
@@ -83,14 +78,14 @@ export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
 # Completions
 zsh-defer eval "$(gh completion -s zsh)"
-if command_exists op; then
+if _command_exists op; then
   zsh-defer eval "$(op completion zsh)"
 fi
 
 # WSL2
-if is_wsl2; then
+if _is_wsl2; then
   # setup 1Password SSH agent for WSL2
-  if command_exists npiperelay; then
+  if _command_exists npiperelay; then
     if ! ss -a | grep -q "$SSH_AUTH_SOCK" >/dev/null 2>&1; then
       if [[ -e "$SSH_AUTH_SOCK" ]]; then
         echo "removing previous socket..."
@@ -113,11 +108,11 @@ function load-mise() {
   eval "$(mise activate zsh)"
   eval "$(mise completion zsh)"
 }
-if ! is_mingw; then
+if ! _is_mingw; then
   zsh-defer load-mise
 fi
 
-function mise-which() { is_mingw && echo "$1" || mise which "$1"; }
+function mise-which() { _is_mingw && echo "$1" || mise which "$1"; }
 
 # fzf
 eval "$($(mise-which fzf) --zsh)"
@@ -129,7 +124,7 @@ eval "$($(mise-which starship) init zsh --print-full-init)"
 eval "$($(mise-which zoxide) init --cmd cd --hook pwd zsh)"
 
 # gomi
-if ! is_mingw && command_exists gomi; then
+if ! _is_mingw && _command_exists gomi; then
   alias rm=gomi
   # zsh-defer gomi --prune=3m & > /dev/null
 fi
@@ -138,11 +133,11 @@ fi
 # eval "$(code --locate-shell-integration-path zsh)"
 
 # Zellij
-# if ! is_mingw && command_exists zellij; then
+# if ! _is_mingw && _command_exists zellij; then
 #   eval "$(zellij setup --generate-auto-start zsh)"
 # fi
 
 # NOTE: Redirecting to /dev/null creates a file named NUL.
-is_mingw && rm -rf ./NUL
+_is_mingw && rm -rf ./NUL
 
 # zprof

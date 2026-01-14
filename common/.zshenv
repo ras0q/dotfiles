@@ -37,14 +37,6 @@ if [[ -n "$WINDOWS_HOME" ]]; then
     /mnt/c/Program\ Files/PowerShell/7
 fi
 
-if [[ "$(uname -r)" == *microsoft* ]]; then
-  [[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
-fi
-
-if [[ "$(uname -s)" =~ "MINGW" ]]; then
-  [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
-fi
-
 [[ -z "$BROWSER" ]] && export BROWSER="msedge.exe"
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 [[ -z "$EDITOR" ]] && export EDITOR="nvim"
@@ -53,3 +45,19 @@ fi
 [[ -z "$LANG" ]] && export LANG=POSIX
 [[ -z "$MISE_ENV" ]] && export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
 [[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
+
+# OS specific settings
+
+_kernel=$(uname -s)
+_kernel_version=$(uname -r)
+function _is_mingw() { [[ "$_kernel" == *MINGW* ]] }
+function _is_wsl2() { [[ "$_kernel_version" == *microsoft* ]] }
+
+if _is_mingw; then
+  [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
+fi
+
+if _is_wsl2; then
+  [[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+fi
+
