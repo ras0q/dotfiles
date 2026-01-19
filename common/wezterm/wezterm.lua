@@ -60,17 +60,28 @@ if is_windows then
 end
 
 -- Colorscheme
-local appearance                        = wezterm.gui and wezterm.gui.get_appearance() or "Light"
-local colorscheme_name                  = appearance == "Light" and "Catppuccin Latte" or "Catppuccin Mocha"
-local colorscheme                       = wezterm.color.get_builtin_schemes()[colorscheme_name]
-colorscheme.tab_bar.active_tab.bg_color = colorscheme.background -- base
-colorscheme.tab_bar.active_tab.fg_color = colorscheme.ansi[7]    -- teal
-colorscheme.tab_bar.inactive_tab_edge   = "None"
-config.color_schemes                    = config.color_schemes or {}
-config.colors                           = colorscheme
+local function get_colorscheme()
+  local appearance = wezterm.gui and wezterm.gui.get_appearance() or "Light"
+  local name = appearance == "Light" and "Catppuccin Latte" or "Catppuccin Mocha"
+  local colorscheme = wezterm.color.get_builtin_schemes()[name]
+  colorscheme.tab_bar.active_tab.bg_color = colorscheme.background -- base
+  colorscheme.tab_bar.active_tab.fg_color = colorscheme.ansi[7]
+  return colorscheme
+end
+local colorscheme    = get_colorscheme()
+config.color_schemes = config.color_schemes or {}
+config.colors        = colorscheme
+wezterm.on("window-config-reloaded", function(window, _)
+  local overrides = window:get_config_overrides() or {}
+  local new_colorscheme = get_colorscheme()
+  if overrides.colors ~= new_colorscheme then
+    overrides.colors = new_colorscheme
+    window:set_config_overrides(overrides)
+  end
+end)
 
 -- Opacity
-config.window_background_opacity        = 0.7
+config.window_background_opacity = 0.7
 if is_windows then
   config.win32_system_backdrop = "Acrylic"
 elseif is_macos then
