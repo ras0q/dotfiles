@@ -27,5 +27,13 @@ return {
   config = function(_, opts)
     require("catppuccin").setup(opts)
     vim.cmd.colorscheme("catppuccin-latte")
+    vim.api.nvim_create_user_command("ColorschemeToggle", function()
+      local current = vim.g.colors_name
+      if current == "catppuccin-latte" then
+        vim.cmd.colorscheme("catppuccin-mocha")
+      else
+        vim.cmd.colorscheme("catppuccin-latte")
+      end
+    end, {})
   end,
 }
