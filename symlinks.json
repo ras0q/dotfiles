@@ -4,6 +4,7 @@
     "~/.bash_profile": "./common/.bash_profile",
     "~/.bashrc": "./common/.bashrc",
     "~/.gitconfig": "./common/.gitconfig",
+    "~/.codex/AGENTS.md": "./common/AGENTS.md",
     "~/.config/git": "./common/git",
     "~/.config/lazygit": "./common/lazygit",
     "~/.config/mise": "./common/mise",
