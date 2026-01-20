@@ -1,6 +1,10 @@
 # zmodload zsh/zprof
 
 function _command_exists() { command -v "$1" >/dev/null 2>&1 }
+function _load_plugin() {
+  local plugin_path="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/$1/$1.plugin.zsh"
+  [[ -f "$plugin_path" ]] && source "$plugin_path"
+}
 
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(cd|pwd|1[sal])"
@@ -24,6 +28,8 @@ setopt inc_append_history_time
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:git-reset:*' sort false
 
+_load_plugin zsh-completions
+
 # compinit
 autoload -Uz compinit
 _zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
@@ -33,6 +39,15 @@ if [[ -f "${_zcompdump}" && $(( $(date +%s) - $(stat -c %Y "${_zcompdump}") )) -
 else
   compinit -C -d "${_zcompdump}"
 fi
+
+# Zsh plugins
+_load_plugin zsh-defer
+zsh-defer _load_plugin fzf-tab # load after compinit, before other plugins
+zsh-defer _load_plugin zsh-autosuggestions
+zsh-defer _load_plugin zsh-abbr
+zsh-defer _load_plugin ni
+zsh-defer _load_plugin cute
+zsh-defer _load_plugin translate-shell
 
 # Functions
 cdp() {
@@ -58,11 +73,6 @@ git-worktree-add-interactive() {
   git worktree add -q "${repo_path}" "${branch}" || return 1
   echo "${repo_path}"
 }
-
-# Plugin manager
-[[ -d ~/.antidote ]] || git clone --depth 1 https://github.com/mattmc3/antidote.git ~/.antidote
-source ~/.antidote/antidote.zsh
-antidote load
 
 # Syntax highlight theme
 mkdir -p ~/.zsh

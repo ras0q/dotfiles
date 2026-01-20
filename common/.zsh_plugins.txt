@@ -1,8 +1,0 @@
-Aloxaf/fzf-tab kind:defer
-azu/ni.zsh kind:defer
-olets/zsh-abbr kind:defer
-ras0q/cute kind:defer
-romkatv/zsh-defer
-zsh-users/zsh-completions kind:defer
-zsh-users/zsh-autosuggestions kind:defer
-soimort/translate-shell kind:defer

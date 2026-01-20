@@ -12,6 +12,7 @@
     "~/.config/starship.toml": "./common/starship.toml",
     "~/.config/translate-shell": "./common/translate-shell",
     "~/.config/zellij": "./common/zellij",
+    "~/.config/zsh": "./common/zsh",
     "~/.config/zsh-abbr": "./common/zsh-abbr",
     "~/.zsh_plugins.txt": "./common/.zsh_plugins.txt",
     "~/.zshenv": "./common/.zshenv",
