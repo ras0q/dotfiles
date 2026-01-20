@@ -7,6 +7,7 @@ HISTORY_IGNORE="(cd|pwd|1[sal])"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
+setopt extendedglob
 setopt hist_allow_clobber
 setopt hist_fcntl_lock
 setopt hist_find_no_dups
@@ -25,15 +26,14 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:git-reset:*' sort false
 
 # compinit
-autoload -Uz compinit
-if [ "$(date +'%j')" != "$(date -r ~/.zcompdump +'%j' 2>/dev/null)" ]; then
-  if [[ ! -f ~/.zcompdump ]]; then
-    touch ~/.zcompdump
-  fi
-  compinit
-else
-  compinit -C
-fi
+# autoload -Uz compinit
+# _zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
+# mkdir -p "${_zcompdump:h}"
+# if [[ -n "${_zcompdump}"(#qN.mh+24) ]]; then
+#   compinit -d "${_zcompdump}"
+# else
+#   compinit -C -d "${_zcompdump}"
+# fi
 
 # Functions
 cdp() {
@@ -76,16 +76,10 @@ export ABBR_SET_EXPANSION_CURSOR=1
 export ABBR_GET_AVAILABLE_ABBREVIATION=1
 export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
-# Completions
-zsh-defer eval "$(gh completion -s zsh)"
-if _command_exists op; then
-  zsh-defer eval "$(op completion zsh)"
-fi
-
 # WSL2
 if _is_wsl2; then
   # setup 1Password SSH agent for WSL2
-  if _command_exists npiperelay; then
+  if command -v npiperelay >/dev/null 2>&1; then
     if ! ss -a | grep -q "$SSH_AUTH_SOCK" >/dev/null 2>&1; then
       if [[ -e "$SSH_AUTH_SOCK" ]]; then
         echo "removing previous socket..."
@@ -129,13 +123,9 @@ if ! _is_mingw && _command_exists gomi; then
   # zsh-defer gomi --prune=3m & > /dev/null
 fi
 
-# cursor
-# eval "$(code --locate-shell-integration-path zsh)"
-
-# Zellij
-# if ! _is_mingw && _command_exists zellij; then
-#   eval "$(zellij setup --generate-auto-start zsh)"
-# fi
+# Completions
+zsh-defer eval "$($(mise-which gh) completion -s zsh)"
+zsh-defer eval "$($(mise-which op) completion zsh)"
 
 # NOTE: Redirecting to /dev/null creates a file named NUL.
 _is_mingw && rm -rf ./NUL
