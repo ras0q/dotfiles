@@ -28,6 +28,7 @@ setopt inc_append_history_time
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:git-reset:*' sort false
 
+_load_plugin zsh-defer
 _load_plugin zsh-completions
 
 # compinit
@@ -35,14 +36,13 @@ autoload -Uz compinit
 _zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
 mkdir -p "${_zcompdump:h}"
 if [[ -f "${_zcompdump}" && $(( $(date +%s) - $(stat -c %Y "${_zcompdump}") )) -lt 86400 ]]; then
-  compinit -C -d "${_zcompdump}"
+  zsh-defer compinit -C -d "${_zcompdump}"
 else
   echo "Generating ${_zcompdump} ..."
-  compinit -d "${_zcompdump}"
+  zsh-defer compinit -d "${_zcompdump}"
 fi
 
 # Zsh plugins
-_load_plugin zsh-defer
 zsh-defer _load_plugin fzf-tab # load after compinit, before other plugins
 zsh-defer _load_plugin zsh-autosuggestions
 zsh-defer _load_plugin zsh-abbr
