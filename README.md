@@ -10,6 +10,7 @@ Cross-platform dotfiles for Windows, Mac, and Ubuntu.
 ```bash
 DOTFILES_DIR=~/ghq/github.com/ras0q/dotfiles
 git clone https://github.com/ras0q/dotfiles.git $DOTFILES_DIR
+git submodule update --init --recursive
 cd $DOTFILES_DIR
 ./install.sh
 ```
