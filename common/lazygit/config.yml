@@ -1,0 +1,7 @@
+git:
+  pagers:
+    - externalDiffCommand: difft --color=always --display=inline
+
+gui:
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 4
