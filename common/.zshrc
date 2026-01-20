@@ -136,7 +136,9 @@ fi
 
 # Completions
 zsh-defer eval "$($(mise-which gh) completion -s zsh)"
-zsh-defer eval "$($(mise-which op) completion zsh)"
+if ! _is_mingw; then
+  zsh-defer eval "$($(mise-which op) completion zsh)"
+fi
 
 # NOTE: Redirecting to /dev/null creates a file named NUL.
 _is_mingw && rm -rf ./NUL
