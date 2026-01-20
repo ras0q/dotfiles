@@ -22,9 +22,9 @@
 
 [core]
 	autoCRLF = false
-  editor = nvim
-  ; TODO: prevent snack.nvim's explorer flickering
-  ; https://github.com/folke/snacks.nvim/issues/1308#issuecomment-2669152591
+	editor = nvim
+	; TODO: prevent snack.nvim's explorer flickering
+	; https://github.com/folke/snacks.nvim/issues/1308#issuecomment-2669152591
 	; fsmonitor = true
 	quotepath = false
 	untrackedCache = true
@@ -81,7 +81,7 @@
 	enabled = false
 
 [submodule]
-  recurse = true
+	recurse = true
 
 [tag]
 	sort = version:refname
@@ -99,5 +99,5 @@
 [include]
 	path = ~/.gitconfig.mac
 	path = ~/.gitconfig.win
-  path = ~/.gitconfig.wsl2
-  path = ~/.gitconfig.private
+	path = ~/.gitconfig.wsl2
+	path = ~/.gitconfig.private
