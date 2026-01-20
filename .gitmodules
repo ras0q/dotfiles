@@ -1,24 +1,32 @@
 [submodule "common/zsh/plugins/fzf-tab"]
 	path = common/zsh/plugins/fzf-tab
 	url = https://github.com/Aloxaf/fzf-tab.git
+  shallow = true
 [submodule "common/zsh/plugins/ni.zsh"]
 	path = common/zsh/plugins/ni.zsh
 	url = https://github.com/azu/ni.zsh.git
+  shallow = true
 [submodule "common/zsh/plugins/zsh-abbr"]
 	path = common/zsh/plugins/zsh-abbr
 	url = https://github.com/olets/zsh-abbr.git
+  shallow = true
 [submodule "common/zsh/plugins/cute"]
 	path = common/zsh/plugins/cute
 	url = https://github.com/ras0q/cute.git
+  shallow = true
 [submodule "common/zsh/plugins/zsh-defer"]
 	path = common/zsh/plugins/zsh-defer
 	url = https://github.com/romkatv/zsh-defer.git
+  shallow = true
 [submodule "common/zsh/plugins/zsh-completions"]
 	path = common/zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
+  shallow = true
 [submodule "common/zsh/plugins/zsh-autosuggestions"]
 	path = common/zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+  shallow = true
 [submodule "common/zsh/plugins/translate-shell"]
 	path = common/zsh/plugins/translate-shell
 	url = https://github.com/soimort/translate-shell.git
+  shallow = true
