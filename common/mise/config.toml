@@ -5,6 +5,7 @@
 
 [tools]
 "aqua:BurntSushi/ripgrep" = "latest"
+"aqua:Wilfred/difftastic" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"
 "aqua:astral-sh/uv" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
