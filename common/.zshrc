@@ -7,7 +7,6 @@ HISTORY_IGNORE="(cd|pwd|1[sal])"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
-setopt extendedglob
 setopt hist_allow_clobber
 setopt hist_fcntl_lock
 setopt hist_find_no_dups
@@ -29,7 +28,7 @@ zstyle ':completion:*:git-reset:*' sort false
 autoload -Uz compinit
 _zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
 mkdir -p "${_zcompdump:h}"
-if [[ -n "${_zcompdump}"(#qN.mh+24) ]]; then
+if [[ -f "${_zcompdump}" && $(( $(date +%s) - $(stat -c %Y "${_zcompdump}") )) -lt 86400 ]]; then
   compinit -d "${_zcompdump}"
 else
   compinit -C -d "${_zcompdump}"
