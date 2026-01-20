@@ -26,14 +26,14 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:git-reset:*' sort false
 
 # compinit
-# autoload -Uz compinit
-# _zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
-# mkdir -p "${_zcompdump:h}"
-# if [[ -n "${_zcompdump}"(#qN.mh+24) ]]; then
-#   compinit -d "${_zcompdump}"
-# else
-#   compinit -C -d "${_zcompdump}"
-# fi
+autoload -Uz compinit
+_zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
+mkdir -p "${_zcompdump:h}"
+if [[ -n "${_zcompdump}"(#qN.mh+24) ]]; then
+  compinit -d "${_zcompdump}"
+else
+  compinit -C -d "${_zcompdump}"
+fi
 
 # Functions
 cdp() {
