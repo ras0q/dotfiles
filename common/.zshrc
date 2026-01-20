@@ -45,6 +45,7 @@ fi
 # Zsh plugins
 zsh-defer _load_plugin fzf-tab # load after compinit, before other plugins
 zsh-defer _load_plugin zsh-autosuggestions
+bindkey '^y' autosuggest-accept
 zsh-defer _load_plugin zsh-abbr
 zsh-defer _load_plugin ni
 zsh-defer _load_plugin cute
