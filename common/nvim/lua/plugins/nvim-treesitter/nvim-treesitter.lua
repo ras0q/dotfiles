@@ -15,6 +15,7 @@ return {
 
     local ensure_installed = {
       "bash",
+      "diff",
       "json",
       "lua",
       "markdown",
