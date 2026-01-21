@@ -33,9 +33,10 @@ _load_plugin zsh-completions
 
 # compinit
 autoload -Uz compinit
+zmodload zsh/stat
 _zcompdump="${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/.zcompdump-${HOST}-${ZSH_VERSION}"
 mkdir -p "${_zcompdump:h}"
-if [[ -f "${_zcompdump}" && $(( $(date +%s) - $(stat -c %Y "${_zcompdump}") )) -lt 86400 ]]; then
+if [[ -f "${_zcompdump}" && $(( $(date +%s) - $(zstat +mtime "${_zcompdump}") )) -lt 86400 ]]; then
   zsh-defer compinit -C -d "${_zcompdump}"
 else
   echo "Generating ${_zcompdump} ..."
