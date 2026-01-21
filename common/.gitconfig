@@ -3,6 +3,7 @@
 [alias]
 	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs -r git branch -d
 	bprunef = !git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+	difft = -c diff.external='difft --color=always --display=inline' diff
 	fixup = commit --fixup HEAD
 	inico = commit --allow-empty -m ':seedling: initial commit'
 	lo = log --oneline
@@ -42,7 +43,6 @@
 [diff]
 	algorithm = histogram
 	colorMoved = plain
-	external = difft --color=always --display=inline
 	mnemonicPrefix = true
 	renames = true
 
@@ -55,7 +55,6 @@
 
 [help]
 	autocorrect = prompt
-
 
 [init]
 	defaultBranch = main
