@@ -42,7 +42,7 @@
 [diff]
 	algorithm = histogram
 	colorMoved = plain
-	external = difft
+	external = difft --color=always --display=inline
 	mnemonicPrefix = true
 	renames = true
 
