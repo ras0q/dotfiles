@@ -20,7 +20,6 @@ return {
   enabled = vim.g.vscode == nil,
   ---@type snacks.Config
   opts = {
-    bigfile = { enabled = true },
     dashboard = {
       enabled = true,
       sections = {
@@ -69,6 +68,6 @@ return {
     { "<leader>l", function() Snacks.lazygit() end,                                                       desc = "LazyGit" },
     { "<leader>p", function() Snacks.picker.pickers() end,                                                desc = "List Pickers" },
     { "<leader>r", function() Snacks.picker.recent() end,                                                 desc = "List Recent files" },
-    { "<leader>z", function() Snacks.zen() end,                                                           desc = "Zen Mode" },
+    { "<leader>z", function() Snacks.zen({ width = 100 }) end,                                            desc = "Zen Mode" },
   },
 }
