@@ -40,6 +40,7 @@ if [[ -f "${_zcompdump}" && $(( $(date +%s) - $(zstat +mtime "${_zcompdump}") ))
   zsh-defer compinit -C -d "${_zcompdump}"
 else
   echo "Generating ${_zcompdump} ..."
+  touch "${_zcompdump}"
   zsh-defer compinit -d "${_zcompdump}"
 fi
 
