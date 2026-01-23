@@ -78,6 +78,89 @@ git-worktree-add-interactive() {
   echo "${repo_path}"
 }
 
+# Convert date format from Obsidian style to date command style
+# YYYY-MM-DD HH:mm:ss → %Y-%m-%d %H:%M:%S
+_convert-date-format() {
+  local input_format="$1"
+  if [[ -z "$input_format" ]]; then
+    read -r input_format
+  fi
+
+  local output_format="$input_format"
+  output_format="${output_format//YYYY/%Y}"
+  output_format="${output_format//MM/%m}"
+  output_format="${output_format//DD/%d}"
+  output_format="${output_format//HH/%H}"
+  output_format="${output_format//mm/%M}"
+  output_format="${output_format//ss/%S}"
+  echo "$output_format"
+}
+
+# TODO: develop as a zsh plugin
+obsidian-daily-note() {
+  local vault_path=$OBSIDIAN_VAULT_PATH
+  if [[ -z "$vault_path" ]]; then
+    echo "Error: OBSIDIAN_VAULT_PATH is not set." >&2
+    return 1
+  fi
+
+  local dn_config_path="${vault_path}/.obsidian/daily-notes.json"
+  local dn_folder=$(jq -r '.folder' "$dn_config_path") # e.g., "Daily"
+  local dn_path_format=$(jq -r '.format' "$dn_config_path" | _convert-date-format) # e.g., "YYYY-MM-DD"
+  local dn_path="${vault_path}/${dn_folder}/$(date +"${dn_path_format}").md"
+
+  if [[ ! -f "$dn_path" ]]; then
+    mkdir -p "$(dirname "$dn_path")"
+  fi
+
+  local dn_header="$(date '+%Y-%m-%d %H:%M:%S')" # e.g., "2026-01-01 00:00:00"
+cat >> "$dn_path" << EOF
+
+### $dn_header
+
+
+EOF
+
+  local dn_message="$1"
+  if [[ -n "$dn_message" ]]; then
+    echo -e "$dn_message\n" >> "$dn_path"
+  else
+    $EDITOR + "$dn_path"
+  fi
+}
+
+obsidian-unique-note() {
+  local vault_path=$OBSIDIAN_VAULT_PATH
+  if [[ -z "$vault_path" ]]; then
+    echo "Error: OBSIDIAN_VAULT_PATH is not set." >&2
+    return 1
+  fi
+
+  local note_title="$1"
+  if [[ -z "$note_title" ]]; then
+    echo "Usage: obsidian-unique-note <note-title>" >&2
+    return 1
+  fi
+
+  local un_config_path="${vault_path}/.obsidian/zk-prefixer.json"
+  local un_folder=$(jq -r '.folder' "$un_config_path") # e.g., "Zettelkasten"
+  local un_prefix_format=$(jq -r '.format' "$un_config_path" | _convert-date-format) # e.g., "YYYYMMDDHHmmss"
+  local un_prefix=$(date +"${un_prefix_format}") # e.g., "20260101000000_"
+  local un_path="${vault_path}/${un_folder}/${un_prefix}${note_title}.md"
+
+  mkdir -p "$(dirname "$un_path")"
+  cat > "$un_path" << EOF
+---
+title: $note_title
+created_at: $(date '+%Y-%m-%dT%H:%M:%S')
+updated_at: $(date '+%Y-%m-%dT%H:%M:%S')
+---
+
+EOF
+
+  $EDITOR + "$un_path"
+}
+
 # Syntax highlight theme
 mkdir -p ~/.zsh
 local shl_catppuccin=~/.zsh/catppuccin_latte-zsh-syntax-highlighting.zsh

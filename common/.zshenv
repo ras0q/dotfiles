@@ -44,6 +44,7 @@ fi
 [[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
 [[ -z "$LANG" ]] && export LANG=POSIX
 [[ -z "$MISE_ENV" ]] && export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
+[[ -z "$OBSIDIAN_VAULT_PATH" ]] && export OBSIDIAN_VAULT_PATH="$HOME/ghq/github.com/ras0q/obsidian_private"
 [[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
 
 # OS specific settings
