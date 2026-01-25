@@ -78,3 +78,11 @@ vim.api.nvim_create_autocmd("QuitPre", {
   end,
   desc = "Close all special buffers and quit Neovim",
 })
+
+-- https://eiji.page/blog/neovim-highlight-on-yank/
+vim.api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
