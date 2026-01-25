@@ -49,9 +49,6 @@ vim.opt.infercase = true
 vim.opt.sessionoptions:remove({ "blank" })
 
 -- clipboard (OSC 52)
-vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
-end)
 local is_wsl2 = vim.fn.has("wsl") == 1
 local is_ssh = os.getenv("SSH_CLIENT") ~= nil or os.getenv("SSH_TTY") ~= nil
 if is_wsl2 or is_ssh then

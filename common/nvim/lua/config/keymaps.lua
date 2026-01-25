@@ -16,6 +16,8 @@ vim.keymap.set("n", "<Space>R", function()
   end
 end, opts)
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
+vim.keymap.set("n", "<Space>p", '"+p', opts)
+vim.keymap.set("n", "<Space>y", '"+y', opts)
 
 -- insert mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
