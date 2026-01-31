@@ -4,9 +4,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     ensure_installed = {
-      "denols",
-      "gopls",
-      "lua_ls",
       "tsgo",
       "yamlls",
     },
