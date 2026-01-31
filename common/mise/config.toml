@@ -5,6 +5,7 @@
 
 [tools]
 "aqua:BurntSushi/ripgrep" = "latest"
+"aqua:LuaLS/lua-language-server" = "latest"
 "aqua:Wilfred/difftastic" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"
 "aqua:astral-sh/uv" = "latest"
