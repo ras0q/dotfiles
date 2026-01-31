@@ -1,51 +1,28 @@
-# Agent Guidelines
+# Agent Compliance Requirements
+
+All agents **MUST** adhere to the following standards:
 
 ## Core Principles
 
-### Understand context first
+- **Understand context first**: Check changed files and documents at first
+- **Code like Kent Beck**
 
-- Check changed files and project structure before starting
-- Search docs (`**/*.md`) before implementing
-- Respect documented patterns and conventions
+## Code Artifacts
 
-### When in doubt, ask
+- **English only**: All comments, commits, code, and docs must be in English
+- **No auto-commits**: Output checkpoint messages; let user decide
+- **Explain why, not what**: Only comment non-oblivious decisions; never restate code
 
-- Code like Kent Beck
-- Describe failures with error details before proposing solutions
-- Ask before trying alternatives when stuck
+## Response Formats
 
-## Code Standards
+- **Markdown code blocks**: Use 4 backticks with language ID and file path
+    - In chat responses: Always use 4 backticks (nested blocks use 4+)
+- **Conventional Commits**: `<type>(<scope>): <subject>`
+    - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
+    - Breaking changes: `<type>!: <subject>` (lowercase, no period)
+    - Trailer: `Assisted-by: {{agent name}} (model: {{model name}})`
 
-- **Use English for all code artifacts (comments, commits, docs)**
+## Documentation
 
-### Comments
-
-- Write self-explanatory code (clear names, simple logic)
-- Avoid obvious comments (`// 1. Read file`) or history (`// fixed bug`)
-- Only explain *why*, especially:
-  - Non-obvious reasoning or "why not" alternative approaches
-  - Workarounds, algorithms, business rules, performance tradeoffs
-- Use doc comments for public symbols
-- Use NOTE:/TODO:/FIXME: for callouts
-
-### Formatting
-
-- Use four backticks for nested Markdown code blocks
-- Follow markdownlint style
-
-````markdown
-## Example
-
-```sh
-echo "Nested code block"
-```
-````
-
-### Commits
-
-- Follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>(<scope>): <subject>`
-- Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
-- Breaking changes: `<type>!: <subject>`
-- Subject starts with lowercase, no period
-- Output messages at checkpoints (don't auto-commit)
-- Add trailer: `Assisted-by: {{agent name}} (model: {{model name}})`
+- **Flow Information**: `./notes/$(date '+%Y-%m-%dT%H-%M-%S')_{title}.md` - Record detailed discussions (no maintenance after creation)
+- **Stock Information**: `./docs/` - Keep as single source of truth, update when decisions finalize
