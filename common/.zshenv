@@ -59,6 +59,7 @@ if _is_mingw; then
 fi
 
 if _is_wsl2; then
-  [[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+  alias ssh="/mnt/c/Windows/System32/OpenSSH/ssh.exe"
+  alias ssh-add="/mnt/c/Windows/System32/OpenSSH/ssh-add.exe"
 fi
 

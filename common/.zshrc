@@ -174,20 +174,6 @@ export ABBR_LOG_AVAILABLE_ABBREVIATION=1
 
 # WSL2
 if _is_wsl2; then
-  # setup 1Password SSH agent for WSL2
-  if command -v npiperelay >/dev/null 2>&1; then
-    if ! ss -a | grep -q "$SSH_AUTH_SOCK" >/dev/null 2>&1; then
-      if [[ -e "$SSH_AUTH_SOCK" ]]; then
-        echo "removing previous socket..."
-        rm -f "$SSH_AUTH_SOCK"
-      fi
-      echo "Starting SSH-Agent relay..."
-      (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"npiperelay -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
-    fi
-  else
-    echo "Install npiperelay (https://github.com/jstarks/npiperelay) in Windows, then symlink to ~/.local/bin/npiperelay"
-  fi
-
   function wsl2_fix_time() {
     sudo ntpdate ntp.nict.jp
   }
