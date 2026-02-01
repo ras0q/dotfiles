@@ -11,6 +11,7 @@
 "aqua:astral-sh/uv" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
 "aqua:cli/cli" = "latest"
+"aqua:fastfetch-cli/fastfetch" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:hadolint/hadolint" = "latest"
 "aqua:jesseduffield/lazygit" = "latest"
