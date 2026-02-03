@@ -19,7 +19,8 @@ return {
         TreesitterContextLineNumber = { bg = colors.base, fg = colors.rosewater },
       }
     end,
-    auto_integrations = true,
+    -- FIXME: slow on nvim 0.12 which using `vim.pack`
+    -- auto_integrations = true,
     integrations = {
       treesitter_context = false,
     },
