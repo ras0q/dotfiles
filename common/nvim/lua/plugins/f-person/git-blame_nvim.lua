@@ -5,5 +5,6 @@ return {
   opts = {
     date_format = "%Y-%m-%d %H:%M:%S",
     delay = 100,
+    ignored_filetypes = { "octo" },
   },
 }
