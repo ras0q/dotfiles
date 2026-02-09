@@ -28,7 +28,6 @@ add_paths \
 
 if [[ -n "$WINDOWS_HOME" ]]; then
   add_paths \
-    $WINDOWS_HOME/AppData/Local/1Password/app/8 \
     $WINDOWS_HOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin \
     $WINDOWS_HOME/AppData/Local/Programs/cursor/resources/app/bin \
     $WINDOWS_HOME/AppData/Local/Microsoft/WindowsApps \

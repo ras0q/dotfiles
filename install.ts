@@ -2,8 +2,9 @@
 
 import { concat } from "jsr:@std/bytes@1.0.5/concat";
 import { parseArgs } from "jsr:@std/cli@1.0.13/parse-args";
-import { $ } from "jsr:@david/dax@0.42.0";
+import { $ } from "jsr:@david/dax@0.45.0";
 import symlinksJSON from "./symlinks.json" with { "type": "json" };
+import path from "node:path";
 
 const encoder = new TextEncoder();
 const gray = encoder.encode("\x1b[90m");
@@ -46,9 +47,9 @@ if (import.meta.main) {
   };
 
   for (const [_target, _source] of Object.entries(symlinks)) {
-    const source = _source.startsWith("/")
-      ? $.path(_source)
-      : root.join(_source);
+    const source = path.isAbsolute(_source)
+      ? path.resolve(_source)
+      : path.resolve(root.toString(), _source);
     const target = $.path(_target.replace(/^~\//, `${home}/`));
     const needsSudo = !target.startsWith(home);
     if (!canUseSudo && needsSudo) {
@@ -73,9 +74,10 @@ if (import.meta.main) {
         : await $`mkdir -p ${parent}`;
     }
 
+    // NOTE: expand source automatically
     needsSudo
-      ? await $`sudo ln -sfn ${source} ${target}`
-      : await $`ln -sfn ${source} ${target}`;
+      ? await $`sudo ln -sfn "${$.rawArg(source)}" ${target}`
+      : await $`ln -sfn "${$.rawArg(source)}" ${target}`;
   }
 
   const packageManagerTask = ({

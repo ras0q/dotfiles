@@ -26,7 +26,8 @@
     "~/.local/bin/explorer.exe": "/mnt/c/Windows/explorer.exe",
     "~/.local/bin/msedge.exe": "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
     "~/.local/bin/pwsh.exe": "/mnt/c/Program Files/PowerShell/7/pwsh.exe",
-    "~/.local/bin/wezterm.exe": "/mnt/c/Program Files/WezTerm/wezterm.exe"
+    "~/.local/bin/wezterm.exe": "/mnt/c/Program Files/WezTerm/wezterm.exe",
+    "~/.local/bin/op-ssh-sign": "/$WINDOWS_HOME/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe"
   },
   "darwin": {
     "~/.Brewfile": "./mac/.Brewfile",

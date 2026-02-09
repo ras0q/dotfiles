@@ -1,5 +1,0 @@
-[gpg]
-	format = ssh
-
-[gpg "ssh"]
-	program = op-ssh-sign
