@@ -235,8 +235,8 @@ local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smar
 smart_splits.apply_to_config(config, {
   direction_keys = { "h", "j", "k", "l" },
   modifiers = {
-    move = "CTRL",   -- modifier to use for pane movement, e.g. CTRL+h to move left
-    resize = "META", -- modifier to use for pane resize, e.g. META+h to resize to the left
+    move = "CTRL", -- modifier to use for pane movement, e.g. CTRL+h to move left
+    -- resize = "META", -- modifier to use for pane resize, e.g. META+h to resize to the left
   },
 })
 
@@ -261,5 +261,11 @@ config.mouse_bindings = {
     action = act.Nop,
   },
 }
+
+-- SSH Agent
+config.mux_enable_ssh_agent = false
+if is_windows then
+  config.default_ssh_auth_sock = "\\\\.\\pipe\\openssh-ssh-agent"
+end
 
 return config
