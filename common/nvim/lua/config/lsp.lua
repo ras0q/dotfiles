@@ -21,6 +21,7 @@ end
 enable_server("denols", "deno")
 enable_server("gopls")
 enable_server("lua_ls", "lua-language-server")
+enable_server("tsgo")
 
 -- NOTE: some plugins handle LSP-related configurations:
 -- - Language server configuration: nvim-lspconfig
