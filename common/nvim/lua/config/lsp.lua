@@ -19,7 +19,6 @@ local function enable_server(server, cmd)
 end
 
 enable_server("denols", "deno")
-enable_server("gitlab_duo", "bun")
 enable_server("gopls")
 enable_server("lua_ls", "lua-language-server")
 
