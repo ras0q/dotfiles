@@ -84,9 +84,6 @@
 	autoupdate = true
 	enabled = false
 
-[submodule]
-	recurse = true
-
 [tag]
 	sort = version:refname
 
