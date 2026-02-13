@@ -22,6 +22,14 @@
     }
   },
   "servers": {
+    "context7": {
+      "autoApprove": [
+        "resolve-library-id",
+        "query-docs"
+      ],
+      "type": "streamable-http",
+      "url": "https://mcp.context7.com/mcp"
+    },
     "deepwiki": {
       "autoApprove": [
         "read_wiki_contents",
