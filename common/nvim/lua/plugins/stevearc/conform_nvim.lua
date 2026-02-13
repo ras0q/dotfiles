@@ -12,7 +12,7 @@ return {
   "stevearc/conform.nvim",
   event = { "BufReadPre", "BufNewFile" },
   opts = function()
-    local js_fts = (vim.lsp.config["denols"] and vim.lsp.config["denols"].filetypes) or {
+    local js_fts = {
       "javascript",
       "javascriptreact",
       "javascript.jsx",
