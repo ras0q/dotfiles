@@ -44,6 +44,23 @@ local function get_windows_shell(title)
   end
 end
 
+--- @param cwd_uri Url | nil
+--- @return string | nil
+local function get_compact_cwd(cwd_uri)
+  local path = cwd_uri and cwd_uri.file_path
+  if type(path) ~= "string" or path == "" then
+    return nil
+  end
+
+  local normalized = path:gsub("[/\\]+$", "")
+  local parent, child = normalized:match("([^/\\]+)[/\\]([^/\\]+)$")
+  if child then
+    return parent:sub(1, 1) .. "/" .. child
+  end
+
+  return normalized:match("([^/\\]+)$") or nil
+end
+
 local config = wezterm.config_builder()
 
 -- General
@@ -103,12 +120,14 @@ config.window_padding = {
 wezterm.on(
   "format-tab-title",
   function(tab)
-    local title = tab.active_pane.title
+    local pane = tab.active_pane
+    local title = (pane.title or ""):gsub("%.exe$", "")
     local shell = get_windows_shell(title)
-    if shell then
-      return shell.label
-    end
-    return nf.md_console_line .. " " .. title:gsub("%.exe$", "")
+    local process = shell and shell.label or (nf.md_console_line .. " " .. title:gsub("%.exe$", ""))
+
+    ---@cast pane { current_working_dir: Url | nil }
+    local cwd = get_compact_cwd(pane.current_working_dir)
+    return cwd and (process .. " @ " .. cwd) or process
   end
 )
 
