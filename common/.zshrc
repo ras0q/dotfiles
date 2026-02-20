@@ -199,12 +199,6 @@ eval "$($(mise-which starship) init zsh --print-full-init)"
 # zoxide
 eval "$($(mise-which zoxide) init --cmd cd --hook pwd zsh)"
 
-# gomi
-if ! _is_mingw && _command_exists gomi; then
-  alias rm=gomi
-  # zsh-defer gomi --prune=3m & > /dev/null
-fi
-
 # Completions
 zsh-defer eval "$($(mise-which gh) completion -s zsh)"
 if ! _is_mingw; then

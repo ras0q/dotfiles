@@ -62,3 +62,21 @@ if _is_wsl2; then
   alias ssh-add="/mnt/c/Windows/System32/OpenSSH/ssh-add.exe"
 fi
 
+# Functions for all scripts
+
+rm() {
+  local t="$HOME/.local/share/Trash"
+  local args=() items=()
+  for i in "$@"; do
+    [[ "$i" == -* ]] && args+=("$i") || items+=("$i")
+  done
+  [ ! -d "$t" ] && mkdir -p "$t"
+  for i in "${items[@]}"; do
+    [ ! -e "$i" ] && { echo "rm: $i: No such file" >&2; continue; }
+    if git check-ignore -q "$i" 2>/dev/null; then
+      command rm "${args[@]}" "$i"
+    else
+      mv "$i" "$t/$(date +%s)_$(basename "$i")"
+    fi
+  done
+}
