@@ -2,7 +2,7 @@
 
 [alias]
 	bprune = !git branch --merged | egrep -v '\\*|develop|main|master' | xargs -r git branch -d
-	bprunef = !git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+	bprunef = !git fetch --prune && git branch -vv | grep ': gone]' | sed 's/^[+* ]*//' | awk '{print $1}' | xargs -r git branch -D
 	difft = -c diff.external='difft --color=always --display=inline' diff
 	fixup = commit --fixup HEAD
 	inico = commit --allow-empty -m ':seedling: initial commit'
