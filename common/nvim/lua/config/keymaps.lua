@@ -15,6 +15,9 @@ vim.keymap.set("n", "<Leader>R", function()
     vim.cmd("restart +qall")
   end
 end, opts)
+for s in ("hjklvsco"):gmatch(".") do
+  vim.keymap.set("n", "<Leader>w" .. s, "<C-w>" .. s, opts)
+end
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 vim.keymap.set("n", "<Leader>p", '"+p', opts)
 vim.keymap.set("n", "<Leader>y", '"+y', opts)
