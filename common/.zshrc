@@ -2,7 +2,7 @@
 
 function _command_exists() { command -v "$1" >/dev/null 2>&1 }
 function _load_plugin() {
-  local plugin_path="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/$1/$1.plugin.zsh"
+  local plugin_path="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/$1/${1%.zsh}.plugin.zsh"
   [[ -f "$plugin_path" ]] && source "$plugin_path"
 }
 
@@ -49,7 +49,7 @@ zsh-defer _load_plugin fzf-tab # load after compinit, before other plugins
 zsh-defer _load_plugin zsh-autosuggestions
 bindkey '^y' autosuggest-accept
 zsh-defer _load_plugin zsh-abbr
-zsh-defer _load_plugin ni
+zsh-defer _load_plugin ni.zsh
 zsh-defer _load_plugin cute
 zsh-defer _load_plugin translate-shell
 
