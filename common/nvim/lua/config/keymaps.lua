@@ -8,21 +8,21 @@ vim.keymap.set("n", "<Up>", "gk", opts)
 vim.keymap.set("n", "gh", "^", opts)
 vim.keymap.set("n", "gl", "$", opts)
 vim.keymap.set("n", "ge", "G", opts)
-vim.keymap.set("n", "<Space>o", ":SearchInBrowser<CR>", opts)
-vim.keymap.set("n", "<Space>R", function()
+vim.keymap.set("n", "<Leader>o", ":SearchInBrowser<CR>", opts)
+vim.keymap.set("n", "<Leader>R", function()
   local confirm = vim.fn.confirm("Do you want to save the session and restart?", "&Yes", 1)
   if confirm == 1 then
     vim.cmd("restart +qall")
   end
 end, opts)
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
-vim.keymap.set("n", "<Space>p", '"+p', opts)
-vim.keymap.set("n", "<Space>y", '"+y', opts)
+vim.keymap.set("n", "<Leader>p", '"+p', opts)
+vim.keymap.set("n", "<Leader>y", '"+y', opts)
 
 -- insert mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
 -- record undo breakpoints
-vim.keymap.set("i", "<Space>", "<Space><C-g>u", opts)
+vim.keymap.set("i", "<Leader>", "<Leader><C-g>u", opts)
 vim.keymap.set("i", ",", ",<C-g>u", opts)
 vim.keymap.set("i", ".", ".<C-g>u", opts)
 vim.keymap.set("i", "、", "、<C-g>u", opts)
@@ -32,8 +32,8 @@ vim.keymap.set("i", "。", "。<C-g>u", opts)
 vim.keymap.set("v", "gh", "^", opts)
 vim.keymap.set("v", "gl", "$", opts)
 vim.keymap.set("v", "ge", "G", opts)
-vim.keymap.set("v", "<Space>p", '"+p', opts)
-vim.keymap.set("v", "<Space>y", '"+y', opts)
+vim.keymap.set("v", "<Leader>p", '"+p', opts)
+vim.keymap.set("v", "<Leader>y", '"+y', opts)
 
 -- terminal mode
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n><Plug>(esc)", opts)

@@ -1,6 +1,6 @@
 require("config.builtin")
 require("config.commands")
-require("config.keymaps")
 require("config.options")
+require("config.keymaps")
 require("config.lazy")
 require("config.lsp")
