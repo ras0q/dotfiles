@@ -31,6 +31,7 @@ node = "lts"
 "npm:mcp-hub" = "latest"
 rust = "1.91.1"
 zig = "0.15.2"
+"github:k1LoW/git-wt" = "latest"
 "github:neovim/neovim" = "nightly"
 "npm:corepack" = "latest"
 

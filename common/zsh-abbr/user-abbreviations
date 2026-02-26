@@ -17,7 +17,7 @@ abbr "gP!"="git push --force-with-lease --force-if-includes"
 abbr "gr"="git rebase"
 abbr "gs"="git switch --recurse-submodules"
 abbr "gt"="git stash"
-abbr "gw"="git worktree"
+abbr "gw"="git wt"
 abbr "gwa"="git-worktree-add-interactive | cdp"
 
 # docker

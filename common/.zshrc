@@ -193,6 +193,9 @@ function mise-which() { _is_mingw && echo "$1" || mise which "$1"; }
 # fzf
 eval "$($(mise-which fzf) --zsh)"
 
+# git-wt
+eval "$(git-wt --init zsh)"
+
 # starship
 eval "$($(mise-which starship) init zsh --print-full-init)"
 
