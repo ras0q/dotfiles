@@ -1,9 +1,8 @@
 ---@type LazyPluginSpec
 return {
   "carlos-algms/agentic.nvim",
-  event = "VeryLazy",
   opts = {
-    provider = "codex-acp",
+    provider = vim.fn.executable("codex-acp") == 1 and "codex-acp" or "copilot-acp",
   },
   config = function(_, opts)
     require("agentic").setup(opts)
@@ -23,28 +22,24 @@ return {
   end,
   keys = {
     {
-      "<C-\\>",
+      "<leader>an",
+      function() require("agentic").new_session() end,
+      desc = "New Agentic Session",
+    },
+    {
+      "<leader>at",
       function() require("agentic").toggle() end,
-      mode = { "n", "v", "i" },
       desc = "Toggle Agentic Chat",
     },
     {
-      "<C-'>",
+      "<leader>ac",
       function() require("agentic").add_selection_or_file_to_context() end,
       mode = { "n", "v" },
       desc = "Add file or selection to Agentic to Context",
     },
     {
-      "<C-,>",
-      function() require("agentic").new_session() end,
-      mode = { "n", "v", "i" },
-      desc = "New Agentic Session",
-    },
-    {
-      "<A-i>r", -- ai Restore
-      function()
-        require("agentic").restore_session()
-      end,
+      "<leader>as",
+      function() require("agentic").restore_session() end,
       desc = "Agentic Restore session",
       silent = true,
       mode = { "n", "v", "i" },
