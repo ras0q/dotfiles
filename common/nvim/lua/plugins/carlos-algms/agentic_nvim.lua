@@ -1,9 +1,11 @@
 ---@type LazyPluginSpec
 return {
   "carlos-algms/agentic.nvim",
-  opts = {
-    provider = vim.fn.executable("codex-acp") == 1 and "codex-acp" or "copilot-acp",
-  },
+  opts = function()
+    return {
+      provider = vim.fn.executable("codex-acp") == 1 and "codex-acp" or "copilot-acp",
+    }
+  end,
   config = function(_, opts)
     require("agentic").setup(opts)
 
