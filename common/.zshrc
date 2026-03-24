@@ -45,13 +45,15 @@ else
 fi
 
 # Zsh plugins
-zsh-defer _load_plugin fzf-tab # load after compinit, before other plugins
-zsh-defer _load_plugin zsh-autosuggestions
-bindkey '^y' autosuggest-accept
-zsh-defer _load_plugin zsh-abbr
-zsh-defer _load_plugin ni.zsh
-zsh-defer _load_plugin cute
-zsh-defer _load_plugin translate-shell
+zsh-defer -c '
+  _load_plugin fzf-tab # load after compinit, before other plugins
+  _load_plugin zsh-autosuggestions
+  bindkey "^y" autosuggest-accept
+  _load_plugin zsh-abbr
+  _load_plugin ni.zsh
+  _load_plugin cute
+  _load_plugin translate-shell
+'
 
 # Functions
 cdp() {
@@ -201,12 +203,6 @@ eval "$($(mise-which starship) init zsh --print-full-init)"
 
 # zoxide
 eval "$($(mise-which zoxide) init --cmd cd --hook pwd zsh)"
-
-# Completions
-zsh-defer eval "$($(mise-which gh) completion -s zsh)"
-if ! _is_mingw; then
-  zsh-defer eval "$($(mise-which op) completion zsh)"
-fi
 
 # NOTE: Redirecting to /dev/null creates a file named NUL.
 _is_mingw && rm -rf ./NUL
