@@ -4,6 +4,9 @@ return {
   name = "catppuccin",
   lazy = false,
   priority = 1000,
+  build = function()
+    require("catppuccin").compile()
+  end,
   opts = {
     flavour = "auto",
     term_colors = true,
