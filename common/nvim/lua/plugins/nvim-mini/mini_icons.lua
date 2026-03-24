@@ -1,8 +1,8 @@
 --- @type LazyPluginSpec
 return {
   "nvim-mini/mini.icons",
+  lazy = false,
   version = "*",
-  event = "VeryLazy",
   opts = {},
   config = function(_, opts)
     require("mini.icons").setup(opts)
