@@ -50,8 +50,8 @@ fi
 
 _kernel=$(uname -s)
 _kernel_version=$(uname -r)
-function _is_mingw() { [[ "$_kernel" == *MINGW* ]] }
-function _is_wsl2() { [[ "$_kernel_version" == *microsoft* ]] }
+function _is_mingw() { [[ "$_kernel" == *MINGW* ]]; }
+function _is_wsl2() { [[ "$_kernel_version" == *microsoft* ]]; }
 
 if _is_mingw; then
   [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"

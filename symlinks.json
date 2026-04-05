@@ -15,7 +15,6 @@
     "~/.config/zellij": "./common/zellij",
     "~/.config/zsh": "./common/zsh",
     "~/.config/zsh-abbr": "./common/zsh-abbr",
-    "~/.zsh_plugins.txt": "./common/.zsh_plugins.txt",
     "~/.zshenv": "./common/.zshenv",
     "~/.zshrc": "./common/.zshrc"
   },
@@ -32,7 +31,6 @@
   "darwin": {
     "~/.Brewfile": "./mac/.Brewfile",
     "~/.Brewfile.lock.json": "./mac/.Brewfile.lock.json",
-    "~/.gitconfig.mac": "./mac/.gitconfig.mac",
     "~/.config/wezterm": "./common/wezterm",
     "~/.local/bin/op-ssh-sign": "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
   },
