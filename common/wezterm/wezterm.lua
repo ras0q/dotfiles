@@ -282,8 +282,8 @@ config.mouse_bindings = {
 }
 
 -- SSH Agent
-config.mux_enable_ssh_agent = false
 if is_windows then
+  config.mux_enable_ssh_agent = false
   config.default_ssh_auth_sock = "\\\\.\\pipe\\openssh-ssh-agent"
 end
 
