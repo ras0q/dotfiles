@@ -34,6 +34,7 @@ zig = "0.15.2"
 "github:k1LoW/git-wt" = "latest"
 "github:neovim/neovim" = "nightly"
 "npm:corepack" = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
 
 [settings]
 exec_auto_install = false
