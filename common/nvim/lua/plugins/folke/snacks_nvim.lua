@@ -29,7 +29,6 @@ return {
         { section = "startup" },
       },
     },
-    explorer = { enabled = true },
     indent = {
       enabled = true,
       scope = { char = "╎" },
@@ -61,7 +60,6 @@ return {
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end,                               desc = "Buffers" },
     { "<leader>c", function() Snacks.picker.files({ hidden = true, cwd = vim.fn.stdpath("config") }) end, desc = "Config" },
-    { "<leader>e", function() Snacks.explorer() end,                                                      desc = "File Explorer" },
     { "<leader>f", function() Snacks.picker.files({ hidden = true }) end,                                 desc = "Find Files" },
     { "<leader>F", function() Snacks.picker(list_repos) end,                                              desc = "List Repositories" },
     { "<leader>g", function() Snacks.picker.grep({ hidden = true }) end,                                  desc = "Live Grep" },
