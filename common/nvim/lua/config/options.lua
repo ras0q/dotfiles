@@ -87,6 +87,7 @@ end
 
 local M = {
   ai_enabled = os.getenv("NVIM_AI_ENABLED") == "true",
+  wakatime_enabled = os.getenv("NVIM_WAKATIME_ENABLED") ~= "0",
 }
 
 return M
