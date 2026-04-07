@@ -44,7 +44,6 @@ return {
       function() require("agentic").restore_session() end,
       desc = "Agentic Restore session",
       silent = true,
-      mode = { "n", "v", "i" },
     },
   },
 }
