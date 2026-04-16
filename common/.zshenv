@@ -36,7 +36,6 @@ if [[ -n "$WINDOWS_HOME" ]]; then
     /mnt/c/Program\ Files/PowerShell/7
 fi
 
-[[ -z "$BROWSER" ]] && export BROWSER="msedge.exe"
 [[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
 [[ -z "$EDITOR" ]] && export EDITOR="nvim"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
