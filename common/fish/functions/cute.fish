@@ -1,0 +1,1 @@
+../../zsh/plugins/cute/functions/cute.fish

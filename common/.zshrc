@@ -1,5 +1,9 @@
 # zmodload zsh/zprof
 
+if [[ -x "$(command -v fish)" && $- == *i* ]]; then
+    exec fish
+fi
+
 function _command_exists() { command -v "$1" >/dev/null 2>&1 }
 function _load_plugin() {
   local plugin_path="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/$1/${1%.zsh}.plugin.zsh"

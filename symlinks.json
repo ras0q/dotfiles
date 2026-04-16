@@ -5,6 +5,7 @@
     "~/.bashrc": "./common/.bashrc",
     "~/.gitconfig": "./common/.gitconfig",
     "~/.codex/AGENTS.md": "./common/AGENTS.md",
+    "~/.config/fish": "./common/fish",
     "~/.config/git": "./common/git",
     "~/.config/lazygit": "./common/lazygit",
     "~/.config/mcphub": "./common/mcphub",
