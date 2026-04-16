@@ -132,11 +132,12 @@ wezterm.on(
 )
 
 -- Font
-config.font = wezterm.font_with_fallback({
+local font_fallback = {
   { family = "Source Code Pro", weight = "Medium" },
-  { family = "源ノ角ゴシック JP VF", weight = "Medium" },
+  { family = is_macos and "Hiragino Sans" or "源ノ角ゴシック JP VF", weight = "Medium" },
   { family = "Symbols Nerd Font" },
-})
+}
+config.font = wezterm.font_with_fallback(font_fallback)
 config.font_size = is_macos and 14.0 or 11.0
 config.cell_width = 0.9
 
