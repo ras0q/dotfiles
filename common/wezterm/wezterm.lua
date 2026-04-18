@@ -250,6 +250,14 @@ if is_windows then
     action = act.CloseCurrentPane({ confirm = true }),
   })
 end
+if is_macos then
+  -- Option+¥ to type "\"
+  table.insert(config.keys, {
+    key = "¥",
+    mods = "ALT",
+    action = wezterm.action.SendKey({ key = "\\" }),
+  })
+end
 
 local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 smart_splits.apply_to_config(config, {
