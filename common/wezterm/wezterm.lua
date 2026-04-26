@@ -133,8 +133,8 @@ wezterm.on(
 
 -- Font
 local font_fallback = {
-  { family = "Source Code Pro", weight = "Medium" },
-  { family = is_macos and "Hiragino Sans" or "源ノ角ゴシック JP VF", weight = "Medium" },
+  { family = "Source Code Pro", weight = "DemiBold" },
+  { family = is_macos and "Hiragino Sans" or "源ノ角ゴシック JP VF", weight = "DemiBold" },
   { family = "Symbols Nerd Font" },
 }
 config.font = wezterm.font_with_fallback(font_fallback)
