@@ -48,6 +48,16 @@ vim.opt.infercase = true
 -- session
 vim.opt.sessionoptions:remove({ "blank" })
 
+-- lsp
+vim.opt.completeopt = {
+  "fuzzy",
+  "popup",
+  "menuone",
+  "noinsert",
+}
+vim.o.pumborder = "rounded"
+vim.opt.pumheight = 15
+
 -- clipboard (OSC 52)
 local is_wsl2 = vim.fn.has("wsl") == 1
 local is_ssh = os.getenv("SSH_CLIENT") ~= nil or os.getenv("SSH_TTY") ~= nil
