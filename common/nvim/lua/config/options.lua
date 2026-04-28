@@ -57,6 +57,7 @@ vim.opt.completeopt = {
 }
 vim.o.pumborder = "rounded"
 vim.opt.pumheight = 15
+vim.opt.pummaxwidth = 40
 
 -- clipboard (OSC 52)
 local is_wsl2 = vim.fn.has("wsl") == 1
