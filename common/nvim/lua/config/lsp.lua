@@ -23,6 +23,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { buffer = buf, desc = "Show diagnostics" })
 
     if client:supports_method("textDocument/completion") then
+      local chars = {}
+      for i = 32, 126 do table.insert(chars, string.char(i)) end
+      client.server_capabilities.completionProvider.triggerCharacters = chars
+
       vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
     end
 
