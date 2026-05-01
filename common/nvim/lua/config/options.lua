@@ -59,6 +59,9 @@ vim.o.pumborder = "rounded"
 vim.opt.pumheight = 15
 vim.opt.pummaxwidth = 40
 
+-- filetype
+vim.g.filetype_v = "v"
+
 -- clipboard (OSC 52)
 local is_wsl2 = vim.fn.has("wsl") == 1
 local is_ssh = os.getenv("SSH_CLIENT") ~= nil or os.getenv("SSH_TTY") ~= nil
