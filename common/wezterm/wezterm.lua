@@ -117,19 +117,21 @@ config.window_padding = {
 }
 
 -- Tab bar
-wezterm.on(
-  "format-tab-title",
-  function(tab)
-    local pane = tab.active_pane
-    local title = (pane.title or ""):gsub("%.exe$", "")
-    local shell = get_windows_shell(title)
-    local process = shell and shell.label or (nf.md_console_line .. " " .. title:gsub("%.exe$", ""))
+if is_windows then
+  wezterm.on(
+    "format-tab-title",
+    function(tab)
+      local pane = tab.active_pane
+      local title = (pane.title or ""):gsub("%.exe$", "")
+      local shell = get_windows_shell(title)
+      local process = shell and shell.label or (nf.md_console_line .. " " .. title:gsub("%.exe$", ""))
 
-    ---@cast pane { current_working_dir: Url | nil }
-    local cwd = get_compact_cwd(pane.current_working_dir)
-    return cwd and (process .. " @ " .. cwd) or process
-  end
-)
+      ---@cast pane { current_working_dir: Url | nil }
+      local cwd = get_compact_cwd(pane.current_working_dir)
+      return cwd and (process .. " @ " .. cwd) or process
+    end
+  )
+end
 
 -- Font
 local font_fallback = {
