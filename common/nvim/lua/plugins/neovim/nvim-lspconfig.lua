@@ -16,6 +16,7 @@ return {
     enable_server("denols", "deno")
     enable_server("gopls")
     enable_server("lua_ls", "lua-language-server")
+    -- NOTE: In Xcode project, you need to build the project with https://github.com/SolaWing/xcode-build-server
     enable_server("sourcekit", "sourcekit-lsp")
     enable_server("tsgo")
   end,

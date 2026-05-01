@@ -11,3 +11,4 @@ mise.local.toml
 .trash/
 tmp/
 worktree/
+buildServer.json
