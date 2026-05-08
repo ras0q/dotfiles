@@ -1,9 +1,18 @@
+vim.opt.completeopt = {
+  "fuzzy",
+  "popup",
+  "menuone",
+  "noinsert",
+}
+vim.opt.pumheight = 15
+
 vim.lsp.log.set_level("warn")
 
 -- NOTE: some plugins handle LSP-related configurations:
 -- - Language server configuration: nvim-lspconfig
 -- - Language server installation: mason-lspconfig.nvim
 -- - Auto-formatting: conform.nvim
+-- - Completion: blink.cmp
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", {}),
   callback = function(args)
@@ -21,14 +30,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
       },
     })
     vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { buffer = buf, desc = "Show diagnostics" })
-
-    if client:supports_method("textDocument/completion") then
-      local chars = {}
-      for i = 32, 126 do table.insert(chars, string.char(i)) end
-      client.server_capabilities.completionProvider.triggerCharacters = chars
-
-      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-    end
 
     if client:supports_method("textDocument/definition") then
       vim.keymap.set("n", "grd", vim.lsp.buf.definition, { buffer = buf, desc = "Go to definition" })
