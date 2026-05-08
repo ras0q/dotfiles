@@ -14,6 +14,7 @@ return {
       pattern = "AgenticChat",
       callback = function()
         vim.opt_local.syntax = "markdown"
+        vim.bo.filetype = "markdown"
       end,
     })
 
