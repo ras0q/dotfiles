@@ -3,7 +3,7 @@ local js_formatter = function(bufnr)
   if js_runtime.is_deno or not js_runtime.is_node then
     return { "deno_fmt" }
   else
-    return { "biome", "prettierd", "prettier", stop_after_first = true }
+    return { "oxfmt", "biome", "prettierd", "prettier", stop_after_first = true }
   end
 end
 
