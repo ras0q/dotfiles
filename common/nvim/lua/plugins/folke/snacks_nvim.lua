@@ -55,7 +55,12 @@ return {
         border = "rounded",
       },
     },
-    zen = { enabled = true },
+    zen = {
+      enabled = true,
+      toggles = {
+        dim = false,
+      },
+    },
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end,                               desc = "Buffers" },
