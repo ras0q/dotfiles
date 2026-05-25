@@ -6,7 +6,7 @@
 	difft = -c diff.external='difft --color=always' diff
 	fixup = commit --fixup HEAD
 	inico = commit --allow-empty -m ':seedling: initial commit'
-	lo = log --oneline
+	lo = log --oneline --max-count=20
 	lp = log -p
 	pushf = push --force-with-lease --force-if-includes
 	cp = cherry-pick
