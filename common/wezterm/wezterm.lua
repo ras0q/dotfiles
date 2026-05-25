@@ -152,6 +152,19 @@ local spawn_tab = act_cb(function(window, pane)
   end
 end)
 
+--- @param command string
+local function spawn_overlay(command)
+  local shell = os.getenv("SHELL") or "/bin/zsh"
+  return act_cb(function(_, pane)
+    pane:split({
+      direction = "Bottom",
+      top_level = true,
+      size = 0.9,
+      args = { shell, "-lc", command },
+    })
+  end)
+end
+
 config.leader = { key = "k", mods = "CTRL" }
 config.keys = {
   -- Cmd+T to show launcher
@@ -216,6 +229,12 @@ config.keys = {
     key = "t",
     mods = "LEADER",
     action = spawn_tab,
+  },
+  -- Leader+L to overlay lazygit on the current tab
+  {
+    key = "l",
+    mods = "LEADER",
+    action = spawn_overlay("lazygit"),
   },
 
   -- Leader+X to close current pane
