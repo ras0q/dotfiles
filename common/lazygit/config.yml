@@ -5,3 +5,5 @@ git:
 gui:
   expandFocusedSidePanel: true
   expandedSidePanelWeight: 4
+  showCommandLog: false
+  showPanelJumps: false
