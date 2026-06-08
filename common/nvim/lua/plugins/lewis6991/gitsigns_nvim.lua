@@ -1,6 +1,7 @@
 ---@type LazyPluginSpec
 return {
   "lewis6991/gitsigns.nvim",
+  enabled = false,
   event = "VeryLazy",
   opts = {
     current_line_blame = true,
