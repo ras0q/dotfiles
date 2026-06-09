@@ -156,12 +156,8 @@ end)
 local function spawn_overlay(command)
   local shell = os.getenv("SHELL") or "/bin/zsh"
   return act_cb(function(_, pane)
-    pane:split({
-      direction = "Bottom",
-      top_level = true,
-      size = 0.9,
-      args = { shell, "-lc", command },
-    })
+    local new_pane = pane:split({ args = { shell, "-lc", command } })
+    new_pane:tab():set_zoomed(true)
   end)
 end
 
@@ -236,7 +232,12 @@ config.keys = {
     mods = "LEADER",
     action = spawn_overlay("lazygit"),
   },
-
+  -- Leader+N to overlay Neovim on the current tab
+  {
+    key = "n",
+    mods = "LEADER",
+    action = spawn_overlay("nvim"),
+  },
   -- Leader+X to close current pane
   {
     key = "x",
