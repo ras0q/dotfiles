@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delegate to Cursor CLI"
+  short_description: "The caller plans and reviews; Cursor CLI executes"
+  default_prompt: "Use $delegate-cursor-cli when the caller should own scope and review while Cursor CLI executes scoped slices."

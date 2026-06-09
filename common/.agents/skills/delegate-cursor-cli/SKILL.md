@@ -1,18 +1,18 @@
 ---
-name: codex-delegate-cursor
-description: Codex plans, scopes, and reviews; Cursor CLI executes locally. Use when breaking work into slices, writing handoff prompts, reviewing CLI output, or driving multi-step coding through a two-agent loop.
+name: delegate-cursor-cli
+description: Delegate scoped implementation slices to Cursor CLI while keeping planning, acceptance criteria, and review with the caller. Use when breaking work into slices, writing handoff prompts, reviewing CLI output, or driving a planner-executor loop.
 ---
 
-# Codex Delegate Cursor
+# Delegate to Cursor CLI
 
-**Codex** plans the work: frame the problem, slice tasks, set acceptance criteria, review results.
+**The caller** plans the work: frame the problem, slice tasks, set acceptance criteria, review results.
 **Cursor CLI** executes: edit files, run commands, return diffs and evidence.
 
-Do not ask Cursor CLI to decide scope, architecture, or tradeoffs until Codex narrows the question.
+Do not ask Cursor CLI to decide scope, architecture, or tradeoffs until the caller narrows the question.
 
 ## Loop
 
-1. **Context** — Read repo and constraints in Codex first.
+1. **Context** — Read the repo and constraints before handing work to Cursor CLI.
 2. **Slice** — Pick the smallest useful step Cursor CLI can finish without guessing.
 3. **Handoff** — Send objective, relevant files, exact instructions, verification, expected return.
 4. **Review** — Check diff/logs against acceptance criteria.

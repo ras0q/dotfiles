@@ -1,4 +1,0 @@
-interface:
-  display_name: "Codex Delegate Cursor"
-  short_description: "Codex plans and reviews; Cursor CLI executes"
-  default_prompt: "Use $codex-delegate-cursor to plan in Codex and execute slices via Cursor CLI."
