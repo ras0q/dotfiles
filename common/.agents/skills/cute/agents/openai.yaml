@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cute"
+  short_description: "Cute Markdown task runner guidance"
+  default_prompt: "Use $cute to update Cute shell task-runner behavior."
