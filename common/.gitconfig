@@ -30,7 +30,17 @@
 	; fsmonitor = true
 	quotepath = false
 	untrackedCache = true
-	pager = LESSCHARSET=utf-8 less
+	pager = delta
+
+[delta]
+	commit-decoration-style = none
+	file-decoration-style = none
+	hunk-header-decoration-style = none
+	hunk-header-style = "file line-number syntax"
+	line-numbers-left-format = "{nm:>4} "
+	line-numbers-right-format = "│{np:>4} "
+	navigate = true
+	side-by-side = true
 
 [credential "https://github.com"]
 	helper =
@@ -62,9 +72,12 @@
 [init]
 	defaultBranch = main
 
+[interactive]
+	diffFilter = delta --color-only
+
 # TODO: migrate to zdiff3
 [merge]
-	conflictstyle = merge
+	conflictStyle = zdiff3
 
 [pull]
 	ff = only

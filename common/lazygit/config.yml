@@ -1,6 +1,6 @@
 git:
   pagers:
-    - externalDiffCommand: difft --color=always
+    - pager: delta --light --paging=never
 
 gui:
   expandFocusedSidePanel: true
