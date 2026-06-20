@@ -1,34 +1,23 @@
 # Agent Global Instructions
 
-All agents **MUST** adhere to the following standards:
-
-## Core Principles
+## Principles
 
 - Think in English, respond in Japanese.
 - Code like Kent Beck.
+- Use `gh` CLI for GitHub operations.
+- Prefer running mechanical work as one shell command or one small script instead of many manual steps.
+- Chain final verification commands with `&&`; use tracing only if needed.
+- Code comments must be in English and explain non-obvious why, not restate what.
+- Document comments for variables and functions should be thorough enough to clarify intent, inputs, outputs, and constraints.
 
-## Code Artifacts
+## Context Files
 
-- English comment only: All comments in code must be in English.
-- Explain why, not what: Only comment non-oblivious decisions; never restate code.
-
-## Agent Context
-
-Maintain repo-local context in `./tmp/contexts/`.
+Maintain repo-local context in `./tmp/contexts/`; `./tmp` is ignored via the global `.gitignore`.
+Because `./tmp` is globally ignored, agents do not need to review its diffs during normal work.
+Before starting a session, ensure the directory exists with `mkdir -p ./tmp/{contexts,notes}/`.
 
 - Keep context concise; record current facts, not full transcripts.
 - Utilize frontmatter.
-
-### `./tmp/contexts/README.md`
-
-- Keep durable repository context here.
-- Refresh it only when durable repository context changes.
-
-### `./tmp/contexts/{branch}.md`
-
-- Keep the current task state here.
-- Refresh it only at the start of work, after plan changes, and after validation completes.
-
-### `./tmp/notes/$(date '+%Y-%m-%d_%H-%M-%s')_{title}.md`
-
-- Create working notes if requested.
+- Refresh `./tmp/contexts/README.md` only when durable repository context changes.
+- Refresh `./tmp/contexts/{branch}.md` at the start of work, after plan changes, and after validation completes.
+- Create `./tmp/notes/$(date '+%Y-%m-%d_%H-%M-%s')_{title}.md` only if requested.
