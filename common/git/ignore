@@ -1,6 +1,7 @@
 .DS_store
 node_modules
 DerivedData
+.derived-data-log*
 NUL
 *.xcuserdatad
 .env
