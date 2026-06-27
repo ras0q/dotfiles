@@ -21,6 +21,7 @@
 "aqua:sharkdp/fd" = "latest"
 "aqua:sigstore/cosign" = "latest"
 "aqua:starship/starship" = "latest"
+"aqua:tombi-toml/tombi" = "latest"
 "aqua:tree-sitter/tree-sitter" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 bun = "1.3.3"
