@@ -1,13 +1,8 @@
 local opts = { noremap = true, silent = true }
 
 -- normal mode
-vim.keymap.set("n", "j", "gj", opts)
-vim.keymap.set("n", "k", "gk", opts)
-vim.keymap.set("n", "<Down>", "gj", opts)
-vim.keymap.set("n", "<Up>", "gk", opts)
 vim.keymap.set("n", "gh", "^", opts)
 vim.keymap.set("n", "gl", "$", opts)
-vim.keymap.set("n", "ge", "G", opts)
 vim.keymap.set("n", "<Leader>o", ":SearchInBrowser<CR>", opts)
 vim.keymap.set("n", "<Leader>R", function()
   local confirm = vim.fn.confirm("Do you want to save the session and restart?", "&Yes", 1)
@@ -34,7 +29,6 @@ vim.keymap.set("i", "。", "。<C-g>u", opts)
 -- visual mode
 vim.keymap.set("v", "gh", "^", opts)
 vim.keymap.set("v", "gl", "$", opts)
-vim.keymap.set("v", "ge", "G", opts)
 vim.keymap.set("v", "<Leader>p", '"+p', opts)
 vim.keymap.set("v", "<Leader>y", '"+y', opts)
 
