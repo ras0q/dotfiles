@@ -26,9 +26,6 @@ return {
   ---@diagnostic enable: undefined-field
   settings = {
     Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
       format = {
         defaultConfig = {
           quote_style = "double",
@@ -38,17 +35,12 @@ return {
       },
       runtime = {
         version = "LuaJIT",
-        pathStrict = true,
         path = { "?.lua", "?/init.lua" },
       },
       workspace = {
         library = {
-          vim.loop.cwd(),
-          vim.fn.stdpath("config") .. "/lua",
-          vim.env.VIMRUNTIME .. "/lua",
-          "${3rd}/luv/library",
-          "${3rd}/busted/library",
-          "${3rd}/luassert/library",
+          vim.fn.stdpath("config"),
+          vim.env.VIMRUNTIME,
         },
       },
     },
