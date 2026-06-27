@@ -33,7 +33,7 @@
   "darwin": {
     "~/.Brewfile": "./mac/.Brewfile",
     "~/.Brewfile.lock.json": "./mac/.Brewfile.lock.json",
-    "~/.config/skhd": "./common/skhd",
+    "~/.config/aerospace": "./common/aerospace",
     "~/.config/wezterm": "./common/wezterm",
     "~/.local/bin/op-ssh-sign": "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
   },
