@@ -1,8 +1,0 @@
-# Option + b -> Open browser (Chrome)
-alt - b : open -a "Google Chrome"
-
-# Option + n -> Open note (Obsidian)
-alt - n : open -a "Obsidian"
-
-# Option + t -> Open terminal (WezTerm)
-alt - t : open -a "WezTerm"
