@@ -1,81 +1,46 @@
-#functions
-add_paths() {
-  local new_paths=()
-  for dir in "$@"; do
-    if [[ -d "$dir" && ":$PATH:" != *":$dir:"* ]]; then
-      new_paths+=("$dir")
-    fi
-  done
+[ -f "$HOME/.env" ] && source "$HOME/.env"
 
-  if [[ ${#new_paths[@]} -gt 0 ]]; then
-    export PATH="$(IFS=:; echo "${new_paths[*]}"):${PATH}"
-  fi
+append_path() {
+  case ":$PATH:" in
+    *":$1:"*) ;;
+    *)
+      [ -d "$1" ] && PATH="$1${PATH:+:$PATH}"
+      ;;
+  esac
 }
 
-[[ -f ~/.env ]] && source ~/.env
+append_path "$HOME/.local/bin"
+append_path "$HOME/.local/share/mise/shims"
+append_path "$HOME/.local/share/nvim/mason/bin"
+append_path "$HOME/.rd/bin"
+append_path "$HOME/.cargo/bin"
+append_path "$HOME/.deno/bin"
+append_path "$HOME/go/bin"
+append_path "/usr/local/cuda/bin"
+append_path "/opt/homebrew/bin"
+append_path "/opt/homebrew/opt/openjdk/bin"
 
-add_paths \
-  ~/.local/bin \
-  ~/.local/share/mise/shims \
-  ~/.local/share/nvim/mason/bin \
-  ~/.rd/bin \
-  ~/.cargo/bin \
-  ~/.deno/bin \
-  ~/go/bin \
-  /usr/local/cuda/bin \
-  /opt/homebrew/bin \
-  /opt/homebrew/opt/openjdk/bin
-
-if [[ -n "$WINDOWS_HOME" ]]; then
-  add_paths \
-    $WINDOWS_HOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin \
-    $WINDOWS_HOME/AppData/Local/Programs/cursor/resources/app/bin \
-    $WINDOWS_HOME/AppData/Local/Microsoft/WindowsApps \
-    $WINDOWS_HOME/AppData/Local/Microsoft/WinGet/Links \
-    /c/Program\ Files/PowerShell/7 \
-    /mnt/c/Program\ Files/PowerShell/7
+if [ -n "$WINDOWS_HOME" ]; then
+  append_path "$WINDOWS_HOME/AppData/Local/Programs/Microsoft VS Code/bin"
+  append_path "$WINDOWS_HOME/AppData/Local/Programs/cursor/resources/app/bin"
+  append_path "$WINDOWS_HOME/AppData/Local/Microsoft/WindowsApps"
+  append_path "$WINDOWS_HOME/AppData/Local/Microsoft/WinGet/Links"
+  append_path "/c/Program Files/PowerShell/7"
+  append_path "/mnt/c/Program Files/PowerShell/7"
 fi
 
-[[ -z "$DOTFILES" ]] && export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
-[[ -z "$EDITOR" ]] && export EDITOR="nvim"
-[[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
-[[ -z "$GOBIN" ]] && export GOBIN="$HOME/go/bin"
-[[ -z "$LANG" ]] && export LANG=POSIX
-[[ -z "$MISE_ENV" ]] && export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
-[[ -z "$OBSIDIAN_VAULT_PATH" ]] && export OBSIDIAN_VAULT_PATH="$HOME/ghq/github.com/ras0q/obsidian_private"
-[[ -z "$XGD_CONFIG_HOME" ]] && export XGD_CONFIG_HOME="$HOME/.config"
+export PATH
+[ -n "$DOTFILES" ] || export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
+[ -n "$EDITOR" ] || export EDITOR="nvim"
+[ -n "$GOPATH" ] || export GOPATH="$HOME/go"
+[ -n "$GOBIN" ] || export GOBIN="$HOME/go/bin"
+[ -n "$LANG" ] || export LANG="POSIX"
+[ -n "$MISE_ENV" ] || export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
+[ -n "$OBSIDIAN_VAULT_PATH" ] || export OBSIDIAN_VAULT_PATH="$HOME/ghq/github.com/ras0q/obsidian_private"
+[ -n "$XGD_CONFIG_HOME" ] || export XGD_CONFIG_HOME="$HOME/.config"
 
-# OS specific settings
-
-_kernel=$(uname -s)
-_kernel_version=$(uname -r)
-function _is_mingw() { [[ "$_kernel" == *MINGW* ]]; }
-function _is_wsl2() { [[ "$_kernel_version" == *microsoft* ]]; }
-
-if _is_mingw; then
-  [[ -z "$MSYS" ]] && export MSYS="winsymlinks:nativestrict"
-fi
-
-if _is_wsl2; then
-  alias ssh="/mnt/c/Windows/System32/OpenSSH/ssh.exe"
-  alias ssh-add="/mnt/c/Windows/System32/OpenSSH/ssh-add.exe"
-fi
-
-# Functions for all scripts
-
-rm() {
-  local t="$HOME/.local/share/Trash"
-  local args=() items=()
-  for i in "$@"; do
-    [[ "$i" == -* ]] && args+=("$i") || items+=("$i")
-  done
-  [ ! -d "$t" ] && mkdir -p "$t"
-  for i in "${items[@]}"; do
-    [ ! -e "$i" ] && { echo "rm: $i: No such file" >&2; continue; }
-    if git check-ignore -q "$i" 2>/dev/null; then
-      command rm "${args[@]}" "$i"
-    else
-      mv "$i" "$t/$(date +%s)_$(basename "$i")"
-    fi
-  done
-}
+case "$(uname -s)" in
+  *MINGW*)
+    [ -n "$MSYS" ] || export MSYS="winsymlinks:nativestrict"
+    ;;
+esac

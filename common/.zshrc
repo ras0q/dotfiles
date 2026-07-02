@@ -10,6 +10,40 @@ function _load_plugin() {
   [[ -f "$plugin_path" ]] && source "$plugin_path"
 }
 
+if [[ "$(uname -r)" == *microsoft* ]]; then
+  alias ssh="/mnt/c/Windows/System32/OpenSSH/ssh.exe"
+  alias ssh-add="/mnt/c/Windows/System32/OpenSSH/ssh-add.exe"
+fi
+
+rm() {
+  local trash_dir="$HOME/.local/share/Trash"
+  local args=()
+  local items=()
+  local item
+
+  for item in "$@"; do
+    if [[ "$item" == -* ]]; then
+      args+=("$item")
+    else
+      items+=("$item")
+    fi
+  done
+
+  [[ -d "$trash_dir" ]] || mkdir -p "$trash_dir"
+  for item in "${items[@]}"; do
+    [[ -e "$item" ]] || {
+      echo "rm: $item: No such file" >&2
+      continue
+    }
+
+    if git check-ignore -q "$item" 2>/dev/null; then
+      command rm "${args[@]}" "$item"
+    else
+      mv "$item" "$trash_dir/$(date +%s)_$(basename "$item")"
+    fi
+  done
+}
+
 HISTFILE=~/.zsh_history
 HISTORY_IGNORE="(cd|pwd|1[sal])"
 HISTSIZE=10000
