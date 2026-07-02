@@ -32,6 +32,10 @@ run = ["layout tiling", "move-node-to-workspace a"]
 if.app-id = "com.google.Chrome"
 run = ["layout tiling", "move-node-to-workspace b"]
 
+[[on-window-detected]]
+if.app-id = "notion.id"
+run = ["layout tiling", "move-node-to-workspace 1"]
+
 [mode.main.binding]
 alt-slash = "layout tiles horizontal vertical"
 alt-comma = "layout accordion horizontal vertical"
