@@ -1,4 +1,8 @@
 function fish_prompt --description 'Write out the prompt'
+        if string match -qr '^3\.' -- $version
+                return
+        end
+
         set -l last_pipestatus $pipestatus
         set -lx __fish_last_status $status # Export for __fish_print_pipestatus.
 
