@@ -1,7 +1,8 @@
 [[env]]
- _.file = "{{ cwd }}/.env"
+_.file = "{{ cwd }}/.env"
+
 [[env]]
- _.file = "{{ cwd }}/.envrc"
+_.file = "{{ cwd }}/.envrc"
 
 [tools]
 "aqua:BurntSushi/ripgrep" = "latest"
@@ -36,13 +37,10 @@ node = "lts"
 "npm:corepack" = "latest"
 "npm:mcp-hub" = "latest"
 python = "latest"
-rust = "1.91.1"
+rust = "latest"
 zig = "0.15.2"
 
 [settings]
 exec_auto_install = false
 experimental = true
 idiomatic_version_file_enable_tools = ["node"]
-
-[settings.npm]
-bun = true
