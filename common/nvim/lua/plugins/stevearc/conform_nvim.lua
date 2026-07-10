@@ -23,7 +23,10 @@ return {
       "jsonc",
     }
 
-    local formatters_by_ft = {}
+    ---@type table<string, table | function>
+    local formatters_by_ft = {
+      php = { "easy-coding-standard" },
+    }
     for _, ft in ipairs(js_fts) do
       formatters_by_ft[ft] = js_formatter
     end
