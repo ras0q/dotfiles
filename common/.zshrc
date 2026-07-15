@@ -5,6 +5,12 @@ if [[ "${ZSH_EXEC_FISH:-}" == "1" && -x "$(command -v fish)" && $- == *i* ]]; th
 fi
 
 function _command_exists() { command -v "$1" >/dev/null 2>&1 }
+function _is_wsl2() {
+  [[ -n "${WSL_INTEROP:-}" || "$(uname -r)" == *microsoft* ]]
+}
+function _is_mingw() {
+  [[ "$(uname -s)" == MINGW* ]]
+}
 function _load_plugin() {
   local plugin_path="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/$1/${1%.zsh}.plugin.zsh"
   [[ -f "$plugin_path" ]] && source "$plugin_path"
