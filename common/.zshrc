@@ -1,6 +1,6 @@
 # zmodload zsh/zprof
 
-if [[ -x "$(command -v fish)" && $- == *i* ]]; then
+if [[ "${ZSH_EXEC_FISH:-}" == "1" && -x "$(command -v fish)" && $- == *i* ]]; then
     exec fish
 fi
 
