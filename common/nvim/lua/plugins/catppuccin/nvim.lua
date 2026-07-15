@@ -4,28 +4,10 @@ return {
   name = "catppuccin",
   lazy = false,
   priority = 1000,
-  build = function()
-    require("catppuccin").compile()
-  end,
   opts = {
-    flavour = "auto",
-    term_colors = true,
-    compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
     transparent_background = true,
     float = {
       transparent = true,
-    },
-    custom_highlights = function(colors)
-      return {
-        FloatBorder = { fg = colors.lavender },
-        TreesitterContext = { bg = colors.base },
-        TreesitterContextLineNumber = { bg = colors.base, fg = colors.rosewater },
-      }
-    end,
-    -- FIXME: slow on nvim 0.12 which using `vim.pack`
-    -- auto_integrations = true,
-    integrations = {
-      treesitter_context = false,
     },
   },
   config = function(_, opts)
