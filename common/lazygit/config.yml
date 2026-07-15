@@ -1,7 +1,3 @@
-git:
-  pagers:
-    - pager: delta --light --paging=never
-
 gui:
   expandFocusedSidePanel: true
   expandedSidePanelWeight: 4
