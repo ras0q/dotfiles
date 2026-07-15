@@ -1,4 +1,5 @@
 vim.cmd.packadd("cfilter")
+require("vim._core.ui2").enable()
 
 -- Disable unused default plugins to improve startup time
 vim.g.loaded_gzip = 1
