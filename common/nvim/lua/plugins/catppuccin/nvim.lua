@@ -4,12 +4,7 @@ return {
   name = "catppuccin",
   lazy = false,
   priority = 1000,
-  opts = {
-    transparent_background = true,
-    float = {
-      transparent = true,
-    },
-  },
+  opts = {},
   config = function(_, opts)
     require("catppuccin").setup(opts)
 
