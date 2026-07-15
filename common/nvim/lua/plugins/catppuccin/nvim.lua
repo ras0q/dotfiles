@@ -30,14 +30,22 @@ return {
   },
   config = function(_, opts)
     require("catppuccin").setup(opts)
-    vim.cmd.colorscheme("catppuccin-latte")
-    vim.api.nvim_create_user_command("ColorschemeToggle", function()
-      local current = vim.g.colors_name
-      if current == "catppuccin-latte" then
-        vim.cmd.colorscheme("catppuccin-mocha")
-      else
-        vim.cmd.colorscheme("catppuccin-latte")
-      end
-    end, {})
+
+    local is_applying_theme = false
+    vim.api.nvim_create_autocmd("OptionSet", {
+      pattern = "background",
+      callback = function()
+        if is_applying_theme then return end
+        is_applying_theme = true
+
+        if vim.o.background == "light" then
+          vim.cmd.colorscheme("catppuccin-latte")
+        else
+          vim.cmd.colorscheme("catppuccin-mocha")
+        end
+
+        is_applying_theme = false
+      end,
+    })
   end,
 }
