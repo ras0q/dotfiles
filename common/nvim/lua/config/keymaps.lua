@@ -4,15 +4,6 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "gh", "^", opts)
 vim.keymap.set("n", "gl", "$", opts)
 vim.keymap.set("n", "<Leader>o", ":SearchInBrowser<CR>", opts)
-vim.keymap.set("n", "<Leader>R", function()
-  local confirm = vim.fn.confirm("Do you want to save the session and restart?", "&Yes", 1)
-  if confirm == 1 then
-    vim.cmd("restart +qall")
-  end
-end, opts)
-for s in ("hjklvsco"):gmatch(".") do
-  vim.keymap.set("n", "<Leader>w" .. s, "<C-w>" .. s, opts)
-end
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
 vim.keymap.set("n", "<Leader>p", '"+p', opts)
 vim.keymap.set("n", "<Leader>y", '"+y', opts)
