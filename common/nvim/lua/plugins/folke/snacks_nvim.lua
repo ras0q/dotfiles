@@ -20,15 +20,6 @@ return {
   enabled = vim.g.vscode == nil,
   ---@type snacks.Config
   opts = {
-    dashboard = {
-      enabled = true,
-      sections = {
-        { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-        { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
-        { icon = " ", key = "s", desc = "Restore Session", section = "session", padding = 1 },
-        { section = "startup" },
-      },
-    },
     indent = {
       enabled = true,
       scope = { char = "╎" },
