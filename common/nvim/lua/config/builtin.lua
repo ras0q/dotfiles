@@ -17,6 +17,4 @@ vim.g.loaded_rrhelper = 1
 vim.g.loaded_spellfile_plugin = 1
 vim.g.loaded_matchit = 1    -- matchit is enabled by default in Neovim
 vim.g.loaded_matchparen = 1 -- we use mini.cursorword instead
-vim.g.loaded_netrw = 1      -- prefer file_browser or oil.nvim
-vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_tutor_mode_plugin = 1

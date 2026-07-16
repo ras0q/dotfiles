@@ -28,10 +28,17 @@ vim.opt.listchars = {
   precedes = "«",
   nbsp = "␣",
 }
-vim.g.netrw_liststyle = 3 -- tree style listing
 vim.schedule(function()
   vim.opt.laststatus = 3
 end)
+
+-- netrw
+vim.g.netrw_liststyle = 1
+vim.g.netrw_winsize = 25
+vim.g.netrw_sizestyle = "H"
+vim.g.netrw_timefmt = "%Y-%m-%d %H:%M:%S"
+vim.g.netrw_preview = 1
+vim.g.netrw_altv = 1
 
 -- tabs
 vim.opt.expandtab = true
