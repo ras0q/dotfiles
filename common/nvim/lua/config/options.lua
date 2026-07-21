@@ -16,7 +16,7 @@ vim.opt.breakindent = true
 vim.opt.linebreak = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.showtabline = 0
+vim.opt.showtabline = 1
 vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
 vim.opt.smartindent = true
@@ -40,7 +40,7 @@ vim.g.netrw_timefmt = "%Y-%m-%d %H:%M:%S"
 vim.g.netrw_preview = 1
 vim.g.netrw_altv = 1
 
--- tabs
+-- indent
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
