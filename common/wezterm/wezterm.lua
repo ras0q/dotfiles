@@ -185,63 +185,11 @@ config.keys = {
     mods = "SUPER|SHIFT",
     action = spawn_tab,
   },
-  -- Leader+D to split vertically
-  {
-    key = "d",
-    mods = "LEADER",
-    action = act_cb(function(window, pane)
-      local param = { domain = "CurrentPaneDomain" }
-      local shell = get_windows_shell(pane:get_title())
-      if shell and shell.args then
-        param.args = shell.args
-      end
-      window:perform_action(act.SplitVertical(param), pane)
-    end),
-  },
-  -- Leader+N to create a new window (split horizontal)
-  {
-    key = "n",
-    mods = "LEADER",
-    action = act_cb(function(window, pane)
-      local param = { domain = "CurrentPaneDomain" }
-      local shell = get_windows_shell(pane:get_title())
-      if shell and shell.args then
-        param.args = shell.args
-      end
-      window:perform_action(act.SplitHorizontal(param), pane)
-    end),
-  },
-  -- Leader+R to split horizontally
-  {
-    key = "r",
-    mods = "LEADER",
-    action = act_cb(function(window, pane)
-      local param = { domain = "CurrentPaneDomain" }
-      local shell = get_windows_shell(pane:get_title())
-      if shell and shell.args then
-        param.args = shell.args
-      end
-      window:perform_action(act.SplitHorizontal(param), pane)
-    end),
-  },
-  -- Leader+T to create a new tab
-  {
-    key = "t",
-    mods = "LEADER",
-    action = spawn_tab,
-  },
   -- Leader+L to overlay lazygit on the current tab
   {
     key = "l",
     mods = "LEADER",
     action = spawn_overlay("lazygit"),
-  },
-
-  -- Leader+X to close current pane
-  {
-    key = "x",
-    mods = "LEADER",
-    action = act.CloseCurrentPane({ confirm = false }),
   },
 }
 if is_windows then
@@ -279,15 +227,6 @@ if is_macos then
     action = wezterm.action.SendKey({ key = "\\" }),
   })
 end
-
-local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
-smart_splits.apply_to_config(config, {
-  direction_keys = { "h", "j", "k", "l" },
-  modifiers = {
-    move = "CTRL", -- modifier to use for pane movement, e.g. CTRL+h to move left
-    -- resize = "META", -- modifier to use for pane resize, e.g. META+h to resize to the left
-  },
-})
 
 -- Mouse bindings
 config.mouse_bindings = {
