@@ -55,6 +55,7 @@ return {
   },
   keys = {
     { "<leader>b", function() Snacks.picker.buffers({ hidden = true }) end,                               desc = "Buffers" },
+    { "<leader>e", function() Snacks.explorer() end,                                                      desc = "Toggle explorer" },
     { "<leader>c", function() Snacks.picker.files({ hidden = true, cwd = vim.fn.stdpath("config") }) end, desc = "Config" },
     { "<leader>f", function() Snacks.picker.files({ hidden = true }) end,                                 desc = "Find Files" },
     { "<leader>F", function() Snacks.picker(list_repos) end,                                              desc = "List Repositories" },
