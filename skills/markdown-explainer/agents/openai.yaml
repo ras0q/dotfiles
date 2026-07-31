@@ -1,0 +1,4 @@
+interface:
+  display_name: "Markdown Explainer"
+  short_description: "Create clear Japanese Markdown explanations"
+  default_prompt: "Use $markdown-explainer to turn the provided material into a clear, standalone Japanese Markdown document."
