@@ -18,18 +18,82 @@ Do not optimize for visual novelty, literary style, or long-term maintainability
 
 ## Workflow
 
-1. Determine the reader contract.
-2. Design the path to understanding.
-3. Write the Markdown draft.
-4. Review the draft when independent review is useful.
-5. Revise only material problems.
-6. Return the final Markdown.
+1. Inspect the request and supplied material.
+2. Resolve material uncertainties with the user.
+3. Determine the reader contract.
+4. Design the path to understanding.
+5. Write the Markdown draft.
+6. Review the draft when independent review is useful.
+7. Revise only material problems.
+8. Return the final Markdown.
 
 Do not expose internal planning or review notes unless requested.
 
+## Clarification gate
+
+Before writing, identify missing information that could materially change the document's accuracy, scope, or usefulness.
+
+Check whether the request and supplied material establish:
+
+- Intended reader and relevant prior knowledge
+- Outcome the reader should achieve or decision the document should support
+- Subject, central question, and necessary scope boundaries
+- Source material that claims must be based on
+- Authority among sources when they conflict or serve different purposes
+- Constraints that affect correctness, such as required inclusions, exclusions, terminology, or a point-in-time cutoff
+
+Ask the user for unresolved required information in one compact round. Prefer one to three questions by combining closely related items. State briefly why an answer is needed when the effect is not self-evident.
+
+For each question:
+
+- Present two to four numbered, mutually exclusive choices
+- Make the choices concrete enough to show their effect on the document
+- Include a safe agent-selected default as one choice when the user has no preference
+- Mark one choice as recommended only when the request or supplied material provides a basis
+- Tell the user to reply with the choice number alone
+
+For multiple questions, restart numbering within each question and ask for a comma-separated sequence in question order, such as `1, 2`. This lets the user answer using numbers only.
+
+Cover the plausible choices without inventing a false binary. If required information cannot be represented by finite choices, such as missing source text or an exact proprietary term, present numbered choices for how to resolve the gap and state the required follow-up action in the option itself.
+
+Always ask before drafting when:
+
+- Required source material is missing or inaccessible
+- Multiple plausible readers, outcomes, interpretations, or scope boundaries would produce materially different documents
+- The request requires factual accuracy but does not establish which supplied source or date boundary governs disputed or time-sensitive claims
+- A missing constraint could cause the document to recommend, omit, or assert the wrong thing
+
+Do not ask:
+
+- For information already stated in the conversation or supplied material
+- The user to confirm a reasonable inference when alternatives would not materially change the document
+- About stylistic preferences the rules in this skill already determine
+- Broad discovery questions when a narrower question can resolve the uncertainty
+- Open-ended questions when numbered choices can resolve the uncertainty
+
+Do not begin the draft while a required answer remains unresolved. If only non-material details are unknown, state any consequential assumption concisely and continue.
+
+Example:
+
+```text
+作成前に2点確認したい。
+
+質問1: 主な読者
+1. 実装担当者 — 実装条件と技術的な因果関係を残す
+2. 意思決定者 — 判断材料、影響、制約を中心にする
+3. 指定なし（推奨）— 添付資料から最も妥当な読者を推定する
+
+質問2: 「現行仕様」の基準
+1. 添付資料 — 添付資料の記述を正とする
+2. 最新の公開情報 — 公開情報を調査し、基準日を明記する
+3. 指定なし（推奨）— 添付資料を正とし、時点の限界を明記する
+
+`1, 2` のように、質問順の番号だけで回答してほしい。
+```
+
 ## Reader contract
 
-Before writing, determine internally:
+After resolving material uncertainties, determine:
 
 - Intended reader
 - Expected prior knowledge
@@ -37,7 +101,7 @@ Before writing, determine internally:
 - Central claim
 - Most likely misunderstanding
 
-Infer these from the request and supplied material.
+Infer values only when the request and supplied material support one materially safe interpretation. Otherwise, use the clarification gate.
 
 Do not classify the document into a named profile.
 
