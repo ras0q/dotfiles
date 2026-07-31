@@ -66,6 +66,8 @@ Omit unnecessary sections. Use subject-specific headings.
 
 Output Markdown only unless the user asks for commentary outside the document.
 
+When writing the output to a Markdown file, ensure its filename begins with the current local date in `YYYY-MM-DD_` format, for example `2026-07-31_project-navigation.md`.
+
 Use:
 
 - One H1
@@ -99,6 +101,10 @@ The surrounding prose must remain understandable without rendering the diagram.
 ## Explanation rules
 
 Write natural and direct Japanese unless another language is requested.
+
+Use plain form (常体), such as 「だ」「である」, rather than polite form (敬体), such as 「です」「ます」.
+
+Do not end Markdown list items with Japanese or English full stops (`。` or `.`).
 
 Begin each major section with, or quickly establish, the proposition the reader should retain. Follow it with reasons, conditions, evidence, or examples.
 
@@ -185,13 +191,13 @@ Do not summarize the progression of the document.
 
 Bad:
 
-- MarkdownとHTMLについて説明した。
-- 再現性について確認した。
+- MarkdownとHTMLについて説明した
+- 再現性について確認した
 
 Better:
 
-- Markdownは表示をViewerに委譲することで、生成側が決定する変数を減らせる。
-- 構造の一貫性は、表現の類似性よりも命題の順序と配置に依存する。
+- Markdownは表示をViewerに委譲することで、生成側が決定する変数を減らせる
+- 構造の一貫性は、表現の類似性よりも命題の順序と配置に依存する
 
 For a short document, omit the final retained-points section when it would merely repeat the body.
 
@@ -327,6 +333,9 @@ Before returning the document, verify:
 - Exactly one H1
 - No heading deeper than H3
 - No raw HTML
+- Japanese prose uses plain form rather than polite form
+- No Markdown list item ends with `。` or `.`
+- A Markdown output filename begins with the current local date in `YYYY-MM-DD_` format
 - No unresolved question, objection, or promise
 - No narration about document progression
 - No materially ambiguous referent
