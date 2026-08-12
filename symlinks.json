@@ -5,6 +5,8 @@
     "~/.bashrc": "./common/.bashrc",
     "~/.gitconfig": "./common/.gitconfig",
     "~/.codex/AGENTS.md": "./common/AGENTS.md",
+    "~/.codex/skills/manage-context-files": "./skills/manage-context-files",
+    "~/.codex/skills/markdown-explainer": "./skills/markdown-explainer",
     "~/.config/fish": "./common/fish",
     "~/.config/git": "./common/git",
     "~/.config/lazygit": "./common/lazygit",

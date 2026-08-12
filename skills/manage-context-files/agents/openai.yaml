@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Context Files"
+  short_description: "Maintain concise repository context across coding sessions"
+  default_prompt: "Use $manage-context-files to create or refresh the repository context files for this task."
