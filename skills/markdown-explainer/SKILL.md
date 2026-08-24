@@ -18,6 +18,7 @@ Optimize for the reader's requested outcome and the current supplied evidence. D
 5. Write the Markdown
 6. Review independently only when it materially reduces risk
 7. Correct material problems and return the document
+8. After writing a file, ask whether to open it with the default application
 
 Do not expose planning or review notes unless requested.
 
@@ -95,6 +96,8 @@ Do not assume that an onboarding document must become a permanent reference. Exp
 Output Markdown only unless the user requests separate commentary.
 
 When writing a file, prefix its name with the current local date in `YYYY-MM-DD_` format.
+
+After writing the file, ask the user whether to open it with the default application. If they agree, open it with the OS default handler. Do not open it without confirmation.
 
 Apply these constraints:
 
