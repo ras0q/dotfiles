@@ -9,8 +9,8 @@ end
 --- @type vim.lsp.Config
 return {
   settings = {
-    baseUrl = require_env("GITLAB_URL"),
-    token = require_env("GITLAB_TOKEN"),
+    baseUrl = require_env("NVIM_GITLAB_URL"),
+    token = require_env("NVIM_GITLAB_TOKEN"),
     telemetry = {
       enabled = false,
     },
