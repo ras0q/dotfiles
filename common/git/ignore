@@ -13,3 +13,5 @@ mise.local.toml
 tmp/
 worktree/
 buildServer.json
+lefthook-local.yml
+nvim.log
