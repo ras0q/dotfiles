@@ -38,6 +38,7 @@ append_path "$HOME/.deno/bin"
 append_path "$HOME/go/bin"
 append_path "/usr/local/cuda/bin"
 append_path "/opt/homebrew/bin"
+append_path "/opt/homebrew/sbin"
 append_path "/opt/homebrew/opt/openjdk/bin"
 
 if [ -n "$WINDOWS_HOME" ]; then
