@@ -62,11 +62,30 @@ Do not ask about established facts, harmless inferences, or stylistic choices fi
 
 Use only the points necessary for the observable reader outcome, normally three to seven. Order them so the orientation, central model, dependencies, concrete application, and limitations become clear when relevant. Do not turn this sequence into a fixed heading template.
 
-Use subject-specific headings and omit sections that do not advance the reader outcome.
+Headings are outline labels, not restated body sentences. Omit sections that do not advance the reader outcome.
 
-Begin each major section with its retained proposition, then support it with reasons, conditions, evidence, or examples. Make causal and logical relationships explicit.
+Choose heading form by section type, and keep the same form for all headings at one level:
 
-Prefer one reusable method or worked path over an inventory of shallow facts. Add a concrete example when an important abstraction, distinction, or causal claim would otherwise be hard to verify.
+- Document title (first heading) and explanation sections: a noun phrase that names the topic and the point, in 体言止め. Do not start with 「〜について」or end with a generic word such as 「概要」or 「はじめに」alone
+- Procedure sections: start with a verb
+- Questions: only for FAQ, or when a noun phrase would hide the reader's actual query
+
+Do not write a complete 「である」sentence as a heading. Put that proposition in the first sentence after the heading.
+
+Begin each major section with the retained proposition as the first sentence. Then support it with reasons, conditions, evidence, or examples. Make causal and logical relationships explicit.
+
+Keep one idea per paragraph. Move a second idea to the next paragraph or to a list. Use a list when three or more items are parallel.
+
+Prefer one reusable method or worked path over an inventory of shallow facts. When an important abstraction, distinction, or causal claim would otherwise be hard to verify, add one concrete example that names:
+
+- Initial situation
+- Operation or change
+- Observable result
+- Relationship to the preceding claim
+
+Prefer one worked example over several shallow examples. Do not add an example when the claim is already concrete and immediately observable.
+
+When several similarly dense paragraphs would sustain reading load, insert one structural break: a short proposition, a concrete example, a compact list, a comparison table, or a Mermaid diagram. Use variation only when it reduces reading effort.
 
 Remove a detail when omitting it would not prevent the reader from:
 
@@ -75,7 +94,17 @@ Remove a detail when omitting it would not prevent the reader from:
 - Applying the demonstrated method
 - Avoiding a likely consequential mistake
 
-End with three to five retained propositions only when they improve recall, judgment, or later action. Do not summarize the document's progression.
+End with three to five retained propositions only when they improve recall, judgment, or later action. Write them as decision rules or capabilities, not as a summary of the document's progression. If the outcome is an operation, state what the reader can do. Omit the closing list when it would only repeat the body.
+
+### Schema and migration sources
+
+When the source is DDL, Flyway, or comment-heavy schema notes:
+
+- Treat co-released migrations as one change, not one file per section
+- Lead with the delta and the invariant the reader must keep (amount, state, ownership)
+- Reprint a post-change `CREATE TABLE`, EXPLAIN plan, or expected QPS only when the reader outcome is capacity or index judgment
+- Treat FYI links as provenance, not as the central model
+- For history tables and triggers, state why they must follow the parent columns. Do not re-list every column
 
 ## Explain a current project or repository
 
@@ -93,27 +122,66 @@ Do not assume that an onboarding document must become a permanent reference. Exp
 
 ## Write the Markdown
 
-Output Markdown only unless the user requests separate commentary.
+Write the explanation to `./tmp/notes/YYYY-MM-DD_{title}.md`. Run `mkdir -p ./tmp/notes/` first. Do not substitute long Markdown in chat when this skill applies.
 
-When writing a file, prefix its name with the current local date in `YYYY-MM-DD_` format.
+Output path rules:
+
+- Prefix with the current local date in `YYYY-MM-DD_` format
+- Use a short kebab-case `{title}` describing the subject
+- Example: `./tmp/notes/2026-09-04_tea-steeping-temperature.md`
+
+Output Markdown only unless the user requests separate commentary.
 
 After writing the file, ask the user whether to open it with the default application. If they agree, open it with the OS default handler. Do not open it without confirmation.
 
 Apply these constraints:
 
-- Use exactly one H1 and no heading deeper than H3
+- Do not use H1. Start with an H2 title, then H2 sections and H3 subsections. Do not skip levels or go deeper than H3
+- Follow a heading with body text. Do not stack headings
+- Do not put a link in a heading
+- Do not end a heading with `。` or `.`. Use `?` only on a question heading
 - Use direct Japanese in plain form unless another language or style is requested
+- End sentences with 「である」or a verb. Do not use sentence-final 「だ。」
 - Do not end Markdown list items with `。` or `.`
 - Do not use raw HTML, custom CSS, JavaScript, decorative elements, or lists nested beyond two levels
 - Use tables only for comparison across stable axes
 - Use Mermaid only when it materially clarifies sequence, hierarchy, dependency, state, or data flow
+- Place a one-sentence reading of a diagram or table immediately before or after it
 - Keep surrounding prose understandable without rendered diagrams
+- Use bold sparingly. Scanning only the bold text must not distort the argument
+- End the document with the credit line below, as the last non-empty line, after a blank line
 
-Avoid ambiguous referents, omitted subjects that obscure meaning, long noun chains, and sentences that combine independent logical relationships. Introduce terminology when needed and include an English term at first use when its scope differs from the Japanese translation.
+Credit line, verbatim:
+
+```
+written by [markdown-explainer](https://github.com/ras0q/dotfiles/tree/main/skills/markdown-explainer)
+```
+
+Avoid ambiguous referents, omitted subjects that obscure meaning, long noun chains, and sentences that combine independent logical relationships. Keep the subject near the verb. Do not stack 「の」three or more times. Split a long 連体修飾 clause or turn it into a list. Prefer a verb over a nominalization. Use a demonstrative only when the antecedent is unique. Keep list items short and parallel; do not use a list as a container for long sentences.
+
+Introduce terminology when needed and include an English term at first use when its scope differs from the Japanese translation. Do not begin with a large glossary unless terminology is itself the subject.
 
 State effects, affected parties, and conditions instead of unsupported evaluations such as 「重要」「本質的」「非常に」.
 
-Remove narration about document progression, such as 「本節では」 or 「次に見ていく」. State propositions about the subject instead.
+Remove narration about document progression, such as 「本節では」 or 「次に見ていく」. State propositions about the subject instead. Do not announce 「まず結論から述べると」. Putting the answer in the first sentence is enough.
+
+Write like this, not like a packed clause:
+
+```markdown
+## 単語だけ
+紅茶
+
+## 完結文は本文へ
+紅茶の味は湯の温度で決まる。
+
+## 説明見出し
+紅茶の湯温と味の関係
+
+紅茶の味は湯の温度で決まる。
+
+## 手順見出し
+茶葉を計って湯を注ぐ
+```
 
 ## Review selectively
 
@@ -129,7 +197,7 @@ Use one subagent only when the draft has complex dependencies or supports a high
 
 Give the reviewer the complete draft, evidence boundary, reader contract, central model, and likely misunderstanding. Ask for at most five concrete findings, not replacement prose.
 
-Do not ask the reviewer to inspect H1 count, heading depth, raw HTML, list-item punctuation, or output filename. The bundled validator owns those mechanical checks.
+Do not ask the reviewer to inspect H1 absence, H2 start, heading depth, heading punctuation, heading links, stacked headings, raw HTML, list-item punctuation, sentence-final 「だ。」, the credit line, or output filename. The bundled validator owns those mechanical checks.
 
 Treat an issue as material only when it could cause the reader to:
 
@@ -138,6 +206,7 @@ Treat an issue as material only when it could cause the reader to:
 - Fail to reach the observable outcome
 - Apply the demonstrated method incorrectly
 - Spend substantial effort resolving avoidable ambiguity
+- Reread a sentence or hunt for an answer that should have been in the first sentence after a heading
 
 Do not treat stylistic preferences, optional enhancements, or missing reference detail as material.
 
@@ -152,9 +221,12 @@ Before returning the document, verify the mechanical constraints and confirm tha
 - The evidence boundary is accurate and no unsupported current-state claim remains
 - No necessary logical dependency is missing
 - Every section advances the reader outcome
+- Headings form a noun-phrase or verb-phrase outline, and first sentences carry the propositions
 - Representative examples teach a reusable relationship or method
+- Schema explanations lead with the delta and invariant, not a reprinted post-image
 - Reference detail has not displaced the primary path to understanding
 - No material ambiguity or unresolved promise remains
 - Any final retained points are propositions rather than chapter summaries
+- The last non-empty line is the credit
 
-Return the final Markdown document.
+Return the output path and a brief summary. The document lives at the output path.

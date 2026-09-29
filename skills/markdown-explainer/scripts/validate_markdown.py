@@ -11,10 +11,18 @@ from pathlib import Path
 from typing import Iterable
 
 
-ATX_HEADING_PATTERN = re.compile(r"^\s*(#{1,6})\s+\S")
+ATX_HEADING_PATTERN = re.compile(r"^\s*(#{1,6})\s+(.*\S)\s*$")
 FENCE_PATTERN = re.compile(r"^\s*(`{3,}|~{3,})")
 LIST_ITEM_PATTERN = re.compile(r"^\s*(?:[-+*]|\d+[.)])\s+(.+?)\s*$")
 OUTPUT_FILENAME_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}_.+\.md$")
+SETEXT_H1_PATTERN = re.compile(r"^\s*=+\s*$")
+THEMATIC_BREAK_PATTERN = re.compile(r"^\s*(-{3,}|\*{3,}|_{3,})\s*$")
+HEADING_LINK_PATTERN = re.compile(r"\[[^\]]*\]\([^)]*\)")
+DA_PERIOD_PATTERN = re.compile(r"だ。")
+CREDIT_LINE = (
+    "written by [markdown-explainer]"
+    "(https://github.com/ras0q/dotfiles/tree/main/skills/markdown-explainer)"
+)
 HTML_TAG_PATTERN = re.compile(
     r"</?(?:a|article|aside|blockquote|br|code|details|div|em|footer|h[1-6]|"
     r"header|hr|img|li|main|ol|p|pre|section|span|strong|summary|table|tbody|"
@@ -97,13 +105,17 @@ def validate_markdown(
         supported mechanical constraints passed.
 
     Checks:
-        Exactly one H1, no ATX heading deeper than H3, no common raw HTML tags,
-        no list item ending in a Japanese or English full stop, and optionally
-        a `YYYY-MM-DD_*.md` filename.
+        No H1, first heading is H2, no ATX heading deeper than H3, no skipped
+        heading level, no stacked headings, no heading full stop or link, no
+        common raw HTML tags, no list item ending in a Japanese or English full
+        stop, no sentence-final 「だ。」, a trailing markdown-explainer credit
+        line, and optionally a `YYYY-MM-DD_*.md` filename.
     """
     findings: list[Finding] = []
-    h1_lines: list[int] = []
+    heading_levels: list[tuple[int, int]] = []
     previous_content: tuple[int, str] | None = None
+    last_content: tuple[int, str] | None = None
+    pending_heading: int | None = None
 
     if check_filename and not OUTPUT_FILENAME_PATTERN.fullmatch(Path(source).name):
         findings.append(
@@ -118,19 +130,46 @@ def validate_markdown(
         heading_match = ATX_HEADING_PATTERN.match(line)
         if heading_match:
             depth = len(heading_match.group(1))
+            heading_text = heading_match.group(2).rstrip()
+            if pending_heading is not None:
+                findings.append(
+                    Finding(
+                        source,
+                        line_number,
+                        "heading must be followed by body text",
+                    )
+                )
             if depth == 1:
-                h1_lines.append(line_number)
+                findings.append(Finding(source, line_number, "H1 is not allowed"))
             if depth > 3:
                 findings.append(
                     Finding(source, line_number, "heading depth must not exceed H3")
                 )
+            if heading_levels and depth > heading_levels[-1][1] + 1:
+                findings.append(
+                    Finding(source, line_number, "heading levels must not skip")
+                )
+            if heading_text.endswith(("。", ".")):
+                findings.append(
+                    Finding(
+                        source,
+                        line_number,
+                        "headings must not end with a full stop",
+                    )
+                )
+            if HEADING_LINK_PATTERN.search(heading_text):
+                findings.append(
+                    Finding(source, line_number, "headings must not contain links")
+                )
+            heading_levels.append((line_number, depth))
+            pending_heading = line_number
 
         if (
             previous_content is not None
-            and re.fullmatch(r"\s*=+\s*", line)
+            and SETEXT_H1_PATTERN.fullmatch(line)
             and previous_content[1].strip()
         ):
-            h1_lines.append(previous_content[0])
+            findings.append(Finding(source, previous_content[0], "H1 is not allowed"))
 
         if HTML_TAG_PATTERN.search(line):
             findings.append(Finding(source, line_number, "raw HTML is not allowed"))
@@ -145,17 +184,40 @@ def validate_markdown(
                 )
             )
 
-        if line.strip():
-            previous_content = (line_number, line)
+        if DA_PERIOD_PATTERN.search(line):
+            findings.append(
+                Finding(source, line_number, "sentence-final だ。 is not allowed")
+            )
 
-    if len(h1_lines) != 1:
-        locations = ", ".join(str(line) for line in h1_lines) or "none"
+        stripped = line.strip()
+        if stripped and not heading_match and not THEMATIC_BREAK_PATTERN.fullmatch(line):
+            pending_heading = None
+        if stripped:
+            previous_content = (line_number, line)
+            last_content = (line_number, line)
+
+    if pending_heading is not None:
         findings.append(
             Finding(
                 source,
-                0,
-                f"document must contain exactly one H1; found at: {locations}",
+                pending_heading,
+                "heading must be followed by body text",
             )
+        )
+
+    if last_content is None or last_content[1].strip() != CREDIT_LINE:
+        findings.append(
+            Finding(
+                source,
+                last_content[0] if last_content else 0,
+                f"document must end with the credit line: {CREDIT_LINE}",
+            )
+        )
+
+    if not heading_levels or heading_levels[0][1] != 2:
+        location = heading_levels[0][0] if heading_levels else 0
+        findings.append(
+            Finding(source, location, "document must start with an H2")
         )
 
     return findings
