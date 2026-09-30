@@ -159,6 +159,8 @@ written by [markdown-explainer](https://github.com/ras0q/dotfiles/tree/main/skil
 
 Avoid ambiguous referents, omitted subjects that obscure meaning, long noun chains, and sentences that combine independent logical relationships. Keep the subject near the verb. Do not stack 「の」three or more times. Split a long 連体修飾 clause or turn it into a list. Prefer a verb over a nominalization. Use a demonstrative only when the antecedent is unique. Keep list items short and parallel; do not use a list as a container for long sentences.
 
+When prose names a table, column, property, variable, type, path, or similar token with inline code, follow the code span with a kind noun that matches the source. Write `` `users` テーブル ``, `` `users.id` カラム ``, or `` `users.id` プロパティ ``. A bare `` `users` `` leaves the kind unknown. Choose the qualifier from evidence; do not invent a kind. Omit the qualifier only when the immediately surrounding words already name the kind.
+
 Introduce terminology when needed and include an English term at first use when its scope differs from the Japanese translation. Do not begin with a large glossary unless terminology is itself the subject.
 
 State effects, affected parties, and conditions instead of unsupported evaluations such as 「重要」「本質的」「非常に」.
@@ -223,6 +225,7 @@ Before returning the document, verify the mechanical constraints and confirm tha
 - Every section advances the reader outcome
 - Headings form a noun-phrase or verb-phrase outline, and first sentences carry the propositions
 - Representative examples teach a reusable relationship or method
+- Inline identifiers carry a kind noun when the kind would otherwise be ambiguous
 - Schema explanations lead with the delta and invariant, not a reprinted post-image
 - Reference detail has not displaced the primary path to understanding
 - No material ambiguity or unresolved promise remains
