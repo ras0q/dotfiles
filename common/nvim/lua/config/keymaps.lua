@@ -5,6 +5,7 @@ vim.keymap.set("n", "gh", "^", opts)
 vim.keymap.set("n", "gl", "$", opts)
 vim.keymap.set("n", "<Leader>o", ':!open "%:p"<CR>', opts)
 vim.keymap.set("n", "<Plug>(esc)<ESC>", "i<ESC>", opts) -- back to terminal mode
+vim.keymap.set("n", "<Leader>yp", function() vim.fn.setreg("+", vim.fn.expand("%:p")) end, { desc = "Copy file path" })
 vim.keymap.set("n", "<Leader>p", '"+p', opts)
 vim.keymap.set("n", "<Leader>y", '"+y', opts)
 vim.keymap.set("n", "<C-d>", "10<C-d>zz", { desc = "Scroll down and center" })
