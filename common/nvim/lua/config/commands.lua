@@ -25,3 +25,20 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd("TermRequest", {
+  callback = function(ev)
+    vim.cmd("redrawtabline")
+
+    local data = ev.data or {}
+    local sequence = data.sequence
+    local terminator = data.terminator
+    if type(sequence) ~= "string" or type(terminator) ~= "string" then
+      return
+    end
+    -- :terminal consumes OSC, so WezTerm never sees desktop notifications.
+    if sequence:match("^\027%]9;") or sequence:match("^\027%]777;notify") then
+      vim.api.nvim_ui_send(sequence .. terminator)
+    end
+  end,
+})
