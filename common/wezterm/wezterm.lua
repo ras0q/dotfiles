@@ -250,6 +250,9 @@ config.mouse_bindings = {
   },
 }
 
+-- Notifications
+config.notification_handling = "AlwaysShow"
+
 -- SSH Agent
 if is_windows then
   config.mux_enable_ssh_agent = false
