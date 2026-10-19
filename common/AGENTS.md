@@ -7,3 +7,5 @@
 - Code comments must explain non-obvious why, not restate what.
 - Document comments for symbols should clarify intent and constraints.
 - Challenge plans branch by branch until aligned; ask one recommended question at a time, and inspect the codebase first.
+
+@/Users/ras/.codex/RTK.md
