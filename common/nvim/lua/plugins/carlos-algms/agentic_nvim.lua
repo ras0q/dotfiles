@@ -3,7 +3,7 @@ return {
   "carlos-algms/agentic.nvim",
   opts = function()
     return {
-      provider = vim.fn.executable("codex-acp") == 1 and "codex-acp" or "copilot-acp",
+      provider = vim.fn.executable("cursor-agent") == 1 and "cursor-acp" or "codex-acp",
     }
   end,
   config = function(_, opts)
