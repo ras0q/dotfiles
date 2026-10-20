@@ -3,8 +3,6 @@
 local function enable_server(server, cmd)
   if vim.fn.executable(cmd or server) == 1 then
     vim.lsp.enable(server)
-  else
-    vim.notify(string.format("LSP server '%s' not enabled: executable not found", server), vim.log.levels.WARN)
   end
 end
 
