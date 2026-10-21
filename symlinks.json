@@ -8,6 +8,7 @@
     "~/.codex/skills/fix-root-causes": "./skills/fix-root-causes",
     "~/.codex/skills/manage-context-files": "./skills/manage-context-files",
     "~/.codex/skills/markdown-explainer": "./skills/markdown-explainer",
+    "~/.codex/skills/write-for-readability": "./skills/write-for-readability",
     "~/.config/fish": "./common/fish",
     "~/.config/git": "./common/git",
     "~/.config/lazygit": "./common/lazygit",
