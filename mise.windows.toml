@@ -1,0 +1,7 @@
+[dotfiles]
+"~/.config/wezterm" = "common/wezterm"
+"~/.inputrc" = "win/.inputrc"
+"~/.wslconfig" = "win/.wslconfig"
+"~/AppData/Local/nvim" = "common/nvim"
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = "win/Microsoft.PowerShell_profile.ps1"
+"~/Documents/PowerShell/Microsoft.VSCode_profile.ps1" = "win/Microsoft.PowerShell_profile.ps1"

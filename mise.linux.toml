@@ -1,0 +1,25 @@
+[bootstrap.apt.sources]
+git-core = { ppa = "git-core/ppa" }
+
+[bootstrap.apt.sources.docker]
+uris = "https://download.docker.com/linux/ubuntu"
+components = "stable"
+key = "https://download.docker.com/linux/ubuntu/gpg"
+fingerprint = "9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88"
+
+[bootstrap.packages]
+"apt:bc" = "latest"
+"apt:curl" = "latest"
+"apt:ca-certificates" = "latest"
+"apt:make" = "latest"
+"apt:gcc" = "latest"
+"apt:socat" = "latest"
+"apt:wget" = "latest"
+"apt:xdg-utils" = "latest"
+"apt:zsh" = "latest"
+"apt:git" = "latest"
+"apt:docker-ce" = "latest"
+"apt:docker-ce-cli" = "latest"
+"apt:containerd.io" = "latest"
+"apt:docker-buildx-plugin" = "latest"
+"apt:docker-compose-plugin" = "latest"

@@ -1,0 +1,26 @@
+[bootstrap.files."/etc/wsl.conf"]
+source = "win/wsl.conf"
+os = "linux"
+owner = "root"
+group = "root"
+mode = "0644"
+
+[dotfiles]
+"~/.local/bin/clip.exe" = { source = "/mnt/c/Windows/system32/clip.exe", variants = [
+  { os = "linux", profile = "wsl" },
+] }
+"~/.local/bin/explorer.exe" = { source = "/mnt/c/Windows/explorer.exe", variants = [
+  { os = "linux", profile = "wsl" },
+] }
+"~/.local/bin/msedge.exe" = { source = "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", variants = [
+  { os = "linux", profile = "wsl" },
+] }
+"~/.local/bin/pwsh.exe" = { source = "/mnt/c/Program Files/PowerShell/7/pwsh.exe", variants = [
+  { os = "linux", profile = "wsl" },
+] }
+"~/.local/bin/wezterm.exe" = { source = "/mnt/c/Program Files/WezTerm/wezterm.exe", variants = [
+  { os = "linux", profile = "wsl" },
+] }
+"~/.local/bin/op-ssh-sign" = { source = "{{ get_env(name='WINDOWS_HOME') }}/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe", variants = [
+  { os = "linux", profile = "wsl" },
+] }

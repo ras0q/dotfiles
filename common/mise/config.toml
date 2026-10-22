@@ -4,6 +4,30 @@ _.file = "{{ cwd }}/.env"
 [[env]]
 _.file = "{{ cwd }}/.envrc"
 
+# FIXME: https://github.com/evilmartians/lefthook/issues/1489
+[[hooks.cd]]
+shell = "zsh"
+script = '''
+repo_root="$(git rev-parse --show-toplevel 2>/dev/null)"
+echo $repo_root
+if [[ -n "$repo_root" && ! -f "$repo_root/lefthook.yml" && -f "$repo_root/lefthook-local.yml" ]]; then
+  export LEFTHOOK_CONFIG="$repo_root/lefthook-local.yml"
+else
+  unset LEFTHOOK_CONFIG
+fi
+'''
+
+[[hooks.cd]]
+shell = "fish"
+script = '''
+set --local repo_root (git rev-parse --show-toplevel 2>/dev/null)
+if test -n "$repo_root"; and not test -f "$repo_root/lefthook.yml"; and test -f "$repo_root/lefthook-local.yml"
+  set --global --export LEFTHOOK_CONFIG "$repo_root/lefthook-local.yml"
+else
+  set --erase LEFTHOOK_CONFIG
+end
+'''
+
 [tools]
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:LuaLS/lua-language-server" = "latest"
@@ -14,9 +38,6 @@ _.file = "{{ cwd }}/.envrc"
 "aqua:cli/cli" = "latest"
 "aqua:dandavison/delta" = "latest"
 "aqua:evilmartians/lefthook" = "latest"
-"aqua:fastfetch-cli/fastfetch" = "latest"
-"aqua:golangci/golangci-lint" = "latest"
-"aqua:hadolint/hadolint" = "latest"
 "aqua:jesseduffield/lazygit" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:junegunn/fzf" = "latest"
@@ -29,16 +50,14 @@ _.file = "{{ cwd }}/.envrc"
 "aqua:tree-sitter/tree-sitter" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 bun = "1.3.3"
-"cargo:eza" = "latest"
 deno = "latest"
-gcloud = "latest"
+"github:eza-community/eza" = "latest"
 "github:k1LoW/git-wt" = "latest"
 "github:neovim/neovim" = "nightly"
 go = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 node = "lts"
 "npm:corepack" = "latest"
-"npm:mcp-hub" = "latest"
 python = "latest"
 rust = "latest"
 zig = "0.15.2"
@@ -47,3 +66,6 @@ zig = "0.15.2"
 exec_auto_install = false
 experimental = true
 idiomatic_version_file_enable_tools = ["node"]
+
+[settings.self_update]
+auto = true

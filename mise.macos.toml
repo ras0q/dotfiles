@@ -1,0 +1,21 @@
+[bootstrap.packages]
+"brew:awk" = { version = "latest", os = "macos" }
+"brew:cmake" = { version = "latest", os = "macos" }
+"brew:ffmpeg" = { version = "latest", os = "macos" }
+"brew:fish" = { version = "latest", os = "macos" }
+"brew:htop" = { version = "latest", os = "macos" }
+"brew:wget" = { version = "latest", os = "macos" }
+"brew-cask:1password" = { version = "latest", os = "macos" }
+"brew-cask:nikitabobko/tap/aerospace" = { version = "latest", os = "macos" }
+"brew-cask:discord" = { version = "latest", os = "macos" }
+"brew-cask:keycastr" = { version = "latest", os = "macos" }
+"brew-cask:meetingbar" = { version = "latest", os = "macos" }
+"brew-cask:obsidian" = { version = "latest", os = "macos" }
+"brew-cask:slack" = { version = "latest", os = "macos" }
+"brew-cask:wezterm@nightly" = { version = "latest", os = "macos" }
+"brew-cask:xcodes-app" = { version = "latest", os = "macos" }
+
+[dotfiles]
+"~/.config/aerospace" = "common/aerospace"
+"~/.config/wezterm" = "common/wezterm"
+"~/.local/bin/op-ssh-sign" = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

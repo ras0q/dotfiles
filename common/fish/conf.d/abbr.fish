@@ -30,7 +30,6 @@ abbr --add 'll' 'eza -l'
 abbr --add 'ls' 'eza'
 
 # others
-abbr --add 'bd' 'brew bundle dump --global --tap --formula -f'
 abbr --add 'c' 'code .'
 abbr --add 'cdf' 'fd -td | fzf || echo $PWD | fish_cdp'
 abbr --add 'cr' 'echo ~/ghq/$(ghq list | fzf) | fish_cdp'

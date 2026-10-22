@@ -1,0 +1,16 @@
+min_version = "2026.10.15"
+
+[dotfiles]
+"~/.AGENTS.md" = "common/AGENTS.md"
+"~/.bash_profile" = "common/.bash_profile"
+"~/.bashrc" = "common/.bashrc"
+"~/.gitconfig" = "common/.gitconfig"
+"~/.codex/AGENTS.md" = "common/AGENTS.md"
+"~/.config/fish" = "common/fish"
+"~/.config/git" = "common/git"
+"~/.config/lazygit" = "common/lazygit"
+"~/.config/mise" = "common/mise"
+"~/.config/nvim" = "common/nvim"
+"~/.config/starship.toml" = "common/starship.toml"
+"~/.zshenv" = "common/.zshenv"
+"~/.zshrc" = "common/.zshrc"
