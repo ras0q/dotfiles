@@ -2,11 +2,15 @@
 
 ## Setup
 
+Prerequirements:
+
+- mise
+- winget (on Windows)
+- xcode-select --install (on macOS)
+
+On WSL, add `-E wsl` to the following command.
+
 ```bash
-# Prerequirements:
-# - mise
-# - winget (on Windows)
-# - xcode-select --install (on macOS)
 mise bootstrap \
   --from https://github.com/ras0q/dotfiles.git \
   --from-dir ~/ghq/github.com/ras0q/dotfiles \
