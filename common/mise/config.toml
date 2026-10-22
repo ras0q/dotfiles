@@ -6,18 +6,6 @@ _.file = "{{ cwd }}/.envrc"
 
 # FIXME: https://github.com/evilmartians/lefthook/issues/1489
 [[hooks.cd]]
-shell = "zsh"
-script = '''
-repo_root="$(git rev-parse --show-toplevel 2>/dev/null)"
-echo $repo_root
-if [[ -n "$repo_root" && ! -f "$repo_root/lefthook.yml" && -f "$repo_root/lefthook-local.yml" ]]; then
-  export LEFTHOOK_CONFIG="$repo_root/lefthook-local.yml"
-else
-  unset LEFTHOOK_CONFIG
-fi
-'''
-
-[[hooks.cd]]
 shell = "fish"
 script = '''
 set --local repo_root (git rev-parse --show-toplevel 2>/dev/null)
