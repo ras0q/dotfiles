@@ -15,6 +15,51 @@
 "brew-cask:wezterm@nightly" = { version = "latest", os = "macos" }
 "brew-cask:xcodes-app" = { version = "latest", os = "macos" }
 
+[bootstrap.macos.dock]
+autohide = true
+show_recents = false
+mru_spaces = false
+
+[bootstrap.macos.keyboard]
+automatic_capitalization = false
+automatic_spelling_correction = false
+fn_state = true
+
+[bootstrap.macos.login_items]
+apps = [
+  "/Applications/1Password.app",
+  "/Applications/MeetingBar.app",
+  "/Applications/KeyCastr.app",
+]
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+NSAutomaticInlinePredictionEnabled = false
+NSAutomaticPeriodSubstitutionEnabled = false
+"com.apple.swipescrolldirection" = false
+
+[bootstrap.macos.defaults."com.apple.dock"]
+"expose-group-apps" = true
+"wvous-bl-corner" = 14  # Quick Note
+"wvous-bl-modifier" = 0
+"wvous-br-corner" = 2  # Mission Control
+"wvous-br-modifier" = 0
+
+[bootstrap.macos.defaults."com.apple.WindowManager"]
+EnableStandardClickToShowDesktop = false
+StandardHideDesktopIcons = true
+
+[bootstrap.macos.defaults."com.apple.menuextra.clock"]
+ShowSeconds = true
+
+[[bootstrap.macos.defaults_entries]]
+domain = "NSGlobalDomain"
+key = "com.apple.keyboard.modifiermapping.0-0-0"
+host = "current"
+value = [
+  # Caps Lock → right Control
+  { HIDKeyboardModifierMappingSrc = 30064771129, HIDKeyboardModifierMappingDst = 30064771300 },
+]
+
 [dotfiles]
 "~/.config/aerospace" = "common/aerospace"
 "~/.config/wezterm" = "common/wezterm"
