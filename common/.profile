@@ -1,21 +1,23 @@
-[ -f "$HOME/.env" ] && source "$HOME/.env"
+[ -f "$HOME/.env" ] && . "$HOME/.env"
 
-[ -n "$COURSIER_BIN_DIR" ] || export COURSIER_BIN_DIR="$HOME/.local/share/coursier/bin"
-[ -n "$DOTFILES" ] || export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
-[ -n "$EDITOR" ] || export EDITOR="nvim"
-[ -n "$GOPATH" ] || export GOPATH="$HOME/go"
-[ -n "$GOBIN" ] || export GOBIN="$HOME/go/bin"
-[ -n "$LANG" ] || export LANG="POSIX"
-[ -n "$MISE_ENV" ] || export MISE_ENV="$(uname -s | tr '[:upper:]' '[:lower:]')"
-[ -n "$OBSIDIAN_VAULT_PATH" ] || export OBSIDIAN_VAULT_PATH="$HOME/ghq/github.com/ras0q/obsidian_private"
-[ -n "$XGD_CONFIG_HOME" ] || export XGD_CONFIG_HOME="$HOME/.config"
+[ -n "${COURSIER_BIN_DIR:-}" ] || export COURSIER_BIN_DIR="$HOME/.local/share/coursier/bin"
+[ -n "${DOTFILES:-}" ] || export DOTFILES="$HOME/ghq/github.com/ras0q/dotfiles"
+[ -n "${EDITOR:-}" ] || export EDITOR="nvim"
+[ -n "${GOPATH:-}" ] || export GOPATH="$HOME/go"
+[ -n "${GOBIN:-}" ] || export GOBIN="$HOME/go/bin"
+[ -n "${LANG:-}" ] || export LANG="POSIX"
+[ -n "${OBSIDIAN_VAULT_PATH:-}" ] || export OBSIDIAN_VAULT_PATH="$HOME/ghq/github.com/ras0q/obsidian_private"
+[ -n "${XDG_CONFIG_HOME:-}" ] || export XDG_CONFIG_HOME="$HOME/.config"
 
 case "$(uname -s)" in
   Darwin)
-    export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    # Keep the forwarded agent when connecting to this Mac over SSH.
+    if [ -z "${SSH_CONNECTION:-}" ]; then
+      export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    fi
     ;;
   *MINGW*)
-    [ -n "$MSYS" ] || export MSYS="winsymlinks:nativestrict"
+    [ -n "${MSYS:-}" ] || export MSYS="winsymlinks:nativestrict"
     ;;
 esac
 
@@ -26,6 +28,7 @@ append_path() {
       [ -d "$1" ] && PATH="$1${PATH:+:$PATH}"
       ;;
   esac
+  return 0
 }
 
 append_path "$COURSIER_BIN_DIR"
@@ -41,7 +44,7 @@ append_path "/opt/homebrew/bin"
 append_path "/opt/homebrew/sbin"
 append_path "/opt/homebrew/opt/openjdk/bin"
 
-if [ -n "$WINDOWS_HOME" ]; then
+if [ -n "${WINDOWS_HOME:-}" ]; then
   append_path "$WINDOWS_HOME/AppData/Local/Programs/Microsoft VS Code/bin"
   append_path "$WINDOWS_HOME/AppData/Local/Programs/cursor/resources/app/bin"
   append_path "$WINDOWS_HOME/AppData/Local/Microsoft/WindowsApps"
@@ -50,4 +53,5 @@ if [ -n "$WINDOWS_HOME" ]; then
   append_path "/mnt/c/Program Files/PowerShell/7"
 fi
 
+unset -f append_path
 export PATH

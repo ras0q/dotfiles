@@ -1,14 +1,8 @@
-# Interactive mode
-[[ $- == *i* && $- != *c* && $- != *s* ]] || return 0
+[ -r "$HOME/.profile" ] && . "$HOME/.profile"
 
-# Execute zsh if installed
-if [[ "$(uname -s)" =~ "MINGW" ]] && command -v zsh > /dev/null 2>&1; then
-  exec zsh
+if [[ $- == *i* && $- != *s* && -z ${BASH_EXECUTION_STRING+x} ]] && command -v fish >/dev/null 2>&1; then
+  if shopt -q login_shell; then
+    exec fish --login
+  fi
+  exec fish
 fi
-
-[[ -f ~/.zshenv ]] && source ~/.zshenv
-
-# Execute fish if installed
-# FISH=$(mise which fish -E linux || which fish || echo "")
-# [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]] || exit 0
-# [[ -n "$FISH" ]] && exec $FISH
