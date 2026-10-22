@@ -17,14 +17,6 @@ done
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-case "$(uname -s)" in
-  MINGW*|MSYS*|CYGWIN*)
-    if "$can_use_sudo"; then
-      bash -e _setup/winget.sh
-    fi
-    ;;
-esac
-
 if "$can_use_sudo"; then
   bash -e _setup/mise.sh --sudo
 else

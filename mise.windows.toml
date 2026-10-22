@@ -1,3 +1,23 @@
+[bootstrap.packages]
+"winget:Git.Git" = "latest"
+"winget:Google.GoogleDrive" = "latest"
+"winget:Microsoft.WSL" = "latest"
+"winget:gerardog.gsudo" = "latest"
+"winget:Microsoft.Edge" = "latest"
+"winget:Microsoft.PowerShell" = "latest"
+"winget:Microsoft.PowerToys" = "latest"
+"winget:Wakatime.DesktopWakatime" = "latest"
+"winget:AgileBits.1Password" = "latest"
+"winget:Discord.Discord" = "latest"
+"winget:Obsidian.Obsidian" = "latest"
+"winget:jdx.mise" = "latest"
+"winget:jstarks.npiperelay" = "latest"
+"winget:SlackTechnologies.Slack" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:Canonical.Ubuntu" = "latest"
+# iCloud is distributed through the Microsoft Store.
+"winget:9PKTQ5699M62" = "latest"
+
 [dotfiles]
 "~/.config/wezterm" = "common/wezterm"
 "~/.inputrc" = "win/.inputrc"
