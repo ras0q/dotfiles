@@ -1,4 +1,0 @@
-interface:
-  display_name: "Markdown Explainer"
-  short_description: "Explain complex material and current projects clearly"
-  default_prompt: "Use $markdown-explainer to create a concise Japanese Markdown explanation of the supplied material or current project state."
