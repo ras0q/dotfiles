@@ -8,7 +8,11 @@
 "brew-cask:1password" = { version = "latest", os = "macos" }
 "brew-cask:nikitabobko/tap/aerospace" = { version = "latest", os = "macos" }
 "brew-cask:discord" = { version = "latest", os = "macos" }
+"brew-cask:dominion525/tap/cmd-eikana" = { version = "latest", os = "macos" }
+"brew-cask:font-source-code-pro" = { version = "latest", os = "macos" }
+"brew-cask:google-chrome" = { version = "latest", os = "macos" }
 "brew-cask:keycastr" = { version = "latest", os = "macos" }
+"brew-cask:macskk" = { version = "latest", os = "macos" }
 "brew-cask:meetingbar" = { version = "latest", os = "macos" }
 "brew-cask:obsidian" = { version = "latest", os = "macos" }
 "brew-cask:slack" = { version = "latest", os = "macos" }
@@ -30,6 +34,7 @@ apps = [
   "/Applications/1Password.app",
   "/Applications/MeetingBar.app",
   "/Applications/KeyCastr.app",
+  "/Applications/⌘英かな.app/",
 ]
 
 [bootstrap.macos.defaults.NSGlobalDomain]
