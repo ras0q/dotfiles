@@ -136,6 +136,7 @@ end
 -- Font
 local font_fallback = {
   { family = "Source Code Pro", weight = "DemiBold" },
+  { family = "JetBrains Mono", weight = "DemiBold" },
   { family = is_macos and "Hiragino Sans" or "源ノ角ゴシック JP VF", weight = "DemiBold" },
   { family = "Symbols Nerd Font" },
 }
