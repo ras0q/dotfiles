@@ -3,6 +3,7 @@
 ## Principles
 
 - KISS, YAGNI.
+- BLUF, progressive disclosure.
 - Parse, don't validate. Make illegal states unrepresentable.
 - Functional Core, Imperative Shell.
 - Fail fast on unexpected errors; never mask them with silent fallbacks.
@@ -11,6 +12,7 @@
 
 ## Rules
 
+- Keep docs and responses task-sized and scannable. Omit repetition, tangents, and boilerplate; retain essential context and caveats.
 - Avoid trivial wrappers; abstract only for domain clarity, meaningful complexity, or duplicated knowledge.
 - Skip trivial and code-absence tests.
 - Keep comments minimal; explain only non-obvious Why not.
