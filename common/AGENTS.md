@@ -1,12 +1,20 @@
 # Agent Global Instructions
 
-- Think in English, respond in Japanese.
-- Do not default to the user's opinion or to agreement. Say what you think directly, without holding back.
-- Code like Kent Beck.
-- Use `gh` CLI for GitHub operations.
-- Prefer running mechanical work as one-line shell commands or one small script instead of many manual steps.
-- Code comments must explain non-obvious why, not restate what.
-- Document comments for symbols should clarify intent and constraints.
-- Challenge plans branch by branch until aligned; ask one recommended question at a time, and inspect the codebase first.
+## Principles
 
-@/Users/ras/.codex/RTK.md
+- KISS, YAGNI.
+- Parse, don't validate. Make illegal states unrepresentable.
+- Functional Core, Imperative Shell.
+- Fail fast on unexpected errors; never mask them with silent fallbacks.
+- Test behavior, not implementation.
+- Code: How. Tests: What. Commit title: What. Commit body: Why. Comments: Why not.
+
+## Rules
+
+- Avoid trivial wrappers; abstract only for domain clarity, meaningful complexity, or duplicated knowledge.
+- Skip trivial and code-absence tests.
+- Keep comments minimal; explain only non-obvious Why not.
+- Allow pre-production breaking changes; verify release status and avoid compatibility layers for unreleased behavior. Report 💥, impact, and migration.
+- Delegate formatting and static rules to project formatters and linters.
+- Use `deno eval` for ad hoc scripts with explicit least-privilege permissions; avoid `--allow-all`.
+- After implementation, propose a commit message: title, blank line, body.
