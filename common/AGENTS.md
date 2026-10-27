@@ -18,7 +18,7 @@
 - Keep comments minimal; explain only non-obvious Why not.
 - Allow pre-production breaking changes; verify release status and avoid compatibility layers for unreleased behavior. Report 💥, impact, and migration.
 - Delegate formatting and static rules to project formatters and linters.
-- Use `rtk <command> ...` to save tokens. Use `rtk proxy <command> ...` for unfiltered output or `rtk recall <hash>` to retrieve elided output.
+- Use `rtk <commands...>` to save tokens.
 - Use `./tmp` for temporary files generated for local testing or notes.
 - Use `deno eval` for ad hoc scripts with explicit least-privilege permissions; avoid `--allow-all`.
 - After implementation, propose a commit message: title, blank line, body.
