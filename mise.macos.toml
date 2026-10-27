@@ -4,6 +4,7 @@
 "brew:ffmpeg" = { version = "latest", os = "macos" }
 "brew:fish" = { version = "latest", os = "macos" }
 "brew:htop" = { version = "latest", os = "macos" }
+"brew:ttyd" = { version = "latest", os = "macos" }
 "brew:wget" = { version = "latest", os = "macos" }
 "brew-cask:1password" = { version = "latest", os = "macos" }
 "brew-cask:nikitabobko/tap/aerospace" = { version = "latest", os = "macos" }
