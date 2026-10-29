@@ -19,5 +19,6 @@
 - Delegate formatting and static rules to project formatters and linters.
 - Use `rtk <commands...>` to save tokens.
 - Use `./tmp` for temporary files generated for local testing or notes.
+- Record user-provided coding conventions and other work instructions in `./tmp/AGENTS.md`
 - Batch independent necessary commands into a single tool call to reduce round trips.
 - After implementation, propose a commit message in English: title, blank line, body.
